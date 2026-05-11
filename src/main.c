@@ -26,6 +26,7 @@
 #include "load_gfx.h"
 #include "util.h"
 #include "audio.h"
+#include "settings_menu.h"
 
 static bool g_run_without_emu = 0;
 
@@ -52,18 +53,19 @@ enum {
 };
 
 static const char kWindowTitle[] = "The Legend of Zelda: A Link to the Past";
-static uint32 g_win_flags = SDL_WINDOW_RESIZABLE;
-static SDL_Window *g_window;
+uint32 g_win_flags = SDL_WINDOW_RESIZABLE;
+SDL_Window *g_window;
 
-static uint8 g_paused, g_turbo, g_replay_turbo = true, g_cursor = true;
-static uint8 g_current_window_scale;
+uint8 g_paused;
+static uint8 g_turbo, g_replay_turbo = true, g_cursor = true;
+uint8 g_current_window_scale;
 static uint8 g_gamepad_buttons;
 static int g_input1_state;
 static bool g_display_perf;
 static int g_curr_fps;
 static int g_ppu_render_flags = 0;
-static int g_snes_width, g_snes_height;
-static int g_sdl_audio_mixer_volume = SDL_MIX_MAXVOLUME;
+int g_snes_width, g_snes_height;
+int g_sdl_audio_mixer_volume = SDL_MIX_MAXVOLUME;
 static struct RendererFuncs g_renderer_funcs;
 static uint32 g_gamepad_modifiers;
 static uint16 g_gamepad_last_cmd[kGamepadBtn_Count];
@@ -201,7 +203,7 @@ static void SDLCALL AudioCallback(void *userdata, Uint8 *stream, int len) {
 }
 
 // State for sdl renderer
-static SDL_Renderer *g_renderer;
+SDL_Renderer *g_renderer;
 static SDL_Texture *g_texture;
 static SDL_Rect g_sdl_renderer_rect;
 
@@ -644,6 +646,8 @@ static void HandleCommand_Locked(uint32 j, bool pressed) {
     case kKeys_ToggleRenderer: g_ppu_render_flags ^= kPpuRenderFlags_NewRenderer; break;
     case kKeys_VolumeUp:
     case kKeys_VolumeDown: HandleVolumeAdjustment(j == kKeys_VolumeUp ? 1 : -1); break;
+    case kKeys_Settings: SettingsMenu_Toggle(); break;
+    case kKeys_Settings2: SettingsMenu_Toggle(); break;
     default: assert(0);
     }
   }

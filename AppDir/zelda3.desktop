@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=The Legend of Zelda: A Link to the Past
+Comment=A reverse engineered native port of Zelda 3 - A Link to the Past
+Exec=zelda3
+Icon=zelda3
+Terminal=false
+Type=Application
+Categories=Game;ActionGame;AdventureGame;
+StartupNotify=true

@@ -34,6 +34,8 @@ enum {
   kKeys_ToggleRenderer,
   kKeys_VolumeUp,
   kKeys_VolumeDown,
+  kKeys_Settings,
+  kKeys_Settings2,
   kKeys_Total,
 };
 
@@ -105,6 +107,22 @@ enum {
 
 extern Config g_config;
 
+typedef struct CheatConfig {
+  bool infinite_health;
+  bool infinite_magic;
+  bool infinite_bombs;
+  bool infinite_arrows;
+  bool infinite_keys;
+  bool infinite_rupees;
+  bool pot_carry;
+  bool walk_wall;
+} CheatConfig;
+
+extern CheatConfig g_cheat_config;
+
 void ParseConfigFile(const char *filename);
 int FindCmdForSdlKey(SDL_Keycode code, SDL_Keymod mod);
 int FindCmdForGamepadButton(int button, uint32 modifiers);
+const uint16 *GetDefaultKbdControls(void);
+void SaveConfigFile(const char *filename);
+void CheatConfig_Apply(void);

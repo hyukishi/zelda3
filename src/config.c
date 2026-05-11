@@ -14,6 +14,7 @@ enum {
 };
 
 Config g_config;
+CheatConfig g_cheat_config;
 
 #define REMAP_SDL_KEYCODE(key) ((key) & SDLK_SCANCODE_MASK ? kKeyMod_ScanCode : 0) | (key) & (kKeyMod_ScanCode - 1)
 #define _(x) REMAP_SDL_KEYCODE(x)
@@ -37,8 +38,8 @@ static const uint16 kDefaultKbdControls[kKeys_Total] = {
   N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N,
   // CheatLife, CheatKeys, CheatEquipment, CheatWalkThroughWalls
   _(SDLK_w), _(SDLK_o), S(SDLK_w), C(SDLK_e),
-  // ClearKeyLog, StopReplay, Fullscreen, Reset, Pause, PauseDimmed, Turbo, ReplayTurbo, WindowBigger, WindowSmaller, DisplayPerf, ToggleRenderer
-  _(SDLK_k), _(SDLK_l), A(SDLK_RETURN), C(SDLK_r), S(SDLK_p), _(SDLK_p), _(SDLK_TAB), _(SDLK_t), N, N, _(SDLK_f), _(SDLK_r),
+  // ClearKeyLog, StopReplay, Fullscreen, Reset, Pause, PauseDimmed, Turbo, ReplayTurbo, WindowBigger, WindowSmaller, DisplayPerf, ToggleRenderer, VolumeUp, VolumeDown, Settings, Settings2
+  _(SDLK_k), _(SDLK_l), A(SDLK_RETURN), C(SDLK_r), S(SDLK_p), _(SDLK_p), _(SDLK_TAB), _(SDLK_t), N, N, _(SDLK_f), _(SDLK_r), N, N, _(SDLK_ESCAPE), _(SDLK_F12),
 };
 #undef _
 #undef A
@@ -58,7 +59,7 @@ static const KeyNameId kKeyNameId[] = {
   M(Controls), M(Load), M(Save), M(Replay), M(LoadRef), M(ReplayRef),
   S(CheatLife), S(CheatKeys), S(CheatEquipment), S(CheatWalkThroughWalls),
   S(ClearKeyLog), S(StopReplay), S(Fullscreen), S(Reset),
-  S(Pause), S(PauseDimmed), S(Turbo), S(ReplayTurbo), S(WindowBigger), S(WindowSmaller), S(VolumeUp), S(VolumeDown), S(DisplayPerf), S(ToggleRenderer),
+  S(Pause), S(PauseDimmed), S(Turbo), S(ReplayTurbo), S(WindowBigger), S(WindowSmaller), S(DisplayPerf), S(ToggleRenderer), S(VolumeUp), S(VolumeDown), S(Settings), S(Settings2),
 };
 #undef S
 #undef M
@@ -277,6 +278,8 @@ static int GetIniSection(const char *s) {
     return 4;
   if (StringEqualsNoCase(s, "[GamepadMap]"))
     return 5;
+  if (StringEqualsNoCase(s, "[Cheats]"))
+    return 6;
   return -1;
 }
 
@@ -430,8 +433,16 @@ static bool HandleIniConfig(int section, const char *key, char *value) {
           nospr = true;
         else if (strcmp(s, "no_visual_fixes") == 0)
           novis = true;
-        else
-          return false;
+        else {
+          // Accept raw numeric value as fallback (e.g. 34 for 16:10)
+          char *end = NULL;
+          long nv = strtol(s, &end, 10);
+          if (end && *end == '\0' && nv >= 0 && nv < 256) {
+            g_config.extended_aspect_ratio = (uint8)nv;
+          } else {
+            return false;
+          }
+        }
       }
       if (g_config.extended_aspect_ratio && !nospr)
         g_config.features0 |= kFeatures0_ExtendScreen64;
@@ -476,6 +487,24 @@ static bool HandleIniConfig(int section, const char *key, char *value) {
     } else if (StringEqualsNoCase(key, "CancelBirdTravel")) {
       return ParseBoolBit(value, &g_config.features0, kFeatures0_CancelBirdTravel);
     }
+  } else if (section == 6) {
+    if (StringEqualsNoCase(key, "InfiniteHealth")) {
+      return ParseBool(value, &g_cheat_config.infinite_health);
+    } else if (StringEqualsNoCase(key, "InfiniteMagic")) {
+      return ParseBool(value, &g_cheat_config.infinite_magic);
+    } else if (StringEqualsNoCase(key, "InfiniteBombs")) {
+      return ParseBool(value, &g_cheat_config.infinite_bombs);
+    } else if (StringEqualsNoCase(key, "InfiniteArrows")) {
+      return ParseBool(value, &g_cheat_config.infinite_arrows);
+    } else if (StringEqualsNoCase(key, "InfiniteKeys")) {
+      return ParseBool(value, &g_cheat_config.infinite_keys);
+    } else if (StringEqualsNoCase(key, "InfiniteRupees")) {
+      return ParseBool(value, &g_cheat_config.infinite_rupees);
+    } else if (StringEqualsNoCase(key, "PotCarry")) {
+      return ParseBool(value, &g_cheat_config.pot_carry);
+    } else if (StringEqualsNoCase(key, "WalkWall")) {
+      return ParseBool(value, &g_cheat_config.walk_wall);
+    }
   }
   return false;
 }
@@ -516,7 +545,12 @@ static bool ParseOneConfigFile(const char *filename, int depth) {
   return true;
 }
 
+void CheatConfig_Apply(void) {
+  // This will be called to sync cheat config into the runtime cheat state
+}
+
 void ParseConfigFile(const char *filename) {
+  g_config.enable_audio = true;  // default audio on
   g_config.msuvolume = 100;  // default msu volume, 100%
 
   if (filename != NULL || !ParseOneConfigFile("zelda3.user.ini", 0)) {
@@ -526,4 +560,76 @@ void ParseConfigFile(const char *filename) {
       fprintf(stderr, "Warning: Unable to read config file %s\n", filename);
   }
   RegisterDefaultKeys();
+}
+
+const uint16 *GetDefaultKbdControls(void) {
+  return kDefaultKbdControls;
+}
+
+void SaveConfigFile(const char *filename) {
+  if (!filename) filename = "zelda3.ini";
+  FILE *f = fopen(filename, "w");
+  if (!f) {
+    fprintf(stderr, "Warning: Unable to write config file %s\n", filename);
+    return;
+  }
+
+  fprintf(f, "[General]\n");
+  fprintf(f, "Autosave = %d\n", g_config.autosave);
+  fprintf(f, "DisplayPerfInTitle = %d\n", g_config.display_perf_title);
+  // Convert numeric aspect ratio back to string the parser understands
+  int ar = g_config.extended_aspect_ratio;
+  const char *ar_str = "4:3";
+  if (ar == 0) ar_str = "4:3";
+  else if (ar == 34 || ar == 36) ar_str = "16:10";
+  else if (ar == 48 || ar == 51) ar_str = "16:9";
+  else if (ar == 64 || ar == 68) ar_str = "18:9";
+  fprintf(f, "ExtendedAspectRatio = %s", ar_str);
+  if (g_config.extend_y) fprintf(f, ", extend_y");
+  fprintf(f, "\n");
+  fprintf(f, "DisableFrameDelay = %d\n", g_config.disable_frame_delay);
+
+  fprintf(f, "\n[Graphics]\n");
+  fprintf(f, "WindowScale = %d\n", g_config.window_scale);
+  fprintf(f, "Fullscreen = %d\n", g_config.fullscreen);
+  fprintf(f, "EnhancedMode7 = %d\n", g_config.enhanced_mode7);
+  fprintf(f, "NewRenderer = %d\n", g_config.new_renderer);
+  fprintf(f, "IgnoreAspectRatio = %d\n", g_config.ignore_aspect_ratio);
+  fprintf(f, "NoSpriteLimits = %d\n", g_config.no_sprite_limits);
+  fprintf(f, "LinearFiltering = %d\n", g_config.linear_filtering);
+  fprintf(f, "OutputMethod = %s\n",
+    g_config.output_method == kOutputMethod_OpenGL ? "OpenGL" :
+    g_config.output_method == kOutputMethod_SDLSoftware ? "SDL-Software" :
+    g_config.output_method == kOutputMethod_OpenGL_ES ? "OpenGL ES" : "SDL");
+  if (g_config.shader)
+    fprintf(f, "Shader = %s\n", g_config.shader);
+  fprintf(f, "DimFlashes = %d\n", (g_config.features0 & kFeatures0_DimFlashes) ? 1 : 0);
+
+  fprintf(f, "\n[Sound]\n");
+  fprintf(f, "EnableAudio = %d\n", g_config.enable_audio);
+  fprintf(f, "AudioFreq = %d\n", g_config.audio_freq);
+  fprintf(f, "AudioChannels = %d\n", g_config.audio_channels);
+  fprintf(f, "AudioSamples = %d\n", g_config.audio_samples);
+  fprintf(f, "MSUVolume = %d\n", g_config.msuvolume);
+
+  fprintf(f, "\n[Features]\n");
+  fprintf(f, "ItemSwitchLR = %d\n", (g_config.features0 & kFeatures0_SwitchLR) ? 1 : 0);
+  fprintf(f, "TurnWhileDashing = %d\n", (g_config.features0 & kFeatures0_TurnWhileDashing) ? 1 : 0);
+  fprintf(f, "MirrorToDarkworld = %d\n", (g_config.features0 & kFeatures0_MirrorToDarkworld) ? 1 : 0);
+  fprintf(f, "SkipIntroOnKeypress = %d\n", (g_config.features0 & kFeatures0_SkipIntroOnKeypress) ? 1 : 0);
+  fprintf(f, "CarryMoreRupees = %d\n", (g_config.features0 & kFeatures0_CarryMoreRupees) ? 1 : 0);
+  fprintf(f, "MiscBugFixes = %d\n", (g_config.features0 & kFeatures0_MiscBugFixes) ? 1 : 0);
+  fprintf(f, "DisableLowHealthBeep = %d\n", (g_config.features0 & kFeatures0_DisableLowHealthBeep) ? 1 : 0);
+
+  fprintf(f, "\n[Cheats]\n");
+  fprintf(f, "InfiniteHealth = %s\n", g_cheat_config.infinite_health ? "yes" : "no");
+  fprintf(f, "InfiniteMagic = %s\n", g_cheat_config.infinite_magic ? "yes" : "no");
+  fprintf(f, "InfiniteBombs = %s\n", g_cheat_config.infinite_bombs ? "yes" : "no");
+  fprintf(f, "InfiniteArrows = %s\n", g_cheat_config.infinite_arrows ? "yes" : "no");
+  fprintf(f, "InfiniteKeys = %s\n", g_cheat_config.infinite_keys ? "yes" : "no");
+  fprintf(f, "InfiniteRupees = %s\n", g_cheat_config.infinite_rupees ? "yes" : "no");
+  fprintf(f, "PotCarry = %s\n", g_cheat_config.pot_carry ? "yes" : "no");
+  fprintf(f, "WalkWall = %s\n", g_cheat_config.walk_wall ? "yes" : "no");
+
+  fclose(f);
 }

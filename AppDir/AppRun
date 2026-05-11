@@ -1,0 +1,29 @@
+#!/bin/bash
+# AppRun entry point for Zelda3 AppImage
+# Sets up the environment and launches the game
+
+HERE="$(dirname "$(readlink -f "$0")")"
+export PATH="${HERE}/usr/bin:${PATH}"
+
+# Change to a writable directory for saves/config if needed
+CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/zelda3"
+SAVE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/zelda3"
+
+mkdir -p "$CONFIG_DIR" "$SAVE_DIR"
+
+# Symlink bundled resources
+if [ ! -f "$CONFIG_DIR/zelda3_assets.dat" ]; then
+    cp "$HERE/zelda3_assets.dat" "$CONFIG_DIR/" 2>/dev/null || true
+fi
+
+# Use bundled config as default, allow user overrides
+if [ ! -f "$CONFIG_DIR/zelda3.ini" ]; then
+    cp "$HERE/zelda3.ini" "$CONFIG_DIR/"
+fi
+
+# Symlink shaders and sprites so the game finds them
+ln -sf "$HERE/glsl-shaders" "$CONFIG_DIR/glsl-shaders" 2>/dev/null || true
+ln -sf "$HERE/sprites-gfx" "$CONFIG_DIR/sprites-gfx" 2>/dev/null || true
+
+cd "$CONFIG_DIR"
+exec "$HERE/zelda3" "$@"
