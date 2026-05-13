@@ -35,6 +35,11 @@ jobs:
       run: pip install pillow pyyaml
     - name: Build
       run: make -j$(nproc)
+    - name: Bundle Python deps and extraction scripts
+      run: |
+        pip install --target=AppDir/python-deps pillow pyyaml
+        cp assets/restool.py AppDir/
+        cp -r assets AppDir/
     - name: Bundle AppImage
       run: |
         cp zelda3 AppDir/
