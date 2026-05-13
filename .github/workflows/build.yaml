@@ -1,0 +1,90 @@
+name: Build
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build-macos:
+    name: macOS x86_64
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install dependencies
+      run: brew install sdl2
+    - name: Build
+      run: make -j$(sysctl -n hw.logicalcpu)
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: zelda3-macos-x86_64
+        path: |
+          zelda3
+          zelda3.ini
+        if-no-files-found: error
+
+  build-linux:
+    name: Linux x86_64 (AppImage)
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - name: Install dependencies
+      run: |
+        sudo apt update
+        sudo apt install -y libsdl2-dev wget file
+    - name: Build binary
+      run: make -j$(nproc)
+    - name: Bundle AppImage
+      run: |
+        mkdir -p AppDir/usr/bin
+        cp zelda3 AppDir/
+        chmod +x AppDir/zelda3
+        cp zelda3.ini AppDir/
+
+        wget -q "https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage" -O appimagetool
+        chmod +x appimagetool
+
+        cat > AppDir/AppRun << 'EOF'
+#!/bin/bash
+HERE="$(dirname "$(readlink -f "$0")")"
+CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/zelda3"
+SAVE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/zelda3"
+mkdir -p "$CONFIG_DIR" "$SAVE_DIR"
+[ ! -f "$CONFIG_DIR/zelda3.ini" ] && cp "$HERE/zelda3.ini" "$CONFIG_DIR/"
+[ ! -f "$CONFIG_DIR/zelda3_assets.dat" -a -f "$HERE/zelda3_assets.dat" ] && cp "$HERE/zelda3_assets.dat" "$CONFIG_DIR/"
+cd "$CONFIG_DIR"
+exec "$HERE/zelda3" "$@"
+EOF
+        chmod +x AppDir/AppRun
+
+        cat > AppDir/zelda3.desktop << 'DESKTOP'
+[Desktop Entry]
+Name=Zelda 3 - A Link to the Past
+Comment=Native PC port of the classic SNES game
+Exec=zelda3
+Icon=zelda3
+Terminal=false
+Type=Application
+Categories=Game;ActionGame;
+DESKTOP
+
+        python3 -c "
+from PIL import Image, ImageDraw
+img = Image.new('RGBA', (256, 256), (0,0,0,0))
+d = ImageDraw.Draw(img)
+g = (255,215,0,255)
+def t(cx,cy,s,c):
+    h=s*0.866
+    d.polygon([(cx,cy-h*2/3),(cx-s/2,cy+h/3),(cx+s/2,cy+h/3)],fill=c)
+t(128,65,70,g); t(93,145,70,g); t(163,145,70,g); t(128,65,35,(218,165,32,255))
+img.save('AppDir/zelda3.png')
+"
+
+        ARCH=x86_64 ./appimagetool AppDir zelda3-linux-x86_64.AppImage
+    - name: Upload AppImage
+      uses: actions/upload-artifact@v4
+      with:
+        name: zelda3-linux-x86_64
+        path: zelda3-linux-x86_64.AppImage
+        if-no-files-found: error
