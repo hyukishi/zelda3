@@ -3,7 +3,10 @@ import util
 import sys
 import os
 
-os.chdir(os.path.dirname(__file__))
+# Add script dir to path instead of changing CWD — allows extraction
+# to write output to the caller's working directory (writable config dir),
+# not the script directory (read-only AppImage mount).
+sys.path.insert(0, os.path.dirname(__file__))
 
 
 parser = argparse.ArgumentParser(description='Resource tool used to build zelda3_assets.dat', allow_abbrev=False)
