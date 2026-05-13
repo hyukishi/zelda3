@@ -1,11 +1,6 @@
-name: Build & Package
+name: Build
 
-on:
-  push:
-  pull_request:
-  workflow_dispatch:
-  release:
-    types: [published]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build-macos:
@@ -30,7 +25,7 @@ jobs:
         if-no-files-found: error
 
   build-linux:
-    name: Linux x86_64 (AppImage)
+    name: Linux x86_64
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -40,84 +35,16 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt update
-        sudo apt install -y libsdl2-dev wget file
+        sudo apt install -y libsdl2-dev
     - name: Install Python deps
       run: pip install pillow pyyaml
-    - name: Build binary
+    - name: Build
       run: make -j$(nproc)
-    - name: Bundle AppImage
-      run: |
-        mkdir -p AppDir/usr/bin
-        cp zelda3 AppDir/
-        chmod +x AppDir/zelda3
-
-        # Install appimagetool
-        wget -q "https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage" -O appimagetool
-        chmod +x appimagetool
-
-        # Create AppRun entry point
-        cat > AppDir/AppRun << 'EOF'
-#!/bin/bash
-HERE="$(dirname "$(readlink -f "$0")")"
-CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/zelda3"
-SAVE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/zelda3"
-mkdir -p "$CONFIG_DIR" "$SAVE_DIR"
-[ ! -f "$CONFIG_DIR/zelda3.ini" ] && cp "$HERE/zelda3.ini" "$CONFIG_DIR/"
-cd "$CONFIG_DIR"
-exec "$HERE/zelda3" "$@"
-EOF
-        chmod +x AppDir/AppRun
-
-        # Desktop file and icon
-        cat > AppDir/zelda3.desktop << 'DESKTOP'
-[Desktop Entry]
-Name=Zelda 3 - A Link to the Past
-Comment=Native PC port of the classic SNES game
-Exec=zelda3
-Icon=zelda3
-Terminal=false
-Type=Application
-Categories=Game;ActionGame;
-DESKTOP
-
-        # Generate a simple icon
-        python3 -c "
-from PIL import Image, ImageDraw
-img = Image.new('RGBA', (256, 256), (0,0,0,0))
-d = ImageDraw.Draw(img)
-g = (255,215,0,255)
-def t(cx,cy,s,c):
-    h=s*0.866
-    d.polygon([(cx,cy-h*2/3),(cx-s/2,cy+h/3),(cx+s/2,cy+h/3)],fill=c)
-t(128,65,70,g); t(93,145,70,g); t(163,145,70,g); t(128,65,35,(218,165,32,255))
-img.save('AppDir/zelda3.png')
-"
-        # Create AppImage
-        ARCH=x86_64 ./appimagetool AppDir zelda3-linux-x86_64.AppImage
-    - name: Upload AppImage
-      uses: actions/upload-artifact@v4
-      with:
-        name: zelda3-linux-x86_64
-        path: zelda3-linux-x86_64.AppImage
-        if-no-files-found: error
-
-  build-windows:
-    name: Windows x86_64
-    runs-on: windows-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Install SDL2
-      run: |
-        Invoke-WebRequest -Uri "https://github.com/libsdl-org/SDL/releases/download/release-2.26.3/SDL2-devel-2.26.3-VC.zip" -OutFile sdl2.zip
-        Expand-Archive -Path sdl2.zip -DestinationPath third_party\
-    - name: Build with MSVC
-      run: |
-        msbuild Zelda3.sln /p:Configuration=Release /p:Platform=x64 /p:WindowsTargetPlatformVersion=10.0
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: zelda3-windows-x86_64
+        name: zelda3-linux-x86_64
         path: |
-          bin/Release/zelda3.exe
+          zelda3
           zelda3.ini
-        if-no-files-found: warn
+        if-no-files-found: error
