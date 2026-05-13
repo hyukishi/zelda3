@@ -829,17 +829,29 @@ static void LoadAssets() {
   size_t length = 0;
   uint8 *data = ReadWholeFile("zelda3_assets.dat", &length);
   if (!data) {
-    size_t bps_length, bps_src_length;
-    uint8 *bps, *bps_src;
-    bps = ReadWholeFile("zelda3_assets.bps", &bps_length);
-    if (!bps)
-      Die("Failed to read zelda3_assets.dat. Please see the README for information about how you get this file.");
-    bps_src = ReadWholeFile("zelda3.sfc", &bps_src_length);
-    if (!bps_src)
-      Die("Missing file: zelda3.sfc");
-    data = ApplyBps(bps_src, bps_src_length, bps, bps_length, &length);
+    // Auto-extract assets from ROM on first run.
+    // Place zelda3.sfc next to the binary and it will extract assets automatically.
+    // Requires Python 3 with pillow and pyyaml (pip install --user pillow pyyaml).
+    if (ReadWholeFile("zelda3.sfc", NULL)) {
+      fprintf(stderr, "Extracting game assets on first run...\n");
+      int ret = system("python3 assets/restool.py --extract-from-rom");
+      if (ret != 0)
+        ret = system("python assets/restool.py --extract-from-rom");
+      if (ret == 0)
+        data = ReadWholeFile("zelda3_assets.dat", &length);
+    }
+    if (!data) {
+      size_t bps_length, bps_src_length;
+      uint8 *bps = ReadWholeFile("zelda3_assets.bps", &bps_length);
+      uint8 *bps_src = ReadWholeFile("zelda3.sfc", &bps_src_length);
+      if (bps && bps_src)
+        data = ApplyBps(bps_src, bps_src_length, bps, bps_length, &length);
+    }
     if (!data)
-      Die("Unable to apply zelda3_assets.bps. Please make sure you got the right version of 'zelda3.sfc'");
+      Die("zelda3_assets.dat not found. Install Python deps and extract assets:\n"
+          "  pip install --user pillow pyyaml\n"
+          "  python3 assets/restool.py --extract-from-rom\n"
+          "Then launch again.");
   }
 
   static const char kAssetsSig[] = { kAssets_Sig };

@@ -16,7 +16,7 @@ endif
 
 .PHONY: all clean clean_obj clean_gen
 
-all: $(TARGET_EXEC) zelda3_assets.dat
+all: $(TARGET_EXEC)
 $(TARGET_EXEC): $(OBJS) $(RES)
 	$(CC) $^ -o $@ $(LDFLAGS) $(SDLFLAGS)
 %.o : %.c
