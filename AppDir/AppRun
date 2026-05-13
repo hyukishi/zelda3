@@ -4,47 +4,36 @@ CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/zelda3"
 SAVE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/zelda3"
 mkdir -p "$CONFIG_DIR" "$SAVE_DIR"
 
-# The directory where the .AppImage file lives (if launched as AppImage)
 APPIMAGE_DIR="${APPDIR:-$(dirname "$APPIMAGE")}"
 
 # Default config
 [ ! -f "$CONFIG_DIR/zelda3.ini" ] && cp "$HERE/zelda3.ini" "$CONFIG_DIR/"
 
-# Look for ROM next to the AppImage, then in config dir
+# Look for ROM next to the AppImage, then in config dir, home
 ROM_PATH=""
 for dir in "$APPIMAGE_DIR" "$CONFIG_DIR" "$(pwd)" "$HOME"; do
     [ -f "$dir/zelda3.sfc" ] && ROM_PATH="$dir/zelda3.sfc" && break
     [ -f "$dir/zelda3.smc" ] && ROM_PATH="$dir/zelda3.smc" && break
 done
-
-# Copy ROM to config dir if found elsewhere
 if [ -n "$ROM_PATH" ] && [ ! -f "$CONFIG_DIR/zelda3.sfc" ] && [ ! -f "$CONFIG_DIR/zelda3.smc" ]; then
     cp "$ROM_PATH" "$CONFIG_DIR/"
 fi
 
-# Extract assets on first run
+# Extract assets on first run using bundled Python deps
 if [ ! -f "$CONFIG_DIR/zelda3_assets.dat" ] && [ -f "$CONFIG_DIR/zelda3.sfc" ]; then
     echo "Extracting game assets on first run..."
-
-    # Use bundled Python deps
-    [ -d "$HERE/python-deps" ] && export PYTHONPATH="$HERE/python-deps"
-
-    # Copy extraction scripts to config dir
-    mkdir -p "$CONFIG_DIR/assets"
-    cp "$HERE/restool.py" "$CONFIG_DIR/" 2>/dev/null
-    if [ -d "$HERE/assets" ]; then
-        for f in "$HERE/assets"/*.py "$HERE/assets"/*.yaml; do
-            [ -f "$f" ] && cp "$f" "$CONFIG_DIR/assets/" 2>/dev/null
-        done
+    if [ -d "$HERE/python-deps" ]; then
+        (cd "$CONFIG_DIR" && PYTHONPATH="$HERE/python-deps:$HERE/assets" python3 "$HERE/assets/restool.py" --extract-from-rom)
+    else
+        (cd "$CONFIG_DIR" && PYTHONPATH="$HERE/assets" python3 "$HERE/assets/restool.py" --extract-from-rom) 2>/dev/null
     fi
 
-    (cd "$CONFIG_DIR" && python3 restool.py --extract-from-rom) || true
-
     if [ ! -f "$CONFIG_DIR/zelda3_assets.dat" ]; then
+        echo ""
         echo "Automatic extraction failed. Install Python deps and run:"
         echo "  pip install --user pillow pyyaml"
-        echo "  cd $CONFIG_DIR"
-        echo "  python3 restool.py --extract-from-rom"
+        echo "  cd $CONFIG_DIR && python3 restool.py --extract-from-rom"
+        echo ""
     fi
 fi
 
