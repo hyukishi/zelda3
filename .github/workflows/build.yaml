@@ -49,9 +49,28 @@ jobs:
         chmod +x appimagetool
         chmod +x AppDir/AppRun
         ARCH=x86_64 ./appimagetool --appimage-extract-and-run AppDir zelda3-linux-x86_64.AppImage
+        chmod +x zelda3-linux-x86_64.AppImage
     - name: Upload AppImage
       uses: actions/upload-artifact@v4
       with:
         name: zelda3-linux-x86_64
         path: zelda3-linux-x86_64.AppImage
         if-no-files-found: error
+
+  build-windows:
+    name: Windows x86_64
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.1
+    - name: Build
+      run: msbuild Zelda3.sln /p:Configuration=Release /p:Platform=x64
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: zelda3-windows-x86_64
+        path: |
+          bin/Release/zelda3.exe
+          zelda3.ini
+        if-no-files-found: warn
