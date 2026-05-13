@@ -24,6 +24,7 @@ __pycache__
 /snes/*.o
 /msu/
 /tmp/
+/zelda3_assets.dat
 /SDL2.dll
 /zelda3.*.ini
 /zelda3.wiki
