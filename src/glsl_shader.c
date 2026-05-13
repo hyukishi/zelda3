@@ -263,8 +263,26 @@ static bool GlslPass_Compile(GlslPass *p, uint type, const uint8 *data, size_t s
     }
   } else {
     while (skip < size && data[skip++] != '\n') {}
-    strings[0] = (char*)data;
-    lengths[0] = (int)skip;
+    // Check if the shader's version is too low for our core-profile context.
+    // The game uses OpenGL 3.3+ which requires at least "#version 330".
+    // Shaders from the glsl-shaders repo often ship with "#version 130".
+    // Extract the version number from the directive to decide.
+    int shader_ver = 0;
+    const char *ver_start = (const char*)data + 8; // after "#version"
+    while (*ver_start == ' ' || *ver_start == '\t') ver_start++;
+    if (*ver_start >= '0' && *ver_start <= '9')
+      shader_ver = atoi(ver_start);
+    if (!use_opengl_es && shader_ver > 0 && shader_ver < 330) {
+      // Upgrade to the context's minimum version
+      strings[0] = "#version 330\n";
+      lengths[0] = (int)sizeof("#version 330\n") - 1;
+    } else if (use_opengl_es && shader_ver > 0 && shader_ver < 300) {
+      strings[0] = "#version 300 es\n";
+      lengths[0] = (int)sizeof("#version 300 es\n") - 1;
+    } else {
+      strings[0] = (char*)data;
+      lengths[0] = (int)skip;
+    }
   }
   if (type == GL_VERTEX_SHADER) {
     strings[1] = (char *)kVertexPrefix;

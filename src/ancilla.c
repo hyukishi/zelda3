@@ -4547,6 +4547,10 @@ void Ancilla_SwordBeam(int k) {  // 88ddc5
     swordbeam_temp_x = Ancilla_GetX(k);
     swordbeam_temp_y = Ancilla_GetY(k);
 
+    // Sword beam cuts grass and bushes along its path
+    if (player_is_indoors == 0 && (ancilla_G[k] & 3) == 0)
+      Overworld_BombTile(swordbeam_temp_x, swordbeam_temp_y);
+
     if ((ancilla_G[k]++ & 0xf) == 0) {
       sound_effect_2 = Ancilla_CalculateSfxPan(k) | 1;
     }
