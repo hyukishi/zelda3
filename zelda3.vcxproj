@@ -439,6 +439,8 @@
     <ClCompile Include="src\util.c" />
     <ClCompile Include="src\zelda_cpu_infra.c" />
     <ClCompile Include="src\zelda_rtl.c" />
+    <ClCompile Include="src\settings_menu.c" />
+    <ClCompile Include="src\updater.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ancilla.h" />
@@ -743,6 +745,8 @@
     <ClInclude Include="src\variables.h" />
     <ClInclude Include="src\zelda_cpu_infra.h" />
     <ClInclude Include="src\zelda_rtl.h" />
+    <ClInclude Include="src\settings_menu.h" />
+    <ClInclude Include="src\updater.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -64,8 +64,10 @@ jobs:
     - uses: actions/checkout@v3
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.1
+    - name: Restore NuGet packages
+      run: nuget restore Zelda3.sln
     - name: Build
-      run: msbuild Zelda3.sln /p:Configuration=Release /p:Platform=x64
+      run: msbuild Zelda3.sln /p:Configuration=Release /p:Platform=x64 /restore
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
