@@ -37,7 +37,13 @@ jobs:
       run: make -j$(nproc)
     - name: Bundle Python deps and extraction scripts
       run: |
-        pip install --target=AppDir/python-deps pillow pyyaml
+        # Copy system-installed packages (with C extensions) into AppDir
+        SITE_PKGS=$(python3 -c "import site; print(site.getsitepackages()[0])")
+        mkdir -p AppDir/python-deps
+        cp -r "$SITE_PKGS/yaml" AppDir/python-deps/yaml
+        cp -r "$SITE_PKGS/_yaml" AppDir/python-deps/ 2>/dev/null || true
+        cp -r "$SITE_PKGS/PIL" AppDir/python-deps/PIL
+        cp -r "$SITE_PKGS/Pillow"* AppDir/python-deps/ 2>/dev/null || true
         cp assets/restool.py AppDir/
         cp -r assets AppDir/
     - name: Bundle AppImage
