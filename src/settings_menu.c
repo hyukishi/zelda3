@@ -188,10 +188,11 @@ enum {
   kOpt_Volume,
   kOpt_LinearFilter,
   kOpt_StretchToFill,
-  kOpt_HdUpscale,
+  kOpt_Shader,
   kOpt_OutputMethod,
   kOpt_Controls,
   kOpt_Cheats,
+  kOpt_Autosave,
   kOpt_Close,
   kOpt_MAIN_COUNT,
 };
@@ -203,15 +204,29 @@ static const char *kOptLabels[] = {
   "Volume",
   "Linear Filter",
   "Stretch to Fill",
-  "HD Upscale",
+  "Shader",
   "Output Method",
   "Show Controls",
   "Cheats",
+  "Autosave",
   "Close",
 };
 
 static const int kOutputValues[] = { 0, 2, 1, 3 };
 static const int kOutputCount = 4;
+
+// Shader presets
+static const char *kShaderNames[] = { "None", "scalefx-aa", "6xBRZ", "ScaleHQ", "6xBRZ+ScaleHQ" };
+static const char *kShaderPaths[] = { NULL, "glsl-shaders/presets/scalefx-aa.glslp", "glsl-shaders/xbrz/6xbrz-linear.glslp", "glsl-shaders/scalehq/4xScaleHQ.glslp", "glsl-shaders/presets/6xbrz+scalehq.glslp" };
+static const int kShaderCount = 5;
+
+static int GetShaderIndex(void) {
+  if (!g_config.shader) return 0;
+  for (int i = 1; i < kShaderCount; i++)
+    if (kShaderPaths[i] && strcmp(g_config.shader, kShaderPaths[i]) == 0)
+      return i;
+  return 0;
+}
 
 // --- Aspect ratio helpers ---
 static const char *kAspectNames[] = { "4:3", "16:9", "16:10", "18:9" };
@@ -255,7 +270,7 @@ static void DrawMainPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w
     if (sel)
       DrawChar(buf, pitch, lx - kFontW - 2, y + 2, '>', kCol_HiAccent);
 
-    uint32 lcol = (i == kOpt_Close) ? kCol_Close : (i == kOpt_Cheats) ? kCol_Cheat : kCol_Label;
+    uint32 lcol = (i == kOpt_Close) ? kCol_Close : (i == kOpt_Cheats) ? kCol_Cheat : (i == kOpt_Autosave) ? kCol_Action : kCol_Label;
     DrawString(buf, pitch, lx, y + 2, kOptLabels[i], lcol);
 
     char vb[32];
@@ -292,13 +307,9 @@ static void DrawMainPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w
       DrawString(buf, pitch, vx, y, g_config.ignore_aspect_ratio ? "ON" : "OFF",
                  g_config.ignore_aspect_ratio ? kCol_On : kCol_Value);
       break;
-    case kOpt_HdUpscale: {
-      bool hd = g_config.output_method == kOutputMethod_OpenGL &&
-                g_config.shader != NULL &&
-                strstr(g_config.shader, "ScaleHQ") != NULL;
-      DrawString(buf, pitch, vx, y, hd ? "ON" : "OFF", hd ? kCol_On : kCol_Value);
+    case kOpt_Shader:
+      DrawString(buf, pitch, vx, y, kShaderNames[GetShaderIndex()], kCol_Value);
       break;
-    }
     case kOpt_OutputMethod: {
       int om = g_config.output_method;
       const char *nm = "SDL";
@@ -308,6 +319,10 @@ static void DrawMainPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w
       DrawString(buf, pitch, vx, y, nm, kCol_Value);
       break;
     }
+    case kOpt_Autosave:
+      DrawString(buf, pitch, vx, y, g_config.autosave ? "ON" : "OFF",
+                 g_config.autosave ? kCol_On : kCol_Value);
+      break;
     default: break;
     }
     y += rh;
@@ -676,20 +691,15 @@ static void ChangeValue(int opt, int delta) {
     }
     break;
   }
-  case kOpt_HdUpscale: {
-    // HD Upscale: single-pass ScaleHQ is light enough for integrated GPUs
-    bool hd = g_config.output_method == kOutputMethod_OpenGL &&
-              g_config.shader != NULL &&
-              strstr(g_config.shader, "ScaleHQ") != NULL;
-    if (!hd) {
-      g_config.output_method = kOutputMethod_OpenGL;
-      g_config.shader = "glsl-shaders/scalehq/2xScaleHQ.glslp";
-    } else {
-      g_config.output_method = kOutputMethod_SDL;
-      g_config.shader = NULL;
-    }
+  case kOpt_Shader: {
+    int idx = GetShaderIndex();
+    idx = (idx + delta + kShaderCount) % kShaderCount;
+    g_config.shader = kShaderPaths[idx];
     break;
   }
+  case kOpt_Autosave:
+    g_config.autosave = !g_config.autosave;
+    break;
   case kOpt_OutputMethod: {
     int idx = 0;
     for (int i = 0; i < kOutputCount; i++)
