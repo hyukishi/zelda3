@@ -19,20 +19,30 @@ if [ -n "$ROM_PATH" ] && [ ! -f "$CONFIG_DIR/zelda3.sfc" ] && [ ! -f "$CONFIG_DI
     cp "$ROM_PATH" "$CONFIG_DIR/"
 fi
 
-# Extract assets on first run using bundled Python deps
+# Extract assets on first run
 if [ ! -f "$CONFIG_DIR/zelda3_assets.dat" ] && [ -f "$CONFIG_DIR/zelda3.sfc" ]; then
     echo "Extracting game assets on first run..."
-    if [ -d "$HERE/python-deps" ]; then
-        (cd "$CONFIG_DIR" && PYTHONPATH="$HERE/python-deps:$HERE/assets" python3 "$HERE/assets/restool.py" --extract-from-rom)
+
+    # Ensure Python deps are installed (Steam Deck / any Linux)
+    if ! python3 -c "import yaml; from PIL import Image" 2>/dev/null; then
+        echo "Installing Python dependencies..."
+        python3 -m pip install --user pillow pyyaml 2>/dev/null || pip3 install --user pillow pyyaml 2>/dev/null || true
+    fi
+
+    if [ -x "$HERE/python-venv/bin/python3" ]; then
+        PYTHONPATH="$HERE/assets" "$HERE/python-venv/bin/python3" "$HERE/assets/restool.py" --extract-from-rom
+    elif [ -d "$HERE/python-deps" ]; then
+        (cd "$CONFIG_DIR" && PYTHONPATH="$HERE/python-deps:$HERE/assets:$(python3 -c "import site; print(site.USER_SITE)" 2>/dev/null)" python3 "$HERE/assets/restool.py" --extract-from-rom)
     else
-        (cd "$CONFIG_DIR" && PYTHONPATH="$HERE/assets" python3 "$HERE/assets/restool.py" --extract-from-rom) 2>/dev/null
+        (cd "$CONFIG_DIR" && PYTHONPATH="$HERE/assets" python3 "$HERE/assets/restool.py" --extract-from-rom)
     fi
 
     if [ ! -f "$CONFIG_DIR/zelda3_assets.dat" ]; then
         echo ""
-        echo "Automatic extraction failed. Install Python deps and run:"
+        echo "Automatic extraction failed. To extract manually:"
         echo "  pip install --user pillow pyyaml"
-        echo "  cd $CONFIG_DIR && python3 restool.py --extract-from-rom"
+        echo "  cd $CONFIG_DIR"
+        echo "  python3 restool.py --extract-from-rom"
         echo ""
     fi
 fi
