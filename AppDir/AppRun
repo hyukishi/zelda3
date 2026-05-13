@@ -31,12 +31,12 @@ if [ ! -f "$CONFIG_DIR/zelda3_assets.dat" ] && [ -f "$CONFIG_DIR/zelda3.sfc" ]; 
     fi
     if [ -f "$VENV_DIR/bin/python3" ]; then
         "$VENV_DIR/bin/pip" install --quiet pillow pyyaml 2>/dev/null
-        # Run extraction from config dir (where ROM is), using bundled scripts
-        (cd "$CONFIG_DIR" && PYTHONPATH="$HERE/assets" "$VENV_DIR/bin/python3" "$HERE/assets/restool.py" --extract-from-rom)
+        # Run extraction from config dir, passing ROM path explicitly since
+        # restool.py does os.chdir() to its own directory on startup.
+        PYTHONPATH="$HERE/assets" "$VENV_DIR/bin/python3" "$HERE/assets/restool.py" --rom "$CONFIG_DIR/zelda3.sfc" --extract-from-rom
     else
-        # Fallback: try system python with --user packages
         python3 -m pip install --user pillow pyyaml 2>/dev/null || true
-        (cd "$CONFIG_DIR" && PYTHONPATH="$HERE/assets" python3 "$HERE/assets/restool.py" --extract-from-rom)
+        PYTHONPATH="$HERE/assets" python3 "$HERE/assets/restool.py" --rom "$CONFIG_DIR/zelda3.sfc" --extract-from-rom
     fi
 
     if [ ! -f "$CONFIG_DIR/zelda3_assets.dat" ]; then
