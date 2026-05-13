@@ -11,6 +11,8 @@ It's around 70-80kLOC of C code, and reimplements all parts of the original game
 
 You need a copy of the ROM to extract game resources (levels, images). Then once that's done, the ROM is no longer needed.
 
+The ROM must be the US version with SHA256 hash `66871d66be19ad2c34c927d6b14cd8eb6fc3181965b6e517cb361f7316009cfb`. Place it next to the binary — assets are auto-extracted on first launch (requires Python 3 with `pillow` and `pyyaml`).
+
 It uses the PPU and DSP implementation from [LakeSnes](https://github.com/elzo-d/LakeSnes), but with lots of speed optimizations.
 Additionally, it can be configured to also run the original machine code side by side. Then the RAM state is compared after each frame, to verify that the C implementation is correct.
 
@@ -86,11 +88,14 @@ python3 -m pip install -r requirements.txt
 * macOS: `brew install sdl2` (you can get homebrew [here](https://brew.sh/))
 
 ## Compiling on Linux/MacOS
-1. Place your US ROM file named `zelda3.sfc` in `zelda3`
-2. Compile
+The build no longer requires a ROM present — just compile the binary. Assets are auto-extracted on first run.
 ```sh
-make
+make -j$(nproc)   # Linux
+make -j$(sysctl -n hw.logicalcpu)   # macOS
 ```
+Then place your US ROM named `zelda3.sfc` next to the `zelda3` binary and run `./zelda3`. Assets extract automatically.
+
+For macOS, use `./build.sh macos` or `./build.sh macapp` for a `.app` bundle.
 <details>
 <summary>
 Advanced make usage ...
@@ -122,7 +127,9 @@ Look at the wiki at https://github.com/snesrev/zelda3/wiki for more help.
 The ROM needs to be named `zelda3.sfc` and has to be from the US region with this exact SHA256 hash
 `66871d66be19ad2c34c927d6b14cd8eb6fc3181965b6e517cb361f7316009cfb`
 
-In case you're planning to move the executable to a different location, please include the file `zelda3_assets.dat`.
+## Linux AppImage / Steam Deck
+
+The Linux AppImage bundles Python deps and extraction scripts — just place `zelda3.sfc` in `~/.config/zelda3/` and launch. Assets auto-extract on first run.
 
 ## Usage and controls
 
@@ -163,6 +170,8 @@ Additionally, the following commands are available:
 | O   | Set dungeon key to 1  |
 | K   | Clear all input history from the joypad log  |
 | L   | Stop replaying a shapshot  |
+| Escape | Open/close settings menu |
+| F12 | Alternate settings menu key |
 | R   | Toggle between fast and slow renderer |
 | F   | Display renderer performance |
 | F1-F10 | Load snapshot      |
