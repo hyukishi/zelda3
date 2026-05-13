@@ -2,9 +2,6 @@ name: Build & Package
 
 on:
   push:
-    branches:
-    - master
-    - native-port-features
   pull_request:
   workflow_dispatch:
   release:
