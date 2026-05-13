@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define CURRENT_VERSION  "v0.4.0"
+#define CURRENT_VERSION  "v0.7.2"
 #define REPO_API        "https://api.github.com/repos/hyukishi/zelda3/releases/latest"
 
 bool g_update_available;
