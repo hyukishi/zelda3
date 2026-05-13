@@ -6,6 +6,7 @@
 #include "features.h"
 #include "zelda_rtl.h"
 #include "snes/ppu.h"
+#include "updater.h"
 #include <SDL.h>
 #include <stdio.h>
 #include <string.h>
@@ -525,8 +526,15 @@ static void SettingsMenu_DrawFrame(uint8 *buf, int pitch, int fb_w, int fb_h) {
   }
 
   // Footer
-  DrawString(buf, pitch, px + (pw - 13 * 8) / 2, py + ph - kPanelPad - kFontH,
-             "F12/ Esc: Close", kCol_Back);
+  if (g_update_available && Updater_IsReady()) {
+    char ubuf[64];
+    snprintf(ubuf, sizeof(ubuf), "Update %s! Press Enter", g_update_version);
+    DrawString(buf, pitch, px + (pw - 24 * 4) / 2, py + ph - kPanelPad - kFontH,
+               ubuf, kCol_Cheat);
+  } else {
+    DrawString(buf, pitch, px + (pw - 13 * 8) / 2, py + ph - kPanelPad - kFontH,
+               "F12/ Esc: Close", kCol_Back);
+  }
 }
 
 // ====================================================================
@@ -799,6 +807,12 @@ void SettingsMenu_Toggle(void) {
 
 void SettingsMenu_Input(int key_code, int key_mod, bool pressed) {
   if (!g_settings_menu_active) return;
+  // Update check: Enter triggers update if available
+  if (pressed && g_update_available && Updater_IsReady() &&
+      (key_code == SDLK_RETURN || key_code == SDLK_KP_ENTER)) {
+    Updater_Apply();
+    return;
+  }
   // Global close
   if (pressed && (key_code == SDLK_F12 || key_code == SDLK_ESCAPE)) {
     SettingsMenu_Toggle();

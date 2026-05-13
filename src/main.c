@@ -27,8 +27,10 @@
 #include "util.h"
 #include "audio.h"
 #include "settings_menu.h"
+#include "updater.h"
 
 static bool g_run_without_emu = 0;
+static bool g_updater_started;
 
 // Forwards
 static bool LoadRom(const char *filename);
@@ -476,6 +478,11 @@ int main(int argc, char** argv) {
     bool is_replay = ZeldaRunFrame(inputs);
     SDL_UnlockMutex(g_audio_mutex);
 
+    // Check for updates once on startup
+    if (!g_updater_started) {
+      g_updater_started = true;
+      Updater_Check();
+    }
     frameCtr++;
 
     if ((g_turbo ^ (is_replay & g_replay_turbo)) && (frameCtr & (g_turbo ? 0xf : 0x7f)) != 0) {
