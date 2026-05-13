@@ -1,6 +1,6 @@
 #!/bin/bash
 # Build script for Zelda3 native cross-platform binary
-# Usage: ./build.sh [macos|linux|windows|appimage|all]
+# Usage: ./build.sh [macos|linux|windows|all]
 
 set -euo pipefail
 cd "$(dirname "$0")"
@@ -60,40 +60,6 @@ build_linux_native() {
     extract_assets
     make -j$(nproc)
     info "Linux build complete: ./zelda3"
-}
-
-build_linux_docker() {
-    info "Building Linux binary via Docker..."
-    command -v docker &>/dev/null || { error "Docker required"; exit 1; }
-
-    make clean_obj 2>/dev/null || true
-    docker build -f Dockerfile.build-linux -t zelda3-builder .
-
-    info "Extracting binary from Docker..."
-    CID=$(docker create zelda3-builder)
-    mkdir -p build-linux
-    docker cp "$CID:/src/zelda3" ./build-linux/
-    docker rm "$CID" >/dev/null
-
-    # Copy platform-independent assets
-    cp zelda3_assets.dat build-linux/ 2>/dev/null || warn "No pre-extracted assets, run make locally first"
-    cp zelda3.ini build-linux/ 2>/dev/null || true
-
-    info "Linux build complete: build-linux/zelda3"
-    file build-linux/zelda3
-}
-
-build_appimage() {
-    # Build Linux binary first, then package as AppImage
-    if [ ! -f "build-linux/zelda3" ]; then
-        if command -v docker &>/dev/null; then
-            build_linux_docker
-        else
-            error "Need Docker or a Linux environment for AppImage builds"
-            exit 1
-        fi
-    fi
-    exec ./build-appimage.sh
 }
 
 build_windows() {
@@ -191,10 +157,7 @@ CMDEOF
         echo ""
         ;;
     linux)
-        build_linux_docker
-        ;;
-    appimage)
-        build_appimage
+        build_linux_native
         ;;
     windows|win)
         build_windows
@@ -204,18 +167,17 @@ CMDEOF
         info "--- macOS done ---"
         build_windows
         info "--- Windows done ---"
-        [ -d build-linux ] || build_linux_docker
+        build_linux_native
         info "--- Linux done ---"
         ;;
     *)
-        echo "Usage: $0 [macos|macapp|linux|windows|appimage|all]"
+        echo "Usage: $0 [macos|macapp|linux|windows|all]"
         echo ""
         echo "Prerequisites:"
         echo "  - Place zelda3.sfc (US ROM) in this directory"
         echo "  - macOS: brew install sdl2  then  ./build.sh macos"
         echo "  - Linux: sudo apt install libsdl2-dev python3-pip  then  ./build.sh linux"
         echo "  - Windows via MinGW: brew install mingw-w64  then  ./build.sh windows"
-        echo "  - AppImage: ./build.sh appimage  (needs Docker running)"
         echo "  - All: ./build.sh all"
         echo ""
         echo "HD features bundled in AppDir/"

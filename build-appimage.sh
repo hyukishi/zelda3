@@ -2,7 +2,7 @@
 # Build Zelda3 Linux AppImage with HD upscaling shaders and ZSPR sprite packs
 #
 # Prerequisites:
-#   - Docker (for building the Linux binary) OR a pre-built Linux binary at build-linux/zelda3
+#   - A pre-built Linux binary (run ./build.sh linux first on a Linux host)
 #   - The ROM file named zelda3.sfc for asset extraction
 #
 # Usage: ./build-appimage.sh
@@ -18,21 +18,10 @@ info()  { echo -e "${GREEN}[INFO]${NC} $1"; }
 warn()  { echo -e "${YELLOW}[WARN]${NC} $1"; }
 error() { echo -e "${RED}[ERROR]${NC} $1"; }
 
-# Check if the Linux binary exists, build if needed
-if [ ! -f "build-linux/zelda3" ]; then
-    info "No cached Linux binary found."
-    if command -v docker &>/dev/null; then
-        info "Building via Docker..."
-        make clean_obj 2>/dev/null || true
-        docker build -f Dockerfile.build-linux -t zelda3-builder . 2>&1
-        CID=$(docker create zelda3-builder)
-        mkdir -p build-linux
-        docker cp "$CID:/src/zelda3" ./build-linux/
-        docker rm "$CID" >/dev/null
-    else
-        error "Docker not available. Pre-build a Linux binary and place it at build-linux/zelda3"
-        exit 1
-    fi
+# Check if the Linux binary exists
+if [ ! -f "./zelda3" ]; then
+    error "Linux binary not found. Run ./build.sh linux first on a Linux host."
+    exit 1
 fi
 
 # Also ensure assets are extracted
@@ -52,7 +41,7 @@ info "Setting up AppDir..."
 rm -rf "${APP_DIR}/zelda3" "${APP_DIR}/zelda3_assets.dat" "${APP_DIR}/glsl-shaders" "${APP_DIR}/sprites-gfx" 2>/dev/null || true
 
 # Binary
-cp build-linux/zelda3 "${APP_DIR}/zelda3"
+cp ./zelda3 "${APP_DIR}/zelda3"
 chmod 755 "${APP_DIR}/zelda3"
 
 # Assets
