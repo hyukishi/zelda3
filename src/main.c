@@ -150,10 +150,10 @@ static void DrawPpuFrameWithPerf() {
   int render_scale = PpuGetCurrentRenderScale(g_zenv.ppu, g_ppu_render_flags);
   uint8 *pixel_buffer = 0;
   int pitch = 0;
+  int fb_w = g_snes_width * render_scale;
+  int fb_h = g_snes_height * render_scale;
 
-  g_renderer_funcs.BeginDraw(g_snes_width * render_scale,
-                             g_snes_height * render_scale,
-                             &pixel_buffer, &pitch);
+  g_renderer_funcs.BeginDraw(fb_w, fb_h, &pixel_buffer, &pitch);
   if (g_display_perf || g_config.display_perf_title) {
     static float history[64], average;
     static int history_pos;
@@ -170,6 +170,7 @@ static void DrawPpuFrameWithPerf() {
   }
   if (g_display_perf)
     RenderNumber(pixel_buffer + pitch * render_scale, pitch, g_curr_fps, render_scale == 4);
+  SettingsMenu_Draw(pixel_buffer, pitch, fb_w, fb_h);
   g_renderer_funcs.EndDraw();
 }
 
@@ -431,10 +432,16 @@ int main(int argc, char** argv) {
         }
         break;
       case SDL_KEYDOWN:
-        HandleInput(event.key.keysym.sym, event.key.keysym.mod, true);
+        if (g_settings_menu_active)
+          SettingsMenu_Input(event.key.keysym.sym, event.key.keysym.mod, true);
+        else
+          HandleInput(event.key.keysym.sym, event.key.keysym.mod, true);
         break;
       case SDL_KEYUP:
-        HandleInput(event.key.keysym.sym, event.key.keysym.mod, false);
+        if (g_settings_menu_active)
+          SettingsMenu_Input(event.key.keysym.sym, event.key.keysym.mod, false);
+        else
+          HandleInput(event.key.keysym.sym, event.key.keysym.mod, false);
         break;
       case SDL_QUIT:
         running = false;
@@ -449,6 +456,12 @@ int main(int argc, char** argv) {
     }
 
     if (g_paused) {
+      if (!g_settings_menu_active) {
+        SDL_Delay(16);
+        continue;
+      }
+      // Settings menu active: draw current frame with overlay
+      DrawPpuFrameWithPerf();
       SDL_Delay(16);
       continue;
     }
@@ -646,8 +659,8 @@ static void HandleCommand_Locked(uint32 j, bool pressed) {
     case kKeys_ToggleRenderer: g_ppu_render_flags ^= kPpuRenderFlags_NewRenderer; break;
     case kKeys_VolumeUp:
     case kKeys_VolumeDown: HandleVolumeAdjustment(j == kKeys_VolumeUp ? 1 : -1); break;
-    case kKeys_Settings: SettingsMenu_Toggle(); break;
-    case kKeys_Settings2: SettingsMenu_Toggle(); break;
+    case kKeys_Settings: if (pressed) SettingsMenu_Toggle(); break;
+    case kKeys_Settings2: if (pressed) SettingsMenu_Toggle(); break;
     default: assert(0);
     }
   }

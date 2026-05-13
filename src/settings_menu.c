@@ -292,7 +292,9 @@ static void DrawMainPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w
                  g_config.ignore_aspect_ratio ? kCol_On : kCol_Value);
       break;
     case kOpt_HdUpscale: {
-      bool hd = g_config.output_method == kOutputMethod_OpenGL && g_config.shader != NULL;
+      bool hd = g_config.output_method == kOutputMethod_OpenGL &&
+                g_config.shader != NULL &&
+                strstr(g_config.shader, "ScaleHQ") != NULL;
       DrawString(buf, pitch, vx, y, hd ? "ON" : "OFF", hd ? kCol_On : kCol_Value);
       break;
     }
@@ -667,10 +669,13 @@ static void ChangeValue(int opt, int delta) {
     break;
   }
   case kOpt_HdUpscale: {
-    bool hd = g_config.output_method == kOutputMethod_OpenGL && g_config.shader != NULL;
+    // HD Upscale: single-pass ScaleHQ is light enough for integrated GPUs
+    bool hd = g_config.output_method == kOutputMethod_OpenGL &&
+              g_config.shader != NULL &&
+              strstr(g_config.shader, "ScaleHQ") != NULL;
     if (!hd) {
       g_config.output_method = kOutputMethod_OpenGL;
-      g_config.shader = "glsl-shaders/presets/6xbrz+scalehq.glslp";
+      g_config.shader = "glsl-shaders/scalehq/2xScaleHQ.glslp";
     } else {
       g_config.output_method = kOutputMethod_SDL;
       g_config.shader = NULL;
