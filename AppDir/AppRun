@@ -4,8 +4,23 @@ CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/zelda3"
 SAVE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/zelda3"
 mkdir -p "$CONFIG_DIR" "$SAVE_DIR"
 
+# The directory where the .AppImage file lives (if launched as AppImage)
+APPIMAGE_DIR="${APPDIR:-$(dirname "$APPIMAGE")}"
+
 # Default config
 [ ! -f "$CONFIG_DIR/zelda3.ini" ] && cp "$HERE/zelda3.ini" "$CONFIG_DIR/"
+
+# Look for ROM next to the AppImage, then in config dir
+ROM_PATH=""
+for dir in "$APPIMAGE_DIR" "$CONFIG_DIR" "$(pwd)" "$HOME"; do
+    [ -f "$dir/zelda3.sfc" ] && ROM_PATH="$dir/zelda3.sfc" && break
+    [ -f "$dir/zelda3.smc" ] && ROM_PATH="$dir/zelda3.smc" && break
+done
+
+# Copy ROM to config dir if found elsewhere
+if [ -n "$ROM_PATH" ] && [ ! -f "$CONFIG_DIR/zelda3.sfc" ] && [ ! -f "$CONFIG_DIR/zelda3.smc" ]; then
+    cp "$ROM_PATH" "$CONFIG_DIR/"
+fi
 
 # Extract assets on first run
 if [ ! -f "$CONFIG_DIR/zelda3_assets.dat" ] && [ -f "$CONFIG_DIR/zelda3.sfc" ]; then
@@ -26,12 +41,10 @@ if [ ! -f "$CONFIG_DIR/zelda3_assets.dat" ] && [ -f "$CONFIG_DIR/zelda3.sfc" ]; 
     (cd "$CONFIG_DIR" && python3 restool.py --extract-from-rom) || true
 
     if [ ! -f "$CONFIG_DIR/zelda3_assets.dat" ]; then
-        echo ""
-        echo "Automatic extraction failed. To extract manually:"
+        echo "Automatic extraction failed. Install Python deps and run:"
         echo "  pip install --user pillow pyyaml"
         echo "  cd $CONFIG_DIR"
         echo "  python3 restool.py --extract-from-rom"
-        echo ""
     fi
 fi
 
