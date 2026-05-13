@@ -42,7 +42,8 @@ jobs:
         chmod +x AppDir/zelda3
         wget -qO appimagetool https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
         chmod +x appimagetool
-        ARCH=x86_64 ./appimagetool AppDir zelda3-linux-x86_64.AppImage
+        chmod +x AppDir/AppRun
+        ARCH=x86_64 ./appimagetool --appimage-extract-and-run AppDir zelda3-linux-x86_64.AppImage
     - name: Upload AppImage
       uses: actions/upload-artifact@v4
       with:
