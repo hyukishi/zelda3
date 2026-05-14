@@ -9,6 +9,7 @@
 #include "updater.h"
 #include <SDL.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 bool g_settings_menu_active;
@@ -189,6 +190,7 @@ enum {
   kOpt_LinearFilter,
   kOpt_StretchToFill,
   kOpt_Shader,
+  kOpt_UpdateShaders,
   kOpt_OutputMethod,
   kOpt_Controls,
   kOpt_Cheats,
@@ -206,6 +208,7 @@ static const char *kOptLabels[] = {
   "Linear Filter",
   "Stretch to Fill",
   "Shader",
+  "Update Shaders",
   "Output Method",
   "Show Controls",
   "Cheats",
@@ -311,6 +314,9 @@ static void DrawMainPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w
       break;
     case kOpt_Shader:
       DrawString(buf, pitch, vx, y, kShaderNames[GetShaderIndex()], kCol_Value);
+      break;
+    case kOpt_UpdateShaders:
+      DrawString(buf, pitch, vx, y, "Run...", kCol_Value);
       break;
     case kOpt_OutputMethod: {
       int om = g_config.output_method;
@@ -732,6 +738,9 @@ static void HandleMainInput(int key_code, int key_mod, bool pressed) {
   case SDLK_KP_ENTER:
     if (g_cursor == kOpt_Controls) { g_page = kPage_Controls; g_cursor = 0; }
     else if (g_cursor == kOpt_Cheats) { g_page = kPage_Cheats; g_cursor = 0; g_cheat_scroll = 0; }
+    else if (g_cursor == kOpt_UpdateShaders) {
+      system("./fetch-shaders.sh &");
+    }
     else if (g_cursor == kOpt_Update) {
       if (g_update_available && Updater_IsReady()) { Updater_Apply(); }
       else { Updater_Check(); g_update_available = false; }
