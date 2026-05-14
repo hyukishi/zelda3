@@ -713,8 +713,11 @@ static void HandleGamepadInput(int button, bool pressed) {
     return;
   g_gamepad_modifiers ^= 1 << button;
 
-  // Back/Start always toggle the settings menu
-  if (pressed && (button == kGamepadBtn_Back || button == kGamepadBtn_Start)) {
+  // Select+Start together toggles settings menu (not single presses)
+  static bool back_held, start_held;
+  if (button == kGamepadBtn_Back) back_held = pressed;
+  if (button == kGamepadBtn_Start) start_held = pressed;
+  if (back_held && start_held && pressed) {
     SettingsMenu_Toggle();
     return;
   }
