@@ -809,6 +809,7 @@ void SettingsMenu_Toggle(void) {
     SaveConfigFile(NULL);
   } else {
     g_settings_menu_active = true;
+    g_paused = true;
     g_cursor = 0;
     g_page = kPage_Main;
     g_main_scroll = 0;
