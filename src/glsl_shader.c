@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include <string.h>
+#include <sys/stat.h>
 #define STB_IMAGE_IMPLEMENTATION
 #define STBI_NO_THREAD_LOCALS
 #define STBI_ONLY_PNG
@@ -371,6 +372,18 @@ static bool IsGlslFilename(const char *filename) {
   return len >= 5 && memcmp(filename + len - 5, ".glsl", 5) == 0;
 }
 
+static void GlslShader_EnsureShadersAvailable(void) {
+  struct stat st;
+  if (stat("glsl-shaders", &st) == 0 && S_ISDIR(st.st_mode))
+    return;
+  if (stat("fetch-shaders.sh", &st) != 0)
+    return;
+  fprintf(stderr, "glsl-shaders not found, running fetch-shaders.sh...\n");
+  int ret = system("./fetch-shaders.sh");
+  if (ret != 0)
+    fprintf(stderr, "fetch-shaders.sh failed (exit %d), shaders unavailable\n", ret);
+}
+
 GlslShader *GlslShader_CreateFromFile(const char *filename, bool opengl_es) {
   char buffer[256];
   GLint link_status;
@@ -379,6 +392,8 @@ GlslShader *GlslShader_CreateFromFile(const char *filename, bool opengl_es) {
   GlslShader *gs = (GlslShader *)calloc(sizeof(GlslShader), 1);
   if (!gs)
     return gs;
+
+  GlslShader_EnsureShadersAvailable();
 
   if (IsGlslFilename(filename)) {
     GlslShader_InitializePasses(gs, 1);
