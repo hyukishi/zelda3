@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define CURRENT_VERSION  "v0.7.6"
+#define CURRENT_VERSION  "v0.7.7"
 #define REPO_API        "https://api.github.com/repos/hyukishi/zelda3/releases/latest"
 
 bool g_update_available;
@@ -118,10 +118,10 @@ void Updater_Check(void) {
   g_update_version = g_new_version;
   g_update_available = true;
 
-  // Download in background
+  // Download synchronously (called from menu, user is waiting)
   snprintf(g_staged_path, sizeof(g_staged_path), "/tmp/zelda3_update_%s", latest);
   snprintf(cmd, sizeof(cmd),
-    "curl -sL '%s' -o '%s' 2>/dev/null &", g_download_url, g_staged_path);
+    "curl -sL '%s' -o '%s' 2>/dev/null", g_download_url, g_staged_path);
   system(cmd);
 }
 

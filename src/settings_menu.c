@@ -193,6 +193,7 @@ enum {
   kOpt_Controls,
   kOpt_Cheats,
   kOpt_Autosave,
+  kOpt_Update,
   kOpt_Close,
   kOpt_MAIN_COUNT,
 };
@@ -209,6 +210,7 @@ static const char *kOptLabels[] = {
   "Show Controls",
   "Cheats",
   "Autosave",
+  "Update",
   "Close",
 };
 
@@ -270,7 +272,7 @@ static void DrawMainPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w
     if (sel)
       DrawChar(buf, pitch, lx - kFontW - 2, y + 2, '>', kCol_HiAccent);
 
-    uint32 lcol = (i == kOpt_Close) ? kCol_Close : (i == kOpt_Cheats) ? kCol_Cheat : (i == kOpt_Autosave) ? kCol_Action : kCol_Label;
+    uint32 lcol = (i == kOpt_Close) ? kCol_Close : (i == kOpt_Cheats) ? kCol_Cheat : (i == kOpt_Autosave || i == kOpt_Update) ? kCol_Action : kCol_Label;
     DrawString(buf, pitch, lx, y + 2, kOptLabels[i], lcol);
 
     char vb[32];
@@ -322,6 +324,12 @@ static void DrawMainPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w
     case kOpt_Autosave:
       DrawString(buf, pitch, vx, y, g_config.autosave ? "ON" : "OFF",
                  g_config.autosave ? kCol_On : kCol_Value);
+      break;
+    case kOpt_Update:
+      if (g_update_available && Updater_IsReady())
+        DrawString(buf, pitch, vx, y, g_update_version ? g_update_version : "Ready", kCol_Cheat);
+      else
+        DrawString(buf, pitch, vx, y, "Check...", kCol_Value);
       break;
     default: break;
     }
@@ -722,6 +730,10 @@ static void HandleMainInput(int key_code, int key_mod, bool pressed) {
   case SDLK_KP_ENTER:
     if (g_cursor == kOpt_Controls) { g_page = kPage_Controls; g_cursor = 0; }
     else if (g_cursor == kOpt_Cheats) { g_page = kPage_Cheats; g_cursor = 0; g_cheat_scroll = 0; }
+    else if (g_cursor == kOpt_Update) {
+      if (g_update_available && Updater_IsReady()) { Updater_Apply(); }
+      else { Updater_Check(); g_update_available = false; }
+    }
     else if (g_cursor == kOpt_Close) SettingsMenu_Toggle();
     else ChangeValue(g_cursor, 1);
     break;
