@@ -712,6 +712,28 @@ static void HandleGamepadInput(int button, bool pressed) {
   if (!!(g_gamepad_modifiers & (1 << button)) == pressed)
     return;
   g_gamepad_modifiers ^= 1 << button;
+
+  // Back/Start always toggle the settings menu
+  if (pressed && (button == kGamepadBtn_Back || button == kGamepadBtn_Start)) {
+    SettingsMenu_Toggle();
+    return;
+  }
+  // Route gamepad to settings menu when active
+  if (g_settings_menu_active && pressed) {
+    int key = 0;
+    switch (button) {
+    case kGamepadBtn_DpadUp:    key = SDLK_UP; break;
+    case kGamepadBtn_DpadDown:  key = SDLK_DOWN; break;
+    case kGamepadBtn_DpadLeft:  key = SDLK_LEFT; break;
+    case kGamepadBtn_DpadRight: key = SDLK_RIGHT; break;
+    case kGamepadBtn_A:         key = SDLK_RETURN; break;
+    case kGamepadBtn_B:         key = SDLK_ESCAPE; break;
+    }
+    if (key) {
+      SettingsMenu_Input(key, 0, pressed);
+      return;
+    }
+  }
   if (pressed)
     g_gamepad_last_cmd[button] = FindCmdForGamepadButton(button, g_gamepad_modifiers);
   if (g_gamepad_last_cmd[button] != 0)
