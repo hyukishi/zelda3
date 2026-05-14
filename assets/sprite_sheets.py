@@ -5,6 +5,7 @@ from util import get_bytes, get_words, get_byte, cache
 import array
 import tables
 import sys
+import os
 
 override_armor_palette = None
 #override_armor_palette = [0x7fff, 0x237e, 0x11b7, 0x369e, 0x14a5,  0x1ff, 0x1078, 0x599d, 0x3647, 0x3b68, 0xa4a, 0x12ef, 0x2a5c, 0x1571, 0x7a18,
@@ -15,6 +16,7 @@ override_armor_palette = None
 
 
 def save_as_png(dimensions, data, fname, palette = None):
+  os.makedirs(os.path.dirname(fname) or '.', exist_ok=True)
   img = Image.new('L' if palette == None else 'P', dimensions)
   img.putdata(data)
   if palette != None:
@@ -22,6 +24,7 @@ def save_as_png(dimensions, data, fname, palette = None):
   img.save(fname)
 
 def save_as_24bpp_png(dimensions, data, fname):
+  os.makedirs(os.path.dirname(fname) or '.', exist_ok=True)
   img = Image.new("RGB", dimensions)
   img.putdata(data)
   img.save(fname)
@@ -121,7 +124,7 @@ def get_hud_snes_palette():
 def decode_hud_icons():
   class PaletteUsage:
     def __init__(self):
-      self.data = open('palette_usage.bin', 'rb').read()
+      self.data = open(os.path.join(os.path.dirname(__file__), 'palette_usage.bin'), 'rb').read()
     def get(self, icon):
       usage = self.data[icon]
       for j in range(8):
@@ -299,7 +302,7 @@ def get_full_palette(pal_idx, pal_subidx):
 
 @cache
 def get_font_3x5():
-  return Image.open('../other/3x5_font.png').tobytes()
+  return Image.open(os.path.join(os.path.dirname(__file__), '..', 'other', '3x5_font.png')).tobytes()
 
 def draw_letter3x5(dst, dst_pitch, dx, dy, ch, color):
   font = get_font_3x5()

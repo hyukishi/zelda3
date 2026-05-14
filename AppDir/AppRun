@@ -29,13 +29,17 @@ if [ ! -f "$CONFIG_DIR/zelda3_assets.dat" ] && [ -f "$CONFIG_DIR/zelda3.sfc" ]; 
         echo "Setting up Python environment..."
         python3 -m venv "$VENV_DIR" 2>/dev/null || true
     fi
+    ROM_FILE="$CONFIG_DIR/zelda3.sfc"
     if [ -f "$VENV_DIR/bin/python3" ]; then
         "$VENV_DIR/bin/pip" install --quiet pillow pyyaml 2>/dev/null
-        (cd "$CONFIG_DIR" && PYTHONPATH="$HERE/assets" "$VENV_DIR/bin/python3" "$HERE/assets/restool.py" --extract-from-rom)
+        (cd "$CONFIG_DIR" && PYTHONPATH="$HERE/assets" "$VENV_DIR/bin/python3" "$HERE/assets/restool.py" --extract-from-rom --rom "$ROM_FILE")
     else
         python3 -m pip install --user pillow pyyaml 2>/dev/null || true
-        (cd "$CONFIG_DIR" && PYTHONPATH="$HERE/assets" python3 "$HERE/assets/restool.py" --extract-from-rom)
+        (cd "$CONFIG_DIR" && PYTHONPATH="$HERE/assets" python3 "$HERE/assets/restool.py" --extract-from-rom --rom "$ROM_FILE")
     fi
+
+    # compile_resources writes ../zelda3_assets.dat relative to CWD
+    [ -f "$CONFIG_DIR/../zelda3_assets.dat" ] && mv "$CONFIG_DIR/../zelda3_assets.dat" "$CONFIG_DIR/zelda3_assets.dat"
 
     if [ ! -f "$CONFIG_DIR/zelda3_assets.dat" ]; then
         echo ""
