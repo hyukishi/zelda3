@@ -23,24 +23,25 @@ jobs:
 
   build-linux:
     name: Linux x86_64 AppImage
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
     - name: Install system deps
-      run: sudo apt update && sudo apt install -y libsdl2-dev wget file
+      run: |
+        sudo apt update
+        sudo apt install -y build-essential libsdl2-dev python3 python3-pip python3-venv wget file
     - name: Install Python deps
-      run: pip install pillow pyyaml
+      run: pip3 install --no-cache-dir pillow pyyaml
     - name: Build
       run: make -j$(nproc)
     - name: Bundle extraction scripts
       run: |
         cp assets/restool.py AppDir/
         cp -r assets AppDir/
+        cp -r other AppDir/
     - name: Bundle AppImage
       run: |
+        rm -f AppDir/glsl-shaders AppDir/sprites-gfx
         cp zelda3 AppDir/
         cp zelda3.ini AppDir/
         chmod +x AppDir/zelda3
