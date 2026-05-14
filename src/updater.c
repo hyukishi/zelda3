@@ -118,10 +118,10 @@ void Updater_Check(void) {
   g_update_version = g_new_version;
   g_update_available = true;
 
-  // Download synchronously (called from menu, user is waiting)
+  // Download in background so menu stays responsive
   snprintf(g_staged_path, sizeof(g_staged_path), "/tmp/zelda3_update_%s", latest);
   snprintf(cmd, sizeof(cmd),
-    "curl -sL '%s' -o '%s' 2>/dev/null", g_download_url, g_staged_path);
+    "curl -sL '%s' -o '%s' 2>/dev/null &", g_download_url, g_staged_path);
   system(cmd);
 }
 

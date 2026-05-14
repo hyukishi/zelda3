@@ -328,6 +328,8 @@ static void DrawMainPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w
     case kOpt_Update:
       if (g_update_available && Updater_IsReady())
         DrawString(buf, pitch, vx, y, g_update_version ? g_update_version : "Ready", kCol_Cheat);
+      else if (g_update_available)
+        DrawString(buf, pitch, vx, y, "Downloading...", kCol_Action);
       else
         DrawString(buf, pitch, vx, y, "Check...", kCol_Value);
       break;
