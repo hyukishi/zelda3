@@ -1,0 +1,117 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 7
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 17
+  blockset: 12
+  enemyblk: 29
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [12, 0]
+  stair0_dest: [29, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 3]
+  stair3_dest: [0, 1]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [10, 8, upper, 1E-PegSwitch]
+- [24, 7, upper, 5B-WallBubble(L-R)]
+- [22, 11, upper, 5B-WallBubble(L-R)]
+- [25, 16, upper, 9B-Wizzrobe]
+- [21, 21, upper, C5-Shooter]
+- [26, 21, upper, C5-Shooter]
+- [21, 25, upper, A7-Stalfos]
+- [23, 25, upper, D1-Transform/Smoke]
+- [27, 25, upper, A7-Stalfos]
+Secrets:
+- [11, 13, 08-Key]
+- [50, 22, 0C-Magic]
+- [52, 24, 0B-Heart]
+- [54, 26, 0C-Magic]
+- [56, 28, 0B-Heart]
+- [48, 46, 0B-Heart]
+Chests: []
+Entrances: []
+Layer1:
+- {x: 2, y: 13, s: 1*0, n: '0D-/ Wall Tile Bot (HIGH) [NW]'}
+- {x: 2, y: 16, s: 1*0, n: '0E-\ Wall Tile Bot (HIGH) [SW]'}
+- {x: 2, y: 14, s: 0*3, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 12, y: 26, s: 1*0, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 19, y: 25, s: 0*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 19, y: 26, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 19, y: 21, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 23, y: 21, s: 0*1, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 25, y: 21, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 25, y: 25, s: 0*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 25, y: 26, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 29, y: 26, s: 0*3, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 34, y: 26, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 34, y: 30, s: 3*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 34, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 19, y: 4, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 19, y: 8, s: 0*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 19, y: 10, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 23, y: 10, s: 0*1, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 25, y: 10, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 25, y: 8, s: 0*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 25, y: 4, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 45, y: 4, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 45, y: 8, s: 0*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 45, y: 10, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 49, y: 10, s: 0*1, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 51, y: 9, s: 0*0, n: '0D-/ Wall Tile Bot (HIGH) [NW]'}
+- {x: 30, y: 4, s: 0*1, n: '3A-[N]Wall Decor: [L-R]'}
+- {x: 58, y: 8, s: 1*3, n: '91-[E]Wall Horz: [U-D]'}
+- {x: 59, y: 25, s: 0*1, n: '80-[E]Wall Torches [U-D]'}
+- {x: 40, y: 59, s: 0*1, n: '56-[S]Wall Torches [L-R]'}
+- {x: 38, y: 32, s: 3*1, n: 'DF-Spike Floor [4-way]'}
+- {x: 37, y: 28, s: 0*1, n: 'B8-Blue Switch Block [L-R]'}
+- {x: 44, y: 30, s: 0*3, n: '92-Blue Peg Block [U-D]'}
+- {x: 46, y: 36, s: 1*2, n: 'B8-Blue Switch Block [L-R]'}
+- {x: 22, y: 16, s: 3*0, n: '5D-Large Horz: Rail [L-R]'}
+- {x: 38, y: 16, s: 1*3, n: '5D-Large Horz: Rail [L-R]'}
+- {x: 30, y: 10, s: 0*3, n: '88-Large Vert: Rail [U-D]'}
+- {x: 30, y: 16, s: 0*2, n: '88-Large Vert: Rail [U-D]'}
+- {x: 34, y: 10, s: 0*3, n: '88-Large Vert: Rail [U-D]'}
+- {x: 34, y: 16, s: 0*2, n: '88-Large Vert: Rail [U-D]'}
+- {x: 38, y: 10, s: 0*3, n: '88-Large Vert: Rail [U-D]'}
+- {x: 38, y: 16, s: 0*2, n: '88-Large Vert: Rail [U-D]'}
+- {x: 42, y: 10, s: 0*3, n: '88-Large Vert: Rail [U-D]'}
+- {x: 42, y: 16, s: 0*2, n: '88-Large Vert: Rail [U-D]'}
+- {x: 46, y: 21, s: 0*3, n: '88-Large Vert: Rail [U-D]'}
+- {x: 39, y: 27, s: 0*3, n: '5D-Large Horz: Rail [L-R]'}
+- {x: 11, y: 13, n: FAF-Pot}
+- {x: 42, y: 42, n: FE4-Fireball Shooter}
+- {x: 52, y: 42, n: FE4-Fireball Shooter}
+- {x: 46, y: 42, n: FAF-Pot}
+- {x: 48, y: 46, n: FAF-Pot}
+- {x: 46, y: 50, n: FAF-Pot}
+- {x: 48, y: 54, n: FAF-Pot}
+- {x: 38, y: 56, n: FAF-Pot}
+- {x: 56, y: 56, n: FAF-Pot}
+- {x: 50, y: 22, n: FAF-Pot}
+- {x: 52, y: 24, n: FAF-Pot}
+- {x: 54, y: 26, n: FAF-Pot}
+- {x: 56, y: 28, n: FAF-Pot}
+- {x: 2, y: 4, s: 1*1, n: 'A0-/ Ceiling [NW]'}
+- {x: 2, y: 21, s: 1*1, n: 'A1-\ Ceiling [SW]'}
+- {x: 2, y: 30, s: 3*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 2, y: 46, s: 3*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 18, y: 30, s: 3*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 18, y: 46, s: 3*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 23, y: 25, s: 0*3, n: '60-Ceiling [U-D]'}
+- {x: 23, y: 4, s: 0*3, n: '60-Ceiling [U-D]'}
+- {x: 49, y: 4, s: 0*3, n: '60-Ceiling [U-D]'}
+- {x: 51, y: 4, s: 0*1, n: 'A0-/ Ceiling [NW]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 28, pos: 8, dir: 1}
+- {type: 0, pos: 7, dir: 3}

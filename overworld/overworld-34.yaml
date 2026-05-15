@@ -1,0 +1,44 @@
+Header:
+  name: 'LW 034 : Smithy Estate'
+  size: small
+  gfx: 35
+  palette: 8
+  sign_text: 167
+  music: {beginning: Beginning, zelda: Town, sword: Town, agahnim: World_map}
+  ambient: {beginning: Heavy rain, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances:
+- {index: 16, x: 16, y: 13, entrance_id: 17}
+- {index: 99, x: 13, y: 7, entrance_id: 100}
+Holes:
+- {x: 18, y: 15, entrance_id: 126}
+- {x: 18, y: 16, entrance_id: 126}
+Exits:
+- index: 18
+  room: 227
+  xy: [264, 200]
+  scroll_xy: [142, 122]
+  camera_xy: [275, 231]
+  load_xy: [1, 1]
+  unk: [6, 2]
+Items:
+- [20, 8, 05-Bomb]
+- [7, 22, 01-Rupee-G]
+- [8, 22, 01-Rupee-G]
+- [11, 22, 01-Rupee-G]
+- [11, 24, 04-Random]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 6, palette: 1}
+  sprites:
+  - [12, 4, D1-Transform/Smoke]
+  - [23, 18, 42-GreenSoldier]
+  - [18, 20, 0B-Chicken]
+Sprites.SecondPart:
+  info: {gfx: 6, palette: 1}
+  sprites:
+  - [12, 4, D1-Transform/Smoke]
+  - [12, 20, 0B-Chicken]
+  - [18, 20, 0B-Chicken]

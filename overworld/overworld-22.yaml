@@ -1,0 +1,45 @@
+Header:
+  name: 'LW 022 : Coven of Commerce'
+  size: small
+  gfx: 41
+  palette: 9
+  sign_text: 63
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel:
+- bird_travel_id: 1
+  xy: [200, 376]
+  scroll_xy: [78, 278]
+  camera_xy: [211, 387]
+  load_xy: [0, 0]
+  unk: [-6, -14]
+Entrances:
+- {index: 75, x: 12, y: 20, entrance_id: 76}
+Exits:
+- index: 72
+  room: 4116
+  xy: [209, 77]
+  scroll_xy: [87, 0]
+  camera_xy: [220, 109]
+  load_xy: [0, 0]
+  unk: [0, -7]
+Items:
+- [14, 15, 01-Rupee-G]
+- [19, 16, 03-Bee]
+- [20, 18, 04-Random]
+- [20, 19, 04-Random]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 13, palette: 6}
+  sprites:
+  - [13, 10, 0D-Cucumber]
+  - [15, 21, 36-Witch]
+  - [6, 24, 0D-Cucumber]
+Sprites.SecondPart:
+  info: {gfx: 13, palette: 6}
+  sprites:
+  - [13, 10, 0D-Cucumber]
+  - [15, 21, 36-Witch]
+  - [6, 24, 0D-Cucumber]

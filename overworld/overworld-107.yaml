@@ -1,0 +1,27 @@
+Header:
+  name: 'DW 107 : Bomb Shop Grounds West'
+  size: small
+  gfx: 48
+  palette: 16
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances:
+- {index: 119, x: 24, y: 6, entrance_id: 113}
+Exits: []
+Items:
+- [16, 6, 04-Random]
+- [24, 6, 84-Staircase]
+- [7, 24, 01-Rupee-G]
+- [9, 24, 01-Rupee-G]
+- [11, 25, 01-Rupee-G]
+- [13, 25, 01-Rupee-G]
+Sprites:
+  info: {gfx: 19, palette: 14}
+  sprites:
+  - [22, 8, 25-LiveTree]
+  - [8, 9, 22-HoppingBulbPlan]
+  - [23, 15, 25-LiveTree]
+  - [19, 22, 12-PigSpearMan]
+  - [15, 25, 12-PigSpearMan]

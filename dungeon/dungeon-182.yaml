@@ -1,0 +1,93 @@
+Header:
+  floor1: 1
+  floor2: 13
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 24
+  blockset: 13
+  enemyblk: 30
+  effect: None
+  tag0: SE Kill enemy to open
+  tag1: Move block to get chest
+  hole0_dest: [0, 0]
+  stair0_dest: [21, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [11, 0]
+  stair3_dest: [5, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [6, 7, upper, CA-Chomp]
+- [10, 7, upper, CA-Chomp]
+- [3, 4, upper, 1E-PegSwitch]
+- [12, 4, upper, 1E-PegSwitch]
+- [23, 7, upper, E3-Fairy]
+- [7, 21, upper, C7-FuzzyStack, drop_key]
+- [23, 24, upper, 114-FloorTiles]
+- [7, 27, upper, 8F-Blob]
+- [8, 27, upper, 8F-Blob]
+Secrets:
+- [47, 18, 0D-BigMagic]
+Chests: [36]
+Entrances: []
+Layer1:
+- {x: 8, y: 36, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 8, y: 40, s: 2*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 8, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 20, y: 36, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 20, y: 40, s: 2*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 20, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 0, y: 4, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 0, y: 8, s: 2*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 0, y: 26, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 4, y: 4, s: 3*0, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 4, y: 26, s: 3*0, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 28, y: 4, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 28, y: 8, s: 2*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 28, y: 26, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 4, y: 8, s: 0*3, n: C4-Doorless Room Transition}
+- {x: 4, y: 22, s: 0*0, n: C4-Doorless Room Transition}
+- {x: 24, y: 8, s: 0*3, n: C4-Doorless Room Transition}
+- {x: 24, y: 22, s: 0*0, n: C4-Doorless Room Transition}
+- {x: 11, y: 23, s: 0*0, n: '89-Block Vert: [U-D]'}
+- {x: 19, y: 23, s: 0*0, n: '89-Block Vert: [U-D]'}
+- {x: 9, y: 25, s: 0*0, n: '89-Block Vert: [U-D]'}
+- {x: 9, y: 23, s: 0*0, n: '89-Block Vert: [U-D]'}
+- {x: 21, y: 25, s: 0*0, n: '89-Block Vert: [U-D]'}
+- {x: 21, y: 23, s: 0*0, n: '89-Block Vert: [U-D]'}
+- {x: 11, y: 25, s: 0*0, n: '89-Block Vert: [U-D]'}
+- {x: 19, y: 25, s: 0*0, n: '89-Block Vert: [U-D]'}
+- {x: 3, y: 21, s: 1*0, n: 'B8-Blue Switch Block [L-R]'}
+- {x: 21, y: 21, s: 1*0, n: 'B8-Blue Switch Block [L-R]'}
+- {x: 3, y: 14, s: 3*1, n: 'B9-Red Switch Block [L-R]'}
+- {x: 15, y: 10, n: F99-Chest}
+- {x: 11, y: 14, n: 134-Block}
+- {x: 19, y: 14, n: 134-Block}
+- {x: 14, y: 4, n: 139-Door Staircase Down L}
+- {x: 38, y: 8, n: 'FEB-Throne/Decor: Object'}
+- {x: 54, y: 8, n: 'FEB-Throne/Decor: Object'}
+- {x: 38, y: 22, n: 'FEB-Throne/Decor: Object'}
+- {x: 54, y: 22, n: 'FEB-Throne/Decor: Object'}
+- {x: 47, y: 18, n: FAF-Pot}
+- {x: 42, y: 40, s: 2*3, n: 'DB-Floor2 [4-way]'}
+- {x: 42, y: 54, s: 2*0, n: 'DB-Floor2 [4-way]'}
+- {x: 38, y: 42, s: 0*3, n: 'DF-Spike Floor [4-way]'}
+- {x: 38, y: 40, s: 1*0, n: 'DF-Spike Floor [4-way]'}
+- {x: 50, y: 40, s: 1*0, n: 'DF-Spike Floor [4-way]'}
+- {x: 54, y: 42, s: 0*3, n: 'DF-Spike Floor [4-way]'}
+- {x: 0, y: 36, s: 1*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 0, y: 52, s: 1*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 24, y: 36, s: 1*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 24, y: 52, s: 1*2, n: 'C0-Ceiling Large [4-way]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 34, pos: 0, dir: 0}
+- {type: 54, pos: 8, dir: 0}
+- {type: 28, pos: 6, dir: 1}
+- {type: 28, pos: 6, dir: 0}
+- {type: 0, pos: 8, dir: 1}

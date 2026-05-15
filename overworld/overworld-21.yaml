@@ -1,0 +1,48 @@
+Header:
+  name: 'LW 021 : South Bend'
+  size: small
+  gfx: 32
+  palette: 0
+  sign_text: 167
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel:
+- whirlpool_src_area: 51
+  xy: [272, 136]
+  scroll_xy: [138, 42]
+  camera_xy: [279, 151]
+  load_xy: [1, 0]
+  unk: [-10, -6]
+Entrances:
+- {index: 55, x: 10, y: 5, entrance_id: 56}
+Holes:
+- {x: 4, y: 15, entrance_id: 124}
+Exits:
+- index: 57
+  room: 8
+  xy: [168, 72]
+  scroll_xy: [54, 0]
+  camera_xy: [179, 111]
+  load_xy: [1, 1]
+  unk: [0, 10]
+Items:
+- [8, 7, 05-Bomb]
+- [4, 15, 80-Hole]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 0, palette: 0}
+  sprites:
+  - [17, 9, BA-Whirlpool]
+  - [22, 14, 41-BlueSoldier]
+  - [27, 15, E3-Fairy]
+  - [11, 23, 41-BlueSoldier]
+Sprites.SecondPart:
+  info: {gfx: 0, palette: 0}
+  sprites:
+  - [17, 9, BA-Whirlpool]
+  - [22, 14, 45-HogSpearMan]
+  - [27, 15, E3-Fairy]
+  - [11, 23, 43-RedSpearSoldier]
+  - [4, 26, AC-Apples]

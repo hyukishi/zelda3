@@ -1,0 +1,107 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 3
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 7
+  blockset: 20
+  enemyblk: 5
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [16, 0]
+  stair0_dest: [8, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 0]
+  stair3_dest: [0, 3]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: true
+Sprites:
+- [7, 10, upper, 28-PersonRm270]
+- [23, 20, upper, BB-ShopMan]
+Secrets: []
+Chests: []
+Entrances:
+- entrance_index: 88
+  name: General Store 2
+  scroll_xy: [256, 272]
+  player_xy: [376, 472]
+  camera_xy: [383, 391]
+  blockset: 20
+  music: Cave
+  palace: None
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, single_y, lower_right]
+  floor: 0
+  house_exit_door: [none]
+- entrance_index: 90
+  name: Storyteller Cave 2
+  scroll_xy: [0, 272]
+  player_xy: [120, 472]
+  camera_xy: [127, 391]
+  blockset: 20
+  music: Cave
+  palace: None
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, double_y, lower_left]
+  floor: 0
+  house_exit_door: [none]
+Layer1:
+- {x: 4, y: 17, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 8, y: 17, s: 2*0, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 24, y: 17, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 4, y: 21, s: 3*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 4, y: 48, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 8, y: 48, s: 0*1, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 10, y: 48, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 10, y: 52, s: 0*3, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 10, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 18, y: 52, s: 0*3, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 18, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 22, y: 48, s: 0*1, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 24, y: 21, s: 3*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 24, y: 48, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 18, y: 48, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 11, y: 20, s: 0*0, n: 'DC-Chest Platform? [4-way]'}
+- {x: 10, y: 30, n: 123-Table}
+- {x: 18, y: 30, n: 123-Table}
+- {x: 10, y: 36, n: 123-Table}
+- {x: 18, y: 36, n: 123-Table}
+- {x: 10, y: 42, n: 123-Table}
+- {x: 18, y: 42, n: 123-Table}
+- {x: 34, y: 52, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 38, y: 52, s: 0*1, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 40, y: 52, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 40, y: 56, s: 0*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 40, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 52, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 52, y: 56, s: 0*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 52, y: 52, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 56, y: 52, s: 0*1, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 58, y: 52, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 40, y: 45, s: 0*3, n: '33-Red Carpet Floor [L-R]'}
+- {x: 39, y: 44, s: 3*2, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 39, y: 49, s: 3*2, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 38, y: 45, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 56, y: 45, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 32, y: 56, s: 1*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 56, y: 56, s: 1*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 2, y: 0, s: 0*0, n: '60-Ceiling [U-D]'}
+- {x: 28, y: 0, s: 0*0, n: '60-Ceiling [U-D]'}
+- {x: 2, y: 52, s: 1*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 22, y: 52, s: 1*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 4, y: 1, s: 3*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 20, y: 1, s: 1*3, n: 'C0-Ceiling Large [4-way]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 14, pos: 6, dir: 1}
+- {type: 14, pos: 8, dir: 1}

@@ -1,0 +1,55 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: Normal
+  collision: One
+  lights_out: 0
+  palette: 7
+  blockset: 6
+  enemyblk: 25
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [2, 0]
+  stair0_dest: [18, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 0]
+  stair3_dest: [0, 0]
+  tele_msg: 199
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites: []
+Secrets: []
+Chests: []
+Entrances:
+- entrance_index: 130
+  name: Chris Houlihan Room (Drop In)
+  scroll_xy: [0, 272]
+  player_xy: [119, 407]
+  camera_xy: [127, 392]
+  blockset: 6
+  music: Cave
+  palace: None
+  doorway_orientation: 0
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, single_y, lower_left]
+  floor: -1
+  house_exit_door: [none]
+Layer1:
+- {x: 15, y: 37, n: F93-Telepathic Tile}
+- {x: 6, y: 40, s: 3*3, n: 'E2-Rupee Floor [4-way]'}
+- {x: 22, y: 40, s: 0*3, n: 'E2-Rupee Floor [4-way]'}
+- {x: 6, y: 54, s: 3*0, n: 'E2-Rupee Floor [4-way]'}
+- {x: 22, y: 54, s: 0*0, n: 'E2-Rupee Floor [4-way]'}
+- {x: 6, y: 40, n: F92-Rupee Floor}
+- {x: 13, y: 40, n: F92-Rupee Floor}
+- {x: 20, y: 40, n: F92-Rupee Floor}
+- {x: 6, y: 50, n: F92-Rupee Floor}
+- {x: 20, y: 50, n: F92-Rupee Floor}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 14, pos: 6, dir: 1}

@@ -1,0 +1,28 @@
+Header:
+  name: 'LW 045 : Eastern Ruins Bridge'
+  size: small
+  gfx: 39
+  palette: 4
+  sign_text: 65
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items: []
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 11, palette: 3}
+  sprites:
+  - [19, 11, 42-GreenSoldier]
+  - [16, 16, 46-BlueArcher]
+  - [18, 22, 41-BlueSoldier]
+Sprites.SecondPart:
+  info: {gfx: 35, palette: 3}
+  sprites:
+  - [15, 8, 0A-4WayOctorok]
+  - [18, 11, 41-BlueSoldier]
+  - [18, 22, 45-HogSpearMan]
+  - [28, 23, 55-FireBallZora]

@@ -1,0 +1,102 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 5
+  start_quadrant: 0
+  bg2: Normal
+  collision: Moving floor
+  lights_out: 0
+  palette: 19
+  blockset: 11
+  enemyblk: 41
+  effect: Moving floor
+  tag0: NE Kill enemy to open
+  tag1: None
+  hole0_dest: [0, 0]
+  stair0_dest: [30, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [19, 0]
+  stair3_dest: [11, 0]
+  tele_msg: 197
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [6, 21, upper, 1E-PegSwitch]
+- [25, 4, upper, 91-StalfosKnight]
+- [22, 11, upper, 91-StalfosKnight]
+- [5, 18, upper, 9D-VRat]
+- [14, 18, upper, 9D-VRat]
+- [16, 18, upper, 107-MovingFloor]
+- [18, 18, upper, 9D-VRat]
+- [21, 18, upper, 9D-VRat]
+- [7, 22, upper, 24-BlueMiri]
+- [17, 24, upper, 24-BlueMiri, drop_key]
+- [21, 25, upper, 24-BlueMiri]
+- [11, 26, upper, 24-BlueMiri]
+Secrets:
+- [48, 12, 0A-Bomb]
+- [50, 12, 0C-Magic]
+- [44, 20, 0B-Heart]
+- [46, 20, 0C-Magic]
+Chests: []
+Entrances: []
+Layer1:
+- {x: 38, y: 4, s: 0*3, n: '05-[N]Wall Column [L-R]'}
+- {x: 38, y: 26, s: 0*3, n: '06-[S]Wall Column [L-R]'}
+- {x: 47, y: 5, n: F93-Telepathic Tile}
+- {x: 46, y: 14, n: FC8-Fake Bomb Floor}
+- {x: 5, y: 39, s: 0*3, n: 'DE-Spike Block [4-way]'}
+- {x: 5, y: 47, s: 0*3, n: 'DE-Spike Block [4-way]'}
+- {x: 5, y: 55, s: 0*1, n: 'DE-Spike Block [4-way]'}
+- {x: 10, y: 37, n: 'F90-?'}
+- {x: 22, y: 37, n: 'F90-?'}
+- {x: 28, y: 37, n: 'F90-?'}
+- {x: 36, y: 37, n: 'F90-?'}
+- {x: 42, y: 37, n: 'F90-?'}
+- {x: 10, y: 59, n: 'F91-?'}
+- {x: 22, y: 59, n: 'F91-?'}
+- {x: 28, y: 59, n: 'F91-?'}
+- {x: 36, y: 59, n: 'F91-?'}
+- {x: 42, y: 59, n: 'F91-?'}
+- {x: 57, y: 39, s: 0*3, n: 'DE-Spike Block [4-way]'}
+- {x: 57, y: 47, s: 0*3, n: 'DE-Spike Block [4-way]'}
+- {x: 57, y: 55, s: 0*1, n: 'DE-Spike Block [4-way]'}
+- {x: 42, y: 11, s: 0*0, n: '5D-Large Horz: Rail [L-R]'}
+- {x: 48, y: 12, n: FAF-Pot}
+- {x: 50, y: 12, n: FAF-Pot}
+- {x: 52, y: 11, s: 1*2, n: '88-Large Vert: Rail [U-D]'}
+- {x: 48, y: 20, s: 0*0, n: '5D-Large Horz: Rail [L-R]'}
+- {x: 44, y: 20, n: FAF-Pot}
+- {x: 46, y: 20, n: FAF-Pot}
+- {x: 42, y: 11, s: 1*2, n: '88-Large Vert: Rail [U-D]'}
+Layer2:
+- {x: 0, y: 39, s: 3*3, n: 'CA-Floor5 [4-way]'}
+- {x: 16, y: 39, s: 3*3, n: 'CA-Floor5 [4-way]'}
+- {x: 32, y: 39, s: 3*3, n: 'CA-Floor5 [4-way]'}
+- {x: 48, y: 39, s: 3*3, n: 'CA-Floor5 [4-way]'}
+- {x: 0, y: 55, s: 3*0, n: 'CA-Floor5 [4-way]'}
+- {x: 16, y: 55, s: 3*0, n: 'CA-Floor5 [4-way]'}
+- {x: 32, y: 55, s: 3*0, n: 'CA-Floor5 [4-way]'}
+- {x: 48, y: 55, s: 3*0, n: 'CA-Floor5 [4-way]'}
+Layer3:
+- {x: 7, y: 39, s: 3*3, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 23, y: 39, s: 3*3, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 39, y: 39, s: 3*3, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 53, y: 39, s: 0*3, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 7, y: 55, s: 3*0, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 23, y: 55, s: 3*0, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 39, y: 55, s: 3*0, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 53, y: 55, s: 0*0, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 18, y: 39, s: 0*2, n: 'DE-Spike Block [4-way]'}
+- {x: 12, y: 51, s: 3*0, n: 'DE-Spike Block [4-way]'}
+- {x: 20, y: 51, s: 0*3, n: 'DE-Spike Block [4-way]'}
+- {x: 26, y: 51, s: 0*3, n: 'DE-Spike Block [4-way]'}
+- {x: 32, y: 39, s: 0*3, n: 'DE-Spike Block [4-way]'}
+- {x: 38, y: 49, s: 0*3, n: 'DE-Spike Block [4-way]'}
+- {x: 38, y: 57, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 46, y: 53, s: 2*0, n: 'DE-Spike Block [4-way]'}
+- {x: 44, y: 39, s: 0*3, n: 'DE-Spike Block [4-way]'}
+- {x: 46, y: 45, s: 2*0, n: 'DE-Spike Block [4-way]'}
+Layer3.doors:
+- {type: 24, pos: 8, dir: 0}
+- {type: 28, pos: 6, dir: 1}

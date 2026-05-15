@@ -1,0 +1,32 @@
+Header:
+  name: 'LW 046 : Eastern Ruins Ridge'
+  size: small
+  gfx: 32
+  palette: 0
+  sign_text: 167
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances:
+- {index: 93, x: 18, y: 4, entrance_id: 94}
+Exits: []
+Items: []
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 11, palette: 3}
+  sprites:
+  - [14, 12, 41-BlueSoldier]
+  - [23, 14, 41-BlueSoldier]
+  - [5, 18, 55-FireBallZora]
+  - [25, 23, 08-Octorok]
+Sprites.SecondPart:
+  info: {gfx: 35, palette: 3}
+  sprites:
+  - [12, 9, E3-Fairy]
+  - [20, 11, 79-Bee]
+  - [14, 12, 45-HogSpearMan]
+  - [23, 14, 41-BlueSoldier]
+  - [5, 18, 55-FireBallZora]
+  - [25, 23, 08-Octorok]

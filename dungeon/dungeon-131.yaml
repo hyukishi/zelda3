@@ -1,0 +1,142 @@
+Header:
+  floor1: 9
+  floor2: 1
+  layout: 2
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 9
+  blockset: 5
+  enemyblk: 10
+  effect: None
+  tag0: SW Move block to open
+  tag1: None
+  hole0_dest: [5, 0]
+  stair0_dest: [10, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 0]
+  stair3_dest: [0, 1]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [27, 8, upper, 63-SandCrab1]
+- [20, 16, upper, 63-SandCrab1]
+- [20, 5, upper, 71-Leever]
+- [7, 6, upper, E3-Fairy]
+- [8, 8, upper, E3-Fairy]
+- [27, 11, upper, 71-Leever]
+- [23, 16, upper, 71-Leever]
+- [8, 23, upper, 61-Beamos]
+- [24, 24, upper, 71-Leever]
+- [20, 27, upper, 71-Leever]
+Secrets:
+- [38, 8, 09-Arrow]
+- [40, 8, 01-Rupee-G]
+- [38, 56, 07-Rupee-B]
+- [40, 56, 09-Arrow]
+Chests: []
+Entrances:
+- entrance_index: 11
+  name: Desert Palace West
+  scroll_xy: [0, 272]
+  player_xy: [120, 472]
+  camera_xy: [127, 391]
+  blockset: 18
+  music: Palace
+  palace: Desert
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, single_y, lower_left]
+  floor: -1
+  house_exit_door: [none]
+Layer1:
+- {x: 42, y: 4, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 42, y: 8, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 42, y: 11, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 46, y: 11, s: 0*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 50, y: 0, s: 1*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 50, y: 11, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 54, y: 0, s: 0*1, n: C4-Doorless Room Transition}
+- {x: 58, y: 0, s: 1*0, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 58, y: 51, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 46, y: 51, s: 1*2, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 42, y: 54, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 42, y: 51, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 42, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 7, y: 9, s: 3*2, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 7, y: 10, s: 1*1, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 8, y: 18, s: 0*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 11, y: 19, s: 0*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 12, y: 22, s: 0*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 13, y: 22, s: 0*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 18, y: 22, s: 0*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 16, y: 22, s: 0*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 20, y: 18, s: 0*1, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 21, y: 18, s: 0*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 24, y: 10, s: 1*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 8, y: 10, s: 0*0, n: 'DB-Floor2 [4-way]'}
+- {x: 20, y: 10, s: 0*0, n: 'DB-Floor2 [4-way]'}
+- {x: 14, y: 22, s: 0*0, n: 'DB-Floor2 [4-way]'}
+- {x: 12, y: 10, s: 1*2, n: 'C8-Water Floor [4-way]'}
+- {x: 8, y: 14, s: 0*0, n: 'C8-Water Floor [4-way]'}
+- {x: 20, y: 14, s: 0*0, n: 'C8-Water Floor [4-way]'}
+- {x: 9, y: 9, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 21, y: 9, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 12, y: 10, s: 1*1, n: '3F-Water Edge [L-R]'}
+- {x: 12, y: 11, s: 0*2, n: '79-Water Edge [U-D]'}
+- {x: 8, y: 14, s: 0*2, n: '46-Water Edge [L-R]'}
+- {x: 8, y: 15, s: 0*1, n: '79-Water Edge [U-D]'}
+- {x: 8, y: 17, s: 0*2, n: '44-Water Edge [L-R]'}
+- {x: 12, y: 18, s: 0*2, n: '79-Water Edge [U-D]'}
+- {x: 12, y: 21, s: 1*1, n: '40-Water Edge [L-R]'}
+- {x: 19, y: 18, s: 0*2, n: '7A-Water Edge [U-D]'}
+- {x: 19, y: 17, s: 0*2, n: '43-Water Edge [L-R]'}
+- {x: 23, y: 15, s: 0*1, n: '7A-Water Edge [U-D]'}
+- {x: 19, y: 14, s: 0*2, n: '45-Water Edge [L-R]'}
+- {x: 19, y: 11, s: 0*2, n: '7A-Water Edge [U-D]'}
+- {x: 6, y: 40, s: 3*2, n: 'DB-Floor2 [4-way]'}
+- {x: 22, y: 40, s: 0*2, n: 'DB-Floor2 [4-way]'}
+- {x: 6, y: 52, s: 3*3, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 22, y: 52, s: 0*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 8, y: 40, s: 3*2, n: 'DB-Floor2 [4-way]'}
+- {x: 38, y: 8, n: FAF-Pot}
+- {x: 40, y: 8, n: FAF-Pot}
+- {x: 38, y: 56, n: FAF-Pot}
+- {x: 40, y: 56, n: FAF-Pot}
+- {x: 6, y: 36, s: 0*3, n: '05-[N]Wall Column [L-R]'}
+- {x: 34, y: 22, s: 2*0, n: '90-[W]Wall Vert: [U-D]'}
+- {x: 58, y: 42, s: 1*0, n: '91-[E]Wall Horz: [U-D]'}
+- {x: 50, y: 51, s: 0*3, n: 'B7-[S]Wall Decor: 1/2 [L-R]'}
+- {x: 6, y: 42, s: 0*0, n: '5E-Block [L-R]'}
+- {x: 8, y: 42, s: 0*1, n: '5E-Block [L-R]'}
+- {x: 18, y: 42, s: 0*1, n: '5E-Block [L-R]'}
+- {x: 20, y: 42, s: 0*1, n: '5E-Block [L-R]'}
+- {x: 42, y: 19, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 46, y: 19, s: 0*2, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 50, y: 19, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 42, y: 23, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 42, y: 27, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 46, y: 27, s: 0*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 50, y: 27, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 50, y: 23, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 42, y: 35, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 46, y: 35, s: 0*2, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 50, y: 35, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 42, y: 39, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 42, y: 43, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 46, y: 43, s: 0*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 50, y: 43, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 50, y: 39, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 46, y: 3, s: 0*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 46, y: 23, s: 0*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 46, y: 39, s: 0*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 46, y: 55, s: 3*1, n: 'C0-Ceiling Large [4-way]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 54, pos: 6, dir: 0}
+- {type: 10, pos: 6, dir: 1}
+- {type: 0, pos: 8, dir: 2}

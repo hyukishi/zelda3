@@ -1,0 +1,292 @@
+Header:
+  floor1: 2
+  floor2: 14
+  layout: 7
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 1
+  palette: 24
+  blockset: 13
+  enemyblk: 37
+  effect: None
+  tag0: Switch opens door(Toggle)
+  tag1: None
+  hole0_dest: [0, 0]
+  stair0_dest: [4, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [24, 0]
+  stair3_dest: [13, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: true
+Sprites:
+- [22, 10, upper, 7E-FireBlade]
+- [9, 15, upper, 7E-FireBlade]
+- [22, 22, upper, 7E-FireBlade]
+Secrets:
+- [56, 8, 07-Rupee-B]
+- [56, 30, 0B-Heart]
+- [38, 32, 88-Switch]
+- [56, 32, 0D-BigMagic]
+- [56, 34, 0B-Heart]
+- [56, 56, 0A-Bomb]
+Chests: []
+Entrances: []
+Layer1:
+- {x: 9, y: 7, s: 3*3, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 41, y: 7, s: 1*2, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 55, y: 7, n: '10A-Wall Outer Corner (LOW) [NE]'}
+- {x: 55, y: 11, s: 3*3, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 55, y: 43, s: 1*1, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 55, y: 55, n: '10B-Wall Outer Corner (LOW) [SE]'}
+- {x: 9, y: 55, s: 3*3, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 41, y: 55, s: 1*2, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 5, y: 55, n: '109-Wall Outer Corner (LOW) [SW]'}
+- {x: 5, y: 11, s: 3*3, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 5, y: 43, s: 1*1, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 5, y: 7, n: '108-Wall Outer Corner (LOW) [NW]'}
+- {x: 8, y: 10, n: '118-Wall Pit Corner (Lower) [NW]'}
+- {x: 10, y: 10, s: 3*3, n: '07-[N]Wall Pit [L-R]'}
+- {x: 42, y: 10, s: 1*1, n: '07-[N]Wall Pit [L-R]'}
+- {x: 54, y: 10, n: '11A-Wall Pit Corner (Lower) [NE]'}
+- {x: 54, y: 12, s: 3*3, n: '68-[E]Wall Pit [U-D]'}
+- {x: 54, y: 44, s: 1*0, n: '68-[E]Wall Pit [U-D]'}
+- {x: 54, y: 54, n: '11B-Wall Pit Corner (Lower) [SE]'}
+- {x: 10, y: 54, s: 3*3, n: '08-[S]Wall Pit [L-R]'}
+- {x: 42, y: 54, s: 1*1, n: '08-[S]Wall Pit [L-R]'}
+- {x: 8, y: 54, n: '119-Wall Pit Corner (Lower) [SW]'}
+- {x: 8, y: 12, s: 3*3, n: '67-[W]Wall Pit [U-D]'}
+- {x: 8, y: 44, s: 1*0, n: '67-[W]Wall Pit [U-D]'}
+- {x: 10, y: 12, s: 3*3, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 26, y: 12, s: 3*3, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 42, y: 12, s: 2*3, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 10, y: 28, s: 3*3, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 26, y: 28, s: 3*3, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 42, y: 28, s: 2*3, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 10, y: 42, s: 3*2, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 26, y: 42, s: 3*2, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 42, y: 42, s: 2*2, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 15, y: 15, s: 0*1, n: '7C-Cane Ride [U-D]'}
+- {x: 12, y: 18, s: 3*3, n: '50-Cane Ride [L-R]'}
+- {x: 29, y: 18, s: 2*2, n: '50-Cane Ride [L-R]'}
+- {x: 11, y: 19, s: 3*3, n: '7C-Cane Ride [U-D]'}
+- {x: 11, y: 36, s: 2*1, n: '7C-Cane Ride [U-D]'}
+- {x: 12, y: 47, s: 3*3, n: '50-Cane Ride [L-R]'}
+- {x: 29, y: 47, s: 2*2, n: '50-Cane Ride [L-R]'}
+- {x: 12, y: 21, s: 3*3, n: '50-Cane Ride [L-R]'}
+- {x: 29, y: 21, s: 1*0, n: '50-Cane Ride [L-R]'}
+- {x: 12, y: 27, s: 0*1, n: '50-Cane Ride [L-R]'}
+- {x: 12, y: 33, s: 0*1, n: '50-Cane Ride [L-R]'}
+- {x: 12, y: 38, s: 3*3, n: '50-Cane Ride [L-R]'}
+- {x: 29, y: 38, s: 0*1, n: '50-Cane Ride [L-R]'}
+- {x: 15, y: 22, s: 3*2, n: '7C-Cane Ride [U-D]'}
+- {x: 15, y: 39, s: 0*0, n: '7C-Cane Ride [U-D]'}
+- {x: 16, y: 41, s: 1*1, n: '50-Cane Ride [L-R]'}
+- {x: 16, y: 35, s: 1*1, n: '50-Cane Ride [L-R]'}
+- {x: 16, y: 44, s: 3*3, n: '50-Cane Ride [L-R]'}
+- {x: 33, y: 44, s: 1*2, n: '50-Cane Ride [L-R]'}
+- {x: 15, y: 45, s: 1*0, n: '7C-Cane Ride [U-D]'}
+- {x: 23, y: 16, s: 3*3, n: '7C-Cane Ride [U-D]'}
+- {x: 23, y: 33, s: 3*3, n: '7C-Cane Ride [U-D]'}
+- {x: 23, y: 51, s: 0*0, n: '7C-Cane Ride [U-D]'}
+- {x: 19, y: 36, s: 0*0, n: '7C-Cane Ride [U-D]'}
+- {x: 19, y: 48, s: 0*0, n: '7C-Cane Ride [U-D]'}
+- {x: 20, y: 50, s: 0*1, n: '50-Cane Ride [L-R]'}
+- {x: 19, y: 19, s: 1*2, n: '7C-Cane Ride [U-D]'}
+- {x: 20, y: 27, s: 2*2, n: '50-Cane Ride [L-R]'}
+- {x: 20, y: 24, s: 1*1, n: '50-Cane Ride [L-R]'}
+- {x: 27, y: 19, s: 0*3, n: '7C-Cane Ride [U-D]'}
+- {x: 32, y: 19, s: 1*2, n: '7C-Cane Ride [U-D]'}
+- {x: 24, y: 15, s: 2*1, n: '50-Cane Ride [L-R]'}
+- {x: 35, y: 13, s: 1*2, n: '7C-Cane Ride [U-D]'}
+- {x: 36, y: 12, s: 1*3, n: '50-Cane Ride [L-R]'}
+- {x: 45, y: 13, s: 0*0, n: '7C-Cane Ride [U-D]'}
+- {x: 42, y: 15, s: 1*0, n: '50-Cane Ride [L-R]'}
+- {x: 33, y: 24, s: 3*1, n: '50-Cane Ride [L-R]'}
+- {x: 48, y: 16, s: 3*0, n: '7C-Cane Ride [U-D]'}
+- {x: 41, y: 16, s: 1*2, n: '7C-Cane Ride [U-D]'}
+- {x: 38, y: 19, s: 0*3, n: '7C-Cane Ride [U-D]'}
+- {x: 51, y: 15, s: 2*2, n: '7C-Cane Ride [U-D]'}
+- {x: 46, y: 27, s: 0*3, n: '50-Cane Ride [L-R]'}
+- {x: 49, y: 18, s: 0*0, n: '50-Cane Ride [L-R]'}
+- {x: 46, y: 30, s: 0*0, n: '50-Cane Ride [L-R]'}
+- {x: 45, y: 25, s: 3*2, n: '7C-Cane Ride [U-D]'}
+- {x: 46, y: 33, s: 0*1, n: '50-Cane Ride [L-R]'}
+- {x: 27, y: 28, s: 0*3, n: '7C-Cane Ride [U-D]'}
+- {x: 28, y: 33, s: 0*3, n: '50-Cane Ride [L-R]'}
+- {x: 28, y: 41, s: 3*3, n: '50-Cane Ride [L-R]'}
+- {x: 32, y: 39, s: 0*0, n: '7C-Cane Ride [U-D]'}
+- {x: 27, y: 42, s: 1*2, n: '7C-Cane Ride [U-D]'}
+- {x: 28, y: 50, s: 1*3, n: '50-Cane Ride [L-R]'}
+- {x: 32, y: 45, s: 1*2, n: '7C-Cane Ride [U-D]'}
+- {x: 24, y: 53, s: 1*2, n: '50-Cane Ride [L-R]'}
+- {x: 37, y: 42, s: 1*2, n: '7C-Cane Ride [U-D]'}
+- {x: 41, y: 42, s: 1*2, n: '7C-Cane Ride [U-D]'}
+- {x: 42, y: 50, s: 1*0, n: '50-Cane Ride [L-R]'}
+- {x: 48, y: 42, s: 1*2, n: '7C-Cane Ride [U-D]'}
+- {x: 46, y: 41, s: 0*3, n: '50-Cane Ride [L-R]'}
+- {x: 51, y: 42, s: 1*3, n: '7C-Cane Ride [U-D]'}
+- {x: 49, y: 47, s: 0*0, n: '50-Cane Ride [L-R]'}
+- {x: 15, y: 14, n: 'F83-Cane Ride Spawn [?]Block'}
+- {x: 15, y: 51, n: 'F83-Cane Ride Spawn [?]Block'}
+- {x: 33, y: 33, n: 'F83-Cane Ride Spawn [?]Block'}
+- {x: 49, y: 33, n: 'F83-Cane Ride Spawn [?]Block'}
+- {x: 51, y: 14, n: 'F83-Cane Ride Spawn [?]Block'}
+- {x: 51, y: 51, n: 'F83-Cane Ride Spawn [?]Block'}
+- {x: 11, y: 18, n: 'F85-Cane Ride Node [S-E]'}
+- {x: 11, y: 21, n: 'F8B-Cane Ride Node [N-E-S]'}
+- {x: 11, y: 27, n: 'F8B-Cane Ride Node [N-E-S]'}
+- {x: 11, y: 33, n: 'F8B-Cane Ride Node [N-E-S]'}
+- {x: 11, y: 38, n: 'F8B-Cane Ride Node [N-E-S]'}
+- {x: 11, y: 47, n: 'F86-Cane Ride Node [N-E]'}
+- {x: 15, y: 18, n: 'F8A-Cane Ride Node [W-N-E]'}
+- {x: 15, y: 21, n: 'F89-Cane Ride Node [W-S-E]'}
+- {x: 15, y: 27, n: 'F8C-Cane Ride Node [N-W-S]'}
+- {x: 15, y: 33, n: 'F8C-Cane Ride Node [N-W-S]'}
+- {x: 15, y: 35, n: 'F8B-Cane Ride Node [N-E-S]'}
+- {x: 15, y: 38, n: 'F8F-?'}
+- {x: 15, y: 41, n: 'F86-Cane Ride Node [N-E]'}
+- {x: 15, y: 44, n: 'F85-Cane Ride Node [S-E]'}
+- {x: 15, y: 47, n: 'F8F-?'}
+- {x: 19, y: 18, n: 'F89-Cane Ride Node [W-S-E]'}
+- {x: 19, y: 21, n: 'F8F-?'}
+- {x: 19, y: 24, n: 'F8B-Cane Ride Node [N-E-S]'}
+- {x: 19, y: 27, n: 'F86-Cane Ride Node [N-E]'}
+- {x: 19, y: 35, n: 'F89-Cane Ride Node [W-S-E]'}
+- {x: 19, y: 38, n: 'F8A-Cane Ride Node [W-N-E]'}
+- {x: 19, y: 47, n: 'F89-Cane Ride Node [W-S-E]'}
+- {x: 19, y: 50, n: 'F86-Cane Ride Node [N-E]'}
+- {x: 23, y: 15, n: 'F85-Cane Ride Node [S-E]'}
+- {x: 23, y: 18, n: 'F8F-?'}
+- {x: 23, y: 21, n: 'F84-Cane Ride Node [4-way]'}
+- {x: 23, y: 24, n: 'F8F-?'}
+- {x: 23, y: 27, n: 'F8F-?'}
+- {x: 23, y: 35, n: 'F8C-Cane Ride Node [N-W-S]'}
+- {x: 23, y: 38, n: 'F8F-?'}
+- {x: 23, y: 41, n: 'F8C-Cane Ride Node [N-W-S]'}
+- {x: 23, y: 44, n: 'F8F-?'}
+- {x: 23, y: 47, n: 'F84-Cane Ride Node [4-way]'}
+- {x: 23, y: 50, n: 'F8C-Cane Ride Node [N-W-S]'}
+- {x: 23, y: 53, n: 'F86-Cane Ride Node [N-E]'}
+- {x: 27, y: 18, n: 'F89-Cane Ride Node [W-S-E]'}
+- {x: 27, y: 21, n: 'F8F-?'}
+- {x: 27, y: 24, n: 'F88-Cane Ride Node [N-E]-2'}
+- {x: 27, y: 27, n: 'F89-Cane Ride Node [W-S-E]'}
+- {x: 27, y: 33, n: 'F86-Cane Ride Node [N-E]'}
+- {x: 27, y: 41, n: 'F85-Cane Ride Node [S-E]'}
+- {x: 27, y: 44, n: 'F84-Cane Ride Node [4-way]'}
+- {x: 27, y: 47, n: 'F8F-?'}
+- {x: 27, y: 50, n: 'F86-Cane Ride Node [N-E]'}
+- {x: 32, y: 18, n: 'F89-Cane Ride Node [W-S-E]'}
+- {x: 32, y: 21, n: 'F8F-?'}
+- {x: 32, y: 24, n: 'F8B-Cane Ride Node [N-E-S]'}
+- {x: 32, y: 27, n: 'F88-Cane Ride Node [N-E]-2'}
+- {x: 32, y: 38, n: 'F87-Cane Ride Node [S-E]-2'}
+- {x: 32, y: 41, n: 'F8A-Cane Ride Node [W-N-E]'}
+- {x: 32, y: 44, n: 'F89-Cane Ride Node [W-S-E]'}
+- {x: 32, y: 47, n: 'F84-Cane Ride Node [4-way]'}
+- {x: 32, y: 50, n: 'F8F-?'}
+- {x: 32, y: 53, n: 'F88-Cane Ride Node [N-E]-2'}
+- {x: 35, y: 12, n: 'F85-Cane Ride Node [S-E]'}
+- {x: 35, y: 15, n: 'F8C-Cane Ride Node [N-W-S]'}
+- {x: 35, y: 18, n: 'F8F-?'}
+- {x: 35, y: 21, n: 'F88-Cane Ride Node [N-E]-2'}
+- {x: 38, y: 18, n: 'F89-Cane Ride Node [W-S-E]'}
+- {x: 38, y: 24, n: 'F8A-Cane Ride Node [W-N-E]'}
+- {x: 37, y: 41, n: 'F89-Cane Ride Node [W-S-E]'}
+- {x: 37, y: 44, n: 'F8F-?'}
+- {x: 37, y: 47, n: 'F84-Cane Ride Node [4-way]'}
+- {x: 37, y: 50, n: 'F88-Cane Ride Node [N-E]-2'}
+- {x: 41, y: 15, n: 'F85-Cane Ride Node [S-E]'}
+- {x: 41, y: 18, n: 'F8C-Cane Ride Node [N-W-S]'}
+- {x: 41, y: 24, n: 'F8A-Cane Ride Node [W-N-E]'}
+- {x: 41, y: 41, n: 'F89-Cane Ride Node [W-S-E]'}
+- {x: 41, y: 44, n: 'F8C-Cane Ride Node [N-W-S]'}
+- {x: 41, y: 47, n: 'F8C-Cane Ride Node [N-W-S]'}
+- {x: 41, y: 50, n: 'F86-Cane Ride Node [N-E]'}
+- {x: 45, y: 12, n: 'F87-Cane Ride Node [S-E]-2'}
+- {x: 45, y: 15, n: 'F8A-Cane Ride Node [W-N-E]'}
+- {x: 45, y: 24, n: 'F89-Cane Ride Node [W-S-E]'}
+- {x: 45, y: 27, n: 'F8B-Cane Ride Node [N-E-S]'}
+- {x: 45, y: 30, n: 'F8B-Cane Ride Node [N-E-S]'}
+- {x: 45, y: 33, n: 'F8B-Cane Ride Node [N-E-S]'}
+- {x: 45, y: 41, n: 'F8A-Cane Ride Node [W-N-E]'}
+- {x: 48, y: 15, n: 'F87-Cane Ride Node [S-E]-2'}
+- {x: 48, y: 18, n: 'F8B-Cane Ride Node [N-E-S]'}
+- {x: 48, y: 24, n: 'F8C-Cane Ride Node [N-W-S]'}
+- {x: 48, y: 27, n: 'F84-Cane Ride Node [4-way]'}
+- {x: 48, y: 30, n: 'F88-Cane Ride Node [N-E]-2'}
+- {x: 48, y: 41, n: 'F89-Cane Ride Node [W-S-E]'}
+- {x: 48, y: 47, n: 'F8B-Cane Ride Node [N-E-S]'}
+- {x: 48, y: 50, n: 'F88-Cane Ride Node [N-E]-2'}
+- {x: 51, y: 18, n: 'F8C-Cane Ride Node [N-W-S]'}
+- {x: 51, y: 27, n: 'F88-Cane Ride Node [N-E]-2'}
+- {x: 51, y: 41, n: 'F87-Cane Ride Node [S-E]-2'}
+- {x: 51, y: 47, n: 'F8C-Cane Ride Node [N-W-S]'}
+Layer2:
+- {x: 10, y: 5, n: FF3-Bg2 Full Mask}
+- {x: 10, y: 5, n: FAA-Dark Room BG2 Mask}
+Layer3:
+- {x: 12, y: 8, s: 1*0, n: C4-Doorless Room Transition}
+- {x: 12, y: 4, s: 1*0, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 14, y: 4, n: 138-Door Staircase Up R}
+- {x: 12, y: 12, s: 1*1, n: '27-Pit [N]Edge [L-R]'}
+- {x: 12, y: 7, s: 0*2, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 19, y: 7, s: 0*2, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 50, y: 8, s: 1*0, n: C4-Doorless Room Transition}
+- {x: 50, y: 4, s: 1*0, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 58, y: 4, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 58, y: 8, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 49, y: 12, s: 0*3, n: '27-Pit [N]Edge [L-R]'}
+- {x: 49, y: 7, s: 0*2, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 54, y: 12, s: 0*1, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 56, y: 8, n: FAF-Pot}
+- {x: 36, y: 30, s: 0*0, n: C4-Doorless Room Transition}
+- {x: 38, y: 30, s: 0*0, n: C4-Doorless Room Transition}
+- {x: 36, y: 32, s: 0*0, n: C4-Doorless Room Transition}
+- {x: 38, y: 32, s: 0*0, n: C4-Doorless Room Transition}
+- {x: 35, y: 29, s: 1*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 35, y: 36, s: 1*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 42, y: 29, s: 1*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 35, y: 30, s: 1*1, n: '6B-[E]Pit Edge [U-D]'}
+- {x: 38, y: 32, n: FAF-Pot}
+- {x: 43, y: 19, s: 0*1, n: '29-Pit [S]Edge [L-R]'}
+- {x: 43, y: 20, s: 0*1, n: '6B-[E]Pit Edge [U-D]'}
+- {x: 43, y: 22, s: 0*1, n: '2A-Pit [N]Edge [L-R]'}
+- {x: 46, y: 20, s: 0*1, n: '6A-[W]Pit Edge [U-D]'}
+- {x: 44, y: 20, n: FE4-Fireball Shooter}
+- {x: 17, y: 29, s: 0*1, n: '29-Pit [S]Edge [L-R]'}
+- {x: 17, y: 30, s: 0*1, n: '6B-[E]Pit Edge [U-D]'}
+- {x: 17, y: 32, s: 0*1, n: '2A-Pit [N]Edge [L-R]'}
+- {x: 20, y: 30, s: 0*1, n: '6A-[W]Pit Edge [U-D]'}
+- {x: 18, y: 30, n: FE4-Fireball Shooter}
+- {x: 43, y: 43, s: 0*1, n: '29-Pit [S]Edge [L-R]'}
+- {x: 43, y: 44, s: 0*1, n: '6B-[E]Pit Edge [U-D]'}
+- {x: 43, y: 46, s: 0*1, n: '2A-Pit [N]Edge [L-R]'}
+- {x: 46, y: 44, s: 0*1, n: '6A-[W]Pit Edge [U-D]'}
+- {x: 44, y: 44, n: FE4-Fireball Shooter}
+- {x: 52, y: 30, s: 1*0, n: C4-Doorless Room Transition}
+- {x: 52, y: 32, s: 1*0, n: C4-Doorless Room Transition}
+- {x: 58, y: 30, s: 0*3, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 51, y: 30, s: 1*1, n: '6B-[E]Pit Edge [U-D]'}
+- {x: 51, y: 29, s: 1*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 51, y: 36, s: 1*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 56, y: 30, n: FAF-Pot}
+- {x: 56, y: 32, n: FAF-Pot}
+- {x: 56, y: 34, n: FAF-Pot}
+- {x: 50, y: 54, s: 1*0, n: C4-Doorless Room Transition}
+- {x: 58, y: 54, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 58, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 50, y: 58, s: 1*0, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 49, y: 53, s: 0*3, n: '28-Pit [S]Edge [L-R]'}
+- {x: 49, y: 53, s: 0*2, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 54, y: 53, s: 0*1, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 56, y: 56, n: FAF-Pot}
+- {x: 12, y: 54, s: 1*0, n: C4-Doorless Room Transition}
+- {x: 12, y: 58, s: 1*0, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 12, y: 53, s: 1*1, n: '28-Pit [S]Edge [L-R]'}
+- {x: 12, y: 53, s: 0*2, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 19, y: 53, s: 0*2, n: '69-Vert: Rail Thin [U-D]'}
+Layer3.doors:
+- {type: 24, pos: 6, dir: 1}

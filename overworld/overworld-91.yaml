@@ -1,0 +1,59 @@
+Header:
+  name: 'DW 091 : Pyramid of Power NW'
+  size: big
+  gfx: 59
+  palette: 18
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel:
+- bird_travel_id: 8
+  xy: [496, 92]
+  scroll_xy: [376, 0]
+  camera_xy: [503, 109]
+  load_xy: [0, 0]
+  unk: [0, -8]
+Entrances:
+- {index: 53, x: 14, y: 27, entrance_id: 54}
+- {index: 98, x: 23, y: 27, entrance_id: 99}
+Holes:
+- {x: 30, y: 8, entrance_id: 123}
+- {x: 31, y: 9, entrance_id: 123}
+- {x: 31, y: 8, entrance_id: 123}
+Exits:
+- index: 6
+  room: 32
+  xy: [496, 92]
+  scroll_xy: [376, 0]
+  camera_xy: [503, 109]
+  load_xy: [0, 0]
+  unk: [0, -8]
+- index: 55
+  room: 16
+  xy: [232, 424]
+  scroll_xy: [116, 346]
+  camera_xy: [243, 455]
+  load_xy: [0, 1]
+  unk: [6, -6]
+Items:
+- [23, 28, 86-Bombable]
+- [4, 57, 04-Random]
+- [7, 60, 01-Rupee-G]
+- [9, 60, 01-Rupee-G]
+- [45, 59, 01-Rupee-G]
+- [48, 60, 01-Rupee-G]
+- [57, 60, 03-Bee]
+Sprites:
+  info: {gfx: 38, palette: 14}
+  sprites:
+  - [21, 23, 22-HoppingBulbPlan]
+  - [52, 18, EB-HeartPie]
+  - [19, 36, 33-PullForRupees]
+  - [15, 39, 12-PigSpearMan]
+  - [23, 42, E3-Fairy]
+  - [12, 42, 12-PigSpearMan]
+  - [30, 44, 11-Hinox]
+  - [52, 37, 0E-SnapDragon]
+  - [50, 39, 12-PigSpearMan]
+  - [48, 41, 12-PigSpearMan]
+  - [33, 44, 11-Hinox]

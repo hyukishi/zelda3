@@ -1,0 +1,64 @@
+Header:
+  floor1: 2
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 36
+  blockset: 14
+  enemyblk: 35
+  effect: None
+  tag0: SW Kill enemy to open
+  tag1: Kill boss again
+  hole0_dest: [0, 0]
+  stair0_dest: [165, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [36, 0]
+  stair3_dest: [14, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [6, 23, upper, 54-Lanmolas]
+- [9, 23, upper, 54-Lanmolas]
+- [7, 25, upper, 54-Lanmolas]
+- [23, 24, upper, D1-Transform/Smoke]
+- [3, 28, upper, C5-Shooter]
+Secrets:
+- [10, 12, 0B-Heart]
+- [20, 12, 09-Arrow]
+- [10, 20, 0A-Bomb]
+- [20, 20, 0C-Magic]
+Chests: []
+Entrances: []
+Layer1:
+- {x: 5, y: 39, s: 3*3, n: 'E8-Weird Floor? [4-way]'}
+- {x: 19, y: 39, s: 1*3, n: 'E8-Weird Floor? [4-way]'}
+- {x: 5, y: 55, s: 3*0, n: 'E8-Weird Floor? [4-way]'}
+- {x: 19, y: 55, s: 1*0, n: 'E8-Weird Floor? [4-way]'}
+- {x: 6, y: 56, n: FE4-Fireball Shooter}
+- {x: 34, y: 43, s: 0*1, n: '76-[W]Wall Decor: [U-D]'}
+- {x: 38, y: 47, s: 1*0, n: '33-Red Carpet Floor [L-R]'}
+- {x: 38, y: 46, s: 3*3, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 38, y: 51, s: 3*3, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 54, y: 46, s: 0*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 54, y: 51, s: 0*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 43, y: 42, n: 'FEB-Throne/Decor: Object'}
+- {x: 49, y: 42, n: 'FEB-Throne/Decor: Object'}
+- {x: 43, y: 52, n: 'FEB-Throne/Decor: Object'}
+- {x: 49, y: 52, n: 'FEB-Throne/Decor: Object'}
+- {x: 10, y: 4, s: 0*1, n: '3A-[N]Wall Decor: [L-R]'}
+- {x: 10, y: 36, s: 0*1, n: '3A-[N]Wall Decor: [L-R]'}
+- {x: 14, y: 4, n: 138-Door Staircase Up R}
+- {x: 10, y: 12, n: FAF-Pot}
+- {x: 20, y: 12, n: FAF-Pot}
+- {x: 10, y: 20, n: FAF-Pot}
+- {x: 20, y: 20, n: FAF-Pot}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 56, pos: 8, dir: 2}
+- {type: 24, pos: 6, dir: 0}
+- {type: 0, pos: 8, dir: 3}

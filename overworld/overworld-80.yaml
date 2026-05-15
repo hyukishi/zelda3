@@ -1,0 +1,26 @@
+Header:
+  name: 'DW 080 : Skull Woods Outskirts'
+  size: small
+  gfx: 63
+  palette: 30
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items:
+- [6, 8, 01-Rupee-G]
+- [9, 15, 01-Rupee-G]
+- [12, 15, 04-Random]
+- [15, 15, 04-Random]
+- [18, 15, 01-Rupee-G]
+- [26, 20, 01-Rupee-G]
+Sprites:
+  info: {gfx: 21, palette: 16}
+  sprites:
+  - [22, 11, 19-Poe/Ghini]
+  - [5, 12, 12-PigSpearMan]
+  - [8, 14, 25-LiveTree]
+  - [25, 19, 0B-Chicken]
+  - [8, 24, 12-PigSpearMan]

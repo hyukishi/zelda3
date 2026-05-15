@@ -1,0 +1,131 @@
+samples:
+- {file: sound/sound0.pcm, repeat: 32}
+- {file: sound/sound1.pcm, repeat: 48}
+- {file: sound/sound2.pcm}
+- {file: sound/sound3.pcm, repeat: 48}
+- {file: sound/sound4.pcm, repeat: 48}
+- {file: sound/sound5.pcm, repeat: 48}
+- {file: sound/sound6.pcm, repeat: 80}
+- {file: sound/sound7.pcm, repeat: 32}
+- {file: sound/sound8.pcm}
+- {file: sound/sound9.pcm, repeat: 2528}
+- {file: sound/sound9.pcm, repeat: 2528}
+- {file: sound/sound11.pcm, repeat: 1792}
+- {file: sound/sound12.pcm}
+- {file: sound/sound13.pcm, repeat: 720}
+- {file: sound/sound14.pcm, repeat: 208}
+- {file: sound/sound15.pcm, repeat: 816}
+- {file: sound/sound16.pcm}
+- {file: sound/sound17.pcm, repeat: 3152}
+- {file: sound/sound18.pcm, repeat: 3088}
+- {file: sound/sound19.pcm}
+- {file: sound/sound19.pcm}
+- {file: sound/sound21.pcm, repeat: 2352}
+- {file: sound/sound22.pcm, repeat: 960}
+- {file: sound/sound23.pcm}
+- {file: sound/sound24.pcm, repeat: 3280}
+instruments:
+- {sample: 0, decay: 7, attack: 15, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 1136}
+- {sample: 1, decay: 7, attack: 15, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 1936}
+- {sample: 2, decay: 7, attack: 15, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 2496}
+- {sample: 3, decay: 7, attack: 15, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 1024}
+- {sample: 4, decay: 7, attack: 15, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 1024}
+- {sample: 5, decay: 7, attack: 15, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 1136}
+- {sample: 6, decay: 7, attack: 15, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 1136}
+- {sample: 7, decay: 7, attack: 15, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 1136}
+- {sample: 8, decay: 7, attack: 15, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 1952}
+- {sample: 9, decay: 0, attack: 15, sustain_level: 7, sustain_rate: 9, vxgain: 184,
+  pitch_base: 480}
+- {sample: 10, decay: 0, attack: 10, sustain_level: 7, sustain_rate: 9, vxgain: 184,
+  pitch_base: 480}
+- {sample: 11, decay: 7, attack: 15, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 768}
+- {sample: 12, decay: 7, attack: 15, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 928}
+- {sample: 13, decay: 7, attack: 15, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 256}
+- {sample: 14, decay: 7, attack: 15, sustain_level: 7, sustain_rate: 15, vxgain: 184,
+  pitch_base: 3744}
+- {sample: 15, decay: 7, attack: 15, sustain_level: 7, sustain_rate: 15, vxgain: 184,
+  pitch_base: 1536}
+- {sample: 16, decay: 7, attack: 15, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 976}
+- {sample: 17, decay: 0, attack: 15, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 768}
+- {sample: 18, decay: 0, attack: 15, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 1776}
+- {sample: 19, decay: 7, attack: 13, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 1952}
+- {sample: 20, decay: 7, attack: 15, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 1952}
+- {sample: 21, decay: 7, attack: 15, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 976}
+- {sample: 22, decay: 0, attack: 15, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 768}
+- {sample: 23, decay: 7, attack: 15, sustain_level: 7, sustain_rate: 0, vxgain: 184,
+  pitch_base: 704}
+- {sample: 24, decay: 7, attack: 14, sustain_level: 4, sustain_rate: 15, vxgain: 184,
+  pitch_base: 1776}
+note_gate_off: [50, 101, 127, 152, 178, 203, 229, 252]
+note_volume: [25, 50, 76, 101, 114, 127, 140, 152, 165, 178, 191, 203, 216, 229, 242,
+  252]
+sfx_instruments:
+- {voll: 112, volr: 112, pitch: 4096, sample: 0, decay: 7, attack: 6, sustain_level: 3,
+  sustain_rate: 10, vxgain: 184, pitch_base: 3}
+- {voll: 112, volr: 112, pitch: 4096, sample: 1, decay: 0, attack: 14, sustain_level: 7,
+  sustain_rate: 0, vxgain: 184, pitch_base: 2}
+- {voll: 112, volr: 112, pitch: 4096, sample: 20, decay: 7, attack: 14, sustain_level: 3,
+  sustain_rate: 10, vxgain: 184, pitch_base: 2}
+- {voll: 112, volr: 112, pitch: 4096, sample: 3, decay: 7, attack: 14, sustain_level: 7,
+  sustain_rate: 24, vxgain: 184, pitch_base: 13}
+- {voll: 112, volr: 112, pitch: 4096, sample: 4, decay: 7, attack: 14, sustain_level: 3,
+  sustain_rate: 10, vxgain: 127, pitch_base: 3}
+- {voll: 112, volr: 112, pitch: 4096, sample: 2, decay: 7, attack: 14, sustain_level: 3,
+  sustain_rate: 10, vxgain: 127, pitch_base: 3}
+- {voll: 112, volr: 112, pitch: 4096, sample: 5, decay: 7, attack: 14, sustain_level: 3,
+  sustain_rate: 10, vxgain: 112, pitch_base: 3}
+- {voll: 112, volr: 112, pitch: 4096, sample: 6, decay: 7, attack: 14, sustain_level: 3,
+  sustain_rate: 10, vxgain: 112, pitch_base: 3}
+- {voll: 112, volr: 112, pitch: 4096, sample: 8, decay: 7, attack: 10, sustain_level: 3,
+  sustain_rate: 10, vxgain: 112, pitch_base: 3}
+- {voll: 112, volr: 112, pitch: 4096, sample: 6, decay: 7, attack: 14, sustain_level: 3,
+  sustain_rate: 10, vxgain: 112, pitch_base: 1}
+- {voll: 112, volr: 112, pitch: 4096, sample: 7, decay: 7, attack: 14, sustain_level: 3,
+  sustain_rate: 10, vxgain: 112, pitch_base: 5}
+- {voll: 112, volr: 112, pitch: 4096, sample: 11, decay: 7, attack: 14, sustain_level: 3,
+  sustain_rate: 10, vxgain: 184, pitch_base: 3}
+- {voll: 112, volr: 112, pitch: 4096, sample: 12, decay: 7, attack: 14, sustain_level: 7,
+  sustain_rate: 0, vxgain: 184, pitch_base: 2}
+- {voll: 112, volr: 112, pitch: 4096, sample: 13, decay: 7, attack: 9, sustain_level: 3,
+  sustain_rate: 14, vxgain: 184, pitch_base: 3}
+- {voll: 112, volr: 112, pitch: 4096, sample: 14, decay: 7, attack: 14, sustain_level: 7,
+  sustain_rate: 21, vxgain: 184, pitch_base: 7}
+- {voll: 112, volr: 112, pitch: 4096, sample: 15, decay: 7, attack: 14, sustain_level: 7,
+  sustain_rate: 21, vxgain: 184, pitch_base: 6}
+- {voll: 112, volr: 112, pitch: 4096, sample: 1, decay: 7, attack: 14, sustain_level: 7,
+  sustain_rate: 28, vxgain: 184, pitch_base: 3}
+- {voll: 112, volr: 112, pitch: 4096, sample: 16, decay: 0, attack: 14, sustain_level: 7,
+  sustain_rate: 0, vxgain: 184, pitch_base: 3}
+- {voll: 112, volr: 112, pitch: 4096, sample: 8, decay: 0, attack: 14, sustain_level: 7,
+  sustain_rate: 0, vxgain: 184, pitch_base: 2}
+- {voll: 112, volr: 112, pitch: 4096, sample: 20, decay: 0, attack: 14, sustain_level: 7,
+  sustain_rate: 0, vxgain: 184, pitch_base: 2}
+- {voll: 112, volr: 112, pitch: 4096, sample: 10, decay: 0, attack: 8, sustain_level: 7,
+  sustain_rate: 0, vxgain: 184, pitch_base: 2}
+- {voll: 112, volr: 112, pitch: 4096, sample: 23, decay: 0, attack: 14, sustain_level: 7,
+  sustain_rate: 0, vxgain: 184, pitch_base: 2}
+- {voll: 112, volr: 112, pitch: 4096, sample: 21, decay: 7, attack: 15, sustain_level: 7,
+  sustain_rate: 0, vxgain: 184, pitch_base: 4}
+- {voll: 112, volr: 112, pitch: 4096, sample: 3, decay: 5, attack: 15, sustain_level: 0,
+  sustain_rate: 17, vxgain: 184, pitch_base: 15}
+- {voll: 112, volr: 112, pitch: 4096, sample: 1, decay: 0, attack: 8, sustain_level: 7,
+  sustain_rate: 0, vxgain: 184, pitch_base: 1}

@@ -1,0 +1,39 @@
+Header:
+  name: 'LW 041 : Kakariko South Annex'
+  size: small
+  gfx: 42
+  palette: 8
+  sign_text: 167
+  music: {beginning: Beginning, zelda: Town, sword: Town, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances:
+- {index: 15, x: 3, y: 22, entrance_id: 16}
+- {index: 72, x: 7, y: 7, entrance_id: 73}
+- {index: 102, x: 22, y: 18, entrance_id: 103}
+Exits:
+- index: 17
+  room: 245
+  xy: [56, 344]
+  scroll_xy: [0, 263]
+  camera_xy: [141, 372]
+  load_xy: [0, 1]
+  unk: [9, 0]
+  door: [wooden, 3, 23]
+Items:
+- [4, 6, 01-Rupee-G]
+- [20, 14, 03-Bee]
+- [4, 16, 04-Random]
+- [19, 18, 04-Random]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 9, palette: 0}
+  sprites: []
+Sprites.SecondPart:
+  info: {gfx: 0, palette: 0}
+  sprites:
+  - [14, 5, 41-BlueSoldier]
+  - [12, 12, 45-HogSpearMan]
+  - [11, 20, 41-BlueSoldier]

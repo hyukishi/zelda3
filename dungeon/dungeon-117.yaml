@@ -1,0 +1,68 @@
+Header:
+  floor1: 9
+  floor2: 1
+  layout: 2
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 9
+  blockset: 5
+  enemyblk: 10
+  effect: None
+  tag0: NW Kill enemy to open
+  tag1: None
+  hole0_dest: [8, 0]
+  stair0_dest: [17, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 2]
+  stair3_dest: [24, 2]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [8, 7, upper, 64-SandCrab2]
+- [4, 27, upper, 64-SandCrab2]
+- [6, 5, upper, 71-Leever]
+- [10, 5, upper, 71-Leever]
+- [6, 10, upper, 71-Leever]
+- [10, 10, upper, 71-Leever]
+- [17, 11, upper, 66-Cannon(Right)]
+- [30, 11, upper, 67-Cannon(Left)]
+- [7, 25, upper, 71-Leever]
+- [9, 25, upper, 71-Leever]
+Secrets:
+- [10, 45, 0C-Magic]
+- [16, 45, 09-Arrow]
+- [22, 45, 0B-Heart]
+Chests: [50]
+Entrances: []
+Layer1:
+- {x: 0, y: 36, s: 0*3, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 0, y: 40, s: 1*0, n: C4-Doorless Room Transition}
+- {x: 0, y: 44, s: 0*1, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 2, y: 44, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 10, y: 62, s: 0*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 10, y: 58, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 14, y: 56, s: 0*1, n: C4-Doorless Room Transition}
+- {x: 18, y: 58, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 18, y: 62, s: 0*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 10, y: 45, n: FAF-Pot}
+- {x: 16, y: 45, n: FAF-Pot}
+- {x: 22, y: 45, n: FAF-Pot}
+- {x: 41, y: 8, s: 1*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 54, y: 8, s: 1*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 41, y: 16, s: 2*2, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 42, y: 8, s: 2*1, n: 'DB-Floor2 [4-way]'}
+- {x: 42, y: 10, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 52, y: 10, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 47, y: 10, n: F99-Chest}
+- {x: 34, y: 20, s: 0*0, n: '65-[W]Wall Column [U-D]'}
+- {x: 34, y: 40, s: 0*0, n: '65-[W]Wall Column [U-D]'}
+- {x: 58, y: 20, s: 0*0, n: '66-[E]Wall Column [U-D]'}
+- {x: 58, y: 40, s: 0*0, n: '66-[E]Wall Column [U-D]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 56, pos: 6, dir: 0}
+- {type: 0, pos: 8, dir: 1}

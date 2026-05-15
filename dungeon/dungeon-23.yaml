@@ -1,0 +1,136 @@
+Header:
+  floor1: 1
+  floor2: 8
+  layout: 7
+  start_quadrant: 0
+  bg2: Parallaxing
+  collision: One
+  lights_out: 0
+  palette: 6
+  blockset: 5
+  enemyblk: 25
+  effect: None
+  tag0: Holes(4)
+  tag1: None
+  hole0_dest: [39, 0]
+  stair0_dest: [7, 0]
+  stair1_dest: [39, 0]
+  stair2_dest: [1, 0]
+  stair3_dest: [15, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [7, 11, upper, 93-RedOrb]
+- [16, 14, upper, 93-RedOrb]
+- [7, 22, upper, 93-RedOrb]
+- [21, 7, upper, 26-BlueOrb]
+- [11, 9, upper, 26-BlueOrb]
+- [6, 17, upper, 7E-FireBlade]
+- [18, 17, upper, 26-BlueOrb]
+- [11, 23, upper, 26-BlueOrb]
+- [23, 23, upper, 26-BlueOrb]
+Secrets:
+- [50, 26, 0B-Heart]
+- [50, 28, 0B-Heart]
+- [50, 30, 0B-Heart]
+- [50, 32, 0B-Heart]
+- [50, 34, 0B-Heart]
+- [50, 36, 0B-Heart]
+- [52, 26, 0B-Heart]
+- [52, 28, 0B-Heart]
+- [52, 30, 0B-Heart]
+- [52, 32, 0B-Heart]
+- [52, 34, 0B-Heart]
+- [52, 36, 0B-Heart]
+Chests: []
+Entrances: []
+Layer1:
+- {x: 14, y: 4, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 11, y: 11, s: 0*0, n: 'A0-/ Ceiling [NW]'}
+- {x: 12, y: 13, s: 0*0, n: '0D-/ Wall Tile Bot (HIGH) [NW]'}
+- {x: 14, y: 8, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 6, y: 14, s: 0*3, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 2, y: 14, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 2, y: 42, s: 2*2, n: '0E-\ Wall Tile Bot (HIGH) [SW]'}
+- {x: 2, y: 42, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 44, y: 4, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 47, y: 11, s: 0*0, n: 'A2-\ Ceiling [NE]'}
+- {x: 44, y: 8, s: 0*0, n: '0F-\ Wall Tile Bot (HIGH) [NE]'}
+- {x: 44, y: 8, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 50, y: 14, s: 1*0, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 58, y: 14, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 46, y: 57, s: 2*2, n: '10-/ Wall Tile Bot (HIGH) [SE]'}
+- {x: 58, y: 42, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 22, y: 4, s: 0*3, n: '05-[N]Wall Column [L-R]'}
+- {x: 30, y: 4, s: 0*0, n: '3A-[N]Wall Decor: [L-R]'}
+- {x: 24, y: 4, n: FE7-Top Crack Wall}
+- {x: 36, y: 4, n: FE7-Top Crack Wall}
+- {x: 20, y: 9, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 20, y: 8, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 17, y: 13, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 12, y: 17, s: 0*2, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 17, y: 12, s: 0*2, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 17, y: 12, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 20, y: 8, s: 0*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 23, y: 8, s: 0*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 12, y: 18, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 5, y: 22, s: 0*3, n: 'C3-Falling Edge Mask [4-way]'}
+- {x: 5, y: 34, s: 0*3, n: 'C3-Falling Edge Mask [4-way]'}
+- {x: 5, y: 22, s: 0*0, n: '27-Pit [N]Edge [L-R]'}
+- {x: 5, y: 23, s: 3*3, n: '6A-[W]Pit Edge [U-D]'}
+- {x: 5, y: 39, s: 1*1, n: '6A-[W]Pit Edge [U-D]'}
+- {x: 7, y: 23, s: 3*3, n: '6B-[E]Pit Edge [U-D]'}
+- {x: 7, y: 39, s: 1*1, n: '6B-[E]Pit Edge [U-D]'}
+- {x: 5, y: 45, s: 0*0, n: '28-Pit [S]Edge [L-R]'}
+- {x: 2, y: 26, n: FE9-Left Crack Wall}
+- {x: 2, y: 30, n: FE9-Left Crack Wall}
+- {x: 12, y: 26, n: FE6-Hole}
+- {x: 12, y: 40, n: FE6-Hole}
+- {x: 12, y: 34, n: 134-Block}
+- {x: 20, y: 24, n: FCF-Inactive Warp}
+- {x: 10, y: 34, n: 11F-Star Tile On}
+- {x: 12, y: 48, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 24, y: 28, s: 0*2, n: 'A4-Hole [4-way]'}
+- {x: 40, y: 28, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 34, y: 40, s: 0*0, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 36, y: 38, s: 0*0, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 36, y: 38, s: 0*1, n: '27-Pit [N]Edge [L-R]'}
+- {x: 36, y: 39, s: 0*0, n: '6A-[W]Pit Edge [U-D]'}
+- {x: 34, y: 40, s: 0*0, n: '2E-Pit [NW]Corner [L-R]'}
+- {x: 34, y: 41, s: 0*1, n: '6A-[W]Pit Edge [U-D]'}
+- {x: 34, y: 43, s: 0*1, n: '28-Pit [S]Edge [L-R]'}
+- {x: 37, y: 42, s: 0*0, n: '6B-[E]Pit Edge [U-D]'}
+- {x: 37, y: 41, s: 0*0, n: '2B-Pit [SE]Corner [L-R]'}
+- {x: 39, y: 39, s: 0*1, n: '6B-[E]Pit Edge [U-D]'}
+- {x: 48, y: 26, s: 1*2, n: '93-Orange Peg Block [U-D]'}
+- {x: 50, y: 24, s: 0*2, n: 'B9-Red Switch Block [L-R]'}
+- {x: 50, y: 38, s: 0*2, n: 'B9-Red Switch Block [L-R]'}
+- {x: 54, y: 26, s: 1*2, n: '93-Orange Peg Block [U-D]'}
+- {x: 50, y: 26, n: FAF-Pot}
+- {x: 50, y: 28, n: FAF-Pot}
+- {x: 50, y: 30, n: FAF-Pot}
+- {x: 50, y: 32, n: FAF-Pot}
+- {x: 50, y: 34, n: FAF-Pot}
+- {x: 50, y: 36, n: FAF-Pot}
+- {x: 52, y: 26, n: FAF-Pot}
+- {x: 52, y: 28, n: FAF-Pot}
+- {x: 52, y: 30, n: FAF-Pot}
+- {x: 52, y: 32, n: FAF-Pot}
+- {x: 52, y: 34, n: FAF-Pot}
+- {x: 52, y: 36, n: FAF-Pot}
+- {x: 50, y: 14, n: FF4-Boss Entrance}
+- {x: 58, y: 20, s: 0*3, n: '66-[E]Wall Column [U-D]'}
+- {x: 59, y: 28, n: FEA-Right Crack Wall}
+- {x: 22, y: 58, s: 0*3, n: '06-[S]Wall Column [L-R]'}
+- {x: 52, y: 14, n: 138-Door Staircase Up R}
+- {x: 6, y: 14, n: 139-Door Staircase Down L}
+- {x: 2, y: 2, s: 1*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 10, y: 4, s: 0*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 10, y: 12, s: 0*1, n: '60-Ceiling [U-D]'}
+- {x: 48, y: 4, s: 3*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 50, y: 12, s: 1*2, n: '00-Ceiling [L-R]'}
+- {x: 2, y: 47, s: 2*3, n: 'A1-\ Ceiling [SW]'}
+- {x: 47, y: 61, s: 2*3, n: 'A3-/ Ceiling [SE]'}
+Layer2: []
+Layer3: []

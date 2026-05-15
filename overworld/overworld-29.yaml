@@ -1,0 +1,33 @@
+Header:
+  name: 'LW 029 : Castle East Bridge'
+  size: small
+  gfx: 39
+  palette: 4
+  sign_text: 68
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items:
+- [24, 4, 01-Rupee-G]
+- [26, 4, 05-Bomb]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites:
+  - [11, 6, AC-Apples]
+Sprites.FirstPart:
+  info: {gfx: 4, palette: 3}
+  sprites:
+  - [11, 6, AC-Apples]
+  - [27, 12, 46-BlueArcher]
+  - [7, 13, 41-BlueSoldier]
+  - [27, 15, 46-BlueArcher]
+  - [7, 18, 58-Crab]
+Sprites.SecondPart:
+  info: {gfx: 2, palette: 3}
+  sprites:
+  - [11, 6, 79-Bee]
+  - [27, 12, 46-BlueArcher]
+  - [7, 13, 45-HogSpearMan]
+  - [27, 15, 46-BlueArcher]

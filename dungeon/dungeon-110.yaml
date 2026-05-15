@@ -1,0 +1,59 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 19
+  blockset: 11
+  enemyblk: 28
+  effect: None
+  tag0: NE Kill enemy to open
+  tag1: None
+  hole0_dest: [0, 0]
+  stair0_dest: [78, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [1, 0]
+  stair3_dest: [1, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [19, 8, upper, 99-Penguin]
+- [19, 9, upper, 99-Penguin]
+- [19, 10, upper, 99-Penguin]
+- [19, 11, upper, 99-Penguin]
+- [19, 12, upper, 99-Penguin]
+Secrets: []
+Chests: []
+Entrances: []
+Layer1:
+- {x: 35, y: 12, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 38, y: 12, s: 0*3, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 43, y: 12, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 43, y: 8, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 43, y: 4, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 49, y: 4, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 49, y: 8, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 52, y: 12, s: 0*3, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 49, y: 12, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 35, y: 16, s: 1*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 35, y: 26, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 57, y: 12, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 57, y: 16, s: 1*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 57, y: 26, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 38, y: 15, s: 3*2, n: 'D2-Floor6 [4-way]'}
+- {x: 54, y: 15, s: 0*2, n: 'D2-Floor6 [4-way]'}
+- {x: 46, y: 7, s: 0*1, n: 'D2-Floor6 [4-way]'}
+- {x: 54, y: 12, n: 138-Door Staircase Up R}
+- {x: 31, y: 4, s: 2*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 53, y: 4, s: 1*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 60, y: 4, s: 1*0, n: '60-Ceiling [U-D]'}
+- {x: 33, y: 12, s: 2*1, n: '60-Ceiling [U-D]'}
+- {x: 61, y: 12, s: 2*1, n: '60-Ceiling [U-D]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 24, pos: 2, dir: 0}

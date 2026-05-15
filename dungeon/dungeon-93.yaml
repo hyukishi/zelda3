@@ -1,0 +1,85 @@
+Header:
+  floor1: 2
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 36
+  blockset: 14
+  enemyblk: 35
+  effect: None
+  tag0: Clear quadrant to open
+  tag1: None
+  hole0_dest: [0, 0]
+  stair0_dest: [92, 0]
+  stair1_dest: [32, 0]
+  stair2_dest: [19, 0]
+  stair3_dest: [11, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [7, 5, upper, A7-Stalfos]
+- [8, 6, upper, 61-Beamos]
+- [3, 8, upper, A7-Stalfos]
+- [21, 8, upper, A6-RedLizard]
+- [23, 8, upper, A7-Stalfos]
+- [25, 8, upper, A5-GreenLizard]
+- [27, 8, upper, A7-Stalfos]
+- [7, 11, upper, A7-Stalfos]
+- [4, 21, upper, 61-Beamos]
+- [11, 21, upper, A5-GreenLizard]
+- [4, 26, upper, A5-GreenLizard]
+- [8, 26, upper, A5-GreenLizard]
+- [11, 26, upper, 61-Beamos]
+Secrets:
+- [8, 10, 0A-Bomb]
+- [22, 10, 07-Rupee-B]
+- [8, 22, 01-Rupee-G]
+- [22, 22, 09-Arrow]
+- [6, 40, 09-Arrow]
+- [24, 40, 0A-Bomb]
+- [6, 56, 0C-Magic]
+- [24, 56, 0A-Bomb]
+Chests: []
+Entrances: []
+Layer1:
+- {x: 9, y: 12, s: 0*0, n: 'E4-Moving Floor Down [4-way]'}
+- {x: 11, y: 12, s: 2*0, n: 'E5-Moving Floor Left [4-way]'}
+- {x: 19, y: 14, s: 0*1, n: 'E3-Moving Floor Up [4-way]'}
+- {x: 9, y: 18, s: 2*0, n: 'E6-Moving Floor Right [4-way]'}
+- {x: 9, y: 16, s: 0*0, n: 'E4-Moving Floor Down [4-way]'}
+- {x: 6, y: 4, s: 0*3, n: '05-[N]Wall Column [L-R]'}
+- {x: 38, y: 4, s: 0*3, n: '05-[N]Wall Column [L-R]'}
+- {x: 6, y: 26, s: 0*3, n: '06-[S]Wall Column [L-R]'}
+- {x: 38, y: 26, s: 0*3, n: '06-[S]Wall Column [L-R]'}
+- {x: 6, y: 36, s: 0*3, n: '05-[N]Wall Column [L-R]'}
+- {x: 6, y: 58, s: 0*3, n: '06-[S]Wall Column [L-R]'}
+- {x: 8, y: 10, n: FAF-Pot}
+- {x: 22, y: 10, n: FAF-Pot}
+- {x: 8, y: 22, n: FAF-Pot}
+- {x: 22, y: 22, n: FAF-Pot}
+- {x: 38, y: 10, s: 3*2, n: 'E3-Moving Floor Up [4-way]'}
+- {x: 54, y: 10, s: 0*2, n: 'E3-Moving Floor Up [4-way]'}
+- {x: 40, y: 16, s: 1*0, n: '5E-Block [L-R]'}
+- {x: 46, y: 4, n: 139-Door Staircase Down L}
+- {x: 10, y: 52, s: 3*0, n: 'E5-Moving Floor Left [4-way]'}
+- {x: 22, y: 42, s: 0*2, n: 'E4-Moving Floor Down [4-way]'}
+- {x: 6, y: 42, s: 3*0, n: 'E6-Moving Floor Right [4-way]'}
+- {x: 20, y: 42, s: 0*0, n: 'E6-Moving Floor Right [4-way]'}
+- {x: 6, y: 44, s: 0*2, n: 'E3-Moving Floor Up [4-way]'}
+- {x: 8, y: 52, s: 0*0, n: 'E5-Moving Floor Left [4-way]'}
+- {x: 6, y: 40, n: FAF-Pot}
+- {x: 24, y: 40, n: FAF-Pot}
+- {x: 6, y: 56, n: FAF-Pot}
+- {x: 24, y: 56, n: FAF-Pot}
+- {x: 11, y: 46, s: 1*1, n: 'DE-Spike Block [4-way]'}
+- {x: 17, y: 46, s: 1*1, n: 'DE-Spike Block [4-way]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 24, pos: 6, dir: 0}
+- {type: 24, pos: 6, dir: 1}
+- {type: 24, pos: 6, dir: 2}

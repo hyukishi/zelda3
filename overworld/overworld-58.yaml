@@ -1,0 +1,38 @@
+Header:
+  name: 'LW 058 : Via of Mystery'
+  size: small
+  gfx: 32
+  palette: 0
+  sign_text: 71
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances:
+- {index: 113, x: 6, y: 3, entrance_id: 94}
+- {index: 120, x: 15, y: 20, entrance_id: 109}
+Exits: []
+Items:
+- [15, 16, 02-RockCrab]
+- [22, 19, 06-Heart]
+- [15, 20, 84-Staircase]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 10, palette: 0}
+  sprites:
+  - [23, 5, 39-GuyByTheSign]
+  - [14, 9, 00-Raven]
+  - [11, 10, 3E-RockCrab]
+  - [24, 14, 3E-RockCrab]
+Sprites.SecondPart:
+  info: {gfx: 10, palette: 0}
+  sprites:
+  - [23, 5, 39-GuyByTheSign]
+  - [11, 10, 3E-RockCrab]
+  - [20, 13, 00-Raven]
+  - [19, 14, 00-Raven]
+  - [20, 15, 00-Raven]
+  - [19, 16, 00-Raven]
+  - [17, 15, 45-HogSpearMan]
+  - [23, 23, 3E-RockCrab]

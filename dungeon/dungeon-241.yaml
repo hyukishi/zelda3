@@ -1,0 +1,178 @@
+Header:
+  floor1: 5
+  floor2: 14
+  layout: 7
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 1
+  palette: 7
+  blockset: 6
+  enemyblk: 1
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [6, 0]
+  stair0_dest: [19, 0]
+  stair1_dest: [0, 2]
+  stair2_dest: [0, 0]
+  stair3_dest: [0, 3]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: true
+Sprites:
+- [25, 16, upper, 6F-Keese]
+- [28, 16, upper, 6F-Keese]
+- [24, 17, upper, 6F-Keese]
+- [29, 17, upper, 6F-Keese]
+- [23, 18, upper, 6F-Keese]
+- [30, 18, upper, 6F-Keese]
+- [6, 27, upper, 6F-Keese]
+- [9, 27, upper, 6F-Keese]
+- [7, 28, upper, 6F-Keese]
+- [8, 28, upper, 6F-Keese]
+Secrets:
+- [32, 10, 0B-Heart]
+Chests: []
+Entrances:
+- entrance_index: 7
+  name: Death Mountain Express (Upper)
+  scroll_xy: [256, 272]
+  player_xy: [376, 448]
+  camera_xy: [383, 391]
+  blockset: 6
+  music: Cave
+  palace: None
+  doorway_orientation: 1
+  plane: 1
+  ladder_level: 0
+  quadrants: [double_x, double_y, lower_right]
+  floor: 0
+  house_exit_door: [none]
+Layer1:
+- {x: 2, y: 25, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 6, y: 25, s: 0*1, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 8, y: 8, s: 2*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 8, y: 25, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 8, y: 4, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 20, y: 4, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 20, y: 8, s: 2*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 20, y: 26, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 24, y: 26, s: 0*1, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 26, y: 25, s: 0*2, n: '09-/ Wall Wood Bot (HIGH) [NW]'}
+- {x: 26, y: 10, s: 0*2, n: '0A-\ Wall Wood Bot (HIGH) [SW]'}
+- {x: 26, y: 8, s: 0*3, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 26, y: 4, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 30, y: 18, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 36, y: 4, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 36, y: 8, s: 0*2, n: '0B-\ Wall Wood Bot (HIGH) [NE]'}
+- {x: 36, y: 8, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 44, y: 16, s: 0*1, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 46, y: 16, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 46, y: 8, s: 1*0, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 46, y: 4, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 2, y: 37, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 6, y: 37, s: 0*1, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 8, y: 37, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 8, y: 41, s: 2*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 8, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 20, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 22, y: 43, s: 0*0, n: '0C-/ Wall Wood Bot (HIGH) [SE]'}
+- {x: 20, y: 46, s: 1*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 28, y: 38, s: 0*1, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 30, y: 37, s: 1*0, n: '0C-/ Wall Wood Bot (HIGH) [SE]'}
+- {x: 40, y: 28, s: 0*3, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 46, y: 28, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 46, y: 32, s: 0*3, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 46, y: 38, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 44, y: 38, s: 0*1, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 40, y: 38, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 40, y: 42, s: 2*0, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 40, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 52, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 52, y: 54, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 52, y: 50, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 56, y: 50, s: 0*1, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 58, y: 50, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 11, y: 11, s: 2*0, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 11, y: 28, n: '10C-Wall Inner Corner (LOW) [NW]'}
+- {x: 11, y: 7, n: '108-Wall Outer Corner (LOW) [NW]'}
+- {x: 15, y: 7, s: 0*0, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 17, y: 7, n: '10A-Wall Outer Corner (LOW) [NE]'}
+- {x: 17, y: 11, s: 2*0, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 20, y: 29, s: 0*2, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 17, y: 29, n: '10E-Wall Inner Corner (LOW) [NE]'}
+- {x: 26, y: 28, s: 1*1, n: '19-/ Wall Tile Bot (LOW)[NW]'}
+- {x: 29, y: 10, s: 0*2, n: '1A-\ Wall Tile Bot (LOW)[SW]'}
+- {x: 33, y: 18, s: 0*1, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 29, y: 10, s: 0*1, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 29, y: 7, n: '108-Wall Outer Corner (LOW) [NW]'}
+- {x: 33, y: 8, s: 1*1, n: '1B-\ Wall Tile Bot (LOW)[NE]'}
+- {x: 33, y: 10, s: 0*0, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 33, y: 7, n: '10A-Wall Outer Corner (LOW) [NE]'}
+- {x: 44, y: 19, s: 0*2, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 49, y: 19, n: '10C-Wall Inner Corner (LOW) [NW]'}
+- {x: 49, y: 11, s: 0*3, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 49, y: 7, n: '108-Wall Outer Corner (LOW) [NW]'}
+- {x: 53, y: 7, s: 0*0, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 55, y: 7, n: '10A-Wall Outer Corner (LOW) [NE]'}
+- {x: 55, y: 11, s: 3*3, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 55, y: 43, s: 0*1, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 55, y: 47, n: '10B-Wall Outer Corner (LOW) [SE]'}
+- {x: 53, y: 47, s: 0*0, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 49, y: 47, n: '10F-Wall Inner Corner (LOW) [SE]'}
+- {x: 49, y: 51, s: 0*1, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 49, y: 55, n: '10B-Wall Outer Corner (LOW) [SE]'}
+- {x: 47, y: 55, s: 0*0, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 43, y: 55, n: '109-Wall Outer Corner (LOW) [SW]'}
+- {x: 43, y: 45, s: 1*0, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 43, y: 41, n: '108-Wall Outer Corner (LOW) [NW]'}
+- {x: 47, y: 41, s: 0*0, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 49, y: 41, n: '10C-Wall Inner Corner (LOW) [NW]'}
+- {x: 49, y: 29, s: 1*1, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 40, y: 25, s: 1*0, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 49, y: 25, n: '10D-Wall Inner Corner (LOW) [SW]'}
+- {x: 30, y: 34, s: 1*0, n: '1C-/ Wall Tile Bot (LOW)[SE]'}
+- {x: 28, y: 35, s: 0*0, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 17, y: 45, s: 1*1, n: '1C-/ Wall Tile Bot (LOW)[SE]'}
+- {x: 17, y: 46, s: 1*0, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 17, y: 55, n: '10B-Wall Outer Corner (LOW) [SE]'}
+- {x: 11, y: 38, s: 2*0, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 11, y: 55, n: '109-Wall Outer Corner (LOW) [SW]'}
+- {x: 15, y: 55, s: 0*0, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 11, y: 34, n: '10D-Wall Inner Corner (LOW) [SW]'}
+- {x: 9, y: 34, s: 0*0, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 5, y: 32, s: 0*0, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 5, y: 28, n: '108-Wall Outer Corner (LOW) [NW]'}
+- {x: 9, y: 28, s: 0*0, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 5, y: 34, n: '109-Wall Outer Corner (LOW) [SW]'}
+- {x: 32, y: 10, n: FAF-Pot}
+- {x: 18, y: 32, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 52, y: 10, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 24, y: 4, s: 2*3, n: '60-Ceiling [U-D]'}
+- {x: 26, y: 15, s: 0*0, n: 'A1-\ Ceiling [SW]'}
+- {x: 26, y: 21, s: 0*0, n: 'A0-/ Ceiling [NW]'}
+- {x: 26, y: 19, s: 0*2, n: '00-Ceiling [L-R]'}
+- {x: 40, y: 4, s: 0*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 44, y: 4, s: 1*2, n: '60-Ceiling [U-D]'}
+- {x: 40, y: 11, s: 0*0, n: 'A2-\ Ceiling [NE]'}
+- {x: 25, y: 45, s: 0*0, n: 'A3-/ Ceiling [SE]'}
+- {x: 31, y: 41, s: 1*1, n: 'A3-/ Ceiling [SE]'}
+- {x: 24, y: 46, s: 3*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 28, y: 42, s: 2*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 40, y: 32, s: 0*3, n: '00-Ceiling [L-R]'}
+- {x: 40, y: 34, s: 0*3, n: '00-Ceiling [L-R]'}
+- {x: 40, y: 36, s: 0*3, n: '00-Ceiling [L-R]'}
+- {x: 56, y: 54, s: 0*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 60, y: 54, s: 1*0, n: '60-Ceiling [U-D]'}
+- {x: 0, y: 4, s: 1*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 0, y: 17, s: 1*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 0, y: 41, s: 1*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 0, y: 54, s: 1*1, n: 'C0-Ceiling Large [4-way]'}
+Layer2:
+- {x: 10, y: 5, n: FF3-Bg2 Full Mask}
+- {x: 10, y: 5, n: FAA-Dark Room BG2 Mask}
+Layer3: []
+Layer3.doors:
+- {type: 16, pos: 11, dir: 1}
+- {type: 2, pos: 4, dir: 2}

@@ -1,0 +1,42 @@
+Header:
+  name: 'LW 020 : Graveyard'
+  size: small
+  gfx: 41
+  palette: 1
+  sign_text: 167
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: Heavy rain, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances:
+- {index: 81, x: 17, y: 5, entrance_id: 82}
+- {index: 90, x: 25, y: 11, entrance_id: 91}
+Holes:
+- {x: 4, y: 10, entrance_id: 129}
+Exits: []
+Items:
+- [8, 9, 01-Rupee-G]
+- [9, 9, 01-Rupee-G]
+- [14, 14, 03-Bee]
+- [28, 15, 04-Random]
+- [4, 20, 04-Random]
+- [6, 21, 03-Bee]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 3, palette: 2}
+  sprites:
+  - [21, 17, 48-RedSpearKnight]
+  - [17, 25, 42-GreenSoldier]
+  - [8, 12, C5-Shooter]
+  - [23, 17, C5-Shooter]
+  - [18, 14, C5-Shooter]
+Sprites.SecondPart:
+  info: {gfx: 3, palette: 2}
+  sprites:
+  - [13, 13, 19-Poe/Ghini]
+  - [25, 15, 19-Poe/Ghini]
+  - [8, 16, 19-Poe/Ghini]
+  - [20, 17, 19-Poe/Ghini]
+  - [19, 20, 19-Poe/Ghini]
+  - [17, 25, 41-BlueSoldier]

@@ -1,0 +1,114 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 6
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 40
+  blockset: 14
+  enemyblk: 19
+  effect: None
+  tag0: SW Kill enemy to open
+  tag1: Holes(7)
+  hole0_dest: [157, 0]
+  stair0_dest: [0, 0]
+  stair1_dest: [40, 0]
+  stair2_dest: [14, 0]
+  stair3_dest: [19, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: true
+Sprites:
+- [11, 7, upper, 24-BlueMiri]
+- [22, 9, upper, 24-BlueMiri]
+- [4, 21, upper, C6-4WayShooter]
+- [11, 21, upper, A7-Stalfos]
+- [7, 23, upper, A7-Stalfos]
+- [9, 23, upper, C6-4WayShooter]
+- [19, 24, upper, 1C-Statue]
+- [23, 24, upper, 26-BlueOrb]
+- [9, 25, upper, A7-Stalfos]
+- [5, 26, upper, C6-4WayShooter]
+- [11, 27, upper, C6-4WayShooter]
+Secrets:
+- [30, 8, 0B-Heart]
+- [32, 8, 08-Key]
+Chests: [40, 68, 54, 54]
+Entrances: []
+Layer1:
+- {x: 2, y: 11, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 6, y: 11, s: 2*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 26, y: 8, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 26, y: 11, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 26, y: 4, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 34, y: 4, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 34, y: 8, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 34, y: 11, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 38, y: 11, s: 2*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 58, y: 11, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 2, y: 21, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 6, y: 21, s: 3*3, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 36, y: 21, s: 2*3, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 58, y: 21, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 8, y: 16, n: FCF-Inactive Warp}
+- {x: 12, y: 14, s: 2*0, n: 'E5-Moving Floor Left [4-way]'}
+- {x: 12, y: 18, n: FE6-Hole}
+- {x: 16, y: 18, n: FE6-Hole}
+- {x: 20, y: 18, n: FE6-Hole}
+- {x: 24, y: 14, n: 11F-Star Tile On}
+- {x: 24, y: 16, n: 11F-Star Tile On}
+- {x: 26, y: 18, s: 2*0, n: 'E6-Moving Floor Right [4-way]'}
+- {x: 24, y: 20, n: FAF-Pot}
+- {x: 38, y: 14, n: FAF-Pot}
+- {x: 44, y: 20, n: FAF-Pot}
+- {x: 30, y: 5, s: 0*0, n: '55-[N]Wall Torches [L-R]'}
+- {x: 38, y: 36, s: 0*3, n: '05-[N]Wall Column [L-R]'}
+- {x: 38, y: 58, s: 0*3, n: '06-[S]Wall Column [L-R]'}
+- {x: 30, y: 8, n: FAF-Pot}
+- {x: 32, y: 8, n: FAF-Pot}
+- {x: 38, y: 18, n: 11E-Star Tile Off}
+- {x: 38, y: 20, n: 11E-Star Tile Off}
+- {x: 40, y: 14, s: 0*0, n: 'E4-Moving Floor Down [4-way]'}
+- {x: 40, y: 18, n: FE6-Hole}
+- {x: 44, y: 14, n: 11F-Star Tile On}
+- {x: 44, y: 16, n: 11F-Star Tile On}
+- {x: 46, y: 18, s: 0*0, n: 'E3-Moving Floor Up [4-way]'}
+- {x: 6, y: 40, n: F99-Chest}
+- {x: 24, y: 40, n: F99-Chest}
+- {x: 6, y: 48, n: F99-Chest}
+- {x: 24, y: 48, n: F99-Chest}
+- {x: 8, y: 42, n: FE5-Medusa Head}
+- {x: 18, y: 46, n: FE5-Medusa Head}
+- {x: 10, y: 52, n: FE5-Medusa Head}
+- {x: 22, y: 54, n: FE5-Medusa Head}
+- {x: 38, y: 46, s: 0*0, n: '5E-Block [L-R]'}
+- {x: 38, y: 48, n: 11F-Star Tile On}
+- {x: 41, y: 42, s: 3*0, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 41, y: 46, s: 0*1, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 41, y: 52, s: 3*0, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 53, y: 46, s: 0*1, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 41, y: 42, s: 3*1, n: '27-Pit [N]Edge [L-R]'}
+- {x: 41, y: 43, s: 2*3, n: '6A-[W]Pit Edge [U-D]'}
+- {x: 41, y: 55, s: 3*1, n: '28-Pit [S]Edge [L-R]'}
+- {x: 56, y: 43, s: 2*3, n: '6B-[E]Pit Edge [U-D]'}
+- {x: 44, y: 45, s: 1*3, n: '29-Pit [S]Edge [L-R]'}
+- {x: 44, y: 52, s: 1*3, n: '2A-Pit [N]Edge [L-R]'}
+- {x: 44, y: 46, s: 1*1, n: '6B-[E]Pit Edge [U-D]'}
+- {x: 53, y: 46, s: 1*1, n: '6A-[W]Pit Edge [U-D]'}
+- {x: 46, y: 42, n: FE6-Hole}
+- {x: 48, y: 48, n: FCA-Warp Tile}
+- {x: 2, y: 3, s: 3*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 18, y: 3, s: 1*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 38, y: 3, s: 3*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 54, y: 3, s: 1*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 0, y: 25, s: 0*0, n: '00-Ceiling [L-R]'}
+- {x: 0, y: 27, s: 0*0, n: '00-Ceiling [L-R]'}
+- {x: 0, y: 29, s: 0*0, n: '00-Ceiling [L-R]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 24, pos: 6, dir: 1}
+- {type: 28, pos: 6, dir: 3}
+- {type: 0, pos: 8, dir: 3}

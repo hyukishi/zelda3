@@ -1,0 +1,43 @@
+Header:
+  name: 'LW 063 : Octorock Nesting Grounds'
+  size: small
+  gfx: 39
+  palette: 4
+  sign_text: 167
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel:
+- bird_travel_id: 7
+  xy: [243, 359]
+  scroll_xy: [117, 261]
+  camera_xy: [250, 370]
+  load_xy: [1, 0]
+  unk: [-5, 11]
+- whirlpool_src_area: 18
+  xy: [104, 184]
+  scroll_xy: [0, 86]
+  camera_xy: [133, 195]
+  load_xy: [0, 0]
+  unk: [-6, 0]
+Entrances: []
+Exits: []
+Items:
+- [20, 24, 04-Random]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 4, palette: 3}
+  sprites:
+  - [17, 4, 08-Octorok]
+  - [22, 5, 08-Octorok]
+  - [8, 11, 55-FireBallZora]
+  - [7, 12, BA-Whirlpool]
+  - [16, 22, 0F-OctoBlimp]
+Sprites.SecondPart:
+  info: {gfx: 32, palette: 3}
+  sprites:
+  - [22, 5, 0A-4WayOctorok]
+  - [7, 12, BA-Whirlpool]
+  - [6, 19, 55-FireBallZora]
+  - [17, 22, 0F-OctoBlimp]

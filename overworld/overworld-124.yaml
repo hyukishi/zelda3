@@ -1,0 +1,25 @@
+Header:
+  name: 'DW 124 : Wilted Terrace'
+  size: small
+  gfx: 64
+  palette: 29
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items:
+- [20, 5, 05-Bomb]
+- [11, 6, 06-Heart]
+- [12, 13, 06-Heart]
+- [10, 14, 04-Random]
+Sprites:
+  info: {gfx: 24, palette: 14}
+  sprites:
+  - [3, 5, D3-AliveRock]
+  - [7, 6, 41-BlueSoldier]
+  - [15, 6, 33-PullForRupees]
+  - [17, 17, 11-Hinox]
+  - [24, 21, 22-HoppingBulbPlan]
+  - [22, 25, 22-HoppingBulbPlan]

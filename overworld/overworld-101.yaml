@@ -1,0 +1,22 @@
+Header:
+  name: 'DW 101 : Moundlands'
+  size: small
+  gfx: 48
+  palette: 16
+  sign_text: 172
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items:
+- [4, 18, 06-Heart]
+Sprites:
+  info: {gfx: 19, palette: 14}
+  sprites:
+  - [19, 7, 12-PigSpearMan]
+  - [15, 10, D3-AliveRock]
+  - [14, 12, 12-PigSpearMan]
+  - [5, 17, 11-Hinox]
+  - [10, 22, 12-PigSpearMan]
+  - [19, 22, 12-PigSpearMan]

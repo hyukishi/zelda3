@@ -1,0 +1,35 @@
+Header:
+  name: 'LW 026 : West Woods'
+  size: small
+  gfx: 32
+  palette: 0
+  sign_text: 167
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: Heavy rain, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items:
+- [21, 9, 03-Bee]
+- [12, 21, 05-Bomb]
+- [21, 27, 04-Random]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 1, palette: 1}
+  sprites:
+  - [20, 12, 41-BlueSoldier]
+  - [12, 14, 42-GreenSoldier]
+  - [13, 17, E3-Fairy]
+  - [23, 23, DA-Rupee-B]
+  - [10, 24, D8-Heart]
+  - [15, 24, 43-RedSpearSoldier]
+Sprites.SecondPart:
+  info: {gfx: 28, palette: 1}
+  sprites:
+  - [15, 8, 41-BlueSoldier]
+  - [12, 14, 41-BlueSoldier]
+  - [13, 17, E3-Fairy]
+  - [10, 24, D8-Heart]
+  - [15, 24, 45-HogSpearMan]

@@ -1,0 +1,60 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 3
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 19
+  blockset: 11
+  enemyblk: 41
+  effect: None
+  tag0: Switch opens door(Hold)
+  tag1: None
+  hole0_dest: [79, 0]
+  stair0_dest: [158, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [19, 0]
+  stair3_dest: [11, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [23, 8, upper, 15-Bubble]
+- [20, 18, upper, A1-IceMan]
+- [20, 21, upper, 24-BlueMiri]
+- [27, 21, upper, 24-BlueMiri]
+- [24, 22, upper, 91-StalfosKnight]
+- [20, 26, upper, 24-BlueMiri]
+- [27, 26, upper, 24-BlueMiri]
+Secrets:
+- [46, 50, 88-Switch]
+Chests: []
+Entrances: []
+Layer1:
+- {x: 46, y: 50, n: FAF-Pot}
+- {x: 46, y: 4, n: 138-Door Staircase Up R}
+- {x: 34, y: 13, s: 1*0, n: '0D-/ Wall Tile Bot (HIGH) [NW]'}
+- {x: 34, y: 16, s: 1*0, n: '0E-\ Wall Tile Bot (HIGH) [SW]'}
+- {x: 52, y: 4, s: 1*0, n: '0F-\ Wall Tile Bot (HIGH) [NE]'}
+- {x: 52, y: 25, s: 1*0, n: '10-/ Wall Tile Bot (HIGH) [SE]'}
+- {x: 34, y: 14, s: 0*3, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 58, y: 14, s: 0*3, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 41, y: 13, n: 11C-Fairy Pot}
+- {x: 51, y: 13, n: 11C-Fairy Pot}
+- {x: 46, y: 20, n: FCF-Inactive Warp}
+- {x: 34, y: 4, s: 1*1, n: 'A0-/ Ceiling [NW]'}
+- {x: 34, y: 21, s: 1*1, n: 'A1-\ Ceiling [SW]'}
+- {x: 53, y: 4, s: 1*1, n: 'A2-\ Ceiling [NE]'}
+- {x: 53, y: 29, s: 1*1, n: 'A3-/ Ceiling [SE]'}
+- {x: 39, y: 36, n: 'FF9-???'}
+- {x: 53, y: 36, s: 0*0, n: '3A-[N]Wall Decor: [L-R]'}
+- {x: 44, y: 36, s: 0*1, n: '05-[N]Wall Column [L-R]'}
+- {x: 38, y: 58, s: 0*3, n: '06-[S]Wall Column [L-R]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 24, pos: 8, dir: 1}
+- {type: 28, pos: 8, dir: 3}
+- {type: 0, pos: 8, dir: 0}

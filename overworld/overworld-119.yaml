@@ -1,0 +1,28 @@
+Header:
+  name: 'DW 119 : Info Hub'
+  size: small
+  gfx: 64
+  palette: 29
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances:
+- {index: 105, x: 9, y: 4, entrance_id: 106}
+- {index: 123, x: 6, y: 8, entrance_id: 112}
+- {index: 128, x: 4, y: 4, entrance_id: 94}
+Exits: []
+Items:
+- [4, 5, 86-Bombable]
+- [21, 7, 06-Heart]
+- [6, 8, 84-Staircase]
+- [12, 10, 05-Bomb]
+Sprites:
+  info: {gfx: 25, palette: 14}
+  sprites:
+  - [17, 8, 08-Octorok]
+  - [9, 10, D3-AliveRock]
+  - [13, 11, A9-BlueAirBomber]
+  - [24, 17, 08-Octorok]
+  - [7, 18, 55-FireBallZora]
+  - [18, 25, 55-FireBallZora]

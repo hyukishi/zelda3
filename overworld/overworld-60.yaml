@@ -1,0 +1,35 @@
+Header:
+  name: 'LW 060 : Hyrule Wetlands Terrace'
+  size: small
+  gfx: 39
+  palette: 4
+  sign_text: 167
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items:
+- [11, 13, 03-Bee]
+- [8, 14, 04-Random]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 4, palette: 3}
+  sprites:
+  - [8, 12, 47-GreenGrassArche]
+  - [20, 15, 08-Octorok]
+  - [14, 15, 00-Raven]
+  - [9, 17, 17-BushCrab]
+  - [20, 21, 0A-4WayOctorok]
+  - [22, 23, 58-Crab]
+  - [11, 24, 08-Octorok]
+Sprites.SecondPart:
+  info: {gfx: 32, palette: 3}
+  sprites:
+  - [11, 9, 00-Raven]
+  - [8, 10, 41-BlueSoldier]
+  - [20, 15, 08-Octorok]
+  - [9, 17, 45-HogSpearMan]
+  - [20, 21, 0A-4WayOctorok]

@@ -1,0 +1,44 @@
+Header:
+  floor1: 2
+  floor2: 14
+  layout: 7
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 37
+  blockset: 14
+  enemyblk: 36
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [0, 0]
+  stair0_dest: [77, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [6, 0]
+  stair3_dest: [5, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [15, 15, upper, 115-WizzrobeSpawn]
+- [12, 14, upper, 15-Bubble]
+Secrets: []
+Chests: []
+Entrances: []
+Layer1:
+- {x: 46, y: 4, n: 138-Door Staircase Up R}
+- {x: 24, y: 18, s: 0*1, n: 'DF-Spike Floor [4-way]'}
+- {x: 26, y: 18, s: 0*1, n: 'DF-Spike Floor [4-way]'}
+- {x: 30, y: 26, s: 0*0, n: 'DF-Spike Floor [4-way]'}
+- {x: 34, y: 22, s: 1*0, n: 'DF-Spike Floor [4-way]'}
+- {x: 34, y: 16, s: 1*0, n: 'DF-Spike Floor [4-way]'}
+- {x: 48, y: 22, s: 0*1, n: 'DF-Spike Floor [4-way]'}
+- {x: 40, y: 32, s: 0*0, n: 'DF-Spike Floor [4-way]'}
+- {x: 30, y: 34, s: 1*0, n: 'DF-Spike Floor [4-way]'}
+- {x: 30, y: 36, s: 1*0, n: 'DF-Spike Floor [4-way]'}
+- {x: 20, y: 38, s: 0*1, n: 'DF-Spike Floor [4-way]'}
+- {x: 22, y: 38, s: 0*1, n: 'DF-Spike Floor [4-way]'}
+- {x: 10, y: 26, s: 1*1, n: 'DF-Spike Floor [4-way]'}
+Layer2: []
+Layer3: []

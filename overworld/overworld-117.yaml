@@ -1,0 +1,48 @@
+Header:
+  name: 'DW 117 : Lake Dielia NW'
+  size: big
+  gfx: 66
+  palette: 28
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances:
+- {index: 44, x: 43, y: 28, entrance_id: 45}
+- {index: 115, x: 5, y: 12, entrance_id: 96}
+Exits:
+- index: 46
+  room: 14
+  xy: [696, 440]
+  scroll_xy: [574, 362]
+  camera_xy: [707, 471]
+  load_xy: [0, 1]
+  unk: [6, -14]
+Items:
+- [12, 5, 06-Heart]
+- [8, 24, 04-Random]
+Sprites:
+  info: {gfx: 25, palette: 14}
+  sprites:
+  - [10, 5, D3-AliveRock]
+  - [9, 7, 41-BlueSoldier]
+  - [11, 9, 41-BlueSoldier]
+  - [7, 19, 08-Octorok]
+  - [24, 22, A8-GreenAirBomber]
+  - [9, 23, AA-LikeLike]
+  - [48, 12, 55-FireBallZora]
+  - [41, 17, A9-BlueAirBomber]
+  - [54, 21, A8-GreenAirBomber]
+  - [49, 31, AA-LikeLike]
+  - [27, 34, 55-FireBallZora]
+  - [20, 40, A8-GreenAirBomber]
+  - [22, 46, AA-LikeLike]
+  - [25, 50, A8-GreenAirBomber]
+  - [10, 53, A9-BlueAirBomber]
+  - [8, 57, 22-HoppingBulbPlan]
+  - [27, 57, 55-FireBallZora]
+  - [42, 38, AA-LikeLike]
+  - [50, 40, A8-GreenAirBomber]
+  - [42, 44, 55-FireBallZora]
+  - [50, 53, 55-FireBallZora]
+  - [55, 57, 08-Octorok]

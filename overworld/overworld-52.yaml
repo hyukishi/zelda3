@@ -1,0 +1,36 @@
+Header:
+  name: 'LW 052 : Hyrule Wetlands NE'
+  size: small
+  gfx: 39
+  palette: 4
+  sign_text: 167
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances:
+- {index: 107, x: 24, y: 6, entrance_id: 94}
+Exits: []
+Items:
+- [24, 7, 86-Bombable]
+- [6, 9, 04-Random]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 4, palette: 3}
+  sprites:
+  - [11, 13, 46-BlueArcher]
+  - [21, 17, 4D-Bunny]
+  - [17, 18, 47-GreenGrassArche]
+  - [8, 19, 00-Raven]
+  - [14, 19, E3-Fairy]
+  - [21, 23, 47-GreenGrassArche]
+  - [12, 24, 46-BlueArcher]
+Sprites.SecondPart:
+  info: {gfx: 32, palette: 3}
+  sprites:
+  - [23, 14, 33-PullForRupees]
+  - [8, 19, 00-Raven]
+  - [17, 18, 41-BlueSoldier]
+  - [6, 19, 08-Octorok]
+  - [12, 24, 08-Octorok]

@@ -1,0 +1,23 @@
+Header:
+  name: 'DW 122 : Via To Nowhere'
+  size: small
+  gfx: 48
+  palette: 16
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items:
+- [19, 10, 05-Bomb]
+- [21, 10, 05-Bomb]
+- [23, 10, 05-Bomb]
+- [22, 19, 06-Heart]
+Sprites:
+  info: {gfx: 24, palette: 0}
+  sprites:
+  - [6, 7, 11-Hinox]
+  - [22, 9, 22-HoppingBulbPlan]
+  - [20, 11, 22-HoppingBulbPlan]
+  - [22, 11, 22-HoppingBulbPlan]

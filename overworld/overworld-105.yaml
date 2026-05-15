@@ -1,0 +1,23 @@
+Header:
+  name: 'DW 105 : Archery Shop Grounds'
+  size: small
+  gfx: 63
+  palette: 16
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances:
+- {index: 88, x: 22, y: 18, entrance_id: 89}
+Exits: []
+Items:
+- [4, 8, 01-Rupee-G]
+- [6, 8, 01-Rupee-G]
+- [20, 14, 04-Random]
+- [19, 18, 01-Rupee-G]
+- [18, 19, 01-Rupee-G]
+- [19, 19, 01-Rupee-G]
+Sprites:
+  info: {gfx: 29, palette: 0}
+  sprites:
+  - [6, 9, 1A-BlackSmith(Frog]

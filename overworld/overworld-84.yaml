@@ -1,0 +1,27 @@
+Header:
+  name: 'DW 084 : Garden of Very Bad Things'
+  size: small
+  gfx: 64
+  palette: 30
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items:
+- [8, 9, 04-Random]
+- [9, 9, 04-Random]
+- [23, 11, 01-Rupee-G]
+- [28, 15, 03-Bee]
+Sprites:
+  info: {gfx: 19, palette: 14}
+  sprites:
+  - [20, 13, 22-HoppingBulbPlan]
+  - [5, 11, DC-Bomb]
+  - [25, 11, DB-InTreeRocks]
+  - [7, 15, 22-HoppingBulbPlan]
+  - [15, 14, E3-Fairy]
+  - [25, 16, 22-HoppingBulbPlan]
+  - [13, 20, 22-HoppingBulbPlan]
+  - [17, 25, 11-Hinox]

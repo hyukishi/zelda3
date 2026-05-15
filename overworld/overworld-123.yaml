@@ -1,0 +1,32 @@
+Header:
+  name: 'DW 123 : Swamp Palace Grounds'
+  size: small
+  gfx: 64
+  palette: 29
+  sign_text: 174
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances:
+- {index: 36, x: 23, y: 14, entrance_id: 37}
+Exits:
+- index: 38
+  room: 40
+  xy: [376, 216]
+  scroll_xy: [242, 140]
+  camera_xy: [383, 249]
+  load_xy: [0, 1]
+  unk: [4, -2]
+Items:
+- [16, 8, 06-Heart]
+- [13, 12, 04-Random]
+- [11, 13, 04-Random]
+Sprites:
+  info: {gfx: 19, palette: 14}
+  sprites:
+  - [18, 6, A9-BlueAirBomber]
+  - [22, 10, AA-LikeLike]
+  - [13, 15, 12-PigSpearMan]
+  - [10, 16, D3-AliveRock]
+  - [19, 20, 12-PigSpearMan]
+  - [22, 24, 22-HoppingBulbPlan]

@@ -1,0 +1,29 @@
+Header:
+  floor1: 0
+  floor2: 0
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 6
+  blockset: 5
+  enemyblk: 25
+  effect: None
+  tag0: Light torches to get chest
+  tag1: NW Kill enemy to open
+  hole0_dest: [0, 0]
+  stair0_dest: [119, 2]
+  stair1_dest: [119, 2]
+  stair2_dest: [0, 0]
+  stair3_dest: [11, 0]
+  tele_msg: 180
+  sort_sprites: 1
+  pits_hurt_player: false
+Sprites: []
+Secrets: []
+Chests: []
+Entrances: []
+Layer1: []
+Layer2: []
+Layer3: []

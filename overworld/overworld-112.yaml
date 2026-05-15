@@ -1,0 +1,40 @@
+Header:
+  name: 'DW 112 : Swamp of Evil NW'
+  size: big
+  gfx: 66
+  palette: 28
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances:
+- {index: 38, x: 18, y: 13, entrance_id: 39}
+- {index: 85, x: 27, y: 12, entrance_id: 94}
+- {index: 94, x: 9, y: 12, entrance_id: 95}
+- {index: 97, x: 50, y: 18, entrance_id: 98}
+Exits:
+- index: 40
+  room: 152
+  xy: [296, 199]
+  scroll_xy: [166, 121]
+  camera_xy: [307, 230]
+  load_xy: [0, 1]
+  unk: [7, -6]
+Items:
+- [3, 40, 06-Heart]
+- [3, 41, 06-Heart]
+Sprites:
+  info: {gfx: 22, palette: 15}
+  sprites:
+  - [33, 27, 00-Raven]
+  - [43, 28, 55-FireBallZora]
+  - [18, 33, 55-FireBallZora]
+  - [27, 36, CF-SwampSnake]
+  - [16, 39, CF-SwampSnake]
+  - [7, 40, 00-Raven]
+  - [22, 43, 55-FireBallZora]
+  - [30, 46, 55-FireBallZora]
+  - [23, 51, CF-SwampSnake]
+  - [17, 56, 55-FireBallZora]
+  - [35, 43, 55-FireBallZora]
+  - [39, 44, CF-SwampSnake]

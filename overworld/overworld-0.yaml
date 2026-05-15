@@ -1,0 +1,72 @@
+Header:
+  name: 'LW 000 : Lost Woods NW'
+  size: big
+  gfx: 33
+  palette: 6
+  sign_text: 167
+  music: {beginning: Forest, zelda: Forest, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: Stop, sword: Stop, agahnim: Stop}
+Travel: []
+Entrances:
+- {index: 43, x: 46, y: 37, entrance_id: 44}
+- {index: 59, x: 47, y: 1, entrance_id: 60}
+Holes:
+- {x: 48, y: 33, entrance_id: 122}
+Exits:
+- index: 54
+  room: 225
+  xy: [744, 584]
+  scroll_xy: [610, 502]
+  camera_xy: [751, 611]
+  load_xy: [1, 63]
+  unk: [10, 14]
+- index: 74
+  room: 4120
+  xy: [597, 446]
+  scroll_xy: [463, 362]
+  camera_xy: [604, 473]
+  load_xy: [1, 62]
+  unk: [-12, 1]
+Items:
+- [53, 6, 04-Random]
+- [10, 50, 04-Random]
+- [48, 33, 80-Hole]
+- [40, 53, 01-Rupee-G]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 7, palette: 5}
+  sprites:
+  - [7, 18, E8-FakeSword]
+  - [18, 11, 00-Raven]
+  - [30, 21, E7-Mushroom]
+  - [40, 6, E8-FakeSword]
+  - [49, 10, 0D-Cucumber]
+  - [45, 10, 00-Raven]
+  - [42, 16, 17-BushCrab]
+  - [57, 21, E8-FakeSword]
+  - [14, 34, C4-Bully]
+  - [30, 45, 17-BushCrab]
+  - [41, 37, 79-Bee]
+  - [42, 39, 33-PullForRupees]
+  - [54, 45, 00-Raven]
+  - [37, 53, E8-FakeSword]
+  - [41, 53, C4-Bully]
+Sprites.SecondPart:
+  info: {gfx: 7, palette: 5}
+  sprites:
+  - [15, 17, 41-BlueSoldier]
+  - [7, 18, E8-FakeSword]
+  - [30, 21, E7-Mushroom]
+  - [13, 31, C4-Bully]
+  - [40, 6, E8-FakeSword]
+  - [43, 8, 33-PullForRupees]
+  - [51, 8, 41-BlueSoldier]
+  - [43, 10, C4-Bully]
+  - [49, 10, 0D-Cucumber]
+  - [42, 16, 17-BushCrab]
+  - [13, 44, 17-BushCrab]
+  - [9, 51, 41-BlueSoldier]
+  - [41, 37, 79-Bee]
+  - [40, 47, 17-BushCrab]

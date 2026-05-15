@@ -1,0 +1,113 @@
+Header:
+  floor1: 3
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 31
+  blockset: 3
+  enemyblk: 5
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [3, 0]
+  stair0_dest: [15, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 0]
+  stair3_dest: [0, 2]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [9, 25, upper, B5-BombShop]
+Secrets: []
+Chests: [70]
+Entrances:
+- entrance_index: 83
+  name: The Bomb "Shop"
+  scroll_xy: [0, 272]
+  player_xy: [120, 472]
+  camera_xy: [127, 391]
+  blockset: 3
+  music: Lower_vol
+  palace: None
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, single_y, lower_left]
+  floor: 0
+  house_exit_door: [wooden, 11, 16]
+- entrance_index: 84
+  name: Village of Outcasts Retirement Center
+  scroll_xy: [256, 272]
+  player_xy: [376, 472]
+  camera_xy: [383, 391]
+  blockset: 3
+  music: Lower_vol
+  palace: None
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, single_y, lower_right]
+  floor: 0
+  repair_scroll_bounds: [0, 0, 0, 0, 0, 0, 0, -1]
+  house_exit_door: [wooden, 52, 27]
+Layer1:
+- {x: 4, y: 40, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 8, y: 40, s: 2*0, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 24, y: 40, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 4, y: 44, s: 1*3, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 4, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 24, y: 44, s: 1*3, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 24, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 15, y: 40, s: 0*0, n: '3E-[N]Wall Column [L-R]'}
+- {x: 4, y: 51, s: 0*0, n: '78-[W]Wall Top Column [U-D]'}
+- {x: 26, y: 51, s: 0*0, n: '7B-[E]Wall Top Column [U-D]'}
+- {x: 8, y: 59, s: 0*0, n: '3B-[S]Wall Decor: [L-R]'}
+- {x: 20, y: 59, s: 0*0, n: '3B-[S]Wall Decor: [L-R]'}
+- {x: 8, y: 41, n: FDC-Bookshelf}
+- {x: 14, y: 42, n: 121-Barrel}
+- {x: 16, y: 42, n: 121-Barrel}
+- {x: 18, y: 41, s: 0*1, n: '4F-Shelf [L-R]'}
+- {x: 20, y: 45, s: 0*1, n: 'C5-Floor3 [4-way]'}
+- {x: 8, y: 46, s: 0*2, n: 'B2-Floor? [L-R]'}
+- {x: 19, y: 45, s: 1*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 19, y: 53, s: 0*1, n: '4C-Bar [L-R]'}
+- {x: 22, y: 45, n: FDB-Water Troof}
+- {x: 8, y: 45, s: 2*0, n: B3-N/A}
+- {x: 8, y: 50, s: 2*0, n: B4-N/A}
+- {x: 8, y: 46, s: 0*3, n: '8D-[W]Edge [U-D]'}
+- {x: 18, y: 46, s: 0*3, n: '8E-[E]Edge [U-D]'}
+- {x: 58, y: 46, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 44, y: 46, s: 1*3, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 40, y: 46, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 40, y: 50, s: 0*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 40, y: 52, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 44, y: 52, s: 1*3, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 58, y: 52, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 34, y: 41, s: 0*1, n: '78-[W]Wall Top Column [U-D]'}
+- {x: 47, y: 48, s: 0*0, n: '4B-[S]Wall Column [L-R]'}
+- {x: 47, y: 52, s: 0*0, n: '3E-[N]Wall Column [L-R]'}
+- {x: 40, y: 59, s: 0*0, n: '3B-[S]Wall Decor: [L-R]'}
+- {x: 52, y: 59, s: 0*0, n: '3B-[S]Wall Decor: [L-R]'}
+- {x: 52, y: 53, n: 12A-Wall Painting}
+- {x: 42, y: 39, n: 128-Bed}
+- {x: 46, y: 37, n: 129-Decoration}
+- {x: 50, y: 39, n: F99-Chest}
+- {x: 54, y: 39, s: 0*0, n: '3C-Double Chair [L-R]'}
+- {x: 52, y: 41, s: 1*0, n: 'DD-Table / Rock [4-way]'}
+- {x: 53, y: 41, n: FDA-Plate on Table}
+- {x: 44, y: 50, s: 2*1, n: '00-Ceiling [L-R]'}
+- {x: 2, y: 36, s: 3*1, n: '60-Ceiling [U-D]'}
+- {x: 4, y: 36, s: 3*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 20, y: 36, s: 1*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 28, y: 36, s: 3*1, n: '60-Ceiling [U-D]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 0, pos: 6, dir: 1}
+- {type: 18, pos: 6, dir: 1}
+- {type: 0, pos: 8, dir: 1}
+- {type: 18, pos: 8, dir: 1}

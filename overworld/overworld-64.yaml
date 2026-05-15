@@ -1,0 +1,85 @@
+Header:
+  name: 'DW 064 : Skull Woods NW'
+  size: big
+  gfx: 62
+  palette: 27
+  sign_text: 167
+  music: {agahnim: Mountain}
+  ambient: {agahnim: Wind}
+Travel: []
+Entrances:
+- {index: 39, x: 14, y: 32, entrance_id: 40}
+- {index: 40, x: 36, y: 36, entrance_id: 41}
+- {index: 41, x: 46, y: 37, entrance_id: 42}
+- {index: 42, x: 9, y: 12, entrance_id: 43}
+Holes:
+- {x: 48, y: 33, entrance_id: 118}
+- {x: 39, y: 44, entrance_id: 119}
+- {x: 39, y: 45, entrance_id: 119}
+- {x: 49, y: 42, entrance_id: 120}
+- {x: 49, y: 43, entrance_id: 120}
+- {x: 30, y: 22, entrance_id: 121}
+- {x: 30, y: 23, entrance_id: 121}
+Exits:
+- index: 41
+  room: 86
+  xy: [232, 504]
+  scroll_xy: [98, 422]
+  camera_xy: [239, 531]
+  load_xy: [1, 63]
+  unk: [10, 14]
+- index: 42
+  room: 87
+  xy: [584, 568]
+  scroll_xy: [450, 486]
+  camera_xy: [591, 595]
+  load_xy: [0, 63]
+  unk: [10, -2]
+- index: 43
+  room: 88
+  xy: [744, 584]
+  scroll_xy: [610, 502]
+  camera_xy: [751, 611]
+  load_xy: [0, 63]
+  unk: [10, -2]
+- index: 44
+  room: 89
+  xy: [152, 184]
+  scroll_xy: [22, 102]
+  camera_xy: [163, 211]
+  load_xy: [0, 63]
+  unk: [10, -6]
+Items:
+- [28, 6, 04-Random]
+- [53, 6, 01-Rupee-G]
+- [56, 10, 03-Bee]
+- [57, 11, 04-Random]
+- [10, 50, 03-Bee]
+- [28, 58, 06-Heart]
+- [30, 59, 05-Bomb]
+- [47, 32, 04-Random]
+- [48, 33, 80-Hole]
+- [49, 34, 01-Rupee-G]
+Sprites:
+  info: {gfx: 19, palette: 14}
+  sprites:
+  - [26, 7, 22-HoppingBulbPlan]
+  - [18, 17, 22-HoppingBulbPlan]
+  - [10, 30, 22-HoppingBulbPlan]
+  - [47, 9, 22-HoppingBulbPlan]
+  - [49, 10, 0E-SnapDragon]
+  - [51, 11, 22-HoppingBulbPlan]
+  - [41, 20, 22-HoppingBulbPlan]
+  - [35, 22, 22-HoppingBulbPlan]
+  - [57, 23, AA-LikeLike]
+  - [10, 33, 22-HoppingBulbPlan]
+  - [26, 37, 22-HoppingBulbPlan]
+  - [11, 40, AA-LikeLike]
+  - [30, 48, 22-HoppingBulbPlan]
+  - [14, 56, 22-HoppingBulbPlan]
+  - [17, 56, 22-HoppingBulbPlan]
+  - [26, 57, 22-HoppingBulbPlan]
+  - [45, 33, 22-HoppingBulbPlan]
+  - [50, 40, 22-HoppingBulbPlan]
+  - [55, 50, 22-HoppingBulbPlan]
+  - [40, 55, AA-LikeLike]

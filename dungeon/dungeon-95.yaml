@@ -1,0 +1,51 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 19
+  blockset: 11
+  enemyblk: 28
+  effect: None
+  tag0: Trigger activated chest
+  tag1: None
+  hole0_dest: [0, 0]
+  stair0_dest: [63, 0]
+  stair1_dest: [127, 0]
+  stair2_dest: [192, 0]
+  stair3_dest: [0, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [4, 24, upper, 24-BlueMiri]
+- [11, 24, upper, 24-BlueMiri]
+- [8, 27, upper, 24-BlueMiri]
+Secrets:
+- [22, 54, 88-Switch]
+Chests: [36]
+Entrances: []
+Layer1:
+- {x: 11, y: 36, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 11, y: 40, s: 1*0, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 11, y: 47, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 15, y: 47, s: 0*1, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 17, y: 40, s: 1*0, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 17, y: 47, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 17, y: 36, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 15, y: 35, s: 1*2, n: '60-Ceiling [U-D]'}
+- {x: 27, y: 47, n: FEA-Right Crack Wall}
+- {x: 12, y: 50, s: 1*1, n: 'DF-Spike Floor [4-way]'}
+- {x: 12, y: 50, s: 1*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 12, y: 58, s: 1*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 22, y: 54, n: FAF-Pot}
+- {x: 8, y: 54, n: F99-Chest}
+- {x: 21, y: 36, n: 138-Door Staircase Up R}
+- {x: 7, y: 36, n: 139-Door Staircase Down L}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 28, pos: 2, dir: 2}

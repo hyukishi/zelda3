@@ -1,0 +1,64 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 6
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 34
+  blockset: 18
+  enemyblk: 7
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [20, 0]
+  stair0_dest: [5, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 0]
+  stair3_dest: [0, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [23, 24, upper, 72-Pond]
+Secrets: []
+Chests: []
+Entrances:
+- entrance_index: 99
+  name: Warped Pond of Wishing
+  scroll_xy: [256, 272]
+  player_xy: [376, 472]
+  camera_xy: [383, 391]
+  blockset: 18
+  music: Secret_way
+  palace: None
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, single_y, lower_right]
+  floor: 0
+  house_exit_door: [none]
+Layer1:
+- {x: 36, y: 43, s: 0*0, n: '0D-/ Wall Tile Bot (HIGH) [NW]'}
+- {x: 42, y: 38, s: 1*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 54, y: 38, s: 0*0, n: '0F-\ Wall Tile Bot (HIGH) [NE]'}
+- {x: 36, y: 44, s: 1*3, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 36, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 56, y: 44, s: 1*3, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 56, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 44, y: 41, s: 1*1, n: 'C9-Water Floor2 [4-way]'}
+- {x: 44, y: 41, s: 1*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 44, y: 48, s: 1*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 51, y: 41, s: 1*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 42, y: 46, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 52, y: 46, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 36, y: 38, s: 0*1, n: 'A0-/ Ceiling [NW]'}
+- {x: 34, y: 38, s: 3*0, n: '60-Ceiling [U-D]'}
+- {x: 60, y: 38, s: 3*0, n: '60-Ceiling [U-D]'}
+- {x: 55, y: 38, s: 0*1, n: 'A2-\ Ceiling [NE]'}
+- {x: 34, y: 36, s: 3*2, n: '00-Ceiling [L-R]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 10, pos: 8, dir: 1}

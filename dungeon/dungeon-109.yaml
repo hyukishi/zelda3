@@ -1,0 +1,77 @@
+Header:
+  floor1: 2
+  floor2: 14
+  layout: 2
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 36
+  blockset: 14
+  enemyblk: 35
+  effect: None
+  tag0: W Kill enemy to open
+  tag1: None
+  hole0_dest: [11, 0]
+  stair0_dest: [28, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [2, 0]
+  stair3_dest: [0, 3]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [5, 6, upper, A6-RedLizard]
+- [11, 6, upper, 61-Beamos]
+- [4, 9, upper, 61-Beamos]
+- [10, 11, upper, A6-RedLizard]
+- [4, 21, upper, C5-Shooter]
+- [11, 21, upper, 61-Beamos]
+- [5, 24, upper, A7-Stalfos]
+- [10, 24, upper, A6-RedLizard]
+- [6, 26, upper, 5C-WallBubble(R-L)]
+Secrets:
+- [14, 52, 0B-Heart]
+- [16, 52, 0B-Heart]
+- [14, 54, 0C-Magic]
+- [16, 54, 0C-Magic]
+Chests: []
+Entrances: []
+Layer1:
+- {x: 5, y: 7, s: 3*3, n: 'D1-Water Floor3 [4-way]'}
+- {x: 19, y: 7, s: 1*3, n: 'D1-Water Floor3 [4-way]'}
+- {x: 5, y: 23, s: 3*0, n: 'D1-Water Floor3 [4-way]'}
+- {x: 19, y: 23, s: 1*0, n: 'D1-Water Floor3 [4-way]'}
+- {x: 5, y: 39, s: 3*3, n: 'D1-Water Floor3 [4-way]'}
+- {x: 19, y: 39, s: 1*3, n: 'D1-Water Floor3 [4-way]'}
+- {x: 5, y: 55, s: 3*0, n: 'D1-Water Floor3 [4-way]'}
+- {x: 19, y: 55, s: 1*0, n: 'D1-Water Floor3 [4-way]'}
+- {x: 13, y: 23, s: 0*0, n: C4-Doorless Room Transition}
+- {x: 15, y: 23, s: 0*0, n: C4-Doorless Room Transition}
+- {x: 13, y: 26, s: 0*3, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 7, y: 17, s: 0*0, n: 'E3-Moving Floor Up [4-way]'}
+- {x: 9, y: 17, s: 3*0, n: 'E5-Moving Floor Left [4-way]'}
+- {x: 21, y: 11, s: 0*1, n: 'E4-Moving Floor Down [4-way]'}
+- {x: 7, y: 11, s: 3*0, n: 'E6-Moving Floor Right [4-way]'}
+- {x: 5, y: 7, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 7, y: 13, s: 0*0, n: 'E3-Moving Floor Up [4-way]'}
+- {x: 11, y: 15, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 19, y: 15, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 25, y: 7, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 5, y: 15, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 25, y: 15, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 5, y: 23, s: 1*1, n: 'DE-Spike Block [4-way]'}
+- {x: 23, y: 23, s: 1*1, n: 'DE-Spike Block [4-way]'}
+- {x: 8, y: 42, n: FE4-Fireball Shooter}
+- {x: 5, y: 47, s: 0*0, n: C4-Doorless Room Transition}
+- {x: 2, y: 47, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 14, y: 52, n: FAF-Pot}
+- {x: 16, y: 52, n: FAF-Pot}
+- {x: 14, y: 54, n: FAF-Pot}
+- {x: 16, y: 54, n: FAF-Pot}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 24, pos: 0, dir: 0}
+- {type: 24, pos: 6, dir: 0}
+- {type: 24, pos: 2, dir: 2}

@@ -1,0 +1,175 @@
+Header:
+  floor1: 5
+  floor2: 14
+  layout: 4
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 1
+  palette: 1
+  blockset: 16
+  enemyblk: 13
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [9, 0]
+  stair0_dest: [19, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [35, 0]
+  stair3_dest: [0, 1]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [14, 8, upper, 73-Priest/Uncle]
+- [20, 21, upper, 4B-Knight]
+- [13, 22, upper, 4B-Knight]
+Secrets:
+- [51, 49, 0C-Magic]
+- [51, 51, 0C-Magic]
+Chests: [18]
+Entrances:
+- entrance_index: 50
+  name: Hyrule Castle Secret Cellar
+  scroll_xy: [0, 272]
+  player_xy: [120, 472]
+  camera_xy: [127, 391]
+  blockset: 1
+  music: Beginning
+  palace: None
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [double_x, single_y, lower_left]
+  floor: -1
+  house_exit_door: [none]
+- entrance_index: 125
+  name: Hyrule Castle Secret Cellar (Drop In)
+  scroll_xy: [256, 16]
+  player_xy: [415, 150]
+  camera_xy: [383, 136]
+  blockset: 1
+  music: Beginning
+  palace: None
+  doorway_orientation: 0
+  plane: 1
+  ladder_level: 0
+  quadrants: [double_x, single_y, upper_right]
+  floor: -1
+  house_exit_door: [none]
+StartingPoints:
+- starting_point_index: 3
+  name: Starting Location 3
+  scroll_xy: [142, 3]
+  player_xy: [262, 112]
+  camera_xy: [269, 123]
+  blockset: 1
+  music: Beginning
+  palace: None
+  doorway_orientation: 0
+  plane: 1
+  ladder_level: 0
+  quadrants: [double_x, single_y, upper_right]
+  floor: -1
+  house_exit_door: [none]
+  associated_entrance_index: 50
+Layer1:
+- {x: 8, y: 8, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 12, y: 8, s: 3*3, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 42, y: 8, s: 2*0, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 58, y: 8, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 8, y: 12, s: 1*3, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 8, y: 26, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 20, y: 26, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 20, y: 24, s: 0*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 20, y: 20, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 24, y: 20, s: 2*1, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 42, y: 20, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 42, y: 24, s: 0*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 42, y: 26, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 11, y: 11, n: '108-Wall Outer Corner (LOW) [NW]'}
+- {x: 15, y: 11, s: 3*3, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 47, y: 11, s: 0*3, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 55, y: 11, n: '10A-Wall Outer Corner (LOW) [NE]'}
+- {x: 55, y: 15, s: 0*3, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 55, y: 23, n: '10B-Wall Outer Corner (LOW) [SE]'}
+- {x: 49, y: 23, s: 0*2, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 45, y: 23, n: '109-Wall Outer Corner (LOW) [SW]'}
+- {x: 45, y: 21, s: 0*0, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 45, y: 17, n: '10D-Wall Inner Corner (LOW) [SW]'}
+- {x: 21, y: 17, s: 2*3, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 17, y: 17, n: '10F-Wall Inner Corner (LOW) [SE]'}
+- {x: 17, y: 21, s: 0*0, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 17, y: 23, n: '10B-Wall Outer Corner (LOW) [SE]'}
+- {x: 15, y: 23, s: 0*0, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 11, y: 23, n: '109-Wall Outer Corner (LOW) [SW]'}
+- {x: 11, y: 15, s: 0*3, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 6, y: 36, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 6, y: 40, s: 2*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 6, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 56, y: 36, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 56, y: 40, s: 2*0, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 56, y: 56, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 38, y: 56, s: 2*1, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 34, y: 56, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 34, y: 52, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 34, y: 48, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 26, y: 48, s: 1*0, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 22, y: 48, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 22, y: 52, s: 0*3, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 22, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 9, y: 39, n: '108-Wall Outer Corner (LOW) [NW]'}
+- {x: 13, y: 39, s: 3*3, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 45, y: 39, s: 0*3, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 53, y: 39, n: '10A-Wall Outer Corner (LOW) [NE]'}
+- {x: 53, y: 43, s: 1*0, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 53, y: 53, n: '10B-Wall Outer Corner (LOW) [SE]'}
+- {x: 41, y: 53, s: 1*1, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 37, y: 53, n: '109-Wall Outer Corner (LOW) [SW]'}
+- {x: 37, y: 49, s: 0*1, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 37, y: 45, n: '10D-Wall Inner Corner (LOW) [SW]'}
+- {x: 23, y: 45, s: 1*2, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 19, y: 45, n: '10F-Wall Inner Corner (LOW) [SE]'}
+- {x: 19, y: 49, s: 0*1, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 19, y: 52, n: '10B-Wall Outer Corner (LOW) [SE]'}
+- {x: 13, y: 52, s: 0*2, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 9, y: 43, s: 1*0, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 9, y: 52, n: '109-Wall Outer Corner (LOW) [SW]'}
+- {x: 48, y: 15, s: 1*1, n: 'C8-Water Floor [4-way]'}
+- {x: 48, y: 14, s: 1*1, n: '3F-Water Edge [L-R]'}
+- {x: 48, y: 15, s: 1*3, n: '79-Water Edge [U-D]'}
+- {x: 48, y: 23, s: 1*1, n: '40-Water Edge [L-R]'}
+- {x: 55, y: 15, s: 1*3, n: '7A-Water Edge [U-D]'}
+- {x: 26, y: 9, s: 0*1, n: '55-[N]Wall Torches [L-R]'}
+- {x: 26, y: 21, s: 0*1, n: '56-[S]Wall Torches [L-R]'}
+- {x: 11, y: 27, s: 0*0, n: '56-[S]Wall Torches [L-R]'}
+- {x: 17, y: 27, s: 0*0, n: '56-[S]Wall Torches [L-R]'}
+- {x: 11, y: 37, s: 0*0, n: '55-[N]Wall Torches [L-R]'}
+- {x: 17, y: 37, s: 0*0, n: '55-[N]Wall Torches [L-R]'}
+- {x: 47, y: 37, s: 0*0, n: '55-[N]Wall Torches [L-R]'}
+- {x: 44, y: 42, s: 0*0, n: 'DC-Chest Platform? [4-way]'}
+- {x: 51, y: 49, n: FAF-Pot}
+- {x: 51, y: 51, n: FAF-Pot}
+- {x: 48, y: 44, n: F99-Chest}
+- {x: 12, y: 5, n: 120-Torch Lit}
+- {x: 10, y: 5, n: 120-Torch Lit}
+- {x: 14, y: 52, n: 'F9D-Stair Wet [S](Layer)'}
+- {x: 9, y: 56, s: 0*1, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 18, y: 56, s: 0*1, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 26, y: 52, s: 1*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 34, y: 60, s: 3*2, n: '00-Ceiling [L-R]'}
+- {x: 60, y: 36, s: 3*0, n: '60-Ceiling [U-D]'}
+- {x: 2, y: 36, s: 0*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 2, y: 52, s: 0*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 24, y: 24, s: 3*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 40, y: 24, s: 0*3, n: '60-Ceiling [U-D]'}
+- {x: 0, y: 4, s: 0*0, n: '00-Ceiling [L-R]'}
+- {x: 0, y: 6, s: 0*0, n: '00-Ceiling [L-R]'}
+- {x: 0, y: 8, s: 1*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 0, y: 24, s: 1*1, n: 'C0-Ceiling Large [4-way]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 2, pos: 9, dir: 0}
+- {type: 0, pos: 6, dir: 1}
+- {type: 18, pos: 6, dir: 1}

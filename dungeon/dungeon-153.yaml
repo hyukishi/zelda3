@@ -1,0 +1,88 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 5
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 1
+  palette: 11
+  blockset: 5
+  enemyblk: 8
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [0, 0]
+  stair0_dest: [218, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [40, 0]
+  stair3_dest: [14, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [21, 6, upper, 15-Bubble]
+- [26, 8, upper, 15-Bubble]
+- [14, 23, upper, 83-GreenRocklops]
+- [17, 23, upper, 83-GreenRocklops, drop_key]
+- [13, 24, upper, 4E-Tentacle2]
+- [18, 24, upper, 4E-Tentacle2]
+- [14, 25, upper, 4F-Tentacle]
+- [15, 25, upper, 4F-Tentacle]
+- [16, 25, upper, 4F-Tentacle]
+- [17, 25, upper, 4F-Tentacle]
+Secrets:
+- [20, 40, 0C-Magic]
+- [42, 40, 0B-Heart]
+Chests: []
+Entrances: []
+Layer1:
+- {x: 14, y: 36, n: 138-Door Staircase Up R}
+- {x: 10, y: 36, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 10, y: 40, s: 0*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 10, y: 42, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 14, y: 42, s: 0*2, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 18, y: 42, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 18, y: 46, s: 1*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 18, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 42, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 42, y: 46, s: 1*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 42, y: 42, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 46, y: 42, s: 0*2, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 50, y: 42, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 50, y: 40, s: 0*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 50, y: 36, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 34, y: 3, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 38, y: 3, s: 2*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 58, y: 3, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 40, y: 9, s: 3*2, n: 'E2-Rupee Floor [4-way]'}
+- {x: 37, y: 6, n: '108-Wall Outer Corner (LOW) [NW]'}
+- {x: 41, y: 6, s: 1*2, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 55, y: 6, n: '10A-Wall Outer Corner (LOW) [NE]'}
+- {x: 37, y: 10, s: 1*0, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 37, y: 20, n: '109-Wall Outer Corner (LOW) [SW]'}
+- {x: 41, y: 20, s: 1*2, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 55, y: 10, s: 1*0, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 55, y: 20, n: '10B-Wall Outer Corner (LOW) [SE]'}
+- {x: 20, y: 40, n: FAF-Pot}
+- {x: 42, y: 40, n: FAF-Pot}
+- {x: 37, y: 24, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 55, y: 24, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 41, y: 20, n: 'F9D-Stair Wet [S](Layer)'}
+- {x: 51, y: 20, n: 'F9D-Stair Wet [S](Layer)'}
+- {x: 2, y: 36, s: 3*1, n: '60-Ceiling [U-D]'}
+- {x: 4, y: 36, s: 3*1, n: '60-Ceiling [U-D]'}
+- {x: 6, y: 36, s: 0*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 6, y: 46, s: 2*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 54, y: 36, s: 1*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 46, y: 46, s: 3*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 42, y: 11, n: F92-Rupee Floor}
+- {x: 49, y: 11, n: F92-Rupee Floor}
+Layer2:
+- {x: 10, y: 5, n: FF3-Bg2 Full Mask}
+- {x: 10, y: 5, n: FAA-Dark Room BG2 Mask}
+Layer3: []
+Layer3.doors:
+- {type: 32, pos: 6, dir: 0}
+- {type: 28, pos: 7, dir: 1}
+- {type: 0, pos: 8, dir: 0}

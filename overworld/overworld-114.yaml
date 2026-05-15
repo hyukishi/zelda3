@@ -1,0 +1,29 @@
+Header:
+  name: 'DW 114 : Depressing Terrace'
+  size: small
+  gfx: 48
+  palette: 16
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items:
+- [14, 10, 04-Random]
+- [15, 10, 04-Random]
+- [14, 11, 04-Random]
+- [15, 11, 04-Random]
+- [19, 12, 03-Bee]
+- [6, 21, 01-Rupee-G]
+- [8, 23, 01-Rupee-G]
+- [4, 24, 01-Rupee-G]
+- [6, 26, 01-Rupee-G]
+Sprites:
+  info: {gfx: 19, palette: 0}
+  sprites:
+  - [27, 11, 25-LiveTree]
+  - [16, 13, 41-BlueSoldier]
+  - [19, 14, 41-BlueSoldier]
+  - [26, 20, 25-LiveTree]
+  - [11, 23, 22-HoppingBulbPlan]

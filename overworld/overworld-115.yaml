@@ -1,0 +1,20 @@
+Header:
+  name: 'DW 115 : Wilted Wetlands NW'
+  size: small
+  gfx: 64
+  palette: 29
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items: []
+Sprites:
+  info: {gfx: 19, palette: 14}
+  sprites:
+  - [23, 12, AA-LikeLike]
+  - [9, 13, 12-PigSpearMan]
+  - [20, 14, A8-GreenAirBomber]
+  - [21, 26, A8-GreenAirBomber]
+  - [27, 27, A9-BlueAirBomber]

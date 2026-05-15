@@ -1,0 +1,69 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 1
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 17
+  blockset: 12
+  enemyblk: 29
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [12, 0]
+  stair0_dest: [29, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 3]
+  stair3_dest: [0, 1]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: true
+Sprites: []
+Secrets: []
+Chests: []
+Entrances: []
+Layer1:
+- {x: 2, y: 20, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 6, y: 20, s: 2*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 26, y: 20, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 5, y: 23, n: '108-Wall Outer Corner (LOW) [NW]'}
+- {x: 9, y: 23, s: 1*2, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 23, y: 23, n: '10A-Wall Outer Corner (LOW) [NE]'}
+- {x: 23, y: 27, s: 3*1, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 18, y: 55, s: 0*2, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 23, y: 55, n: '10B-Wall Outer Corner (LOW) [SE]'}
+- {x: 8, y: 55, s: 0*2, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 5, y: 55, n: '109-Wall Outer Corner (LOW) [SW]'}
+- {x: 5, y: 35, s: 2*1, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 5, y: 27, s: 0*1, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 10, y: 27, s: 2*0, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 10, y: 35, s: 0*3, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 10, y: 51, s: 0*0, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 18, y: 31, s: 0*3, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 18, y: 47, s: 0*1, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 8, y: 27, s: 0*1, n: '67-[W]Wall Pit [U-D]'}
+- {x: 8, y: 26, n: '118-Wall Pit Corner (Lower) [NW]'}
+- {x: 10, y: 26, s: 1*1, n: '07-[N]Wall Pit [L-R]'}
+- {x: 22, y: 26, n: '11A-Wall Pit Corner (Lower) [NE]'}
+- {x: 22, y: 28, s: 3*0, n: '68-[E]Wall Pit [U-D]'}
+- {x: 22, y: 54, n: '11B-Wall Pit Corner (Lower) [SE]'}
+- {x: 18, y: 54, s: 0*1, n: '08-[S]Wall Pit [L-R]'}
+- {x: 10, y: 54, s: 0*1, n: '08-[S]Wall Pit [L-R]'}
+- {x: 8, y: 35, s: 2*1, n: '67-[W]Wall Pit [U-D]'}
+- {x: 8, y: 54, n: '119-Wall Pit Corner (Lower) [SW]'}
+- {x: 8, y: 59, s: 0*1, n: '56-[S]Wall Torches [L-R]'}
+- {x: 3, y: 25, s: 0*1, n: '7F-[W]Wall Torches [U-D]'}
+- {x: 2, y: 4, s: 3*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 18, y: 4, s: 2*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 5, y: 30, s: 2*2, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 5, y: 35, s: 1*1, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 13, y: 35, s: 0*1, n: '8A-Long Vert: Rail [U-D]'}
+- {x: 18, y: 30, s: 1*2, n: '8A-Long Vert: Rail [U-D]'}
+Layer2:
+- {x: 10, y: 5, n: FF3-Bg2 Full Mask}
+Layer3: []
+Layer3.doors:
+- {type: 0, pos: 1, dir: 2}
+- {type: 0, pos: 6, dir: 1}

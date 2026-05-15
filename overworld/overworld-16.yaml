@@ -1,0 +1,32 @@
+Header:
+  name: 'LW 016 : Lost Woods Outskirts'
+  size: small
+  gfx: 35
+  palette: 8
+  sign_text: 61
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items:
+- [20, 22, 04-Random]
+- [23, 22, 82-Warp]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 6, palette: 1}
+  sprites:
+  - [5, 12, 42-GreenSoldier]
+  - [7, 12, AC-Apples]
+  - [23, 15, E0-BigMagic]
+  - [8, 24, 42-GreenSoldier]
+Sprites.SecondPart:
+  info: {gfx: 6, palette: 1}
+  sprites:
+  - [5, 12, 41-BlueSoldier]
+  - [7, 12, AC-Apples]
+  - [23, 15, E0-BigMagic]
+  - [7, 18, 41-BlueSoldier]
+  - [8, 24, 41-BlueSoldier]

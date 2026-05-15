@@ -1,0 +1,80 @@
+Header:
+  floor1: 1
+  floor2: 8
+  layout: 2
+  start_quadrant: 0
+  bg2: Parallaxing
+  collision: One
+  lights_out: 0
+  palette: 19
+  blockset: 11
+  enemyblk: 28
+  effect: None
+  tag0: SW Kill enemies for chest
+  tag1: Switch opens door(Toggle)
+  hole0_dest: [158, 0]
+  stair0_dest: [94, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [19, 0]
+  stair3_dest: [11, 0]
+  tele_msg: 194
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [23, 17, upper, 93-RedOrb]
+- [24, 14, upper, 7F-FireBlade2]
+- [20, 15, upper, 99-Penguin]
+- [7, 18, upper, A1-IceMan]
+- [10, 18, upper, A1-IceMan]
+- [27, 22, upper, 99-Penguin]
+- [23, 23, upper, 7F-FireBlade2]
+Secrets:
+- [43, 30, 0B-Heart]
+- [41, 52, 0C-Magic]
+- [50, 52, 88-Switch]
+Chests: [40, 36]
+Entrances: []
+Layer1:
+- {x: 6, y: 46, n: FC7-Bomb Floor}
+- {x: 37, y: 7, s: 3*3, n: 'D1-Water Floor3 [4-way]'}
+- {x: 51, y: 7, s: 1*3, n: 'D1-Water Floor3 [4-way]'}
+- {x: 37, y: 23, s: 3*3, n: 'D1-Water Floor3 [4-way]'}
+- {x: 51, y: 23, s: 1*3, n: 'D1-Water Floor3 [4-way]'}
+- {x: 37, y: 39, s: 3*3, n: 'D1-Water Floor3 [4-way]'}
+- {x: 51, y: 39, s: 1*3, n: 'D1-Water Floor3 [4-way]'}
+- {x: 6, y: 42, n: FC8-Fake Bomb Floor}
+- {x: 6, y: 50, n: FC8-Fake Bomb Floor}
+- {x: 10, y: 46, n: FC8-Fake Bomb Floor}
+- {x: 10, y: 50, n: FC8-Fake Bomb Floor}
+- {x: 25, y: 39, s: 0*2, n: '88-Large Vert: Rail [U-D]'}
+- {x: 25, y: 51, s: 0*2, n: '88-Large Vert: Rail [U-D]'}
+- {x: 21, y: 47, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 7, y: 51, n: 12D-Floor Stairs Up (room)}
+- {x: 43, y: 30, n: FAF-Pot}
+- {x: 41, y: 52, n: FAF-Pot}
+- {x: 37, y: 55, s: 3*0, n: 'D1-Water Floor3 [4-way]'}
+- {x: 51, y: 55, s: 1*0, n: 'D1-Water Floor3 [4-way]'}
+- {x: 47, y: 5, n: F93-Telepathic Tile}
+- {x: 42, y: 22, s: 1*0, n: 'DE-Spike Block [4-way]'}
+- {x: 37, y: 28, s: 1*0, n: 'DE-Spike Block [4-way]'}
+- {x: 48, y: 28, n: 134-Block}
+- {x: 55, y: 32, s: 1*0, n: 'DE-Spike Block [4-way]'}
+- {x: 37, y: 42, s: 1*0, n: 'DE-Spike Block [4-way]'}
+- {x: 46, y: 46, n: 134-Block}
+- {x: 55, y: 46, s: 1*0, n: 'DE-Spike Block [4-way]'}
+- {x: 50, y: 52, n: FAF-Pot}
+- {x: 52, y: 52, n: FAF-Pot}
+- {x: 14, y: 48, n: F99-Chest}
+- {x: 13, y: 36, n: 'FF9-???'}
+- {x: 19, y: 36, n: 'FF9-???'}
+- {x: 8, y: 36, s: 0*0, n: '3A-[N]Wall Decor: [L-R]'}
+- {x: 2, y: 4, s: 3*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 2, y: 20, s: 3*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 18, y: 4, s: 2*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 18, y: 20, s: 2*2, n: 'C0-Ceiling Large [4-way]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 28, pos: 8, dir: 1}
+- {type: 54, pos: 8, dir: 2}
+- {type: 0, pos: 6, dir: 3}

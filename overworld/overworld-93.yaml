@@ -1,0 +1,22 @@
+Header:
+  name: 'DW 093 : Pyramid East Non-bridge'
+  size: small
+  gfx: 64
+  palette: 16
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items: []
+Sprites:
+  info: {gfx: 19, palette: 14}
+  sprites:
+  - [11, 8, 25-LiveTree]
+  - [7, 9, 11-Hinox]
+  - [6, 11, 0E-SnapDragon]
+  - [24, 11, 12-PigSpearMan]
+  - [23, 14, D3-AliveRock]
+  - [26, 16, 12-PigSpearMan]
+  - [8, 17, 41-BlueSoldier]

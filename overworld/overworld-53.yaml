@@ -1,0 +1,82 @@
+Header:
+  name: 'LW 053 : Lake Hylia NW'
+  size: big
+  gfx: 39
+  palette: 4
+  sign_text: 70
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel:
+- whirlpool_src_area: 15
+  xy: [656, 680]
+  scroll_xy: [522, 582]
+  camera_xy: [663, 691]
+  load_xy: [1, 0]
+  unk: [-6, 6]
+Entrances:
+- {index: 87, x: 25, y: 3, entrance_id: 88}
+- {index: 92, x: 42, y: 25, entrance_id: 93}
+- {index: 114, x: 5, y: 12, entrance_id: 101}
+- {index: 124, x: 6, y: 47, entrance_id: 108}
+Exits: []
+Items:
+- [24, 20, 04-Random]
+- [8, 24, 06-Heart]
+- [43, 30, 82-Warp]
+- [6, 48, 86-Bombable]
+- [47, 57, 03-Bee]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 4, palette: 3}
+  sprites:
+  - [14, 7, 00-Raven]
+  - [13, 9, 08-Octorok]
+  - [10, 12, 46-BlueArcher]
+  - [25, 19, EB-HeartPie]
+  - [25, 20, 0D-Cucumber]
+  - [7, 23, 58-Crab]
+  - [17, 23, 55-FireBallZora]
+  - [37, 13, 55-FireBallZora]
+  - [39, 31, 0D-Cucumber]
+  - [47, 31, 0D-Cucumber]
+  - [10, 53, 08-Octorok]
+  - [20, 53, 55-FireBallZora]
+  - [15, 53, 00-Raven]
+  - [11, 57, 08-Octorok]
+  - [25, 58, 0D-Cucumber]
+  - [17, 59, 58-Crab]
+  - [36, 43, 55-FireBallZora]
+  - [41, 43, BA-Whirlpool]
+  - [57, 49, 55-FireBallZora]
+  - [33, 54, 55-FireBallZora]
+  - [50, 55, 0D-Cucumber]
+  - [52, 57, 0D-Cucumber]
+  - [46, 58, 58-Crab]
+Sprites.SecondPart:
+  info: {gfx: 32, palette: 3}
+  sprites:
+  - [14, 7, 00-Raven]
+  - [13, 9, 08-Octorok]
+  - [10, 12, 45-HogSpearMan]
+  - [25, 19, EB-HeartPie]
+  - [25, 20, 0D-Cucumber]
+  - [17, 23, 55-FireBallZora]
+  - [56, 10, 0A-4WayOctorok]
+  - [37, 13, 55-FireBallZora]
+  - [55, 25, 55-FireBallZora]
+  - [39, 31, 0D-Cucumber]
+  - [47, 31, 0D-Cucumber]
+  - [27, 38, 55-FireBallZora]
+  - [13, 47, 00-Raven]
+  - [6, 52, 08-Octorok]
+  - [10, 53, 08-Octorok]
+  - [20, 53, 55-FireBallZora]
+  - [11, 57, 08-Octorok]
+  - [25, 58, 0D-Cucumber]
+  - [41, 43, BA-Whirlpool]
+  - [57, 49, 55-FireBallZora]
+  - [33, 54, 55-FireBallZora]
+  - [50, 55, 0D-Cucumber]
+  - [52, 57, 0D-Cucumber]

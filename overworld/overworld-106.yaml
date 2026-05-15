@@ -1,0 +1,16 @@
+Header:
+  name: 'DW 106 : Depressing Grove'
+  size: small
+  gfx: 48
+  palette: 18
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items: []
+Sprites:
+  info: {gfx: 17, palette: 11}
+  sprites:
+  - [14, 15, 2E-FluteBoy]

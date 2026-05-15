@@ -1,0 +1,24 @@
+Header:
+  name: 'DW 071 : Turtle Rock'
+  size: small
+  gfx: 60
+  palette: 24
+  sign_text: 167
+  music: {agahnim: Mountain}
+  ambient: {agahnim: Wind}
+Travel: []
+Entrances:
+- {index: 52, x: 16, y: 19, entrance_id: 53}
+Exits:
+- index: 52
+  room: 214
+  xy: [264, 296]
+  scroll_xy: [150, 218]
+  camera_xy: [275, 327]
+  load_xy: [0, 1]
+  unk: [6, -6]
+Items: []
+Sprites:
+  info: {gfx: 20, palette: 12}
+  sprites:
+  - [22, 20, 33-PullForRupees]

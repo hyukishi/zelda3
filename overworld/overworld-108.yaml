@@ -1,0 +1,31 @@
+Header:
+  name: 'DW 108 : Bomp Shop Grounds'
+  size: small
+  gfx: 48
+  palette: 16
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances:
+- {index: 82, x: 11, y: 15, entrance_id: 83}
+Exits: []
+Items:
+- [19, 4, 01-Rupee-G]
+- [8, 17, 01-Rupee-G]
+- [14, 17, 01-Rupee-G]
+- [3, 18, 01-Rupee-G]
+- [9, 18, 01-Rupee-G]
+- [15, 18, 01-Rupee-G]
+- [2, 19, 04-Random]
+- [26, 21, 04-Random]
+- [27, 22, 04-Random]
+- [28, 23, 04-Random]
+Sprites:
+  info: {gfx: 19, palette: 14}
+  sprites:
+  - [21, 6, 0E-SnapDragon]
+  - [21, 10, 12-PigSpearMan]
+  - [20, 13, 12-PigSpearMan]
+  - [20, 22, 11-Hinox]
+  - [9, 25, 22-HoppingBulbPlan]

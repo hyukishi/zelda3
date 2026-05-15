@@ -1,0 +1,79 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 7
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 1
+  palette: 0
+  blockset: 0
+  enemyblk: 2
+  effect: None
+  tag0: Move block to open
+  tag1: None
+  hole0_dest: [0, 0]
+  stair0_dest: [66, 0]
+  stair1_dest: [1, 0]
+  stair2_dest: [1, 0]
+  stair3_dest: [1, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [17, 10, upper, 6D-Rat]
+- [27, 11, upper, 6D-Rat]
+- [15, 13, upper, 6D-Rat]
+- [6, 21, upper, 6D-Rat]
+Secrets:
+- [50, 20, 0B-Heart]
+- [26, 30, 01-Rupee-G]
+- [26, 32, 0C-Magic]
+- [10, 45, 0C-Magic]
+Chests: []
+Entrances: []
+Layer1:
+- {x: 22, y: 4, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 22, y: 8, s: 3*3, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 22, y: 37, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 6, y: 37, s: 2*0, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 2, y: 37, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 2, y: 47, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 6, y: 47, s: 2*0, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 22, y: 47, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 22, y: 51, s: 1*0, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 22, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 38, y: 4, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 38, y: 8, s: 1*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 38, y: 20, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 42, y: 20, s: 0*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 46, y: 20, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 46, y: 8, s: 1*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 46, y: 4, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 58, y: 30, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 42, y: 30, s: 2*0, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 38, y: 30, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 38, y: 34, s: 3*0, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 38, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 52, y: 4, n: 139-Door Staircase Down L}
+- {x: 50, y: 20, n: FAF-Pot}
+- {x: 26, y: 30, n: FAF-Pot}
+- {x: 26, y: 32, n: FAF-Pot}
+- {x: 10, y: 45, n: FAF-Pot}
+- {x: 2, y: 4, s: 3*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 2, y: 20, s: 3*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 18, y: 4, s: 0*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 18, y: 20, s: 0*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 2, y: 35, s: 2*2, n: '00-Ceiling [L-R]'}
+- {x: 2, y: 51, s: 3*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 18, y: 51, s: 0*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 42, y: 4, s: 0*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 42, y: 34, s: 3*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 42, y: 50, s: 3*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 58, y: 34, s: 0*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 58, y: 50, s: 0*2, n: 'C0-Ceiling Large [4-way]'}
+Layer2:
+- {x: 10, y: 5, n: FAA-Dark Room BG2 Mask}
+Layer3: []
+Layer3.doors:
+- {type: 24, pos: 7, dir: 1}

@@ -1,0 +1,37 @@
+Header:
+  name: 'DW 067 : Ganon''s Tower NW'
+  size: big
+  gfx: 65
+  palette: 23
+  sign_text: 167
+  music: {agahnim: Mountain}
+  ambient: {agahnim: Wind}
+Travel: []
+Entrances:
+- {index: 54, x: 47, y: 3, entrance_id: 55}
+- {index: 64, x: 50, y: 36, entrance_id: 65}
+- {index: 111, x: 7, y: 47, entrance_id: 94}
+Exits:
+- index: 56
+  room: 12
+  xy: [760, 40]
+  scroll_xy: [644, 0]
+  camera_xy: [771, 111]
+  load_xy: [1, 0]
+  unk: [0, -4]
+Items:
+- [48, 20, 04-Random]
+- [45, 23, 04-Random]
+- [51, 23, 04-Random]
+- [48, 26, 04-Random]
+- [16, 50, 01-Rupee-G]
+- [2, 52, 04-Random]
+- [55, 47, 06-Heart]
+- [52, 50, 06-Heart]
+- [58, 50, 06-Heart]
+- [55, 53, 06-Heart]
+Sprites:
+  info: {gfx: 20, palette: 12}
+  sprites:
+  - [47, 12, 37-Waterfall]
+  - [32, 24, B9-Bully&Whimp(DW)]

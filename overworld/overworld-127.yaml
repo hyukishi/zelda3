@@ -1,0 +1,30 @@
+Header:
+  name: 'DW 127 : A Terrible Vacation Spot'
+  size: small
+  gfx: 48
+  palette: 16
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel:
+- whirlpool_src_area: 85
+  xy: [104, 184]
+  scroll_xy: [0, 86]
+  camera_xy: [133, 195]
+  load_xy: [0, 0]
+  unk: [-6, 0]
+Entrances: []
+Exits: []
+Items:
+- [23, 5, 04-Random]
+- [20, 24, 04-Random]
+Sprites:
+  info: {gfx: 25, palette: 14}
+  sprites:
+  - [16, 6, A8-GreenAirBomber]
+  - [22, 6, 08-Octorok]
+  - [7, 12, BA-Whirlpool]
+  - [7, 14, 55-FireBallZora]
+  - [13, 19, A8-GreenAirBomber]
+  - [22, 20, AA-LikeLike]
+  - [15, 23, 08-Octorok]

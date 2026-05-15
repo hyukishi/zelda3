@@ -1,0 +1,72 @@
+Header:
+  floor1: 3
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 5
+  blockset: 3
+  enemyblk: 15
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [3, 1]
+  stair0_dest: [13, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 0]
+  stair3_dest: [0, 1]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [25, 27, upper, BB-ShopMan]
+Secrets: []
+Chests: []
+Entrances:
+- entrance_index: 103
+  name: Chest Shell Game 2
+  scroll_xy: [256, 272]
+  player_xy: [376, 472]
+  camera_xy: [383, 391]
+  blockset: 3
+  music: Shop
+  palace: None
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, single_y, lower_right]
+  floor: 0
+  house_exit_door: [wooden, 22, 19]
+Layer1:
+- {x: 40, y: 36, s: 0*1, n: '3E-[N]Wall Column [L-R]'}
+- {x: 34, y: 41, s: 0*1, n: '78-[W]Wall Top Column [U-D]'}
+- {x: 60, y: 41, s: 0*1, n: '7B-[E]Wall Top Column [U-D]'}
+- {x: 34, y: 47, s: 0*0, n: '76-[W]Wall Decor: [U-D]'}
+- {x: 59, y: 47, s: 0*0, n: '77-[E]Wall Decor: [U-D]'}
+- {x: 40, y: 59, s: 0*0, n: '3B-[S]Wall Decor: [L-R]'}
+- {x: 52, y: 59, s: 0*0, n: '3B-[S]Wall Decor: [L-R]'}
+- {x: 45, y: 36, n: FDC-Bookshelf}
+- {x: 50, y: 41, s: 2*0, n: 'DD-Table / Rock [4-way]'}
+- {x: 52, y: 41, n: FDA-Plate on Table}
+- {x: 51, y: 39, n: 127-Chair}
+- {x: 55, y: 39, n: 127-Chair}
+- {x: 40, y: 46, s: 0*3, n: 'B2-Floor? [L-R]'}
+- {x: 39, y: 45, s: 3*3, n: B3-N/A}
+- {x: 39, y: 50, s: 3*3, n: B4-N/A}
+- {x: 39, y: 46, s: 0*3, n: '8D-[W]Edge [U-D]'}
+- {x: 56, y: 46, s: 0*3, n: '8E-[E]Edge [U-D]'}
+- {x: 37, y: 47, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 57, y: 47, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 42, y: 47, n: FF5-Minigame Chest}
+- {x: 47, y: 47, n: FF5-Minigame Chest}
+- {x: 52, y: 47, n: FF5-Minigame Chest}
+- {x: 37, y: 53, s: 0*1, n: '4C-Bar [L-R]'}
+- {x: 53, y: 53, s: 0*1, n: '4C-Bar [L-R]'}
+- {x: 38, y: 53, n: FDF-Bottles on Bar}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 0, pos: 8, dir: 1}
+- {type: 18, pos: 8, dir: 1}

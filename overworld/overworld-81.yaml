@@ -1,0 +1,30 @@
+Header:
+  name: 'DW 081 : Village of Outcasts Psychics Unlimited'
+  size: small
+  gfx: 63
+  palette: 30
+  sign_text: 170
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances:
+- {index: 101, x: 15, y: 17, entrance_id: 102}
+Exits: []
+Items:
+- [11, 14, 03-Bee]
+- [21, 18, 01-Rupee-G]
+- [26, 20, 05-Bomb]
+- [18, 21, 01-Rupee-G]
+- [12, 23, 01-Rupee-G]
+- [13, 24, 01-Rupee-G]
+- [12, 26, 01-Rupee-G]
+- [7, 27, 04-Random]
+Sprites:
+  info: {gfx: 21, palette: 16}
+  sprites:
+  - [23, 14, 45-HogSpearMan]
+  - [8, 16, E3-Fairy]
+  - [9, 16, E3-Fairy]
+  - [28, 21, D3-AliveRock]
+  - [20, 22, 12-PigSpearMan]
+  - [14, 23, 12-PigSpearMan]

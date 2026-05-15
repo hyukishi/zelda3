@@ -1,0 +1,20 @@
+Header:
+  name: 'DW 104 : Digging Game Field'
+  size: small
+  gfx: 63
+  palette: 30
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items:
+- [16, 8, 01-Rupee-G]
+- [20, 8, 01-Rupee-G]
+- [16, 18, 03-Bee]
+- [25, 21, 04-Random]
+Sprites:
+  info: {gfx: 27, palette: 18}
+  sprites:
+  - [14, 17, D5-DiggingGameGuy]

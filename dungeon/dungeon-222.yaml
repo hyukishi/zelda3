@@ -1,0 +1,33 @@
+Header:
+  floor1: 4
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: Addition
+  collision: One
+  lights_out: 0
+  palette: 20
+  blockset: 11
+  enemyblk: 22
+  effect: None
+  tag0: Kill enemy to clear level
+  tag1: None
+  hole0_dest: [6, 0]
+  stair0_dest: [19, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 3]
+  stair3_dest: [0, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [23, 5, upper, A3]
+- [23, 5, upper, A4]
+- [23, 5, upper, A2-KholdStare]
+Secrets: []
+Chests: []
+Entrances: []
+Layer1: []
+Layer2:
+- {x: 43, y: 8, n: F95-Kholdstare Shell - BG2}
+Layer3: []

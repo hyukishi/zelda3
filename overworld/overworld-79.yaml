@@ -1,0 +1,24 @@
+Header:
+  name: 'DW 079 : Falls of Ill Omen'
+  size: small
+  gfx: 64
+  palette: 29
+  sign_text: 169
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items:
+- [23, 13, 05-Bomb]
+- [26, 13, 05-Bomb]
+- [25, 16, 06-Heart]
+- [25, 20, 06-Heart]
+- [14, 22, 06-Heart]
+Sprites:
+  info: {gfx: 22, palette: 10}
+  sprites:
+  - [25, 8, 55-FireBallZora]
+  - [4, 11, C0-Item]
+  - [24, 13, D3-AliveRock]
+  - [26, 17, 22-HoppingBulbPlan]

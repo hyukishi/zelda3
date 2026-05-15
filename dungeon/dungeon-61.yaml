@@ -1,0 +1,114 @@
+Header:
+  floor1: 2
+  floor2: 8
+  layout: 0
+  start_quadrant: 0
+  bg2: Parallaxing
+  collision: One
+  lights_out: 0
+  palette: 26
+  blockset: 14
+  enemyblk: 12
+  effect: None
+  tag0: Light torches to open
+  tag1: None
+  hole0_dest: [150, 0]
+  stair0_dest: [150, 0]
+  stair1_dest: [204, 0]
+  stair2_dest: [19, 0]
+  stair3_dest: [11, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [5, 23, upper, 1E-PegSwitch]
+- [10, 25, upper, 1E-PegSwitch]
+- [23, 7, upper, 13-MiniHelmasaur, drop_key]
+- [24, 7, upper, 13-MiniHelmasaur]
+- [21, 8, upper, C5-Shooter]
+- [26, 8, upper, C5-Shooter]
+- [4, 10, upper, 8A-SpikeBlock]
+- [3, 11, upper, 7D-BigSpikeBlock]
+- [27, 21, upper, 10A-FloorDrop(Sqr)]
+- [19, 22, upper, 5C-WallBubble(R-L)]
+- [28, 22, upper, 5B-WallBubble(L-R)]
+- [9, 22, upper, 5B-WallBubble(L-R)]
+- [7, 23, upper, D1-Transform/Smoke]
+- [8, 23, upper, 15-Bubble]
+Secrets:
+- [38, 24, 0A-Bomb]
+- [56, 24, 0A-Bomb]
+- [12, 44, 0B-Heart]
+- [20, 44, 09-Arrow]
+- [16, 48, 0B-Heart]
+- [10, 52, 07-Rupee-B]
+- [18, 52, 0D-BigMagic]
+Chests: [40, 40, 36]
+Entrances: []
+Layer1:
+- {x: 16, y: 4, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 16, y: 8, s: 1*0, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 16, y: 16, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 6, y: 16, s: 1*1, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 2, y: 16, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 5, y: 19, s: 3*1, n: 'E5-Moving Floor Left [4-way]'}
+- {x: 19, y: 19, s: 1*1, n: 'E5-Moving Floor Left [4-way]'}
+- {x: 42, y: 10, s: 2*0, n: 'DF-Spike Floor [4-way]'}
+- {x: 42, y: 20, s: 2*0, n: 'DF-Spike Floor [4-way]'}
+- {x: 38, y: 24, n: FAF-Pot}
+- {x: 56, y: 24, n: FAF-Pot}
+- {x: 42, y: 16, n: FE4-Fireball Shooter}
+- {x: 52, y: 16, n: FE4-Fireball Shooter}
+- {x: 5, y: 39, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 5, y: 39, s: 0*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 23, y: 39, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 26, y: 39, s: 0*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 5, y: 54, s: 0*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 5, y: 58, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 23, y: 58, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 26, y: 54, s: 0*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 6, y: 40, s: 0*2, n: '92-Blue Peg Block [U-D]'}
+- {x: 24, y: 40, s: 0*2, n: '92-Blue Peg Block [U-D]'}
+- {x: 6, y: 54, s: 0*2, n: '92-Blue Peg Block [U-D]'}
+- {x: 24, y: 54, s: 0*2, n: '92-Blue Peg Block [U-D]'}
+- {x: 10, y: 42, s: 1*2, n: 'B9-Red Switch Block [L-R]'}
+- {x: 10, y: 54, s: 1*2, n: 'B9-Red Switch Block [L-R]'}
+- {x: 8, y: 44, s: 1*1, n: '93-Orange Peg Block [U-D]'}
+- {x: 22, y: 44, s: 1*1, n: '93-Orange Peg Block [U-D]'}
+- {x: 14, y: 44, s: 0*2, n: 'B8-Blue Switch Block [L-R]'}
+- {x: 14, y: 52, s: 0*2, n: 'B8-Blue Switch Block [L-R]'}
+- {x: 12, y: 46, s: 0*3, n: '92-Blue Peg Block [U-D]'}
+- {x: 18, y: 46, s: 0*3, n: '92-Blue Peg Block [U-D]'}
+- {x: 12, y: 44, n: FAF-Pot}
+- {x: 20, y: 44, n: FAF-Pot}
+- {x: 38, y: 4, s: 0*3, n: '05-[N]Wall Column [L-R]'}
+- {x: 38, y: 26, s: 0*3, n: '06-[S]Wall Column [L-R]'}
+- {x: 38, y: 8, n: F99-Chest}
+- {x: 56, y: 8, n: F99-Chest}
+- {x: 14, y: 48, n: F99-Chest}
+- {x: 16, y: 48, n: FAF-Pot}
+- {x: 10, y: 52, n: FAF-Pot}
+- {x: 18, y: 52, n: FAF-Pot}
+- {x: 10, y: 59, s: 0*1, n: '3B-[S]Wall Decor: [L-R]'}
+- {x: 40, y: 39, s: 1*0, n: 'C3-Falling Edge Mask [4-way]'}
+- {x: 50, y: 39, s: 1*0, n: 'C3-Falling Edge Mask [4-way]'}
+- {x: 37, y: 44, s: 0*3, n: 'C3-Falling Edge Mask [4-way]'}
+- {x: 56, y: 44, s: 0*3, n: 'C3-Falling Edge Mask [4-way]'}
+- {x: 42, y: 44, s: 0*0, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 50, y: 44, s: 0*0, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 42, y: 50, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 42, y: 50, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 42, y: 53, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 50, y: 50, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 53, y: 50, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 50, y: 53, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 42, y: 56, s: 2*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 46, y: 50, n: 12E-Floor Stairs Down (room)}
+- {x: 0, y: 4, s: 3*2, n: 'C0-Ceiling Large [4-way]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 54, pos: 8, dir: 0}
+- {type: 28, pos: 6, dir: 2}
+- {type: 28, pos: 6, dir: 1}
+- {type: 46, pos: 6, dir: 0}

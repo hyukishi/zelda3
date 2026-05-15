@@ -1,0 +1,44 @@
+Header:
+  name: 'LW 042 : Haunted Grove'
+  size: small
+  gfx: 33
+  palette: 1
+  sign_text: 167
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: Heavy rain, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances: []
+Exits:
+- index: 73
+  room: 4118
+  xy: [254, 370]
+  scroll_xy: [120, 286]
+  camera_xy: [261, 397]
+  load_xy: [1, 1]
+  unk: [0, 8]
+Items: []
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 15, palette: 1}
+  sprites:
+  - [9, 9, 1D-UselessSprite]
+  - [14, 12, 9E-Ostrich]
+  - [13, 14, A0-Uglybird]
+  - [14, 14, 2E-FluteBoy]
+  - [17, 14, A0-Uglybird]
+  - [12, 15, 9F-Rabbit]
+  - [17, 16, 9F-Rabbit]
+Sprites.SecondPart:
+  info: {gfx: 15, palette: 1}
+  sprites:
+  - [9, 9, 1D-UselessSprite]
+  - [14, 12, 9E-Ostrich]
+  - [13, 14, A0-Uglybird]
+  - [14, 14, 2E-FluteBoy]
+  - [17, 14, A0-Uglybird]
+  - [12, 15, 9F-Rabbit]
+  - [17, 16, 9F-Rabbit]
+  - [21, 20, DB-InTreeRocks]
+  - [15, 24, DB-InTreeRocks]

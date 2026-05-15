@@ -1,0 +1,36 @@
+Header:
+  name: 'LW 047 : Eastern Cul-de-sac'
+  size: small
+  gfx: 37
+  palette: 9
+  sign_text: 167
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel:
+- bird_travel_id: 4
+  xy: [304, 344]
+  scroll_xy: [178, 250]
+  camera_xy: [311, 359]
+  load_xy: [1, 0]
+  unk: [-10, 14]
+Entrances:
+- {index: 84, x: 26, y: 18, entrance_id: 85}
+Exits: []
+Items:
+- [25, 23, 82-Warp]
+- [9, 26, 05-Bomb]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 5, palette: 7}
+  sprites:
+  - [15, 12, 41-BlueSoldier]
+  - [7, 23, 51-Armos]
+  - [12, 23, 51-Armos]
+Sprites.SecondPart:
+  info: {gfx: 5, palette: 7}
+  sprites:
+  - [15, 12, 45-HogSpearMan]
+  - [7, 23, 51-Armos]
+  - [12, 23, 51-Armos]

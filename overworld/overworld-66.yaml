@@ -1,0 +1,27 @@
+Header:
+  name: 'DW 066 : Eastern Skull Clearing'
+  size: small
+  gfx: 62
+  palette: 30
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances:
+- {index: 86, x: 21, y: 13, entrance_id: 96}
+Exits: []
+Items:
+- [22, 9, 01-Rupee-G]
+- [26, 11, 01-Rupee-G]
+- [5, 18, 03-Bee]
+- [12, 27, 01-Rupee-G]
+- [18, 27, 01-Rupee-G]
+- [15, 28, 01-Rupee-G]
+- [20, 29, 01-Rupee-G]
+Sprites:
+  info: {gfx: 23, palette: 16}
+  sprites:
+  - [12, 17, 0E-SnapDragon]
+  - [12, 19, 0E-SnapDragon]
+  - [6, 22, E3-Fairy]
+  - [14, 25, 12-PigSpearMan]

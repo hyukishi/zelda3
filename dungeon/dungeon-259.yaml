@@ -1,0 +1,158 @@
+Header:
+  floor1: 3
+  floor2: 14
+  layout: 3
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 5
+  blockset: 3
+  enemyblk: 15
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [3, 1]
+  stair0_dest: [13, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 0]
+  stair3_dest: [0, 1]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [6, 21, upper, BC-OldMan2]
+- [10, 27, upper, 29-Thief]
+- [23, 23, upper, 35-HedgeMan]
+Secrets:
+- [6, 15, 0E-Chicken]
+- [6, 24, 0B-Heart]
+Chests: [22]
+Entrances:
+- entrance_index: 66
+  name: Kakariko Pub South
+  scroll_xy: [0, 272]
+  player_xy: [120, 472]
+  camera_xy: [127, 391]
+  blockset: 3
+  music: Lower_vol
+  palace: None
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, double_y, lower_left]
+  floor: 0
+  house_exit_door: [wooden, 40, 56]
+- entrance_index: 67
+  name: Kakariko Pub North
+  scroll_xy: [0, 0]
+  player_xy: [120, 32]
+  camera_xy: [127, 116]
+  blockset: 3
+  music: Lower_vol
+  palace: None
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, double_y, upper_left]
+  floor: 0
+  repair_scroll_bounds: [1, 0, 1, 0, 0, 0, 0, 0]
+  house_exit_door: [none_0xffff]
+- entrance_index: 68
+  name: Kakariko Inn
+  scroll_xy: [256, 272]
+  player_xy: [376, 472]
+  camera_xy: [383, 391]
+  blockset: 3
+  music: Lower_vol
+  palace: None
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, single_y, lower_left]
+  floor: 0
+  house_exit_door: [wooden, 51, 40]
+Layer1:
+- {x: 2, y: 14, s: 0*1, n: '78-[W]Wall Top Column [U-D]'}
+- {x: 2, y: 41, s: 0*1, n: '78-[W]Wall Top Column [U-D]'}
+- {x: 28, y: 14, s: 0*1, n: '7B-[E]Wall Top Column [U-D]'}
+- {x: 28, y: 41, s: 0*1, n: '7B-[E]Wall Top Column [U-D]'}
+- {x: 8, y: 59, s: 0*0, n: '3B-[S]Wall Decor: [L-R]'}
+- {x: 20, y: 59, s: 0*0, n: '3B-[S]Wall Decor: [L-R]'}
+- {x: 18, y: 4, s: 0*1, n: '4F-Shelf [L-R]'}
+- {x: 12, y: 13, s: 1*0, n: 'DD-Table / Rock [4-way]'}
+- {x: 6, y: 15, n: FAF-Pot}
+- {x: 6, y: 19, n: FAF-Pot}
+- {x: 6, y: 17, n: F99-Chest}
+- {x: 5, y: 21, s: 2*1, n: '4C-Bar [L-R]'}
+- {x: 6, y: 24, n: FAF-Pot}
+- {x: 8, y: 24, n: 127-Chair}
+- {x: 12, y: 24, n: 127-Chair}
+- {x: 16, y: 24, n: 127-Chair}
+- {x: 20, y: 24, n: 127-Chair}
+- {x: 24, y: 24, n: 127-Chair}
+- {x: 8, y: 30, s: 0*1, n: '3C-Double Chair [L-R]'}
+- {x: 18, y: 30, s: 0*1, n: '3C-Double Chair [L-R]'}
+- {x: 18, y: 40, s: 0*1, n: '3C-Double Chair [L-R]'}
+- {x: 12, y: 42, n: 127-Chair}
+- {x: 12, y: 46, n: 127-Chair}
+- {x: 12, y: 50, n: 127-Chair}
+- {x: 12, y: 54, n: 127-Chair}
+- {x: 8, y: 32, s: 1*0, n: 'DD-Table / Rock [4-way]'}
+- {x: 18, y: 32, s: 1*0, n: 'DD-Table / Rock [4-way]'}
+- {x: 18, y: 42, s: 1*0, n: 'DD-Table / Rock [4-way]'}
+- {x: 6, y: 40, s: 0*1, n: '4C-Bar [L-R]'}
+- {x: 6, y: 54, s: 0*1, n: '4C-Bar [L-R]'}
+- {x: 46, y: 36, n: 129-Decoration}
+- {x: 38, y: 39, n: 128-Bed}
+- {x: 38, y: 46, n: 128-Bed}
+- {x: 38, y: 53, n: 128-Bed}
+- {x: 54, y: 39, n: 128-Bed}
+- {x: 54, y: 46, n: 128-Bed}
+- {x: 54, y: 53, n: 128-Bed}
+- {x: 46, y: 41, s: 0*0, n: 'B2-Floor? [L-R]'}
+- {x: 46, y: 45, s: 0*0, n: 'B2-Floor? [L-R]'}
+- {x: 46, y: 49, s: 0*0, n: 'B2-Floor? [L-R]'}
+- {x: 46, y: 53, s: 0*0, n: 'B2-Floor? [L-R]'}
+- {x: 45, y: 40, s: 0*3, n: B3-N/A}
+- {x: 45, y: 57, s: 0*3, n: B4-N/A}
+- {x: 45, y: 41, s: 3*3, n: '8D-[W]Edge [U-D]'}
+- {x: 50, y: 41, s: 3*3, n: '8E-[E]Edge [U-D]'}
+- {x: 34, y: 48, s: 0*0, n: '78-[W]Wall Top Column [U-D]'}
+- {x: 60, y: 48, s: 0*0, n: '7B-[E]Wall Top Column [U-D]'}
+- {x: 20, y: 8, n: FDD-Forge}
+- {x: 24, y: 11, n: 121-Barrel}
+- {x: 6, y: 8, n: 121-Barrel}
+- {x: 6, y: 10, n: 121-Barrel}
+- {x: 6, y: 12, n: 121-Barrel}
+- {x: 8, y: 8, n: 121-Barrel}
+- {x: 8, y: 10, n: 121-Barrel}
+- {x: 10, y: 8, n: 121-Barrel}
+- {x: 13, y: 13, n: FDA-Plate on Table}
+- {x: 23, y: 14, n: FDB-Water Troof}
+- {x: 7, y: 21, n: FDF-Bottles on Bar}
+- {x: 11, y: 21, n: FDF-Bottles on Bar}
+- {x: 22, y: 21, n: FDF-Bottles on Bar}
+- {x: 9, y: 32, n: FDA-Plate on Table}
+- {x: 19, y: 42, n: FDA-Plate on Table}
+- {x: 8, y: 40, n: FDF-Bottles on Bar}
+- {x: 8, y: 54, n: FDF-Bottles on Bar}
+- {x: 10, y: 41, s: 1*1, n: 8F-N/A}
+- {x: 10, y: 40, n: 'FD8-Bar Corner [NE]'}
+- {x: 10, y: 54, n: 'FD9-Bar Corner [SE]'}
+- {x: 6, y: 49, n: 121-Barrel}
+- {x: 6, y: 51, n: 121-Barrel}
+- {x: 18, y: 53, s: 0*1, n: 'B2-Floor? [L-R]'}
+- {x: 17, y: 52, s: 1*2, n: B3-N/A}
+- {x: 17, y: 57, s: 1*2, n: B4-N/A}
+- {x: 17, y: 53, s: 0*3, n: '8D-[W]Edge [U-D]'}
+- {x: 25, y: 53, s: 0*3, n: '8E-[E]Edge [U-D]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 0, pos: 0, dir: 0}
+- {type: 18, pos: 0, dir: 0}
+- {type: 0, pos: 6, dir: 1}
+- {type: 18, pos: 6, dir: 1}
+- {type: 0, pos: 8, dir: 1}
+- {type: 18, pos: 8, dir: 1}

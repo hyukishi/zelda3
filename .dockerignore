@@ -1,0 +1,31 @@
+# Exclude pre-compiled artifacts to force clean build inside Docker
+zelda3
+zelda3_assets.dat
+src/*.o
+snes/*.o
+third_party/*/*.o
+third_party/*/*/*.o
+
+# Exclude Python venv
+venv/
+
+# Exclude extracted assets
+tables/*.png
+tables/*.txt
+tables/*.yaml
+tables/sprites/
+
+# Exclude save files
+saves/
+
+# Exclude version control
+.git/
+.gitignore
+
+# Exclude macOS bundle
+*.app
+*.command
+
+# Exclude Windows binary
+zelda3.exe
+*.res

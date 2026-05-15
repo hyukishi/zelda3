@@ -1,0 +1,38 @@
+Header:
+  name: 'LW 018 : Nothern Pond'
+  size: small
+  gfx: 32
+  palette: 0
+  sign_text: 66
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: Heavy rain, zelda: None, sword: None, agahnim: None}
+Travel:
+- whirlpool_src_area: 63
+  xy: [232, 248]
+  scroll_xy: [98, 154]
+  camera_xy: [239, 263]
+  load_xy: [1, 0]
+  unk: [-10, 14]
+Entrances: []
+Exits: []
+Items:
+- [24, 10, 06-Heart]
+- [4, 16, 04-Random]
+- [25, 19, 06-Heart]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 0, palette: 0}
+  sprites:
+  - [21, 14, 42-GreenSoldier]
+  - [7, 16, 42-GreenSoldier]
+  - [15, 16, BA-Whirlpool]
+  - [21, 21, 42-GreenSoldier]
+Sprites.SecondPart:
+  info: {gfx: 0, palette: 0}
+  sprites:
+  - [20, 10, E3-Fairy]
+  - [21, 14, 41-BlueSoldier]
+  - [15, 16, BA-Whirlpool]
+  - [21, 21, 42-GreenSoldier]

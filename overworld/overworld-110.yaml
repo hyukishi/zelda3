@@ -1,0 +1,22 @@
+Header:
+  name: 'DW 110 : Terrace of Darkness'
+  size: small
+  gfx: 48
+  palette: 16
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances:
+- {index: 108, x: 18, y: 4, entrance_id: 94}
+Exits: []
+Items: []
+Sprites:
+  info: {gfx: 24, palette: 14}
+  sprites:
+  - [12, 8, DA-Rupee-B]
+  - [16, 9, 79-Bee]
+  - [20, 10, AC-Apples]
+  - [8, 11, 41-BlueSoldier]
+  - [16, 14, 41-BlueSoldier]
+  - [26, 24, 22-HoppingBulbPlan]

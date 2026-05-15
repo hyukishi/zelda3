@@ -1,0 +1,171 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 2
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 13
+  blockset: 9
+  enemyblk: 19
+  effect: None
+  tag0: Holes(0)
+  tag1: Use lever to bomb wall
+  hole0_dest: [9, 0]
+  stair0_dest: [19, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 3]
+  stair3_dest: [0, 1]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: true
+Sprites:
+- [12, 20, upper, 18-Moldorm]
+- [6, 22, upper, 18-Moldorm]
+- [22, 22, upper, 93-RedOrb]
+- [20, 4, upper, 13-MiniHelmasaur]
+- [22, 6, upper, 5B-WallBubble(L-R)]
+- [8, 10, upper, 04-PullSwitch]
+- [27, 11, upper, 26-BlueOrb]
+- [22, 25, upper, 26-BlueOrb]
+- [10, 26, upper, 23-RedMiri]
+Secrets:
+- [48, 10, 0A-Bomb]
+- [50, 10, 0C-Magic]
+- [6, 14, 0C-Magic]
+- [46, 14, 0B-Heart]
+- [54, 14, 0B-Heart]
+- [8, 16, 0C-Magic]
+- [50, 18, 0C-Magic]
+- [52, 18, 0A-Bomb]
+Chests: [7!, 51]
+Entrances:
+- entrance_index: 42
+  name: Skull Woods Big Chest
+  scroll_xy: [0, 272]
+  player_xy: [120, 472]
+  camera_xy: [127, 391]
+  blockset: 9
+  music: Dungeon
+  palace: Wood
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, single_y, lower_left]
+  floor: -1
+  house_exit_door: [none]
+- entrance_index: 118
+  name: Skull Woods 3 (Drop In)
+  scroll_xy: [256, 0]
+  player_xy: [400, 105]
+  camera_xy: [383, 119]
+  blockset: 9
+  music: Dungeon
+  palace: Wood
+  doorway_orientation: 0
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, double_y, upper_right]
+  floor: -1
+  house_exit_door: [none]
+Layer1:
+- {x: 34, y: 26, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 38, y: 26, s: 0*2, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 42, y: 26, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 42, y: 30, s: 0*3, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 38, y: 36, s: 0*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 42, y: 36, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 34, y: 36, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 58, y: 26, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 54, y: 26, s: 0*2, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 50, y: 26, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 50, y: 30, s: 0*3, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 54, y: 36, s: 0*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 50, y: 36, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 58, y: 36, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 2, y: 10, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 6, y: 10, s: 0*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 10, y: 10, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 10, y: 14, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 10, y: 18, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 14, y: 18, s: 0*3, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 20, y: 18, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 20, y: 14, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 20, y: 10, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 24, y: 10, s: 0*1, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 26, y: 10, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 12, y: 22, n: FE6-Hole}
+- {x: 18, y: 22, n: FE6-Hole}
+- {x: 22, y: 22, n: FE6-Hole}
+- {x: 6, y: 27, n: FE8-Bottom Crack Wall}
+- {x: 10, y: 27, n: FE8-Bottom Crack Wall}
+- {x: 14, y: 27, n: FE8-Bottom Crack Wall}
+- {x: 18, y: 27, n: FE8-Bottom Crack Wall}
+- {x: 22, y: 27, n: FE8-Bottom Crack Wall}
+- {x: 10, y: 13, s: 1*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 23, y: 13, s: 1*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 6, y: 14, n: FAF-Pot}
+- {x: 8, y: 14, n: FAF-Pot}
+- {x: 6, y: 24, n: FAF-Pot}
+- {x: 8, y: 16, n: FAF-Pot}
+- {x: 5, y: 43, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 23, y: 43, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 9, y: 43, s: 0*2, n: '88-Large Vert: Rail [U-D]'}
+- {x: 21, y: 43, s: 0*2, n: '88-Large Vert: Rail [U-D]'}
+- {x: 9, y: 48, s: 2*0, n: '5D-Large Horz: Rail [L-R]'}
+- {x: 6, y: 54, s: 0*0, n: '38-Statue [L-R]'}
+- {x: 24, y: 54, s: 0*0, n: '38-Statue [L-R]'}
+- {x: 14, y: 43, n: FB1-Big Chest}
+- {x: 42, y: 4, s: 0*0, n: '36-[N]Curtain [L-R]'}
+- {x: 46, y: 4, s: 0*0, n: '3A-[N]Wall Decor: [L-R]'}
+- {x: 50, y: 4, s: 0*0, n: '36-[N]Curtain [L-R]'}
+- {x: 58, y: 10, s: 0*1, n: '74-[E]Curtain [U-D]'}
+- {x: 58, y: 40, s: 0*2, n: '74-[E]Curtain [U-D]'}
+- {x: 48, y: 10, n: FAF-Pot}
+- {x: 50, y: 10, n: FAF-Pot}
+- {x: 52, y: 10, n: FAF-Pot}
+- {x: 46, y: 12, n: FAF-Pot}
+- {x: 46, y: 14, n: FAF-Pot}
+- {x: 46, y: 16, n: FAF-Pot}
+- {x: 48, y: 18, n: FAF-Pot}
+- {x: 50, y: 18, n: FAF-Pot}
+- {x: 52, y: 18, n: FAF-Pot}
+- {x: 54, y: 12, n: FAF-Pot}
+- {x: 54, y: 14, n: FAF-Pot}
+- {x: 54, y: 16, n: FAF-Pot}
+- {x: 41, y: 18, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 46, y: 22, n: 11F-Star Tile On}
+- {x: 48, y: 22, n: 11F-Star Tile On}
+- {x: 42, y: 22, n: FE6-Hole}
+- {x: 50, y: 22, n: FE6-Hole}
+- {x: 50, y: 40, n: FE6-Hole}
+- {x: 54, y: 44, n: FE6-Hole}
+- {x: 50, y: 48, n: FE6-Hole}
+- {x: 40, y: 50, n: FE6-Hole}
+- {x: 45, y: 26, s: 2*2, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 50, y: 26, s: 2*2, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 46, y: 28, n: 11E-Star Tile Off}
+- {x: 48, y: 28, n: 11E-Star Tile Off}
+- {x: 46, y: 38, n: 11F-Star Tile On}
+- {x: 48, y: 38, n: 11F-Star Tile On}
+- {x: 40, y: 40, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 52, y: 54, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 56, y: 40, n: F99-Chest}
+- {x: 34, y: 30, s: 1*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 34, y: 34, s: 1*0, n: '00-Ceiling [L-R]'}
+- {x: 54, y: 30, s: 1*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 54, y: 34, s: 1*0, n: '00-Ceiling [L-R]'}
+- {x: 2, y: 2, s: 3*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 18, y: 2, s: 2*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 14, y: 10, s: 0*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 18, y: 10, s: 1*0, n: '60-Ceiling [U-D]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 48, pos: 0, dir: 0}
+- {type: 28, pos: 2, dir: 2}
+- {type: 28, pos: 8, dir: 1}
+- {type: 46, pos: 6, dir: 2}
+- {type: 10, pos: 6, dir: 1}
+- {type: 0, pos: 8, dir: 2}

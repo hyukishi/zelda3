@@ -1,0 +1,36 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: Translucent
+  collision: One
+  lights_out: 0
+  palette: 18
+  blockset: 12
+  enemyblk: 22
+  effect: None
+  tag0: Kill enemy to clear level
+  tag1: None
+  hole0_dest: [12, 0]
+  stair0_dest: [28, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 0]
+  stair3_dest: [0, 1]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [7, 21, upper, BD-Viterous]
+Secrets: []
+Chests: []
+Entrances: []
+Layer1:
+- {x: 10, y: 59, s: 0*0, n: '56-[S]Wall Torches [L-R]'}
+- {x: 18, y: 59, s: 0*0, n: '56-[S]Wall Torches [L-R]'}
+- {x: 6, y: 40, n: 'FFB-Vitreous Boss?'}
+Layer2:
+- {x: 5, y: 39, n: FE2-Right Warp Door}
+Layer3: []
+Layer3.doors:
+- {type: 24, pos: 6, dir: 1}

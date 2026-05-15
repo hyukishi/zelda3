@@ -1,0 +1,32 @@
+Header:
+  name: 'DW 090 : West Woods'
+  size: small
+  gfx: 48
+  palette: 16
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances:
+- {index: 116, x: 20, y: 20, entrance_id: 87}
+Exits: []
+Items:
+- [13, 8, 06-Heart]
+- [26, 17, 01-Rupee-G]
+- [25, 20, 01-Rupee-G]
+- [25, 22, 01-Rupee-G]
+- [17, 24, 01-Rupee-G]
+- [19, 24, 01-Rupee-G]
+- [22, 24, 01-Rupee-G]
+- [24, 24, 01-Rupee-G]
+- [7, 25, 05-Bomb]
+- [26, 25, 01-Rupee-G]
+Sprites:
+  info: {gfx: 19, palette: 16}
+  sprites:
+  - [15, 8, 12-PigSpearMan]
+  - [18, 8, 25-LiveTree]
+  - [18, 13, D3-AliveRock]
+  - [21, 12, 12-PigSpearMan]
+  - [11, 15, 11-Hinox]
+  - [14, 25, 12-PigSpearMan]

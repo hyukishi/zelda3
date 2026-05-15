@@ -1,0 +1,39 @@
+Header:
+  name: 'LW 040 : Kakariko Maze'
+  size: small
+  gfx: 35
+  palette: 8
+  sign_text: 167
+  music: {beginning: Beginning, zelda: Town, sword: Town, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances:
+- {index: 14, x: 27, y: 22, entrance_id: 15}
+Exits:
+- index: 16
+  room: 244
+  xy: [440, 344]
+  scroll_xy: [256, 262]
+  camera_xy: [397, 371]
+  load_xy: [0, 1]
+  unk: [10, 0]
+  door: [wooden, 27, 23]
+Items:
+- [21, 14, 04-Random]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 6, palette: 1}
+  sprites:
+  - [7, 19, EB-HeartPie]
+  - [8, 18, 30-Person]
+  - [25, 24, 2F-Person]
+Sprites.SecondPart:
+  info: {gfx: 6, palette: 1}
+  sprites:
+  - [18, 12, 41-BlueSoldier]
+  - [7, 19, EB-HeartPie]
+  - [8, 18, 30-Person]
+  - [25, 24, 2F-Person]
+  - [12, 25, 41-BlueSoldier]

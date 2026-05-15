@@ -1,0 +1,75 @@
+Header:
+  floor1: 9
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 12
+  blockset: 2
+  enemyblk: 18
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [0, 0]
+  stair0_dest: [64, 0]
+  stair1_dest: [32, 0]
+  stair2_dest: [6, 0]
+  stair3_dest: [5, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [7, 5, upper, C1-AgahTalk]
+Secrets: []
+Chests: []
+Entrances:
+- entrance_index: 117
+  name: Hyrule Tower Agahnim's Sanctum
+  scroll_xy: [0, 16]
+  player_xy: [120, 152]
+  camera_xy: [127, 136]
+  blockset: 2
+  music: Same
+  palace: None
+  doorway_orientation: 0
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, single_y, upper_left]
+  floor: -1
+  house_exit_door: [none]
+Layer1:
+- {x: 6, y: 8, s: 1*0, n: '33-Red Carpet Floor [L-R]'}
+- {x: 6, y: 12, s: 1*0, n: '33-Red Carpet Floor [L-R]'}
+- {x: 6, y: 16, s: 1*0, n: '33-Red Carpet Floor [L-R]'}
+- {x: 6, y: 20, s: 1*0, n: '33-Red Carpet Floor [L-R]'}
+- {x: 6, y: 22, s: 1*0, n: '33-Red Carpet Floor [L-R]'}
+- {x: 6, y: 4, s: 0*3, n: '05-[N]Wall Column [L-R]'}
+- {x: 8, y: 4, s: 0*2, n: '36-[N]Curtain [L-R]'}
+- {x: 13, y: 8, s: 0*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 18, y: 8, s: 0*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 8, y: 9, s: 3*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 23, y: 9, s: 3*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 9, y: 9, s: 0*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 19, y: 9, s: 0*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 9, y: 24, s: 0*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 19, y: 24, s: 0*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 13, y: 22, s: 0*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 18, y: 22, s: 0*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 9, y: 10, n: FAD-Agahnim Altar}
+- {x: 10, y: 9, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 20, y: 9, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 14, y: 58, n: FA1-Staircase Going Down (Down)}
+- {x: 14, y: 44, s: 0*2, n: '70-Red Floor/Wire Floor [U-D]'}
+- {x: 14, y: 54, s: 0*0, n: '70-Red Floor/Wire Floor [U-D]'}
+- {x: 13, y: 44, s: 2*2, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 18, y: 44, s: 2*2, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 12, y: 36, n: FF4-Boss Entrance}
+- {x: 10, y: 44, s: 0*1, n: '87-Floor Torch [U-D]'}
+- {x: 20, y: 44, s: 0*1, n: '87-Floor Torch [U-D]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 50, pos: 0, dir: 0}
+- {type: 56, pos: 6, dir: 0}

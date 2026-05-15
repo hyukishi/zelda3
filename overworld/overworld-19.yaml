@@ -1,0 +1,43 @@
+Header:
+  name: 'LW 019 : Sanctuary Grounds'
+  size: small
+  gfx: 41
+  palette: 1
+  sign_text: 66
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: Heavy rain, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances:
+- {index: 1, x: 21, y: 3, entrance_id: 2}
+- {index: 121, x: 3, y: 10, entrance_id: 110}
+Exits:
+- index: 1
+  room: 18
+  xy: [344, 20]
+  scroll_xy: [222, 0]
+  camera_xy: [355, 109]
+  load_xy: [1, 0]
+  unk: [0, 2]
+  door: [sanctuary, 21, 3]
+Items:
+- [3, 10, 84-Staircase]
+- [16, 15, 03-Bee]
+- [26, 16, 04-Random]
+- [20, 17, 04-Random]
+- [17, 19, 06-Heart]
+- [27, 19, 04-Random]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 3, palette: 2}
+  sprites:
+  - [24, 9, AC-Apples]
+  - [17, 23, 42-GreenSoldier]
+Sprites.SecondPart:
+  info: {gfx: 3, palette: 2}
+  sprites:
+  - [24, 9, 79-Bee]
+  - [7, 12, DE-8_bombs]
+  - [13, 23, 41-BlueSoldier]
+  - [18, 26, 41-BlueSoldier]

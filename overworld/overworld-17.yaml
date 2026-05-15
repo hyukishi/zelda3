@@ -1,0 +1,32 @@
+Header:
+  name: 'LW 017 : Kakariko Psychics Unlimited'
+  size: small
+  gfx: 35
+  palette: 8
+  sign_text: 73
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances:
+- {index: 100, x: 15, y: 17, entrance_id: 101}
+Exits: []
+Items:
+- [26, 20, 05-Bomb]
+- [7, 27, 06-Heart]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 6, palette: 1}
+  sprites:
+  - [23, 12, 42-GreenSoldier]
+  - [26, 13, 42-GreenSoldier]
+  - [8, 16, DC-Bomb]
+  - [8, 23, 0B-Chicken]
+Sprites.SecondPart:
+  info: {gfx: 6, palette: 1}
+  sprites:
+  - [23, 12, 41-BlueSoldier]
+  - [26, 13, 41-BlueSoldier]
+  - [8, 16, DC-Bomb]
+  - [8, 23, 0B-Chicken]

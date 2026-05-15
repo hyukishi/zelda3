@@ -1,0 +1,15 @@
+Header:
+  name: 'SP 137 : Zora Falls SW <NO SPRITES>'
+  size: big
+  gfx: -1
+  palette: -1
+  sign_text: -1
+  music: {agahnim: World_map}
+  ambient: {agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items: []
+Sprites:
+  info: {}
+  sprites: []

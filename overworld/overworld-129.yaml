@@ -1,0 +1,61 @@
+Header:
+  name: 'SP 129 : Zora Falls NW <AVAILABLE>'
+  size: big
+  gfx: -1
+  palette: 10
+  sign_text: -1
+  music: {agahnim: World_map}
+  ambient: {agahnim: None}
+Travel: []
+Entrances: []
+Exits:
+- index: 70
+  room: 4112
+  xy: [637, 110]
+  scroll_xy: [513, 16]
+  camera_xy: [644, 141]
+  load_xy: [0, 63]
+  unk: [0, -1]
+- index: 77
+  room: 386
+  xy: [158, 1000]
+  scroll_xy: [30, 800]
+  camera_xy: [161, 925]
+  load_xy: [0, 61]
+  unk: [0, -14]
+  special_exit: {dir: 0, spr_gfx: 14, aux_gfx: 47, pal_bg: 10, pal_spr: 8, top: 0,
+    bottom: 800, left: 512, right: 1280, left_edge_of_map: 512, unk4: -224, unk6: 768,
+    unk5: -224, unk7: 768}
+Items: []
+Sprites:
+  info: {}
+  sprites:
+  - [27, 38, EB-HeartPie]
+  - [10, 6, 56-WalkingZora]
+  - [28, 6, 56-WalkingZora]
+  - [17, 7, 55-FireBallZora]
+  - [22, 10, 56-WalkingZora]
+  - [26, 10, 55-FireBallZora]
+  - [9, 12, 55-FireBallZora]
+  - [18, 13, 55-FireBallZora]
+  - [26, 18, 56-WalkingZora]
+  - [7, 19, 56-WalkingZora]
+  - [20, 19, 56-WalkingZora]
+  - [8, 24, 56-WalkingZora]
+  - [4, 28, 56-WalkingZora]
+  - [59, 4, 52-ZoraKing]
+  - [39, 8, 55-FireBallZora]
+  - [45, 8, 55-FireBallZora]
+  - [34, 14, 56-WalkingZora]
+  - [45, 14, 55-FireBallZora]
+  - [33, 20, 55-FireBallZora]
+  - [13, 32, 56-WalkingZora]
+  - [8, 49, 56-WalkingZora]
+  - [20, 49, 55-FireBallZora]
+  - [12, 51, 56-WalkingZora]
+  - [14, 53, 55-FireBallZora]
+  - [8, 56, 56-WalkingZora]
+  - [59, 40, 56-WalkingZora]
+  - [58, 43, 56-WalkingZora]
+  - [45, 53, 56-WalkingZora]
+  - [55, 54, 56-WalkingZora]

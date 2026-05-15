@@ -1,0 +1,113 @@
+Header:
+  floor1: 3
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 5
+  blockset: 3
+  enemyblk: 5
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [6, 0]
+  stair0_dest: [19, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 0]
+  stair3_dest: [0, 3]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [23, 22, upper, BB-ShopMan]
+Secrets:
+- [23, 57, 0B-Heart]
+- [25, 57, 0B-Heart]
+Chests: []
+Entrances:
+- entrance_index: 70
+  name: Kakariko's Lame Shop
+  scroll_xy: [256, 272]
+  player_xy: [376, 472]
+  camera_xy: [383, 391]
+  blockset: 3
+  music: Psychic
+  palace: None
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, single_y, lower_right]
+  floor: 0
+  house_exit_door: [wooden, 27, 53]
+- entrance_index: 107
+  name: Village House 1
+  scroll_xy: [0, 272]
+  player_xy: [120, 472]
+  camera_xy: [127, 391]
+  blockset: 3
+  music: Lower_vol
+  palace: None
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, single_y, lower_left]
+  floor: 0
+  house_exit_door: [wooden, 21, 15]
+Layer1:
+- {x: 2, y: 41, s: 0*1, n: '78-[W]Wall Top Column [U-D]'}
+- {x: 28, y: 41, s: 0*1, n: '7B-[E]Wall Top Column [U-D]'}
+- {x: 6, y: 59, s: 0*2, n: '3B-[S]Wall Decor: [L-R]'}
+- {x: 7, y: 36, s: 0*1, n: '4F-Shelf [L-R]'}
+- {x: 14, y: 37, n: 129-Decoration}
+- {x: 18, y: 37, n: 121-Barrel}
+- {x: 20, y: 37, n: 121-Barrel}
+- {x: 19, y: 39, n: 121-Barrel}
+- {x: 5, y: 45, n: 128-Bed}
+- {x: 23, y: 45, n: 128-Bed}
+- {x: 14, y: 44, s: 0*2, n: 'DD-Table / Rock [4-way]'}
+- {x: 12, y: 47, n: 127-Chair}
+- {x: 18, y: 47, n: 127-Chair}
+- {x: 5, y: 51, s: 0*1, n: 'C5-Floor3 [4-way]'}
+- {x: 9, y: 55, s: 3*0, n: 'C5-Floor3 [4-way]'}
+- {x: 23, y: 51, s: 0*1, n: 'C5-Floor3 [4-way]'}
+- {x: 5, y: 50, s: 0*1, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 9, y: 51, s: 0*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 10, y: 54, s: 2*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 22, y: 51, s: 0*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 22, y: 50, s: 0*1, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 10, y: 54, n: FDB-Water Troof}
+- {x: 21, y: 54, n: FDD-Forge}
+- {x: 23, y: 57, n: FAF-Pot}
+- {x: 25, y: 57, n: FAF-Pot}
+- {x: 36, y: 40, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 40, y: 40, s: 2*0, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 56, y: 40, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 36, y: 44, s: 1*3, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 36, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 56, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 56, y: 44, s: 1*3, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 36, y: 50, s: 0*0, n: '78-[W]Wall Top Column [U-D]'}
+- {x: 58, y: 50, s: 0*0, n: '7B-[E]Wall Top Column [U-D]'}
+- {x: 40, y: 40, s: 0*1, n: '4F-Shelf [L-R]'}
+- {x: 50, y: 40, s: 0*1, n: '4F-Shelf [L-R]'}
+- {x: 39, y: 44, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 55, y: 44, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 40, y: 49, s: 0*3, n: 'B2-Floor? [L-R]'}
+- {x: 39, y: 48, s: 3*3, n: B3-N/A}
+- {x: 39, y: 53, s: 3*3, n: B4-N/A}
+- {x: 39, y: 49, s: 0*3, n: '8D-[W]Edge [U-D]'}
+- {x: 56, y: 49, s: 0*3, n: '8E-[E]Edge [U-D]'}
+- {x: 40, y: 56, n: 127-Chair}
+- {x: 34, y: 36, s: 3*1, n: '60-Ceiling [U-D]'}
+- {x: 60, y: 36, s: 3*1, n: '60-Ceiling [U-D]'}
+- {x: 36, y: 36, s: 3*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 52, y: 36, s: 1*0, n: 'C0-Ceiling Large [4-way]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 0, pos: 6, dir: 1}
+- {type: 18, pos: 6, dir: 1}
+- {type: 0, pos: 8, dir: 1}
+- {type: 18, pos: 8, dir: 1}

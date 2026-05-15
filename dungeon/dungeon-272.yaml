@@ -1,0 +1,69 @@
+Header:
+  floor1: 3
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 31
+  blockset: 3
+  enemyblk: 5
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [3, 0]
+  stair0_dest: [15, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 0]
+  stair3_dest: [0, 2]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [7, 21, upper, BB-ShopMan]
+Secrets: []
+Chests: []
+Entrances:
+- entrance_index: 87
+  name: General Store 1
+  scroll_xy: [0, 272]
+  player_xy: [120, 472]
+  camera_xy: [127, 391]
+  blockset: 3
+  music: Psychic
+  palace: None
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, single_y, lower_left]
+  floor: 0
+  house_exit_door: [wooden, 20, 21]
+Layer1:
+- {x: 2, y: 41, s: 0*1, n: '78-[W]Wall Top Column [U-D]'}
+- {x: 2, y: 47, s: 0*0, n: '76-[W]Wall Decor: [U-D]'}
+- {x: 28, y: 41, s: 0*1, n: '7B-[E]Wall Top Column [U-D]'}
+- {x: 27, y: 47, s: 0*0, n: '77-[E]Wall Decor: [U-D]'}
+- {x: 8, y: 59, s: 0*0, n: '3B-[S]Wall Decor: [L-R]'}
+- {x: 20, y: 59, s: 0*0, n: '3B-[S]Wall Decor: [L-R]'}
+- {x: 5, y: 38, n: 121-Barrel}
+- {x: 5, y: 40, n: 121-Barrel}
+- {x: 11, y: 38, n: 121-Barrel}
+- {x: 13, y: 38, n: 121-Barrel}
+- {x: 12, y: 40, n: 121-Barrel}
+- {x: 7, y: 37, n: 129-Decoration}
+- {x: 19, y: 41, n: FDD-Forge}
+- {x: 8, y: 46, s: 3*0, n: 'C5-Floor3 [4-way]'}
+- {x: 6, y: 45, s: 3*3, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 22, y: 45, s: 0*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 8, y: 50, s: 3*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 5, y: 46, n: FDB-Water Troof}
+- {x: 24, y: 46, n: FDB-Water Troof}
+- {x: 12, y: 54, n: 120-Torch Lit}
+- {x: 18, y: 54, n: 120-Torch Lit}
+- {x: 6, y: 54, s: 0*0, n: 'DD-Table / Rock [4-way]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 0, pos: 6, dir: 1}
+- {type: 18, pos: 6, dir: 1}

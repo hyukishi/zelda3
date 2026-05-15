@@ -1,0 +1,28 @@
+Header:
+  name: 'DW 098 : Gossip Shop'
+  size: small
+  gfx: 63
+  palette: 30
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances:
+- {index: 126, x: 16, y: 26, entrance_id: 131}
+Exits: []
+Items:
+- [20, 8, 04-Random]
+- [9, 23, 01-Rupee-G]
+- [9, 25, 01-Rupee-G]
+- [11, 25, 01-Rupee-G]
+- [9, 27, 01-Rupee-G]
+- [8, 28, 01-Rupee-G]
+Sprites:
+  info: {gfx: 21, palette: 16}
+  sprites:
+  - [13, 5, B4-BlueChest]
+  - [19, 17, 0B-Chicken]
+  - [17, 19, 0B-Chicken]
+  - [21, 21, 0B-Chicken]
+  - [9, 22, 0B-Chicken]
+  - [17, 23, 0B-Chicken]

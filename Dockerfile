@@ -19,7 +19,7 @@ COPY . .
 # Remove broken symlinks in AppDir (upstream points to macOS paths)
 RUN rm -f AppDir/glsl-shaders AppDir/sprites-gfx
 
-RUN make -j"$(nproc)"
+RUN make clean && make -j"$(nproc)"
 
 # Bundle binary, config, and extraction scripts into AppDir
 RUN cp zelda3 AppDir/ \

@@ -1,0 +1,68 @@
+Header:
+  floor1: 1
+  floor2: 8
+  layout: 0
+  start_quadrant: 0
+  bg2: Parallaxing
+  collision: One
+  lights_out: 0
+  palette: 19
+  blockset: 11
+  enemyblk: 41
+  effect: None
+  tag0: Pull lever to open
+  tag1: None
+  hole0_dest: [222, 0]
+  stair0_dest: [1, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [2, 0]
+  stair3_dest: [33, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [22, 5, upper, 23-RedMiri]
+- [25, 5, upper, 23-RedMiri]
+- [28, 5, upper, 04-PullSwitch]
+- [20, 9, upper, 1C-Statue]
+- [27, 8, upper, 24-BlueMiri]
+- [28, 8, upper, 24-BlueMiri]
+- [27, 9, upper, 24-BlueMiri]
+- [28, 9, upper, 24-BlueMiri]
+Secrets:
+- [38, 16, 0C-Magic]
+- [40, 16, 0C-Magic]
+- [54, 24, 0A-Bomb]
+- [56, 24, 09-Arrow]
+- [38, 23, 80-Hole]
+Chests: []
+Entrances: []
+Layer1:
+- {x: 41, y: 14, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 41, y: 18, s: 1*0, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 41, y: 26, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 45, y: 14, s: 0*3, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 51, y: 14, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 51, y: 18, s: 1*0, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 51, y: 26, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 37, y: 16, s: 1*3, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 38, y: 16, n: FAF-Pot}
+- {x: 40, y: 16, n: FAF-Pot}
+- {x: 38, y: 18, s: 0*0, n: '38-Statue [L-R]'}
+- {x: 38, y: 23, n: FAC-Large Pick Up Block}
+- {x: 38, y: 21, n: F96-Single Hammer Peg}
+- {x: 40, y: 21, n: F96-Single Hammer Peg}
+- {x: 54, y: 24, n: FAF-Pot}
+- {x: 56, y: 24, n: FAF-Pot}
+- {x: 58, y: 16, s: 1*3, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 54, y: 21, n: F96-Single Hammer Peg}
+- {x: 56, y: 21, n: F96-Single Hammer Peg}
+- {x: 54, y: 16, n: FAC-Large Pick Up Block}
+- {x: 37, y: 8, n: 'FEB-Throne/Decor: Object'}
+- {x: 55, y: 8, n: 'FEB-Throne/Decor: Object'}
+- {x: 45, y: 18, s: 0*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 49, y: 18, s: 1*2, n: '60-Ceiling [U-D]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 24, pos: 2, dir: 0}

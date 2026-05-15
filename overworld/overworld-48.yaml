@@ -1,0 +1,116 @@
+Header:
+  name: 'LW 048 : Desert of Mystery NW'
+  size: big
+  gfx: 43
+  palette: 9
+  sign_text: 167
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: Stop}
+Travel:
+- bird_travel_id: 5
+  xy: [120, 936]
+  scroll_xy: [0, 798]
+  camera_xy: [141, 909]
+  load_xy: [0, 0]
+  unk: [0, 0]
+Entrances:
+- {index: 8, x: 18, y: 11, entrance_id: 9}
+- {index: 9, x: 28, y: 10, entrance_id: 10}
+- {index: 10, x: 8, y: 10, entrance_id: 11}
+- {index: 11, x: 18, y: 3, entrance_id: 12}
+- {index: 76, x: 50, y: 18, entrance_id: 77}
+- {index: 112, x: 50, y: 18, entrance_id: 77}
+- {index: 125, x: 44, y: 6, entrance_id: 114}
+Exits:
+- index: 10
+  room: 132
+  xy: [296, 168]
+  scroll_xy: [166, 86]
+  camera_xy: [307, 195]
+  load_xy: [0, 1]
+  unk: [10, -6]
+- index: 11
+  room: 133
+  xy: [456, 152]
+  scroll_xy: [322, 74]
+  camera_xy: [463, 183]
+  load_xy: [0, 1]
+  unk: [6, -2]
+- index: 12
+  room: 131
+  xy: [136, 152]
+  scroll_xy: [3, 70]
+  camera_xy: [144, 179]
+  load_xy: [0, 1]
+  unk: [10, -3]
+- index: 13
+  room: 99
+  xy: [296, 40]
+  scroll_xy: [162, 0]
+  camera_xy: [303, 109]
+  load_xy: [1, 0]
+  unk: [0, 14]
+- index: 71
+  room: 4114
+  xy: [304, 370]
+  scroll_xy: [170, 288]
+  camera_xy: [311, 397]
+  load_xy: [1, 0]
+  unk: [0, 6]
+Items:
+- [44, 6, 84-Staircase]
+- [40, 20, 04-Random]
+- [3, 40, 06-Heart]
+- [10, 59, 82-Warp]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 8, palette: 4}
+  sprites:
+  - [18, 20, 57-HyliaObstacle]
+  - [18, 25, B3-Inscription]
+  - [14, 28, 57-HyliaObstacle]
+  - [22, 28, 57-HyliaObstacle]
+  - [39, 25, 4C-Geldman]
+  - [34, 28, 01-Vulture]
+  - [42, 31, 4C-Geldman]
+  - [29, 38, 4C-Geldman]
+  - [7, 41, 01-Vulture]
+  - [15, 41, 4C-Geldman]
+  - [6, 42, EB-HeartPie]
+  - [27, 44, 4C-Geldman]
+  - [10, 48, 4C-Geldman]
+  - [20, 53, 4C-Geldman]
+  - [55, 43, F2-MedallianTablet]
+  - [54, 33, D4-GroundBomb]
+  - [34, 36, 4C-Geldman]
+  - [41, 37, D4-GroundBomb]
+  - [32, 44, 4C-Geldman]
+  - [35, 50, 4C-Geldman]
+  - [48, 50, D4-GroundBomb]
+  - [52, 51, 01-Vulture]
+  - [45, 59, D4-GroundBomb]
+Sprites.SecondPart:
+  info: {gfx: 31, palette: 4}
+  sprites:
+  - [18, 20, 57-HyliaObstacle]
+  - [18, 25, B3-Inscription]
+  - [14, 28, 57-HyliaObstacle]
+  - [22, 28, 57-HyliaObstacle]
+  - [39, 25, 4C-Geldman]
+  - [34, 28, 01-Vulture]
+  - [42, 31, 4C-Geldman]
+  - [12, 35, D4-GroundBomb]
+  - [29, 38, 4C-Geldman]
+  - [7, 41, 01-Vulture]
+  - [15, 41, 4C-Geldman]
+  - [6, 42, EB-HeartPie]
+  - [27, 44, 4C-Geldman]
+  - [10, 48, 4C-Geldman]
+  - [20, 53, 4C-Geldman]
+  - [55, 43, F2-MedallianTablet]
+  - [34, 36, 4C-Geldman]
+  - [40, 42, 4C-Geldman]
+  - [35, 50, 4C-Geldman]
+  - [52, 51, 01-Vulture]

@@ -1,0 +1,43 @@
+Header:
+  name: 'LW 059 : Watergate Grounds'
+  size: small
+  gfx: 39
+  palette: 4
+  sign_text: 67
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel:
+- bird_travel_id: 6
+  xy: [376, 317]
+  scroll_xy: [242, 223]
+  camera_xy: [383, 332]
+  load_xy: [0, 0]
+  unk: [-15, -2]
+Entrances:
+- {index: 77, x: 23, y: 14, entrance_id: 78}
+Exits: []
+Items:
+- [13, 12, 03-Bee]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 4, palette: 3}
+  sprites:
+  - [19, 6, 47-GreenGrassArche]
+  - [12, 10, 46-BlueArcher]
+  - [19, 13, D2-Fish]
+  - [8, 11, 00-Raven]
+  - [20, 14, EB-HeartPie]
+  - [27, 16, D2-Fish]
+  - [15, 20, 4D-Bunny]
+  - [20, 27, 00-Raven]
+Sprites.SecondPart:
+  info: {gfx: 32, palette: 3}
+  sprites:
+  - [19, 13, D2-Fish]
+  - [12, 15, 08-Octorok]
+  - [20, 14, EB-HeartPie]
+  - [15, 20, 0A-4WayOctorok]
+  - [23, 24, 41-BlueSoldier]
+  - [20, 27, 00-Raven]

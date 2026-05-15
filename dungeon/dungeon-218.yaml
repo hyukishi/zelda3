@@ -1,0 +1,47 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 6
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 11
+  blockset: 5
+  enemyblk: 8
+  effect: None
+  tag0: Switch opens door(Toggle)
+  tag1: None
+  hole0_dest: [0, 0]
+  stair0_dest: [153, 0]
+  stair1_dest: [224, 0]
+  stair2_dest: [20, 0]
+  stair3_dest: [11, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [7, 24, upper, 15-Bubble]
+- [8, 24, upper, 15-Bubble]
+Secrets:
+- [12, 46, 09-Arrow]
+- [18, 46, 09-Arrow]
+- [12, 50, 88-Switch]
+- [18, 50, 0B-Heart]
+Chests: []
+Entrances: []
+Layer1:
+- {x: 14, y: 36, n: 139-Door Staircase Down L}
+- {x: 6, y: 36, s: 0*3, n: '05-[N]Wall Column [L-R]'}
+- {x: 8, y: 42, s: 0*0, n: '38-Statue [L-R]'}
+- {x: 8, y: 53, s: 0*0, n: '38-Statue [L-R]'}
+- {x: 22, y: 42, s: 0*0, n: '38-Statue [L-R]'}
+- {x: 22, y: 53, s: 0*0, n: '38-Statue [L-R]'}
+- {x: 12, y: 46, n: FAF-Pot}
+- {x: 18, y: 46, n: FAF-Pot}
+- {x: 12, y: 50, n: FAF-Pot}
+- {x: 18, y: 50, n: FAF-Pot}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 24, pos: 2, dir: 2}

@@ -1,0 +1,77 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 6
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 11
+  blockset: 5
+  enemyblk: 8
+  effect: None
+  tag0: Switch opens door(Toggle)
+  tag1: None
+  hole0_dest: [5, 0]
+  stair0_dest: [8, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [23, 0]
+  stair3_dest: [0, 3]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [12, 20, upper, 102-CannonRoom]
+- [24, 21, upper, 83-GreenRocklops]
+- [24, 24, upper, 83-GreenRocklops]
+- [24, 27, upper, 83-GreenRocklops]
+Secrets:
+- [46, 40, 09-Arrow]
+- [46, 56, 0B-Heart]
+Chests: []
+Entrances: []
+Layer1:
+- {x: 7, y: 36, s: 0*0, n: '51-[N]Canon Hole [L-R]'}
+- {x: 11, y: 36, s: 0*0, n: '51-[N]Canon Hole [L-R]'}
+- {x: 17, y: 36, s: 0*0, n: '51-[N]Canon Hole [L-R]'}
+- {x: 21, y: 36, s: 0*0, n: '51-[N]Canon Hole [L-R]'}
+- {x: 7, y: 59, s: 0*0, n: '52-[S]Canon Hole [L-R]'}
+- {x: 11, y: 59, s: 0*0, n: '52-[S]Canon Hole [L-R]'}
+- {x: 17, y: 59, s: 0*0, n: '52-[S]Canon Hole [L-R]'}
+- {x: 21, y: 59, s: 0*0, n: '52-[S]Canon Hole [L-R]'}
+- {x: 2, y: 39, s: 0*0, n: '85-[W]Wall Canon Hole [U-D]'}
+- {x: 2, y: 43, s: 0*0, n: '85-[W]Wall Canon Hole [U-D]'}
+- {x: 2, y: 51, s: 0*0, n: '85-[W]Wall Canon Hole [U-D]'}
+- {x: 2, y: 55, s: 0*0, n: '85-[W]Wall Canon Hole [U-D]'}
+- {x: 27, y: 39, s: 0*0, n: '86-[E]Wall Canon Hole [U-D]'}
+- {x: 27, y: 43, s: 0*0, n: '86-[E]Wall Canon Hole [U-D]'}
+- {x: 27, y: 51, s: 0*0, n: '86-[E]Wall Canon Hole [U-D]'}
+- {x: 27, y: 55, s: 0*0, n: '86-[E]Wall Canon Hole [U-D]'}
+- {x: 10, y: 42, n: FD0-Floor Switch}
+- {x: 20, y: 42, n: FE3-Fake Floor Switch}
+- {x: 10, y: 54, n: FE3-Fake Floor Switch}
+- {x: 20, y: 54, n: FE3-Fake Floor Switch}
+- {x: 34, y: 44, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 38, y: 44, s: 0*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 42, y: 44, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 42, y: 40, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 42, y: 36, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 34, y: 50, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 38, y: 50, s: 0*2, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 42, y: 50, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 42, y: 54, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 42, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 40, y: 48, n: FE3-Fake Floor Switch}
+- {x: 48, y: 42, n: FE3-Fake Floor Switch}
+- {x: 48, y: 48, n: FE3-Fake Floor Switch}
+- {x: 46, y: 40, n: FAF-Pot}
+- {x: 46, y: 56, n: FAF-Pot}
+- {x: 48, y: 54, n: FD0-Floor Switch}
+- {x: 34, y: 36, s: 1*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 34, y: 54, s: 1*1, n: 'C0-Ceiling Large [4-way]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 24, pos: 2, dir: 2}
+- {type: 24, pos: 8, dir: 2}
+- {type: 24, pos: 8, dir: 3}

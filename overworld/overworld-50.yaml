@@ -1,0 +1,37 @@
+Header:
+  name: 'LW 050 : Haunted Terrace'
+  size: small
+  gfx: 32
+  palette: 0
+  sign_text: 167
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances:
+- {index: 80, x: 3, y: 18, entrance_id: 81}
+Exits: []
+Items:
+- [15, 10, 05-Bomb]
+- [21, 10, 04-Random]
+- [14, 11, 05-Bomb]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites:
+  - [26, 9, DC-Bomb]
+  - [24, 18, D8-Heart]
+Sprites.FirstPart:
+  info: {gfx: 10, palette: 0}
+  sprites:
+  - [26, 9, D8-Heart]
+  - [11, 11, 41-BlueSoldier]
+  - [18, 11, 41-BlueSoldier]
+  - [25, 18, E3-Fairy]
+Sprites.SecondPart:
+  info: {gfx: 10, palette: 0}
+  sprites:
+  - [26, 9, D8-Heart]
+  - [11, 12, 42-GreenSoldier]
+  - [18, 12, 41-BlueSoldier]
+  - [19, 16, 42-GreenSoldier]
+  - [25, 18, DD-4_bombs]
+  - [8, 21, D4-GroundBomb]

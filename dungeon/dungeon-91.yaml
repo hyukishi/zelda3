@@ -1,0 +1,93 @@
+Header:
+  floor1: 2
+  floor2: 6
+  layout: 1
+  start_quadrant: 0
+  bg2: Normal
+  collision: One
+  lights_out: 0
+  palette: 27
+  blockset: 14
+  enemyblk: 10
+  effect: None
+  tag0: Switch opens door(Toggle)
+  tag1: None
+  hole0_dest: [14, 0]
+  stair0_dest: [10, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 0]
+  stair3_dest: [0, 3]
+  tele_msg: 180
+  sort_sprites: 1
+  pits_hurt_player: false
+Sprites:
+- [23, 12, lower, 1E-PegSwitch]
+- [24, 19, lower, 1E-PegSwitch]
+- [23, 21, lower, 8A-SpikeBlock]
+- [22, 8, lower, 83-GreenRocklops]
+- [25, 8, lower, 84-RedRocklops]
+- [20, 14, lower, 8A-SpikeBlock]
+- [27, 16, lower, 8A-SpikeBlock]
+- [23, 17, lower, 8A-SpikeBlock]
+- [20, 18, lower, 8A-SpikeBlock]
+Secrets:
+- [47, 75, 88-Switch]
+Chests: [36]
+Entrances: []
+Layer1:
+- {x: 46, y: 50, n: 'F9C-Stair [S](Layer)'}
+- {x: 34, y: 13, s: 1*2, n: '65-[W]Wall Column [U-D]'}
+- {x: 58, y: 13, s: 1*2, n: '66-[E]Wall Column [U-D]'}
+Layer2:
+- {x: 37, y: 6, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 41, y: 6, s: 1*3, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 55, y: 6, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 37, y: 10, s: 3*3, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 37, y: 40, s: 2*0, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 37, y: 55, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 41, y: 55, s: 1*3, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 55, y: 10, s: 3*3, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 55, y: 40, s: 2*0, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 55, y: 55, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 42, y: 20, s: 1*2, n: 'B9-Red Switch Block [L-R]'}
+- {x: 42, y: 22, s: 2*3, n: '93-Orange Peg Block [U-D]'}
+- {x: 52, y: 22, s: 2*3, n: '93-Orange Peg Block [U-D]'}
+- {x: 40, y: 44, s: 0*2, n: 'B9-Red Switch Block [L-R]'}
+- {x: 52, y: 44, s: 0*2, n: 'B9-Red Switch Block [L-R]'}
+- {x: 45, y: 11, n: FAF-Pot}
+- {x: 47, y: 11, n: FAF-Pot}
+- {x: 49, y: 11, n: FAF-Pot}
+- {x: 45, y: 50, s: 0*2, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 50, y: 50, s: 0*2, n: '69-Vert: Rail Thin [U-D]'}
+Layer3:
+- {x: 40, y: 11, s: 3*0, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 46, y: 15, s: 0*0, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 42, y: 19, s: 2*3, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 42, y: 35, s: 2*3, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 42, y: 50, s: 2*0, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 40, y: 10, s: 3*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 40, y: 10, s: 0*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 40, y: 14, s: 0*2, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 50, y: 14, s: 0*2, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 55, y: 10, s: 0*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 45, y: 14, s: 0*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 50, y: 14, s: 0*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 42, y: 18, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 50, y: 18, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 42, y: 18, s: 1*2, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 53, y: 18, s: 1*2, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 42, y: 28, s: 3*3, n: '8C-[E]Vert: Jump Edge [U-D]'}
+- {x: 42, y: 37, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 42, y: 45, s: 0*0, n: '8C-[E]Vert: Jump Edge [U-D]'}
+- {x: 53, y: 28, s: 3*3, n: '8B-[W]Vert: Jump Edge [U-D]'}
+- {x: 53, y: 37, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 53, y: 45, s: 0*0, n: '8B-[W]Vert: Jump Edge [U-D]'}
+- {x: 42, y: 53, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 50, y: 53, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 42, y: 50, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 45, y: 50, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 53, y: 50, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 50, y: 50, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+Layer3.doors:
+- {type: 28, pos: 8, dir: 1}
+- {type: 24, pos: 6, dir: 3}

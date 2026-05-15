@@ -1,0 +1,32 @@
+Header:
+  name: 'LW 023 : Zora Ridge'
+  size: small
+  gfx: 41
+  palette: 0
+  sign_text: 176
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items:
+- [14, 28, 06-Heart]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 10, palette: 3}
+  sprites:
+  - [24, 8, 0D-Cucumber]
+  - [23, 10, 0D-Cucumber]
+  - [13, 11, 0D-Cucumber]
+  - [22, 12, 0D-Cucumber]
+  - [8, 22, 0D-Cucumber]
+Sprites.SecondPart:
+  info: {gfx: 10, palette: 3}
+  sprites:
+  - [24, 8, 0D-Cucumber]
+  - [23, 10, 0D-Cucumber]
+  - [13, 11, 45-HogSpearMan]
+  - [22, 12, 0D-Cucumber]
+  - [8, 22, 0D-Cucumber]

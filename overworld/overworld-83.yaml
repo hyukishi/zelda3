@@ -1,0 +1,37 @@
+Header:
+  name: 'DW 083 : Unctuary Grounds'
+  size: small
+  gfx: 64
+  palette: 30
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances:
+- {index: 89, x: 21, y: 5, entrance_id: 90}
+Exits: []
+Items:
+- [2, 11, 05-Bomb]
+- [28, 11, 04-Random]
+- [3, 12, 05-Bomb]
+- [4, 13, 05-Bomb]
+- [5, 14, 05-Bomb]
+- [6, 15, 05-Bomb]
+- [16, 15, 01-Rupee-G]
+- [27, 15, 03-Bee]
+- [17, 16, 01-Rupee-G]
+- [23, 16, 01-Rupee-G]
+- [19, 17, 01-Rupee-G]
+- [24, 17, 01-Rupee-G]
+- [16, 18, 04-Random]
+- [20, 18, 01-Rupee-G]
+- [26, 18, 01-Rupee-G]
+- [27, 19, 01-Rupee-G]
+Sprites:
+  info: {gfx: 19, palette: 14}
+  sprites:
+  - [6, 11, D3-AliveRock]
+  - [21, 12, 11-Hinox]
+  - [8, 13, 22-HoppingBulbPlan]
+  - [13, 21, 12-PigSpearMan]
+  - [22, 24, 0E-SnapDragon]

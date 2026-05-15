@@ -1,0 +1,34 @@
+Header:
+  name: 'LW 037 : Moundlands'
+  size: small
+  gfx: 32
+  palette: 0
+  sign_text: 69
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items:
+- [4, 18, 06-Heart]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 4, palette: 3}
+  sprites:
+  - [15, 8, 08-Octorok]
+  - [5, 12, 08-Octorok]
+  - [20, 12, 08-Octorok]
+  - [16, 13, 08-Octorok]
+  - [12, 17, 08-Octorok]
+  - [24, 22, 08-Octorok]
+  - [8, 23, 08-Octorok]
+  - [16, 23, 08-Octorok]
+Sprites.SecondPart:
+  info: {gfx: 0, palette: 3}
+  sprites:
+  - [14, 8, 41-BlueSoldier]
+  - [5, 12, 41-BlueSoldier]
+  - [9, 17, 41-BlueSoldier]
+  - [25, 22, 45-HogSpearMan]

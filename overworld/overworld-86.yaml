@@ -1,0 +1,28 @@
+Header:
+  name: 'DW 086 : Riverside Commerce'
+  size: small
+  gfx: 64
+  palette: 30
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances:
+- {index: 110, x: 13, y: 21, entrance_id: 96}
+Exits: []
+Items:
+- [14, 15, 04-Random]
+- [19, 17, 01-Rupee-G]
+- [19, 18, 01-Rupee-G]
+- [19, 19, 01-Rupee-G]
+- [19, 20, 01-Rupee-G]
+- [12, 25, 01-Rupee-G]
+- [13, 26, 01-Rupee-G]
+Sprites:
+  info: {gfx: 22, palette: 13}
+  sprites:
+  - [10, 6, 55-FireBallZora]
+  - [19, 10, 55-FireBallZora]
+  - [4, 14, 79-Bee]
+  - [17, 23, 22-HoppingBulbPlan]
+  - [5, 26, 22-HoppingBulbPlan]

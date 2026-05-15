@@ -1,0 +1,31 @@
+Header:
+  name: 'LW 007 : Turtle Rock'
+  size: small
+  gfx: 34
+  palette: 7
+  sign_text: 167
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: Stop, sword: Stop, agahnim: Stop}
+Travel: []
+Entrances: []
+Exits: []
+Items: []
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 16, palette: 9}
+  sprites:
+  - [14, 7, 27-Squirrel]
+  - [10, 13, 27-Squirrel]
+  - [23, 21, 27-Squirrel]
+  - [15, 22, 27-Squirrel]
+  - [18, 22, 27-Squirrel]
+Sprites.SecondPart:
+  info: {gfx: 16, palette: 9}
+  sprites:
+  - [14, 7, 27-Squirrel]
+  - [10, 13, 27-Squirrel]
+  - [23, 21, 27-Squirrel]
+  - [15, 22, 27-Squirrel]
+  - [18, 22, 27-Squirrel]

@@ -1,0 +1,103 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 7
+  blockset: 6
+  enemyblk: 40
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [255, 3]
+  stair0_dest: [255, 3]
+  stair1_dest: [255, 3]
+  stair2_dest: [255, 3]
+  stair3_dest: [255, 3]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [7, 21, upper, E3-Fairy]
+- [8, 21, upper, E3-Fairy]
+- [7, 22, upper, E3-Fairy]
+- [8, 22, upper, E3-Fairy]
+- [28, 20, upper, EB-HeartPie]
+Secrets: []
+Chests: []
+Entrances:
+- entrance_index: 113
+  name: Fairy Cave 5
+  scroll_xy: [0, 272]
+  player_xy: [120, 472]
+  camera_xy: [127, 391]
+  blockset: 6
+  music: Fountain
+  palace: None
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, single_y, lower_left]
+  floor: 0
+  house_exit_door: [none]
+- entrance_index: 114
+  name: Heart Piece Cave 2
+  scroll_xy: [256, 272]
+  player_xy: [376, 472]
+  camera_xy: [383, 391]
+  blockset: 6
+  music: Cave
+  palace: None
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, single_y, lower_right]
+  floor: 0
+  house_exit_door: [none]
+Layer1:
+- {x: 2, y: 50, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 6, y: 50, s: 0*2, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 10, y: 50, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 10, y: 54, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 18, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 18, y: 54, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 18, y: 50, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 22, y: 50, s: 0*2, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 26, y: 50, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 10, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 42, y: 36, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 42, y: 40, s: 2*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 42, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 58, y: 50, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 54, y: 50, s: 0*2, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 50, y: 50, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 50, y: 54, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 50, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 12, y: 40, s: 1*1, n: 'C8-Water Floor [4-way]'}
+- {x: 11, y: 40, s: 1*3, n: '3F-Water Edge [L-R]'}
+- {x: 11, y: 41, s: 1*2, n: '79-Water Edge [U-D]'}
+- {x: 11, y: 48, s: 1*3, n: '40-Water Edge [L-R]'}
+- {x: 20, y: 41, s: 1*2, n: '7A-Water Edge [U-D]'}
+- {x: 6, y: 42, n: 124-Decoration}
+- {x: 22, y: 42, n: 124-Decoration}
+- {x: 54, y: 46, s: 0*0, n: '5E-Block [L-R]'}
+- {x: 50, y: 42, s: 0*1, n: '89-Block Vert: [U-D]'}
+- {x: 56, y: 48, s: 0*0, n: '5E-Block [L-R]'}
+- {x: 45, y: 39, s: 3*2, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 45, y: 55, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 45, y: 39, s: 2*2, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 58, y: 39, s: 2*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 50, y: 50, s: 1*1, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 34, y: 36, s: 1*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 34, y: 52, s: 1*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 54, y: 54, s: 1*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 2, y: 54, s: 1*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 22, y: 54, s: 1*1, n: 'C0-Ceiling Large [4-way]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 14, pos: 6, dir: 1}
+- {type: 14, pos: 8, dir: 1}

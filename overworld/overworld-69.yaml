@@ -1,0 +1,78 @@
+Header:
+  name: 'DW 069 : Death Mountain Bridge NW'
+  size: big
+  gfx: 65
+  palette: 23
+  sign_text: 167
+  music: {agahnim: Mountain}
+  ambient: {agahnim: Wind}
+Travel: []
+Entrances:
+- {index: 18, x: 55, y: 36, entrance_id: 19}
+- {index: 19, x: 59, y: 15, entrance_id: 20}
+- {index: 20, x: 43, y: 22, entrance_id: 21}
+- {index: 23, x: 49, y: 28, entrance_id: 24}
+- {index: 24, x: 55, y: 22, entrance_id: 25}
+- {index: 57, x: 52, y: 16, entrance_id: 58}
+- {index: 58, x: 44, y: 3, entrance_id: 59}
+- {index: 109, x: 58, y: 36, entrance_id: 88}
+Exits:
+- index: 20
+  room: 248
+  xy: [888, 568]
+  scroll_xy: [768, 484]
+  camera_xy: [893, 595]
+  load_xy: [0, 63]
+  unk: [10, 0]
+- index: 21
+  room: 232
+  xy: [952, 231]
+  scroll_xy: [768, 147]
+  camera_xy: [893, 258]
+  load_xy: [0, 63]
+  unk: [11, 0]
+- index: 22
+  room: 35
+  xy: [696, 343]
+  scroll_xy: [582, 259]
+  camera_xy: [707, 370]
+  load_xy: [1, 63]
+  unk: [11, 10]
+- index: 25
+  room: 213
+  xy: [792, 440]
+  scroll_xy: [678, 356]
+  camera_xy: [803, 467]
+  load_xy: [0, 63]
+  unk: [10, -6]
+- index: 26
+  room: 36
+  xy: [888, 343]
+  scroll_xy: [768, 259]
+  camera_xy: [893, 370]
+  load_xy: [0, 63]
+  unk: [11, 0]
+- index: 59
+  room: 60
+  xy: [840, 263]
+  scroll_xy: [726, 163]
+  camera_xy: [851, 274]
+  load_xy: [0, 63]
+  unk: [11, -6]
+- index: 60
+  room: 44
+  xy: [712, 56]
+  scroll_xy: [598, 0]
+  camera_xy: [723, 111]
+  load_xy: [1, 0]
+  unk: [0, 10]
+Items:
+- [52, 16, 84-Staircase]
+- [44, 39, 05-Bomb]
+- [45, 40, 05-Bomb]
+Sprites:
+  info: {gfx: 20, palette: 12}
+  sprites:
+  - [6, 12, D0-Lynel]
+  - [29, 14, D0-Lynel]
+  - [32, 11, D0-Lynel]

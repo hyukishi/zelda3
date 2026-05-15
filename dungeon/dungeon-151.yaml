@@ -1,0 +1,86 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 2
+  start_quadrant: 0
+  bg2: On top
+  collision: Both w/scroll
+  lights_out: 0
+  palette: 17
+  blockset: 12
+  enemyblk: 29
+  effect: None
+  tag0: Secret wall (Right)
+  tag1: None
+  hole0_dest: [209, 0]
+  stair0_dest: [209, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [17, 0]
+  stair3_dest: [12, 0]
+  tele_msg: 187
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [15, 15, upper, 115-WizzrobeSpawn]
+Secrets: []
+Chests: []
+Entrances: []
+Layer1:
+- {x: 2, y: 9, s: 0*0, n: '0D-/ Wall Tile Bot (HIGH) [NW]'}
+- {x: 2, y: 10, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 24, y: 4, s: 0*0, n: '0F-\ Wall Tile Bot (HIGH) [NE]'}
+- {x: 26, y: 10, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 2, y: 52, s: 0*0, n: '0E-\ Wall Tile Bot (HIGH) [SW]'}
+- {x: 2, y: 52, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 24, y: 57, s: 0*0, n: '10-/ Wall Tile Bot (HIGH) [SE]'}
+- {x: 26, y: 52, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 20, y: 4, n: 139-Door Staircase Down L}
+- {x: 8, y: 9, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 20, y: 9, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 8, y: 19, s: 0*2, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 8, y: 27, s: 0*1, n: '56-[S]Wall Torches [L-R]'}
+- {x: 18, y: 19, s: 0*2, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 5, y: 26, s: 1*1, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 18, y: 26, s: 1*1, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 14, y: 19, s: 0*1, n: '70-Red Floor/Wire Floor [U-D]'}
+- {x: 8, y: 37, s: 0*1, n: '55-[N]Wall Torches [L-R]'}
+- {x: 5, y: 39, s: 1*1, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 18, y: 39, s: 1*1, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 5, y: 46, s: 1*1, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 18, y: 46, s: 1*1, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 6, y: 19, s: 0*0, n: '89-Block Vert: [U-D]'}
+- {x: 24, y: 19, s: 0*0, n: '89-Block Vert: [U-D]'}
+- {x: 8, y: 53, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 20, y: 53, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 14, y: 39, s: 0*1, n: '70-Red Floor/Wire Floor [U-D]'}
+- {x: 34, y: 19, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 38, y: 19, s: 2*1, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 56, y: 19, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 56, y: 23, s: 3*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 56, y: 51, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 38, y: 51, s: 2*1, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 34, y: 51, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 38, y: 20, n: F93-Telepathic Tile}
+- {x: 37, y: 22, s: 1*2, n: '70-Red Floor/Wire Floor [U-D]'}
+- {x: 41, y: 22, s: 1*2, n: '70-Red Floor/Wire Floor [U-D]'}
+- {x: 45, y: 22, s: 1*2, n: '70-Red Floor/Wire Floor [U-D]'}
+- {x: 49, y: 22, s: 1*2, n: '70-Red Floor/Wire Floor [U-D]'}
+- {x: 53, y: 22, s: 1*2, n: '70-Red Floor/Wire Floor [U-D]'}
+- {x: 37, y: 48, s: 1*0, n: '33-Red Carpet Floor [L-R]'}
+- {x: 49, y: 43, s: 3*1, n: 'DE-Spike Block [4-way]'}
+- {x: 50, y: 47, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 34, y: 3, s: 3*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 50, y: 3, s: 2*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 60, y: 0, s: 0*0, n: '60-Ceiling [U-D]'}
+- {x: 34, y: 55, s: 3*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 50, y: 55, s: 2*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 2, y: 4, s: 0*1, n: 'A0-/ Ceiling [NW]'}
+- {x: 25, y: 4, s: 0*1, n: 'A2-\ Ceiling [NE]'}
+- {x: 2, y: 57, s: 0*1, n: 'A1-\ Ceiling [SW]'}
+- {x: 25, y: 61, s: 0*1, n: 'A3-/ Ceiling [SE]'}
+Layer2:
+- {x: 41, y: 19, s: 3*1, n: 'CE-Moving Wall Left [4-way]'}
+Layer3: []
+Layer3.doors:
+- {type: 0, pos: 8, dir: 2}
+- {type: 0, pos: 6, dir: 0}

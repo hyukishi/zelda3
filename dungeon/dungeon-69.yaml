@@ -1,0 +1,119 @@
+Header:
+  floor1: 3
+  floor2: 14
+  layout: 2
+  start_quadrant: 0
+  bg2: On top
+  collision: One
+  lights_out: 0
+  palette: 23
+  blockset: 10
+  enemyblk: 27
+  effect: None
+  tag0: NW Kill enemy to open
+  tag1: None
+  hole0_dest: [0, 0]
+  stair0_dest: [188, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [10, 0]
+  stair3_dest: [8, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [25, 6, upper, B7-BlindMan]
+- [6, 6, upper, A6-RedLizard]
+- [4, 11, upper, A5-GreenLizard]
+- [11, 11, upper, A7-Stalfos]
+- [23, 11, upper, D1-Transform/Smoke]
+- [24, 12, upper, A5-GreenLizard]
+- [26, 12, upper, A5-GreenLizard]
+- [24, 17, upper, A5-GreenLizard]
+- [22, 24, upper, 8F-Blob]
+- [25, 27, upper, A6-RedLizard]
+- [7, 28, upper, A6-RedLizard]
+Secrets:
+- [6, 8, 09-Arrow]
+- [54, 22, 0B-Heart]
+- [24, 24, 09-Arrow]
+- [46, 33, 0C-Magic]
+- [54, 33, 0B-Heart]
+Chests: [36]
+Entrances: []
+Layer1:
+- {x: 2, y: 44, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 6, y: 44, s: 0*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 10, y: 44, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 10, y: 40, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 10, y: 36, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 18, y: 36, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 18, y: 40, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 18, y: 44, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 22, y: 44, s: 0*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 26, y: 44, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 34, y: 44, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 38, y: 44, s: 0*3, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 43, y: 44, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 43, y: 12, s: 3*3, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 43, y: 42, s: 0*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 43, y: 8, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 47, y: 8, s: 1*0, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 55, y: 8, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 55, y: 12, s: 3*3, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 55, y: 42, s: 2*0, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 55, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 14, y: 4, n: 138-Door Staircase Up R}
+- {x: 14, y: 15, n: FAC-Large Pick Up Block}
+- {x: 12, y: 19, s: 0*1, n: '89-Block Vert: [U-D]'}
+- {x: 18, y: 19, s: 0*1, n: '89-Block Vert: [U-D]'}
+- {x: 12, y: 21, s: 0*1, n: '89-Block Vert: [U-D]'}
+- {x: 18, y: 21, s: 0*1, n: '89-Block Vert: [U-D]'}
+- {x: 6, y: 8, n: FAF-Pot}
+- {x: 24, y: 24, n: FAF-Pot}
+- {x: 8, y: 15, n: 'FEB-Throne/Decor: Object'}
+- {x: 20, y: 15, n: 'FEB-Throne/Decor: Object'}
+- {x: 14, y: 40, s: 0*1, n: 'E4-Moving Floor Down [4-way]'}
+- {x: 14, y: 47, s: 0*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 14, y: 50, n: 11C-Fairy Pot}
+- {x: 27, y: 52, s: 0*0, n: '80-[E]Wall Torches [U-D]'}
+- {x: 35, y: 52, s: 0*0, n: '7F-[W]Wall Torches [U-D]'}
+- {x: 56, y: 52, s: 0*0, n: '80-[E]Wall Torches [U-D]'}
+- {x: 42, y: 52, s: 1*0, n: 'DD-Table / Rock [4-way]'}
+- {x: 54, y: 11, n: F99-Chest}
+- {x: 46, y: 22, n: FAF-Pot}
+- {x: 54, y: 22, n: FAF-Pot}
+- {x: 46, y: 33, n: FAF-Pot}
+- {x: 54, y: 33, n: FAF-Pot}
+- {x: 46, y: 44, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 52, y: 44, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 46, y: 43, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 52, y: 43, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 46, y: 32, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 52, y: 32, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 46, y: 31, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 52, y: 31, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 46, y: 20, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 52, y: 20, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 46, y: 19, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 52, y: 19, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 50, y: 18, n: F98-Cell Lock}
+- {x: 50, y: 30, n: F98-Cell Lock}
+- {x: 50, y: 42, n: F98-Cell Lock}
+- {x: 2, y: 36, s: 1*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 22, y: 36, s: 1*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 31, y: 4, s: 2*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 31, y: 20, s: 2*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 31, y: 36, s: 2*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 43, y: 4, s: 3*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 59, y: 0, s: 0*0, n: '60-Ceiling [U-D]'}
+- {x: 61, y: 0, s: 0*0, n: '60-Ceiling [U-D]'}
+Layer2:
+- {x: 43, y: 40, n: F97-Cell}
+- {x: 43, y: 28, n: F97-Cell}
+- {x: 43, y: 16, n: F97-Cell}
+Layer3: []
+Layer3.doors:
+- {type: 24, pos: 0, dir: 2}
+- {type: 0, pos: 6, dir: 0}
+- {type: 0, pos: 2, dir: 2}
+- {type: 0, pos: 8, dir: 2}

@@ -1,0 +1,55 @@
+Header:
+  name: 'LW 010 : Death Mountain Gateway'
+  size: small
+  gfx: 33
+  palette: 8
+  sign_text: 60
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances:
+- {index: 5, x: 26, y: 12, entrance_id: 6}
+- {index: 45, x: 27, y: 6, entrance_id: 46}
+Exits:
+- index: 7
+  room: 240
+  xy: [424, 184]
+  scroll_xy: [256, 100]
+  camera_xy: [397, 211]
+  load_xy: [0, 1]
+  unk: [10, 0]
+- index: 47
+  room: 230
+  xy: [440, 87]
+  scroll_xy: [256, 5]
+  camera_xy: [397, 114]
+  load_xy: [0, 1]
+  unk: [11, 0]
+Items:
+- [24, 14, 02-RockCrab]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 7, palette: 6}
+  sprites:
+  - [14, 4, 79-Bee]
+  - [14, 6, 33-PullForRupees]
+  - [5, 9, 00-Raven]
+  - [16, 13, 0D-Cucumber]
+  - [11, 14, 0D-Cucumber]
+  - [19, 22, 00-Raven]
+  - [14, 22, 17-BushCrab]
+  - [22, 22, 0D-Cucumber]
+  - [17, 23, 00-Raven]
+  - [25, 26, AC-Apples]
+Sprites.SecondPart:
+  info: {gfx: 26, palette: 6}
+  sprites:
+  - [14, 4, 79-Bee]
+  - [16, 13, 41-BlueSoldier]
+  - [17, 22, 00-Raven]
+  - [19, 22, 00-Raven]
+  - [14, 22, 17-BushCrab]
+  - [17, 23, 00-Raven]
+  - [25, 26, AC-Apples]

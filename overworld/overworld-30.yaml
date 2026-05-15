@@ -1,0 +1,76 @@
+Header:
+  name: 'LW 030 : Eastern Ruins NW'
+  size: big
+  gfx: 37
+  palette: 9
+  sign_text: 167
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances:
+- {index: 7, x: 53, y: 2, entrance_id: 8}
+- {index: 68, x: 15, y: 19, entrance_id: 69}
+Exits:
+- index: 9
+  room: 201
+  xy: [848, 24]
+  scroll_xy: [726, 0]
+  camera_xy: [859, 109]
+  load_xy: [0, 0]
+  unk: [0, -6]
+- index: 68
+  room: 4108
+  xy: [636, 306]
+  scroll_xy: [510, 228]
+  camera_xy: [643, 337]
+  load_xy: [1, 1]
+  unk: [7, 2]
+Items: []
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 5, palette: 7}
+  sprites:
+  - [19, 8, 51-Armos]
+  - [14, 14, 51-Armos]
+  - [17, 26, 08-Octorok]
+  - [25, 26, 51-Armos]
+  - [51, 9, 51-Armos]
+  - [55, 9, 51-Armos]
+  - [49, 16, 41-BlueSoldier]
+  - [47, 23, 51-Armos]
+  - [53, 29, 0A-4WayOctorok]
+  - [15, 37, 0A-4WayOctorok]
+  - [9, 40, 08-Octorok]
+  - [21, 44, 08-Octorok]
+  - [20, 51, 51-Armos]
+  - [23, 51, 51-Armos]
+  - [9, 54, 08-Octorok]
+  - [36, 37, 51-Armos]
+  - [40, 41, 51-Armos]
+  - [61, 41, 51-Armos]
+  - [46, 59, 08-Octorok]
+Sprites.SecondPart:
+  info: {gfx: 5, palette: 7}
+  sprites:
+  - [14, 14, 51-Armos]
+  - [17, 26, 45-HogSpearMan]
+  - [25, 26, 51-Armos]
+  - [51, 4, 33-PullForRupees]
+  - [51, 9, 51-Armos]
+  - [55, 9, 51-Armos]
+  - [49, 16, 45-HogSpearMan]
+  - [47, 23, 51-Armos]
+  - [15, 37, 41-BlueSoldier]
+  - [9, 40, 45-HogSpearMan]
+  - [21, 44, 43-RedSpearSoldier]
+  - [20, 51, 51-Armos]
+  - [23, 51, 51-Armos]
+  - [36, 37, 51-Armos]
+  - [49, 40, 51-Armos]
+  - [40, 41, 51-Armos]
+  - [58, 41, 51-Armos]
+  - [61, 41, 51-Armos]
+  - [34, 55, E3-Fairy]
+  - [45, 58, 45-HogSpearMan]

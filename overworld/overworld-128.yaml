@@ -1,0 +1,43 @@
+Header:
+  name: 'SP 128 : Master Grove / Under Hyrule Bridge'
+  size: small
+  gfx: -1
+  palette: 10
+  sign_text: -1
+  music: {agahnim: Forest}
+  ambient: {agahnim: None}
+Travel: []
+Entrances: []
+Exits:
+- index: 75
+  room: 384
+  xy: [128, 488]
+  scroll_xy: [0, 288]
+  camera_xy: [131, 413]
+  load_xy: [0, 46]
+  unk: [0, 0]
+  special_exit: {dir: 0, spr_gfx: 12, aux_gfx: 47, pal_bg: 10, pal_spr: 1, top: 0,
+    bottom: 288, left: 0, right: 0, left_edge_of_map: 0, unk4: -224, unk6: -4, unk5: -224,
+    unk7: 4}
+- index: 76
+  room: 385
+  xy: [496, 128]
+  scroll_xy: [256, 0]
+  camera_xy: [397, 143]
+  load_xy: [0, 0]
+  unk: [0, 0]
+  special_exit: {dir: 2, spr_gfx: 12, aux_gfx: 47, pal_bg: 10, pal_spr: 8, top: 0,
+    bottom: 32, left: 256, right: 256, left_edge_of_map: 0, unk4: -224, unk6: 256,
+    unk5: -224, unk7: 260}
+Items: []
+Sprites:
+  info: {}
+  sprites:
+  - [7, 8, 62-MasterSwd]
+  - [7, 10, B3-Inscription]
+  - [15, 20, 5A-Animal]
+  - [0, 22, 59-Animal]
+  - [2, 24, 5A-Animal]
+  - [14, 26, 59-Animal]
+  - [15, 27, 5A-Animal]
+  - [22, 4, 2B-TentMan]

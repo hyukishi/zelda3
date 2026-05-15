@@ -1,0 +1,46 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 19
+  blockset: 11
+  enemyblk: 28
+  effect: None
+  tag0: NE Kill enemy for chest
+  tag1: None
+  hole0_dest: [6, 0]
+  stair0_dest: [25, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 3]
+  stair3_dest: [0, 3]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [20, 6, upper, 99-Penguin]
+- [28, 6, upper, 99-Penguin]
+- [22, 8, upper, 99-Penguin]
+- [25, 8, upper, 99-Penguin]
+- [20, 11, upper, 99-Penguin]
+- [27, 11, upper, 99-Penguin]
+Secrets: []
+Chests: [37]
+Entrances: []
+Layer1:
+- {x: 37, y: 7, s: 3*3, n: 'D2-Floor6 [4-way]'}
+- {x: 51, y: 7, s: 1*3, n: 'D2-Floor6 [4-way]'}
+- {x: 37, y: 23, s: 3*0, n: 'D2-Floor6 [4-way]'}
+- {x: 51, y: 23, s: 1*0, n: 'D2-Floor6 [4-way]'}
+- {x: 46, y: 20, n: F99-Chest}
+- {x: 37, y: 7, s: 0*3, n: '88-Large Vert: Rail [U-D]'}
+- {x: 37, y: 24, s: 0*1, n: '5D-Large Horz: Rail [L-R]'}
+- {x: 52, y: 7, s: 0*1, n: '5D-Large Horz: Rail [L-R]'}
+- {x: 57, y: 20, s: 0*1, n: '88-Large Vert: Rail [U-D]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 0, pos: 2, dir: 0}

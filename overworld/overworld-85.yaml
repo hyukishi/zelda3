@@ -1,0 +1,30 @@
+Header:
+  name: 'DW 085 : South Bend'
+  size: small
+  gfx: 48
+  palette: 16
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel:
+- whirlpool_src_area: 127
+  xy: [272, 136]
+  scroll_xy: [138, 42]
+  camera_xy: [279, 151]
+  load_xy: [1, 0]
+  unk: [-10, -6]
+Entrances: []
+Exits: []
+Items:
+- [5, 7, 05-Bomb]
+- [4, 15, 04-Random]
+Sprites:
+  info: {gfx: 24, palette: 0}
+  sprites:
+  - [17, 9, BA-Whirlpool]
+  - [22, 14, 11-Hinox]
+  - [24, 14, D3-AliveRock]
+  - [27, 15, DA-Rupee-B]
+  - [7, 23, 11-Hinox]
+  - [10, 26, 79-Bee]
+  - [26, 27, 22-HoppingBulbPlan]

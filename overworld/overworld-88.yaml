@@ -1,0 +1,70 @@
+Header:
+  name: 'DW 088 : Village of Outcasts NW'
+  size: big
+  gfx: 63
+  palette: 30
+  sign_text: 175
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances:
+- {index: 51, x: 31, y: 27, entrance_id: 52}
+- {index: 70, x: 12, y: 22, entrance_id: 71}
+- {index: 71, x: 27, y: 52, entrance_id: 72}
+- {index: 83, x: 52, y: 26, entrance_id: 84}
+- {index: 95, x: 51, y: 39, entrance_id: 96}
+Exits:
+- index: 53
+  room: 219
+  xy: [504, 424]
+  scroll_xy: [374, 346]
+  camera_xy: [515, 455]
+  load_xy: [0, 1]
+  unk: [6, -6]
+Items:
+- [13, 9, 04-Random]
+- [11, 25, 03-Bee]
+- [42, 12, 01-Rupee-G]
+- [43, 12, 01-Rupee-G]
+- [60, 21, 04-Random]
+- [61, 21, 04-Random]
+- [43, 25, 01-Rupee-G]
+- [50, 28, 01-Rupee-G]
+- [51, 30, 01-Rupee-G]
+- [9, 33, 01-Rupee-G]
+- [16, 33, 04-Random]
+- [10, 34, 01-Rupee-G]
+- [9, 36, 01-Rupee-G]
+- [15, 36, 04-Random]
+- [11, 37, 01-Rupee-G]
+- [14, 51, 04-Random]
+- [10, 52, 04-Random]
+- [12, 53, 04-Random]
+- [15, 54, 04-Random]
+- [26, 56, 05-Bomb]
+- [19, 57, 05-Bomb]
+- [27, 53, 86-Bombable]
+- [54, 41, 01-Rupee-G]
+- [49, 43, 01-Rupee-G]
+- [37, 52, 04-Random]
+- [36, 54, 03-Bee]
+Sprites:
+  info: {gfx: 21, palette: 16}
+  sprites:
+  - [19, 6, 12-PigSpearMan]
+  - [24, 12, 25-LiveTree]
+  - [7, 28, 41-BlueSoldier]
+  - [53, 10, 12-PigSpearMan]
+  - [43, 12, 19-Poe/Ghini]
+  - [46, 23, C4-Bully]
+  - [32, 28, 14-GargoyleGrate]
+  - [24, 37, 19-Poe/Ghini]
+  - [13, 39, C4-Bully]
+  - [29, 40, 19-Poe/Ghini]
+  - [18, 46, 12-PigSpearMan]
+  - [22, 52, 0B-Chicken]
+  - [21, 55, 0B-Chicken]
+  - [40, 39, 0B-Chicken]
+  - [51, 47, 41-BlueSoldier]
+  - [44, 52, 19-Poe/Ghini]
+  - [55, 53, 25-LiveTree]

@@ -1,0 +1,45 @@
+Header:
+  name: 'DW 094 : Maze of Darkness NW'
+  size: big
+  gfx: 61
+  palette: 26
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances:
+- {index: 37, x: 53, y: 3, entrance_id: 38}
+- {index: 103, x: 25, y: 31, entrance_id: 104}
+Exits:
+- index: 39
+  room: 74
+  xy: [848, 40]
+  scroll_xy: [726, 0]
+  camera_xy: [859, 109]
+  load_xy: [0, 0]
+  unk: [0, -6]
+Items: []
+Sprites:
+  info: {gfx: 23, palette: 13}
+  sprites:
+  - [13, 4, 22-HoppingBulbPlan]
+  - [3, 17, 22-HoppingBulbPlan]
+  - [21, 17, B6-Kiki]
+  - [18, 26, 22-HoppingBulbPlan]
+  - [39, 9, 22-HoppingBulbPlan]
+  - [47, 16, 22-HoppingBulbPlan]
+  - [37, 21, 12-PigSpearMan]
+  - [38, 23, 11-Hinox]
+  - [53, 24, 22-HoppingBulbPlan]
+  - [42, 30, 22-HoppingBulbPlan]
+  - [10, 38, 12-PigSpearMan]
+  - [12, 43, 12-PigSpearMan]
+  - [7, 53, 22-HoppingBulbPlan]
+  - [22, 55, 11-Hinox]
+  - [9, 56, 0E-SnapDragon]
+  - [50, 36, 12-PigSpearMan]
+  - [53, 40, 0E-SnapDragon]
+  - [36, 48, 22-HoppingBulbPlan]
+  - [48, 48, E3-Fairy]
+  - [53, 54, 11-Hinox]
+  - [41, 55, 00-Raven]

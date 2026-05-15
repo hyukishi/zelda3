@@ -1,0 +1,30 @@
+Header:
+  name: 'DW 116 : Wilted Wetlands NE'
+  size: small
+  gfx: 64
+  palette: 29
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances:
+- {index: 60, x: 24, y: 6, entrance_id: 61}
+Exits: []
+Items:
+- [24, 7, 86-Bombable]
+- [6, 8, 01-Rupee-G]
+- [8, 11, 01-Rupee-G]
+- [10, 12, 01-Rupee-G]
+- [20, 14, 06-Heart]
+- [5, 18, 01-Rupee-G]
+- [15, 27, 04-Random]
+Sprites:
+  info: {gfx: 19, palette: 14}
+  sprites:
+  - [11, 13, 12-PigSpearMan]
+  - [23, 14, 33-PullForRupees]
+  - [16, 17, A8-GreenAirBomber]
+  - [21, 17, 12-PigSpearMan]
+  - [10, 18, AA-LikeLike]
+  - [14, 20, AC-Apples]
+  - [17, 23, 12-PigSpearMan]

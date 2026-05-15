@@ -1,0 +1,38 @@
+Header:
+  name: 'LW 051 : Hyrule Wetlands NW'
+  size: small
+  gfx: 39
+  palette: 4
+  sign_text: 66
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel:
+- whirlpool_src_area: 21
+  xy: [368, 280]
+  scroll_xy: [234, 186]
+  camera_xy: [375, 295]
+  load_xy: [1, 0]
+  unk: [-10, 6]
+Entrances: []
+Exits: []
+Items:
+- [20, 5, 82-Warp]
+- [10, 22, 02-RockCrab]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 4, palette: 3}
+  sprites:
+  - [21, 11, 47-GreenGrassArche]
+  - [9, 14, 46-BlueArcher]
+  - [23, 18, BA-Whirlpool]
+  - [26, 27, 08-Octorok]
+Sprites.SecondPart:
+  info: {gfx: 32, palette: 3}
+  sprites:
+  - [19, 6, 08-Octorok]
+  - [20, 11, 0A-4WayOctorok]
+  - [23, 18, BA-Whirlpool]
+  - [18, 22, 08-Octorok]
+  - [26, 27, 08-Octorok]

@@ -1,0 +1,56 @@
+Header:
+  floor1: 2
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 30
+  blockset: 17
+  enemyblk: 5
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [20, 0]
+  stair0_dest: [5, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 0]
+  stair3_dest: [0, 3]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [4, 23, upper, 1A-BlackSmith(Frog]
+Secrets: []
+Chests: []
+Entrances:
+- entrance_index: 100
+  name: Chez Smithies
+  scroll_xy: [0, 272]
+  player_xy: [120, 472]
+  camera_xy: [127, 391]
+  blockset: 17
+  music: Lower_vol
+  palace: None
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, single_y, lower_left]
+  floor: 0
+  house_exit_door: [wooden, 13, 8]
+Layer1:
+- {x: 6, y: 40, s: 3*3, n: 'C5-Floor3 [4-way]'}
+- {x: 21, y: 40, s: 2*3, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 6, y: 55, s: 3*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 6, y: 36, n: 'FCC-???'}
+- {x: 14, y: 36, n: 'FCB-???'}
+- {x: 14, y: 41, n: 'FCD-???'}
+- {x: 10, y: 46, n: 'FCE-???'}
+- {x: 23, y: 44, s: 0*0, n: '3C-Double Chair [L-R]'}
+- {x: 22, y: 46, s: 0*0, n: 'DD-Table / Rock [4-way]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 0, pos: 6, dir: 1}
+- {type: 18, pos: 6, dir: 1}

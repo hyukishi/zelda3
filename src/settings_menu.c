@@ -18,7 +18,9 @@ bool g_settings_menu_active;
 extern uint8 g_current_window_scale;
 extern SDL_Window *g_window;
 extern uint32 g_win_flags;
+extern SDL_Renderer *g_renderer;
 extern int g_sdl_audio_mixer_volume;
+extern int g_snes_width, g_snes_height;
 extern uint8 g_paused;
 extern void ChangeWindowScale(int scale_step);
 
@@ -235,12 +237,19 @@ static int GetShaderIndex(void) {
 
 // --- Aspect ratio helpers ---
 static const char *kAspectNames[] = { "4:3", "16:9", "16:10", "18:9" };
-static const int kAspectValues[] = { 0, 48, 34, 64 };
 static const int kAspectCount = 4;
+// Values for 224-line (extend_y=false) vs 240-line (extend_y=true)
+static const int kAspectValues224[] = { 0, 48, 34, 64 };
+static const int kAspectValues240[] = { 0, 51, 36, 68 };
+
+static const int *GetAspectValues(void) {
+  return g_config.extend_y ? kAspectValues240 : kAspectValues224;
+}
 
 static int GetAspectIndex(void) {
+  const int *values = GetAspectValues();
   for (int i = 0; i < kAspectCount; i++)
-    if (g_config.extended_aspect_ratio == kAspectValues[i])
+    if (g_config.extended_aspect_ratio == values[i])
       return i;
   return 1;
 }
@@ -677,7 +686,15 @@ static void ChangeValue(int opt, int delta) {
   case kOpt_AspectRatio: {
     int idx = GetAspectIndex();
     idx = (idx + delta + kAspectCount) % kAspectCount;
-    g_config.extended_aspect_ratio = kAspectValues[idx];
+    const int *values = GetAspectValues();
+    g_config.extended_aspect_ratio = values[idx];
+    // Apply the new aspect ratio in real-time
+    g_snes_width = g_config.extended_aspect_ratio * 2 + 256;
+    g_snes_height = g_config.extend_y ? 240 : 224;
+    // PpuSetExtraSideSpace is declared in snes/ppu.h, g_zenv is declared in zelda_rtl.h
+    PpuSetExtraSideSpace(g_zenv.ppu, g_config.extended_aspect_ratio, g_config.extended_aspect_ratio, 0);
+    // Resize window to match new dimensions
+    SDL_SetWindowSize(g_window, g_current_window_scale * g_snes_width, g_current_window_scale * g_snes_height);
     break;
   }
   case kOpt_Volume: {
@@ -697,8 +714,6 @@ static void ChangeValue(int opt, int delta) {
   case kOpt_StretchToFill: {
     g_config.ignore_aspect_ratio = !g_config.ignore_aspect_ratio;
     // Apply immediately for SDL mode
-    extern SDL_Renderer *g_renderer;
-    extern int g_snes_width, g_snes_height;
     if (g_renderer) {
       if (g_config.ignore_aspect_ratio)
         SDL_RenderSetLogicalSize(g_renderer, 0, 0);

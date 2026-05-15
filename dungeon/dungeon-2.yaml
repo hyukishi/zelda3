@@ -1,0 +1,127 @@
+Header:
+  floor1: 7
+  floor2: 7
+  layout: 4
+  start_quadrant: 0
+  bg2: Normal
+  collision: One
+  lights_out: 0
+  palette: 29
+  blockset: 4
+  enemyblk: 6
+  effect: None
+  tag0: Pull lever to open
+  tag1: None
+  hole0_dest: [0, 0]
+  stair0_dest: [17, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [24, 0]
+  stair3_dest: [13, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [18, 5, lower, 6D-Rat]
+- [21, 6, lower, 6D-Rat]
+- [15, 8, lower, 6D-Rat]
+- [16, 8, lower, 6D-Rat]
+- [24, 9, lower, 6D-Rat]
+- [15, 23, lower, 106-BombDrop]
+- [9, 24, lower, 106-BombDrop]
+- [11, 24, lower, 106-BombDrop]
+- [10, 25, lower, 106-BombDrop]
+- [12, 25, lower, 106-BombDrop]
+- [9, 26, lower, 106-BombDrop]
+- [11, 27, lower, 106-BombDrop]
+- [10, 23, lower, 06-TrapSwitch]
+- [21, 23, lower, 04-PullSwitch]
+- [13, 26, lower, 6D-Rat]
+- [18, 26, lower, 6D-Rat]
+Secrets: []
+Chests: []
+Entrances: []
+Layer1:
+- {x: 12, y: 4, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 12, y: 8, s: 2*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 12, y: 26, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 53, y: 4, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 53, y: 8, s: 2*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 53, y: 26, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 15, y: 7, n: '108-Wall Outer Corner (LOW) [NW]'}
+- {x: 19, y: 7, s: 3*3, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 50, y: 7, n: '10A-Wall Outer Corner (LOW) [NE]'}
+- {x: 15, y: 11, s: 1*1, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 15, y: 23, n: '109-Wall Outer Corner (LOW) [SW]'}
+- {x: 19, y: 23, s: 3*3, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 50, y: 11, s: 1*1, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 50, y: 23, n: '10B-Wall Outer Corner (LOW) [SE]'}
+- {x: 21, y: 36, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 21, y: 40, s: 0*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 16, y: 42, s: 0*3, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 21, y: 42, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 12, y: 42, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 12, y: 46, s: 1*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 12, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 39, y: 36, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 39, y: 40, s: 0*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 42, y: 42, s: 0*3, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 39, y: 42, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 48, y: 42, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 48, y: 46, s: 1*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 48, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 24, y: 39, n: '108-Wall Outer Corner (LOW) [NW]'}
+- {x: 28, y: 39, s: 0*3, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 36, y: 39, n: '10A-Wall Outer Corner (LOW) [NE]'}
+- {x: 24, y: 43, s: 0*0, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 19, y: 45, s: 0*2, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 15, y: 45, n: '108-Wall Outer Corner (LOW) [NW]'}
+- {x: 24, y: 45, n: '10C-Wall Inner Corner (LOW) [NW]'}
+- {x: 15, y: 49, s: 0*2, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 15, y: 55, n: '109-Wall Outer Corner (LOW) [SW]'}
+- {x: 19, y: 55, s: 3*0, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 45, y: 55, n: '10B-Wall Outer Corner (LOW) [SE]'}
+- {x: 36, y: 43, s: 0*0, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 36, y: 45, n: '10E-Wall Inner Corner (LOW) [NE]'}
+- {x: 40, y: 45, s: 0*2, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 45, y: 45, n: '10A-Wall Outer Corner (LOW) [NE]'}
+- {x: 45, y: 49, s: 0*2, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 2, y: 0, s: 0*0, n: '60-Ceiling [U-D]'}
+- {x: 4, y: 0, s: 0*0, n: '60-Ceiling [U-D]'}
+- {x: 4, y: 4, s: 1*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 4, y: 20, s: 1*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 5, y: 34, s: 3*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 4, y: 42, s: 1*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 4, y: 58, s: 1*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 57, y: 0, s: 0*0, n: '60-Ceiling [U-D]'}
+- {x: 59, y: 0, s: 0*0, n: '60-Ceiling [U-D]'}
+- {x: 60, y: 0, s: 0*0, n: '60-Ceiling [U-D]'}
+- {x: 43, y: 34, s: 3*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 52, y: 42, s: 1*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 52, y: 58, s: 1*0, n: 'C0-Ceiling Large [4-way]'}
+Layer2:
+- {x: 46, y: 7, n: 13B-Door Staircase Down L (Lower)}
+- {x: 40, y: 12, n: FAF-Pot}
+- {x: 40, y: 16, n: FAF-Pot}
+- {x: 22, y: 16, n: FAF-Pot}
+- {x: 22, y: 20, n: FAF-Pot}
+- {x: 28, y: 27, s: 1*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 32, y: 27, s: 1*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 28, y: 59, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 32, y: 59, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+Layer3:
+- {x: 15, y: 7, s: 3*3, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 31, y: 7, s: 3*3, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 46, y: 7, s: 1*3, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 15, y: 23, s: 3*0, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 31, y: 23, s: 3*0, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 46, y: 23, s: 1*0, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 24, y: 39, s: 3*3, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 15, y: 45, s: 2*2, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 15, y: 55, s: 3*0, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 31, y: 55, s: 3*0, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 37, y: 45, s: 2*2, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 45, y: 55, s: 0*0, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+Layer3.doors:
+- {type: 68, pos: 10, dir: 1}
+- {type: 64, pos: 10, dir: 0}
+- {type: 22, pos: 10, dir: 1}

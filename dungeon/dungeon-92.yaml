@@ -1,0 +1,91 @@
+Header:
+  floor1: 2
+  floor2: 14
+  layout: 6
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 27
+  blockset: 14
+  enemyblk: 10
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [0, 0]
+  stair0_dest: [93, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [36, 0]
+  stair3_dest: [14, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: true
+Sprites:
+- [11, 2, upper, 68-Cannon(Down)]
+- [5, 14, upper, 69-Cannon(Up)]
+- [14, 14, upper, 69-Cannon(Up)]
+- [23, 24, upper, E3-Fairy]
+- [24, 24, upper, E3-Fairy]
+Secrets:
+- [47, 44, 0A-Bomb]
+- [47, 52, 0D-BigMagic]
+Chests: []
+Entrances: []
+Layer1:
+- {x: 5, y: 7, n: '108-Wall Outer Corner (LOW) [NW]'}
+- {x: 9, y: 7, s: 3*3, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 41, y: 7, s: 0*1, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 5, y: 11, s: 0*1, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 5, y: 19, s: 0*1, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 5, y: 23, n: '109-Wall Outer Corner (LOW) [SW]'}
+- {x: 9, y: 23, s: 3*3, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 41, y: 23, s: 0*1, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 55, y: 11, s: 1*1, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 55, y: 23, n: '10B-Wall Outer Corner (LOW) [SE]'}
+- {x: 55, y: 7, n: '10A-Wall Outer Corner (LOW) [NE]'}
+- {x: 51, y: 7, s: 0*1, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 8, y: 11, s: 0*1, n: '67-[W]Wall Pit [U-D]'}
+- {x: 10, y: 11, s: 3*0, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 26, y: 11, s: 3*0, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 42, y: 11, s: 0*0, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 46, y: 19, s: 2*0, n: 'C3-Falling Edge Mask [4-way]'}
+- {x: 50, y: 11, s: 0*0, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 10, y: 19, s: 3*0, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 26, y: 19, s: 3*0, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 42, y: 19, s: 0*0, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 8, y: 10, n: '118-Wall Pit Corner (Lower) [NW]'}
+- {x: 8, y: 19, s: 0*1, n: '67-[W]Wall Pit [U-D]'}
+- {x: 8, y: 22, n: '119-Wall Pit Corner (Lower) [SW]'}
+- {x: 10, y: 10, s: 3*3, n: '07-[N]Wall Pit [L-R]'}
+- {x: 42, y: 10, s: 0*1, n: '07-[N]Wall Pit [L-R]'}
+- {x: 50, y: 10, s: 0*1, n: '07-[N]Wall Pit [L-R]'}
+- {x: 54, y: 12, s: 1*0, n: '68-[E]Wall Pit [U-D]'}
+- {x: 54, y: 22, n: '11B-Wall Pit Corner (Lower) [SE]'}
+- {x: 54, y: 10, n: '11A-Wall Pit Corner (Lower) [NE]'}
+- {x: 10, y: 22, s: 3*3, n: '08-[S]Wall Pit [L-R]'}
+- {x: 42, y: 22, s: 0*1, n: '08-[S]Wall Pit [L-R]'}
+- {x: 5, y: 14, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 5, y: 19, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 45, y: 7, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 50, y: 7, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 42, y: 4, s: 0*1, n: '3A-[N]Wall Decor: [L-R]'}
+- {x: 46, y: 4, n: 138-Door Staircase Up R}
+- {x: 45, y: 22, s: 0*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 54, y: 22, s: 0*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 42, y: 36, s: 0*1, n: '3A-[N]Wall Decor: [L-R]'}
+- {x: 50, y: 15, s: 0*0, n: '5E-Block [L-R]'}
+- {x: 52, y: 15, s: 0*0, n: '5E-Block [L-R]'}
+- {x: 47, y: 44, n: FAF-Pot}
+- {x: 44, y: 45, n: FAF-Pot}
+- {x: 42, y: 48, n: FAF-Pot}
+- {x: 44, y: 51, n: FAF-Pot}
+- {x: 47, y: 52, n: FAF-Pot}
+- {x: 50, y: 51, n: FAF-Pot}
+- {x: 52, y: 48, n: FAF-Pot}
+- {x: 50, y: 45, n: FAF-Pot}
+Layer2:
+- {x: 10, y: 5, n: FF3-Bg2 Full Mask}
+Layer3: []
+Layer3.doors:
+- {type: 46, pos: 8, dir: 0}
+- {type: 0, pos: 0, dir: 2}

@@ -1,0 +1,67 @@
+Header:
+  name: 'LW 044 : Uncle''s Estate East'
+  size: small
+  gfx: 32
+  palette: 0
+  sign_text: 167
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: Heavy rain, zelda: None, sword: None, agahnim: None}
+Travel:
+- bird_travel_id: 3
+  xy: [184, 279]
+  scroll_xy: [64, 185]
+  camera_xy: [191, 294]
+  load_xy: [0, 0]
+  unk: [-9, 0]
+Entrances:
+- {index: 0, x: 11, y: 15, entrance_id: 1}
+Exits:
+- index: 0
+  room: 260
+  xy: [184, 232]
+  scroll_xy: [50, 154]
+  camera_xy: [191, 263]
+  load_xy: [0, 1]
+  unk: [6, -2]
+  door: [wooden, 11, 16]
+- index: 61
+  room: 3
+  xy: [184, 232]
+  scroll_xy: [50, 154]
+  camera_xy: [191, 263]
+  load_xy: [0, 1]
+  unk: [6, -2]
+  door: [wooden, 11, 16]
+- index: 65
+  room: 4102
+  xy: [335, 89]
+  scroll_xy: [215, 11]
+  camera_xy: [342, 120]
+  load_xy: [0, 1]
+  unk: [5, -7]
+Items:
+- [10, 4, 01-Rupee-G]
+- [15, 17, 01-Rupee-G]
+- [8, 17, 01-Rupee-G]
+- [3, 18, 01-Rupee-G]
+- [2, 19, 04-Random]
+- [14, 20, 05-Bomb]
+- [26, 21, 06-Heart]
+- [27, 23, 01-Rupee-G]
+Sprites.Beginning:
+  info: {gfx: 2, palette: 1}
+  sprites:
+  - [30, 24, 3F-PalaceGuard]
+  - [30, 26, 3F-PalaceGuard]
+  - [13, 30, 3F-PalaceGuard]
+  - [15, 30, 3F-PalaceGuard]
+Sprites.FirstPart:
+  info: {gfx: 0, palette: 0}
+  sprites:
+  - [24, 20, 42-GreenSoldier]
+  - [9, 25, 41-BlueSoldier]
+Sprites.SecondPart:
+  info: {gfx: 0, palette: 0}
+  sprites:
+  - [24, 20, 41-BlueSoldier]
+  - [9, 25, 41-BlueSoldier]

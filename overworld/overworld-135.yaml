@@ -1,0 +1,15 @@
+Header:
+  name: 'NA 135 : Unused N/A'
+  size: big
+  gfx: -1
+  palette: 10
+  sign_text: -1
+  music: {agahnim: World_map}
+  ambient: {agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items: []
+Sprites:
+  info: {}
+  sprites: []

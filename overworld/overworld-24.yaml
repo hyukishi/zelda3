@@ -1,0 +1,123 @@
+Header:
+  name: 'LW 024 : Kakariko NW'
+  size: big
+  gfx: 35
+  palette: 8
+  sign_text: 59
+  music: {beginning: Beginning, zelda: Town, sword: Town, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel:
+- bird_travel_id: 2
+  xy: [512, 439]
+  scroll_xy: [382, 345]
+  camera_xy: [523, 454]
+  load_xy: [1, 1]
+  unk: [7, 2]
+Entrances:
+- {index: 12, x: 38, y: 10, entrance_id: 13}
+- {index: 13, x: 42, y: 10, entrance_id: 14}
+- {index: 56, x: 11, y: 12, entrance_id: 57}
+- {index: 61, x: 52, y: 26, entrance_id: 62}
+- {index: 62, x: 12, y: 22, entrance_id: 63}
+- {index: 63, x: 39, y: 40, entrance_id: 64}
+- {index: 65, x: 40, y: 55, entrance_id: 66}
+- {index: 66, x: 40, y: 49, entrance_id: 67}
+- {index: 67, x: 51, y: 39, entrance_id: 68}
+- {index: 69, x: 27, y: 52, entrance_id: 70}
+- {index: 73, x: 6, y: 55, entrance_id: 74}
+- {index: 74, x: 24, y: 41, entrance_id: 75}
+- {index: 96, x: 32, y: 10, entrance_id: 97}
+Holes:
+- {x: 5, y: 13, entrance_id: 128}
+- {x: 5, y: 12, entrance_id: 128}
+Exits:
+- index: 14
+  room: 242
+  xy: [616, 152]
+  scroll_xy: [482, 76]
+  camera_xy: [623, 185]
+  load_xy: [0, 1]
+  unk: [4, -2]
+  door: [wooden, 38, 11]
+- index: 15
+  room: 243
+  xy: [680, 152]
+  scroll_xy: [546, 74]
+  camera_xy: [687, 183]
+  load_xy: [0, 1]
+  unk: [6, -2]
+  door: [wooden, 42, 11]
+- index: 58
+  room: 47
+  xy: [184, 183]
+  scroll_xy: [50, 101]
+  camera_xy: [191, 210]
+  load_xy: [0, 1]
+  unk: [11, -2]
+- index: 63
+  room: 4098
+  xy: [717, 194]
+  scroll_xy: [587, 116]
+  camera_xy: [728, 225]
+  load_xy: [0, 1]
+  unk: [12, -11]
+- index: 69
+  room: 4110
+  xy: [131, 628]
+  scroll_xy: [1, 550]
+  camera_xy: [142, 659]
+  load_xy: [0, 0]
+  unk: [-6, -1]
+Items:
+- [60, 21, 04-Random]
+- [61, 21, 05-Bomb]
+- [55, 29, 01-Rupee-G]
+- [9, 34, 03-Bee]
+- [15, 34, 04-Random]
+- [11, 36, 01-Rupee-G]
+- [16, 37, 01-Rupee-G]
+- [9, 39, 01-Rupee-G]
+- [15, 39, 01-Rupee-G]
+- [12, 52, 04-Random]
+- [11, 53, 04-Random]
+- [13, 53, 05-Bomb]
+- [10, 54, 04-Random]
+- [6, 56, 86-Bombable]
+- [25, 57, 03-Bee]
+- [53, 42, 06-Heart]
+- [49, 43, 04-Random]
+- [55, 43, 04-Random]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 6, palette: 1}
+  sprites:
+  - [24, 10, E3-Fairy]
+  - [12, 23, F3-PersonsDoor]
+  - [24, 22, 75-BottleMan]
+  - [14, 28, 3D-ScaredGirl1]
+  - [32, 24, 1D-UselessSprite]
+  - [52, 27, F3-PersonsDoor]
+  - [29, 46, 74-Runner]
+  - [25, 44, 2A-DustGirl]
+  - [24, 49, 3C-FarmBoy]
+  - [22, 53, 0B-Chicken]
+  - [24, 54, 0B-Chicken]
+  - [51, 32, 34-ScaredGirl2]
+  - [54, 51, DA-Rupee-B]
+Sprites.SecondPart:
+  info: {gfx: 6, palette: 1}
+  sprites:
+  - [18, 8, 41-BlueSoldier]
+  - [24, 10, DB-InTreeRocks]
+  - [24, 22, 75-BottleMan]
+  - [7, 28, 41-BlueSoldier]
+  - [53, 11, 41-BlueSoldier]
+  - [32, 24, 1D-UselessSprite]
+  - [18, 46, 41-BlueSoldier]
+  - [20, 52, 0B-Chicken]
+  - [22, 53, 0B-Chicken]
+  - [57, 34, 43-RedSpearSoldier]
+  - [32, 46, 41-BlueSoldier]
+  - [54, 51, 79-Bee]

@@ -1,0 +1,48 @@
+Header:
+  floor1: 9
+  floor2: 10
+  layout: 0
+  start_quadrant: 0
+  bg2: Dark
+  collision: One
+  lights_out: 0
+  palette: 27
+  blockset: 14
+  enemyblk: 24
+  effect: Red flashes
+  tag0: Agahnim's room
+  tag1: None
+  hole0_dest: [11, 0]
+  stair0_dest: [28, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [8, 0]
+  stair3_dest: [0, 3]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [7, 21, upper, 7A-Agahnim]
+Secrets: []
+Chests: []
+Entrances: []
+Layer1:
+- {x: 0, y: 32, s: 3*0, n: 'DB-Floor2 [4-way]'}
+- {x: 0, y: 32, s: 3*0, n: 'DB-Floor2 [4-way]'}
+- {x: 16, y: 32, s: 3*0, n: 'DB-Floor2 [4-way]'}
+- {x: 0, y: 36, s: 0*3, n: 'DB-Floor2 [4-way]'}
+- {x: 0, y: 50, s: 0*2, n: 'DB-Floor2 [4-way]'}
+- {x: 28, y: 32, s: 3*3, n: 'DB-Floor2 [4-way]'}
+- {x: 28, y: 46, s: 3*3, n: 'DB-Floor2 [4-way]'}
+- {x: 56, y: 32, s: 1*3, n: 'DB-Floor2 [4-way]'}
+- {x: 56, y: 46, s: 1*3, n: 'DB-Floor2 [4-way]'}
+- {x: 0, y: 32, n: FAE-Agahnim Room}
+- {x: 2, y: 57, s: 0*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 2, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 26, y: 57, s: 0*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 26, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 2, y: 36, s: 0*2, n: 'A5-/ Ceiling [Trans][NW]'}
+- {x: 24, y: 36, s: 0*2, n: 'A7-\ Ceiling [Trans][NE]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 24, pos: 6, dir: 1}

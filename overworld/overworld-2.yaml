@@ -1,0 +1,47 @@
+Header:
+  name: 'LW 002 : Lumberjack Estate'
+  size: small
+  gfx: 33
+  palette: 8
+  sign_text: 72
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances:
+- {index: 17, x: 20, y: 7, entrance_id: 18}
+- {index: 117, x: 21, y: 14, entrance_id: 107}
+Holes:
+- {x: 12, y: 18, entrance_id: 127}
+Exits:
+- index: 19
+  room: 226
+  xy: [328, 103]
+  scroll_xy: [198, 21]
+  camera_xy: [339, 130]
+  load_xy: [0, 1]
+  unk: [11, -6]
+- index: 67
+  room: 4106
+  xy: [337, 219]
+  scroll_xy: [207, 137]
+  camera_xy: [348, 246]
+  load_xy: [1, 1]
+  unk: [1, 1]
+Items:
+- [23, 9, 01-Rupee-G]
+- [11, 26, 03-Bee]
+- [18, 27, 01-Rupee-G]
+- [16, 29, 01-Rupee-G]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 7, palette: 6}
+  sprites:
+  - [4, 19, 0D-Cucumber]
+  - [12, 19, 2C-Lumberjacks]
+  - [13, 26, 17-BushCrab]
+Sprites.SecondPart:
+  info: {gfx: 26, palette: 6}
+  sprites:
+  - [13, 18, 3B-DashItem]

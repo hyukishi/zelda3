@@ -1,0 +1,61 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 8
+  blockset: 8
+  enemyblk: 20
+  effect: None
+  tag0: Kill enemy to clear level
+  tag1: None
+  hole0_dest: [5, 0]
+  stair0_dest: [12, 0]
+  stair1_dest: [0, 2]
+  stair2_dest: [37, 0]
+  stair3_dest: [0, 2]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [7, 23, upper, 8C-Arrghus]
+- [7, 23, upper, 8D-ArrghusFuzz]
+- [7, 23, upper, 8D-ArrghusFuzz]
+- [7, 23, upper, 8D-ArrghusFuzz]
+- [7, 23, upper, 8D-ArrghusFuzz]
+- [7, 23, upper, 8D-ArrghusFuzz]
+- [7, 23, upper, 8D-ArrghusFuzz]
+- [7, 23, upper, 8D-ArrghusFuzz]
+- [7, 23, upper, 8D-ArrghusFuzz]
+- [7, 23, upper, 8D-ArrghusFuzz]
+- [7, 23, upper, 8D-ArrghusFuzz]
+- [7, 23, upper, 8D-ArrghusFuzz]
+- [7, 23, upper, 8D-ArrghusFuzz]
+- [7, 23, upper, 8D-ArrghusFuzz]
+Secrets: []
+Chests: []
+Entrances: []
+Layer1:
+- {x: 6, y: 40, s: 3*3, n: 'C8-Water Floor [4-way]'}
+- {x: 22, y: 40, s: 0*3, n: 'C8-Water Floor [4-way]'}
+- {x: 6, y: 54, s: 3*0, n: 'C8-Water Floor [4-way]'}
+- {x: 22, y: 54, s: 0*0, n: 'C8-Water Floor [4-way]'}
+- {x: 5, y: 39, s: 3*3, n: '3F-Water Edge [L-R]'}
+- {x: 21, y: 39, s: 0*3, n: '3F-Water Edge [L-R]'}
+- {x: 5, y: 40, s: 3*3, n: '79-Water Edge [U-D]'}
+- {x: 5, y: 56, s: 0*1, n: '79-Water Edge [U-D]'}
+- {x: 5, y: 58, s: 3*3, n: '40-Water Edge [L-R]'}
+- {x: 21, y: 58, s: 0*3, n: '40-Water Edge [L-R]'}
+- {x: 26, y: 40, s: 3*3, n: '7A-Water Edge [U-D]'}
+- {x: 26, y: 56, s: 0*1, n: '7A-Water Edge [U-D]'}
+- {x: 8, y: 36, n: F81-Waterfall Face}
+- {x: 20, y: 36, n: F81-Waterfall Face}
+- {x: 3, y: 41, s: 0*1, n: '7F-[W]Wall Torches [U-D]'}
+- {x: 27, y: 41, s: 0*1, n: '80-[E]Wall Torches [U-D]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 24, pos: 6, dir: 1}

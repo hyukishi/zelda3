@@ -1,0 +1,25 @@
+Header:
+  name: 'SP 136 : Triforce Room / Curtain Overlay'
+  size: big
+  gfx: -1
+  palette: -1
+  sign_text: -1
+  music: {agahnim: World_map}
+  ambient: {agahnim: None}
+Travel: []
+Entrances: []
+Exits:
+- index: 78
+  room: 393
+  xy: [128, -256]
+  scroll_xy: [0, -512]
+  camera_xy: [131, -355]
+  load_xy: [0, 32]
+  unk: [0, 0]
+  special_exit: {dir: 0, spr_gfx: 14, aux_gfx: 47, pal_bg: 2, pal_spr: 0, top: 512,
+    bottom: 544, left: 256, right: 256, left_edge_of_map: 0, unk4: -224, unk6: 256,
+    unk5: -224, unk7: 260}
+Items: []
+Sprites:
+  info: {}
+  sprites: []

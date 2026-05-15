@@ -1,0 +1,106 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 3
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 1
+  palette: 0
+  blockset: 2
+  enemyblk: 33
+  effect: None
+  tag0: W Move block to open
+  tag1: None
+  hole0_dest: [0, 0]
+  stair0_dest: [192, 0]
+  stair1_dest: [224, 0]
+  stair2_dest: [0, 0]
+  stair3_dest: [17, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [11, 5, upper, 6F-Keese]
+- [9, 7, upper, 41-BlueSoldier]
+- [23, 7, upper, 6F-Keese]
+- [21, 11, upper, 44-Warrior]
+- [9, 12, upper, 6F-Keese]
+- [8, 15, upper, 6F-Keese]
+- [3, 16, upper, 41.3-BlueSoldier]
+- [9, 20, upper, 41-BlueSoldier]
+- [27, 22, upper, 44-Warrior]
+- [6, 25, upper, 6F-Keese]
+- [26, 25, upper, 44-Warrior]
+Secrets:
+- [15, 11, 0C-Magic]
+- [6, 23, 01-Rupee-G]
+- [21, 26, 0C-Magic]
+- [24, 32, 0B-Heart]
+- [24, 41, 01-Rupee-G]
+- [9, 47, 07-Rupee-B]
+- [6, 56, 0B-Heart]
+Chests: [36]
+Entrances: []
+Layer1:
+- {x: 11, y: 7, s: 2*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 8, y: 10, s: 0*2, n: '8A-Long Vert: Rail [U-D]'}
+- {x: 5, y: 25, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 11, y: 22, s: 2*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 8, y: 34, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 11, y: 22, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 14, y: 19, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 14, y: 19, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 14, y: 10, s: 0*3, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 14, y: 10, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 17, y: 10, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 17, y: 13, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 20, y: 13, s: 2*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 17, y: 25, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 17, y: 25, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 17, y: 28, s: 0*3, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 23, y: 10, s: 3*3, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 20, y: 10, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 14, y: 25, s: 3*3, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 14, y: 31, s: 0*3, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 23, y: 31, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 23, y: 31, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 17, y: 34, s: 0*3, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 17, y: 34, s: 0*3, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 11, y: 37, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 11, y: 37, s: 2*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 11, y: 49, s: 0*3, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 8, y: 46, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 8, y: 37, s: 3*3, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 8, y: 54, s: 0*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 14, y: 46, s: 0*3, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 11, y: 52, s: 2*1, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 20, y: 46, s: 0*3, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 23, y: 52, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 8, y: 55, s: 2*1, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 17, y: 43, s: 1*2, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 20, y: 37, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 23, y: 37, s: 0*3, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 23, y: 43, s: 0*3, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 15, y: 11, n: FAF-Pot}
+- {x: 6, y: 23, n: FAF-Pot}
+- {x: 6, y: 26, n: F99-Chest}
+- {x: 21, y: 26, n: FAF-Pot}
+- {x: 24, y: 32, n: FAF-Pot}
+- {x: 24, y: 41, n: FAF-Pot}
+- {x: 9, y: 47, n: FAF-Pot}
+- {x: 6, y: 56, n: FAF-Pot}
+- {x: 48, y: 36, s: 0*1, n: '05-[N]Wall Column [L-R]'}
+- {x: 50, y: 36, n: 138-Door Staircase Up R}
+- {x: 50, y: 40, s: 0*1, n: '70-Red Floor/Wire Floor [U-D]'}
+- {x: 38, y: 47, s: 0*3, n: '33-Red Carpet Floor [L-R]'}
+- {x: 46, y: 4, n: 139-Door Staircase Down L}
+- {x: 46, y: 8, s: 0*1, n: '70-Red Floor/Wire Floor [U-D]'}
+- {x: 38, y: 15, s: 0*2, n: '33-Red Carpet Floor [L-R]'}
+- {x: 47, y: 15, s: 0*0, n: '38-Statue [L-R]'}
+Layer2:
+- {x: 10, y: 5, n: FAA-Dark Room BG2 Mask}
+Layer3: []
+Layer3.doors:
+- {type: 28, pos: 8, dir: 2}
+- {type: 56, pos: 6, dir: 2}

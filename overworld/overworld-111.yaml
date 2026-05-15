@@ -1,0 +1,25 @@
+Header:
+  name: 'DW 111 : Cul-de-sac of Darkness'
+  size: small
+  gfx: 61
+  palette: 26
+  sign_text: 167
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances:
+- {index: 104, x: 26, y: 18, entrance_id: 105}
+Exits: []
+Items:
+- [18, 22, 05-Bomb]
+- [6, 23, 05-Bomb]
+- [11, 23, 05-Bomb]
+- [9, 26, 05-Bomb]
+Sprites:
+  info: {gfx: 23, palette: 13}
+  sprites:
+  - [13, 8, 0E-SnapDragon]
+  - [15, 8, 0E-SnapDragon]
+  - [14, 11, 0E-SnapDragon]
+  - [23, 12, 00-Raven]
+  - [9, 23, D3-AliveRock]

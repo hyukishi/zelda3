@@ -1,0 +1,7909 @@
+# Song index 32
+[Song_0x2b00]
+Phrase_0x2b04
+
+[Phrase_0x2b04]
+Pattern_0x2b14
+Pattern_0x2b3e
+Pattern_0x2b5b
+Pattern_0x2b78
+Pattern_0x2b95
+None
+None
+None
+
+[Pattern_0x2b14]
+PercussionDefine 25
+SongVolume 200
+EchoEnable 255 40 40
+EchoSetup 2 20 2
+Tempo 25
+Instrument 11
+Volume 200
+Pan 18
+A#3  6 6d
+B-3 -- --
+C-4 -- --
+B-3 -- --
+C-4 -- --
+E-4 -- --
+F-4 -- --
+E-4 -- --
+F-4 -- --
+A#4 -- --
+B-4 -- --
+C-5 -- --
+B-4 -- --
+E-5 -- --
+F-5 -- --
+A#5 -- --
+B-5 -- --
+--- 90 --
+
+[Pattern_0x2b3e]
+Instrument 11
+Volume 200
+Pan 16
+--- 18 --
+A#3  6 6d
+B-3 -- --
+C-4 -- --
+B-3 -- --
+C-4 -- --
+E-4 -- --
+F-4 -- --
+E-4 -- --
+F-4 -- --
+A#4 -- --
+B-4 -- --
+C-5 -- --
+B-4 -- --
+E-5 -- --
+F-5 -- --
+A#5 -- --
+B-5 -- --
+--- 72 --
+Fallthrough 
+
+[Pattern_0x2b5b]
+Instrument 11
+Volume 200
+Pan 12
+--- 36 --
+A#3  6 6d
+B-3 -- --
+C-4 -- --
+B-3 -- --
+C-4 -- --
+E-4 -- --
+F-4 -- --
+E-4 -- --
+F-4 -- --
+A#4 -- --
+B-4 -- --
+C-5 -- --
+B-4 -- --
+E-5 -- --
+F-5 -- --
+A#5 -- --
+B-5 -- --
+--- 54 --
+Fallthrough 
+
+[Pattern_0x2b78]
+Instrument 11
+Volume 200
+Pan 8
+--- 54 --
+A#3  6 6d
+B-3 -- --
+C-4 -- --
+B-3 -- --
+C-4 -- --
+E-4 -- --
+F-4 -- --
+E-4 -- --
+F-4 -- --
+A#4 -- --
+B-4 -- --
+C-5 -- --
+B-4 -- --
+E-5 -- --
+F-5 -- --
+A#5 -- --
+B-5 -- --
+--- 36 --
+Fallthrough 
+
+[Pattern_0x2b95]
+Instrument 11
+Volume 200
+Pan 4
+--- 72 --
+A#3  6 6d
+B-3 -- --
+C-4 -- --
+B-3 -- --
+C-4 -- --
+E-4 -- --
+F-4 -- --
+E-4 -- --
+F-4 -- --
+A#4 -- --
+B-4 -- --
+C-5 -- --
+B-4 -- --
+E-5 -- --
+F-5 -- --
+A#5 -- --
+B-5 -- --
+--- 18 --
+
+# Song index 34
+[Song_0x2bb3]
+Phrase_0x2bd3
+Phrase_0x2bc3
+Phrase_0x2be3
+Phrase_0x2c03
+Phrase_0x2bf3
+PhraseLoop 255 -4
+
+[Phrase_0x2bc3]
+Pattern_0x2c13
+None
+Pattern_0x2c28
+Pattern_0x2c4d
+Pattern_0x2c6a
+Pattern_0x2c87
+Pattern_0x2ca4
+None
+
+[Phrase_0x2bd3]
+Pattern_0x2cb0
+None
+Pattern_0x2cf4
+Pattern_0x2cfe
+Pattern_0x2d1c
+None
+Pattern_0x2d3a
+None
+
+[Phrase_0x2be3]
+Pattern_0x2d4f
+Pattern_0x2d64
+Pattern_0x2d87
+Pattern_0x2d8b
+Pattern_0x2da1
+Pattern_0x2db7
+Pattern_0x2dcd
+None
+
+[Phrase_0x2bf3]
+Pattern_0x2dd9
+Pattern_0x2dde
+Pattern_0x2de2
+Pattern_0x2dea
+Pattern_0x2e1c
+Pattern_0x2e4e
+None
+None
+
+[Phrase_0x2c03]
+Pattern_0x2e80
+Pattern_0x2e9f
+Pattern_0x2eac
+Pattern_0x2eb0
+Pattern_0x2eb9
+Pattern_0x2ec2
+Pattern_0x2ecb
+None
+
+[Pattern_0x2c13]
+C-2 12 6d
+G-2 -- --
+C-3 -- --
+D#2 -- --
+A#2 -- --
+D#3 -- --
+F-2 -- --
+C-3 -- --
+F-3 -- --
+G#2 -- --
+D#3 -- --
+G#3 -- --
+G-2 -- --
+G-3 -- --
+Call Pattern_0x2edb 6
+
+[Pattern_0x2c28]
+Call Pattern_0x2eea 6
+F-4 12 6d
+F-4 12 69
+F-4 -- --
+F-4 12 6d
+F-4 12 69
+F-4 -- --
+F-4 12 6d
+F-4 12 69
+F-4 -- --
+F-4  6 6d
+F-4 -- --
+F-4 12 --
+F-4 -- --
+F-4  6 --
+F-4 -- --
+F-4 12 --
+Fallthrough 
+
+[Pattern_0x2c4d]
+Instrument 17
+Volume 200
+C-4 96 6d
+-+- 72 --
+D#4 96 --
+-+- 72 --
+D-4 -- --
+-+- 96 --
+C#4 -- --
+-+- 72 --
+C-4 -- --
+-+- 96 --
+-+- -- --
+--- 72 --
+--- 96 --
+--- 72 --
+Fallthrough 
+
+[Pattern_0x2c6a]
+Instrument 17
+Volume 200
+G-3 96 6d
+-+- 72 --
+A#3 96 --
+-+- 72 --
+A-3 -- --
+-+- 96 --
+G#3 -- --
+-+- 72 --
+G-3 -- --
+-+- 96 --
+-+- -- --
+--- 72 --
+--- 96 --
+--- 72 --
+Fallthrough 
+
+[Pattern_0x2c87]
+Instrument 17
+Volume 200
+D-3 96 6d
+-+- 72 --
+F-3 96 --
+-+- 72 --
+E-3 -- --
+-+- 96 --
+D#3 -- --
+-+- 72 --
+D-3 -- --
+-+- 96 --
+-+- -- --
+--- 72 --
+--- 96 --
+--- 72 --
+Fallthrough 
+
+[Pattern_0x2ca4]
+C-2 36 7d
+D#2 -- --
+F-2 -- --
+G#2 -- --
+G-2 24 --
+Call Pattern_0x2f0d 6
+Fallthrough 
+
+[Pattern_0x2cb0]
+PercussionDefine 25
+SongVolume 200
+EchoEnable 255 30 30
+EchoSetup 2 20 2
+Tempo 49
+Instrument 11
+Volume 220
+D#5  6 6d
+D-5 -- --
+C#5 -- --
+C-5 -- --
+B-4 -- --
+D-5 -- --
+C#5 -- --
+C-5 -- --
+B-4 -- --
+A#4 -- --
+A-4 -- --
+G#4 -- --
+G-4 -- --
+F#4 -- --
+F-4 -- --
+E-4 -- --
+Instrument 24
+C-2 12 --
+G-2 -- --
+C-3 -- --
+D#2 -- --
+A#2 -- --
+D#3 -- --
+F-2 -- --
+C-3 -- --
+F-3 -- --
+G#2 -- --
+D#3 -- --
+G#3 -- --
+G-2 -- --
+G-3 -- --
+C-2 -- --
+G-2 -- --
+C-3 -- --
+D#2 -- --
+A#2 -- --
+D#3 -- --
+F-2 -- --
+C-3 -- --
+F-3 -- --
+G#2 -- --
+D#3 -- --
+G#3 -- --
+G-2 -- --
+G-3 -- --
+
+[Pattern_0x2cf4]
+Instrument 19
+Volume 160
+--- 96 --
+Call Pattern_0x2eea 2
+Fallthrough 
+
+[Pattern_0x2cfe]
+Instrument 11
+Volume 220
+B-4  6 6d
+A#4 -- --
+A-4 -- --
+G#4 -- --
+G-4 -- --
+A#4 -- --
+A-4 -- --
+G#4 -- --
+G-4 -- --
+F#4 -- --
+F-4 -- --
+E-4 -- --
+D#4 -- --
+D-4 -- --
+C#4 -- --
+C-4 -- --
+--- 96 --
+--- 72 --
+--- 96 --
+--- 72 --
+Fallthrough 
+
+[Pattern_0x2d1c]
+Instrument 11
+Volume 220
+F-4  6 6d
+E-4 -- --
+D#4 -- --
+D-4 -- --
+C#4 -- --
+E-4 -- --
+D#4 -- --
+D-4 -- --
+C#4 -- --
+C-4 -- --
+B-3 -- --
+A#3 -- --
+A-3 -- --
+G#3 -- --
+G-3 -- --
+F#3 -- --
+--- 96 --
+--- 72 --
+--- 96 --
+--- 72 --
+Fallthrough 
+
+[Pattern_0x2d3a]
+Instrument 2
+Volume 180
+--- 96 --
+C-2 36 7d
+D#2 -- --
+F-2 -- --
+G#2 -- --
+G-2 24 --
+C-2 36 --
+D#2 -- --
+F-2 -- --
+G#2 -- --
+G-2 24 --
+Fallthrough 
+
+[Pattern_0x2d4f]
+F#2 12 6d
+C#3 -- --
+F#3 -- --
+A-2 -- --
+E-3 -- --
+A-3 -- --
+B-2 -- --
+F#3 -- --
+B-3 -- --
+D-3 -- --
+A-3 -- --
+D-4 -- --
+C#3 -- --
+C#4 -- --
+Call Pattern_0x2f15 4
+
+[Pattern_0x2d64]
+Instrument 11
+Volume 200
+C#5 12 6d
+F#5 96 --
+-+- 60 --
+G-5 12 --
+C-5 72 --
+-+- 84 --
+F-5 12 --
+G#4 96 --
+-+- 60 --
+G-4 12 --
+D-5 96 --
+-+- 60 --
+D#5 12 --
+F#4 96 --
+-+- 60 --
+Fallthrough 
+
+[Pattern_0x2d87]
+Call Pattern_0x2eea 5
+Fallthrough 
+
+[Pattern_0x2d8b]
+Instrument 17
+Volume 200
+F#4 96 6d
+-+- 72 --
+A-4 96 --
+-+- 72 --
+G#4 -- --
+-+- 96 --
+G-4 -- --
+-+- 72 --
+F#4 -- --
+-+- 96 --
+Fallthrough 
+
+[Pattern_0x2da1]
+Instrument 17
+Volume 200
+C#4 96 6d
+-+- 72 --
+E-4 96 --
+-+- 72 --
+D#4 -- --
+-+- 96 --
+D-4 -- --
+-+- 72 --
+C#4 -- --
+-+- 96 --
+Fallthrough 
+
+[Pattern_0x2db7]
+Instrument 17
+Volume 200
+G#3 96 6d
+-+- 72 --
+B-3 96 --
+-+- 72 --
+A#3 -- --
+-+- 96 --
+A-3 -- --
+-+- 72 --
+G#3 -- --
+-+- 96 --
+Fallthrough 
+
+[Pattern_0x2dcd]
+F#2 36 7d
+A-2 -- --
+B-2 -- --
+D-3 -- --
+C#3 24 --
+Call Pattern_0x2f24 4
+Fallthrough 
+
+[Pattern_0x2dd9]
+Call Pattern_0x2f2c 1
+
+[Pattern_0x2dde]
+Call Pattern_0x2f2c 1
+Fallthrough 
+
+[Pattern_0x2de2]
+Instrument 19
+Volume 160
+Call Pattern_0x2eea 3
+Fallthrough 
+
+[Pattern_0x2dea]
+B-4 12 4d
+B-4 24 --
+B-4 12 --
+B-4 -- --
+B-4 24 --
+B-4 12 --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 24 --
+A#4 12 --
+A#4 24 --
+A#4 12 --
+A#4 -- --
+A#4 24 --
+A#4 -- --
+A#4 12 --
+A#4 -- --
+A#4 -- --
+A#4 24 --
+A-4 12 --
+A-4 24 --
+A-4 12 --
+A-4 -- --
+A-4 24 --
+A-4 -- --
+G#4 12 --
+G#4 -- --
+G#4 -- --
+G#4 24 --
+Fallthrough 
+
+[Pattern_0x2e1c]
+F#4 12 4d
+F#4 24 --
+F#4 12 --
+F#4 -- --
+F#4 24 --
+F#4 12 --
+F#4 -- --
+F#4 -- --
+F#4 -- --
+F#4 -- --
+F#4 24 --
+F-4 12 --
+F-4 24 --
+F-4 12 --
+F-4 -- --
+F-4 24 --
+F-4 -- --
+F-4 12 --
+F-4 -- --
+F-4 -- --
+F-4 24 --
+E-4 12 --
+E-4 24 --
+E-4 12 --
+E-4 -- --
+E-4 24 --
+E-4 -- --
+D#4 12 --
+D#4 -- --
+D#4 -- --
+D#4 24 --
+Fallthrough 
+
+[Pattern_0x2e4e]
+C-4 12 4d
+C-4 24 --
+C-4 12 --
+C-4 -- --
+C-4 24 --
+C-4 12 --
+C-4 -- --
+C-4 -- --
+C-4 -- --
+C-4 -- --
+C-4 24 --
+B-3 12 --
+B-3 24 --
+B-3 12 --
+B-3 -- --
+B-3 24 --
+B-3 -- --
+B-3 12 --
+B-3 -- --
+B-3 -- --
+B-3 24 --
+A#3 12 --
+A#3 24 --
+A#3 12 --
+A#3 -- --
+A#3 24 --
+A#3 -- --
+A-3 12 --
+A-3 -- --
+A-3 -- --
+A-3 24 --
+Fallthrough 
+
+[Pattern_0x2e80]
+F-2 12 6d
+C-3 -- --
+F-3 -- --
+G#2 -- --
+D#3 -- --
+G#3 -- --
+A#2 -- --
+F-3 -- --
+A#3 -- --
+C#3 -- --
+G#3 -- --
+C#4 -- --
+C-3 -- --
+C-4 -- --
+E-2 -- --
+B-2 -- --
+E-3 -- --
+G-2 -- --
+D-3 -- --
+G-3 -- --
+A-2 -- --
+E-3 -- --
+A-3 -- --
+C-3 -- --
+G-3 -- --
+C-4 -- --
+B-2 -- --
+B-3 -- --
+
+[Pattern_0x2e9f]
+F#4 12 6d
+F-4 96 --
+-+- 60 --
+F-4 12 --
+E-4 72 --
+-+- 84 --
+Fallthrough 
+
+[Pattern_0x2eac]
+Call Pattern_0x2eea 2
+Fallthrough 
+
+[Pattern_0x2eb0]
+F-4 96 6d
+-+- 72 --
+E-4 96 --
+-+- 72 --
+Fallthrough 
+
+[Pattern_0x2eb9]
+C-4 96 6d
+-+- 72 --
+B-3 96 --
+-+- 72 --
+Fallthrough 
+
+[Pattern_0x2ec2]
+G-3 96 6d
+-+- 72 --
+F#3 96 --
+-+- 72 --
+Fallthrough 
+
+[Pattern_0x2ecb]
+F-2 36 7d
+G#2 -- --
+A#2 -- --
+C#3 -- --
+C-3 24 --
+E-2 36 --
+G-2 -- --
+A-2 -- --
+C-3 -- --
+B-2 24 --
+
+[Pattern_0x2edb]
+C-2 -- --
+G-2 -- --
+C-3 -- --
+D#2 -- --
+A#2 -- --
+D#3 -- --
+F-2 -- --
+C-3 -- --
+F-3 -- --
+G#2 -- --
+D#3 -- --
+G#3 -- --
+G-2 -- --
+G-3 -- --
+
+[Pattern_0x2eea]
+F-4 12 6d
+F-4 12 69
+F-4 -- --
+F-4 12 6d
+F-4 12 69
+F-4 -- --
+F-4 12 6d
+F-4 12 69
+F-4 -- --
+F-4 12 6d
+F-4 12 69
+F-4 -- --
+F-4 12 6d
+F-4 12 69
+
+[Pattern_0x2f0d]
+C-2 36 --
+D#2 -- --
+F-2 -- --
+G#2 -- --
+G-2 24 --
+
+[Pattern_0x2f15]
+F#2 -- --
+C#3 -- --
+F#3 -- --
+A-2 -- --
+E-3 -- --
+A-3 -- --
+B-2 -- --
+F#3 -- --
+B-3 -- --
+D-3 -- --
+A-3 -- --
+D-4 -- --
+C#3 -- --
+C#4 -- --
+
+[Pattern_0x2f24]
+F#2 36 --
+A-2 -- --
+B-2 -- --
+D-3 -- --
+C#3 24 --
+
+[Pattern_0x2f2c]
+D#2 12 6d
+A#2 -- --
+D#3 -- --
+F#3 -- --
+C#4 -- --
+F#4 -- --
+G#4 -- --
+D#4 -- --
+G#3 -- --
+B-2 -- --
+F#3 -- --
+B-3 -- --
+A#2 -- --
+A#3 -- --
+D-2 -- --
+A-2 -- --
+D-3 -- --
+F-3 -- --
+C-4 -- --
+F-4 -- --
+G-4 -- --
+D-4 -- --
+G-3 -- --
+A#2 -- --
+F-3 -- --
+A#3 -- --
+A-2 -- --
+A-3 -- --
+C#2 -- --
+G#2 -- --
+C#3 -- --
+E-3 -- --
+B-3 -- --
+E-4 -- --
+F#4 -- --
+C#4 -- --
+F-4 -- --
+G#4 -- --
+D#4 -- --
+G#3 -- --
+G-3 -- --
+G-4 -- --
+
+# Song index 33
+[Song_0x2f59]
+Phrase_0x2f67
+Phrase_0xfb78
+Phrase_0xfb78
+Phrase_0xfb88
+PhraseLoop 255 -3
+
+[Phrase_0x2f67]
+Pattern_0x2f77
+Pattern_0x2fa1
+Pattern_0x2fb6
+Pattern_0x2fcb
+Pattern_0x2fe0
+Pattern_0x2ff5
+None
+None
+
+[Pattern_0x2f77]
+PercussionDefine 25
+SongVolume 200
+EchoEnable 255 40 40
+EchoSetup 2 20 2
+Tempo 25
+Instrument 9
+Volume 200
+Vibrato 26 28 24
+Pan 12
+F-5  8 6d
+E-5 16 --
+B-4  8 --
+A#4 16 --
+F-4  8 --
+E-4 -- --
+B-3 -- --
+A#3 16 --
+-+- 96 --
+
+[Pattern_0x2fa1]
+Instrument 9
+Volume 200
+F-4  8 6d
+E-4 16 --
+B-3  8 --
+A#3 16 --
+F-3  8 --
+E-3 -- --
+B-2 -- --
+A#2 16 --
+-+- 96 --
+Fallthrough 
+
+[Pattern_0x2fb6]
+Instrument 9
+Volume 200
+B-4  8 6d
+A#4 16 --
+F-4  8 --
+E-4 16 --
+B-3  8 --
+A#3 -- --
+F-3 -- --
+E-3 16 --
+-+- 96 --
+Fallthrough 
+
+[Pattern_0x2fcb]
+Instrument 9
+Volume 200
+A#4  8 6d
+A-4 16 --
+E-4  8 --
+D#4 16 --
+A#3  8 --
+A-3 -- --
+E-3 -- --
+D#3 16 --
+-+- 96 --
+Fallthrough 
+
+[Pattern_0x2fe0]
+Instrument 9
+Volume 200
+F-3  8 6d
+E-3 16 --
+B-2  8 --
+A#2 16 --
+F-2  8 --
+E-2 -- --
+B-1 -- --
+A#1 16 --
+-+- 96 --
+Fallthrough 
+
+[Pattern_0x2ff5]
+Instrument 2
+Volume 220
+A-1  8 7d
+A-1 16 --
+A-1  8 --
+A-1 16 --
+A-1  8 --
+A-1 -- --
+A-1 -- --
+A-1 16 --
+-+- 96 68
+
+[SongList_0xd000]
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Song_0x2880
+None
+None
+None
+None
+Song_0xd046
+Song_0xdbec
+Song_0xe13a
+Song_0xe431
+Song_0xe6f9
+Song_0xe91e
+Song_0xec0b
+Song_0xf1d1
+Song_0xe13a
+Song_0xf304
+Song_0xf580
+Song_0xf909
+Song_0xfb6a
+Song_0x2b00
+Song_0x2f59
+Song_0x2bb3
+None
+Song_0x2b00
+Song_0x2f59
+Song_0x2bb3
+
+# Song index 15
+[Song_0xd046]
+Phrase_0xd076
+Phrase_0xd066
+Phrase_0xd086
+Phrase_0xd086
+Phrase_0xd096
+Phrase_0xd086
+Phrase_0xd0a6
+Phrase_0xd0b6
+Phrase_0xd0d6
+Phrase_0xd0e6
+Phrase_0xd0c6
+Phrase_0xd0f6
+Phrase_0xd106
+PhraseLoop 255 -11
+
+[Phrase_0xd066]
+Pattern_0xd116
+Pattern_0xd128
+Pattern_0xd12c
+Pattern_0xd134
+Pattern_0xd143
+None
+None
+Pattern_0xd147
+
+[Phrase_0xd076]
+Pattern_0xd154
+Pattern_0xd185
+Pattern_0xd199
+Pattern_0xd1b9
+Pattern_0xd1d9
+Pattern_0xd219
+Pattern_0xd258
+Pattern_0xd278
+
+[Phrase_0xd086]
+Pattern_0xd297
+Pattern_0xd2b9
+Pattern_0xd2c5
+Pattern_0xd2dc
+Pattern_0xd301
+Pattern_0xd309
+Pattern_0xd33b
+None
+
+[Phrase_0xd096]
+Pattern_0xd359
+Pattern_0xd38f
+Pattern_0xd3a6
+Pattern_0xd3c5
+Pattern_0xd3eb
+Pattern_0xd3f3
+Pattern_0xd427
+None
+
+[Phrase_0xd0a6]
+Pattern_0xd446
+Pattern_0xd474
+Pattern_0xd499
+Pattern_0xd4c6
+Pattern_0xd4e6
+Pattern_0xd4ee
+Pattern_0xd52b
+None
+
+[Phrase_0xd0b6]
+Pattern_0xd543
+Pattern_0xd56e
+Pattern_0xd596
+Pattern_0xd5af
+Pattern_0xd5c9
+Pattern_0xd625
+Pattern_0xd662
+Pattern_0xd67a
+
+[Phrase_0xd0c6]
+Pattern_0xd693
+Pattern_0xd69f
+Pattern_0xd6ae
+Pattern_0xd6c7
+Pattern_0xd6cd
+None
+Pattern_0xd701
+None
+
+[Phrase_0xd0d6]
+Pattern_0xd70c
+Pattern_0xd71b
+Pattern_0xd71f
+Pattern_0xd72d
+Pattern_0xd735
+None
+Pattern_0xd740
+None
+
+[Phrase_0xd0e6]
+Pattern_0xd755
+Pattern_0xd76c
+Pattern_0xd770
+Pattern_0xd77c
+Pattern_0xd782
+Pattern_0xd78d
+Pattern_0xd7a8
+None
+
+[Phrase_0xd0f6]
+Pattern_0xd7bd
+Pattern_0xd7da
+Pattern_0xd7de
+Pattern_0xd7fa
+Pattern_0xd846
+Pattern_0xd874
+Pattern_0xd8a2
+None
+
+[Phrase_0xd106]
+Pattern_0xd8bf
+Pattern_0xd8d2
+Pattern_0xd8d6
+Pattern_0xd8de
+Pattern_0xd8f0
+None
+Pattern_0xd8f4
+Pattern_0xd8fe
+
+[Pattern_0xd116]
+Tempo 27
+Volume 200
+Instrument 11
+Vibrato 20 30 20
+--- 96 --
+--- -- --
+Call Pattern_0xd90c 1
+
+[Pattern_0xd128]
+Call Pattern_0xd925 1
+Fallthrough 
+
+[Pattern_0xd12c]
+Call Pattern_0xd93f 1
+Call Pattern_0xd960 1
+Fallthrough 
+
+[Pattern_0xd134]
+Volume 200
+Instrument 10
+Vibrato 29 20 30
+Pan 15
+--- 96 --
+--- -- --
+--- -- --
+--- -- --
+Fallthrough 
+
+[Pattern_0xd143]
+Call Pattern_0xd976 1
+Fallthrough 
+
+[Pattern_0xd147]
+Volume 140
+Instrument 10
+Vibrato 29 20 30
+--- 96 --
+--- -- --
+--- -- --
+--- -- --
+Fallthrough 
+
+[Pattern_0xd154]
+PercussionDefine 23
+SongVolume 200
+Tempo 21
+EchoEnable 255 0 0
+EchoSetup 2 30 2
+EchoVolumeFade 30 30 30
+Volume 200
+Instrument 11
+Vibrato 20 30 20
+---  8 --
+--- 16 --
+G-4  4 3d
+G-4 -- --
+G-4 12 --
+F-4 -- --
+G-4 24 6d
+G#4 18 --
+B-4  6 3d
+G-4 96 6d
+
+[Pattern_0xd185]
+Volume 200
+Instrument 17
+Vibrato 20 30 20
+Pan 5
+---  8 --
+G-2 72 7f
+G#2 24 6d
+G-2 96 --
+Fallthrough 
+
+[Pattern_0xd199]
+Volume 200
+Instrument 11
+Vibrato 20 30 20
+Pan 8
+---  8 --
+--- 16 --
+D-4  4 3d
+D-4 -- --
+D-4 12 --
+C-4 -- --
+D-4 24 6d
+D#4 18 --
+F#4  6 3d
+D-4 96 6d
+Fallthrough 
+
+[Pattern_0xd1b9]
+Volume 200
+Instrument 11
+Vibrato 20 30 20
+Pan 12
+---  8 --
+--- 16 --
+A-3  4 3d
+A-3 -- --
+A-3 12 --
+G-3 -- --
+A-3 24 6d
+A#3 18 --
+C#4  6 3d
+A-3 96 6d
+Fallthrough 
+
+[Pattern_0xd1d9]
+Volume 250
+Instrument 2
+G-1  4 7d
+G-1 -- --
+G-1 72 7f
+G#1  6 7d
+G#1  6 7b
+G#1  9 7c
+---  3 --
+G-1  6 7e
+G-1  6 7a
+G-1  6 78
+G-1  6 76
+G-1  6 77
+G-1  6 78
+G-1  6 79
+G-1  6 7a
+G-1  6 7b
+G-1  6 7c
+G-1  6 7d
+G-1  6 7e
+G-1  6 7f
+G-1 -- --
+G-1 12 --
+Fallthrough 
+
+[Pattern_0xd219]
+Volume 250
+Instrument 2
+---  8 --
+Instrument 12
+A-2 75 7f
+Instrument 2
+G#1  6 7b
+G#1  6 7c
+---  3 --
+--- -- --
+G-1  6 7e
+G-1  6 7a
+G-1  6 78
+G-1  6 76
+G-1  6 77
+G-1  6 78
+G-1  6 79
+G-1  6 7a
+G-1  6 7b
+G-1  6 7c
+G-1  6 7d
+G-1  6 7e
+G-1 21 7f
+---  6 --
+Fallthrough 
+
+[Pattern_0xd258]
+Volume 140
+Instrument 22
+Vibrato 20 30 20
+Pan 7
+---  8 --
+--- 16 --
+D-5  4 3d
+D-5 -- --
+D-5 12 --
+C-5 -- --
+D-5 24 6d
+D#5 18 --
+F#5  6 3d
+D-5 96 6d
+Fallthrough 
+
+[Pattern_0xd278]
+Volume 160
+Instrument 11
+Vibrato 23 30 18
+Pan 9
+--- 16 --
+--- -- --
+G-4  4 3d
+G-4 -- --
+G-4 12 --
+F-4 -- --
+G-4 24 6d
+G#4 18 --
+B-4  6 3d
+G-4 88 6d
+Fallthrough 
+
+[Pattern_0xd297]
+Volume 200
+Instrument 11
+Vibrato 20 30 20
+Call Pattern_0xd90c 1
+--- -- --
+G-4 -- --
+--- -- --
+G-4 -- --
+F-4 -- --
+--- -- --
+F-4 -- --
+G-4 -- --
+--- -- --
+G-4 -- --
+G-4 -- --
+G-4  6 4d
+G-4 -- --
+G-4 12 2d
+G-4 -- --
+G#4 -- --
+F#4 -- --
+
+[Pattern_0xd2b9]
+Volume 140
+Instrument 10
+Vibrato 20 30 20
+Call Pattern_0xd9a7 1
+Fallthrough 
+
+[Pattern_0xd2c5]
+Call Pattern_0xd93f 1
+--- -- --
+D-4 -- --
+--- -- --
+D-4 -- --
+C-4 -- --
+--- -- --
+C-4 -- --
+D-4 -- --
+--- -- --
+D-4 -- --
+D-4 -- --
+D-4  6 --
+D-4 -- --
+D-4 12 --
+D-4 -- --
+D#4 -- --
+C#4 -- --
+Fallthrough 
+
+[Pattern_0xd2dc]
+Volume 200
+Instrument 10
+Vibrato 29 20 30
+G-4 96 7d
+PitchSlide 36 12 166
+-+- 36 6d
+G-4 12 --
+G#4 -- --
+A#4 -- --
+-+-  8 --
+F#4 -- --
+A#4 -- --
+G-4 96 7d
+PitchSlide 36 12 166
+-+- 48 68
+--- -- --
+Fallthrough 
+
+[Pattern_0xd301]
+Volume 200
+Instrument 2
+Call Pattern_0xd9b7 2
+Fallthrough 
+
+[Pattern_0xd309]
+Volume 200
+Instrument 11
+Vibrato 25 30 23
+Pan 7
+--- 96 --
+--- -- --
+--- 64 --
+G-4  4 79
+A-4  4 7a
+A#4  4 7b
+B-4  4 7c
+C#5  4 7d
+D-5 12 2d
+--- -- --
+D-5 -- --
+D-5 -- --
+D-5  6 --
+D-5 -- --
+F-5 12 --
+F-5 -- --
+D#5  6 7b
+D-5 -- --
+C#5 -- --
+C-5  6 2b
+Fallthrough 
+
+[Pattern_0xd33b]
+Volume 140
+Instrument 10
+Vibrato 29 20 30
+---  8 --
+G-4 48 6d
+D-4 -- --
+-+- 36 --
+G-4 12 --
+G#4 -- --
+A#4 -- --
+-+-  8 --
+F#4 -- --
+A#4 -- --
+G-4 48 --
+D-4 -- --
+-+- -- --
+--- 40 --
+Fallthrough 
+
+[Pattern_0xd359]
+Volume 200
+Instrument 11
+Vibrato 20 30 20
+--- 12 --
+C-5 12 2d
+--- -- --
+C-5 -- --
+A#4 -- --
+--- -- --
+A#4 -- --
+C-5 -- --
+--- -- --
+C-5 -- --
+C-5 -- --
+C-5  6 4d
+C-5 -- --
+C-5 12 2d
+C-5 -- --
+C#5 -- --
+B-4 -- --
+--- -- --
+C-5 -- --
+--- -- --
+C-5 -- --
+A#4 -- --
+--- -- --
+A#4 -- --
+C-5 -- --
+--- -- --
+C-5 -- --
+C-5 -- --
+C-5  6 4d
+C-5 -- --
+C-5 12 2d
+C-5 -- --
+C#5 -- --
+B-4 -- --
+
+[Pattern_0xd38f]
+Volume 140
+Instrument 10
+Vibrato 20 30 20
+C-4 48 7d
+A#3 -- --
+C-4 -- --
+C#4 24 --
+B-3 -- --
+C-4 48 --
+A#3 -- --
+C-4 -- --
+C#4 24 --
+B-3 -- --
+Fallthrough 
+
+[Pattern_0xd3a6]
+Volume 200
+Instrument 11
+Vibrato 25 30 23
+Call Pattern_0xd90c 1
+--- -- --
+G-4 -- --
+--- -- --
+G-4 -- --
+F-4 -- --
+--- -- --
+F-4 -- --
+G-4 -- --
+--- -- --
+G-4 -- --
+G-4 -- --
+G-4  6 --
+G-4 -- --
+G-4 12 --
+G-4 -- --
+G#4 -- --
+F#4 -- --
+Fallthrough 
+
+[Pattern_0xd3c5]
+Volume 200
+Instrument 10
+Vibrato 29 20 30
+C-5 96 7d
+PitchSlide 36 12 171
+-+- 36 6d
+C-5 12 --
+F-5 16 --
+D#5  8 --
+-+- -- --
+C#5 -- --
+B-4 -- --
+C-5 96 7d
+PitchSlide 36 12 171
+-+- 48 68
+--- -- --
+Fallthrough 
+
+[Pattern_0xd3eb]
+Volume 200
+Instrument 2
+Call Pattern_0xd9cf 2
+Fallthrough 
+
+[Pattern_0xd3f3]
+Volume 200
+Instrument 11
+Vibrato 25 30 23
+--- 96 --
+--- -- --
+--- 64 --
+C-5  4 79
+D-5  4 7a
+D#5  4 7b
+E-5  4 7c
+F#5  4 7d
+G-5 12 --
+-+- 36 4d
+G-5  6 2d
+G-5 -- --
+A#5 12 --
+A#5 -- --
+G#5  6 7d
+G-5  6 6d
+F#5  6 7d
+F-5  6 2d
+Fallthrough 
+
+[Pattern_0xd427]
+Volume 140
+Instrument 10
+Vibrato 29 20 30
+---  8 --
+C-5 48 6d
+G-4 -- --
+-+- 36 --
+C-5 12 --
+F-5 16 --
+D#5  8 --
+-+- -- --
+C#5 -- --
+B-4 -- --
+C-5 48 --
+G-4 -- --
+-+- -- --
+--- 40 --
+Fallthrough 
+
+[Pattern_0xd446]
+Volume 200
+Instrument 11
+Vibrato 25 30 23
+Pan 8
+--- 96 --
+--- 24 --
+D-5  4 2d
+D-5 -- --
+D-5  8 --
+D-5 -- --
+D-5 12 --
+D#5 -- --
+F-5  8 --
+D#5 -- --
+D-5 -- --
+--- 96 --
+--- 24 --
+D-5  4 --
+D-5 -- --
+D-5  8 --
+D-5 -- --
+D-5 12 --
+D#5 -- --
+F-5  8 --
+D#5 -- --
+D-5 -- --
+
+[Pattern_0xd474]
+Volume 200
+Instrument 10
+Vibrato 20 30 20
+G#2 32 7d
+D#3  8 --
+G#3 -- --
+D#4 48 --
+G-2 32 --
+D-3  8 --
+G-3 -- --
+D-4 48 --
+G#2 32 --
+D#3  8 --
+G#3 -- --
+D#4 48 --
+G-2 32 --
+D-3  8 --
+G-3 -- --
+D-4 48 --
+Fallthrough 
+
+[Pattern_0xd499]
+Volume 200
+Instrument 11
+Vibrato 25 30 23
+Pan 6
+--- 96 --
+--- 24 --
+B-4  4 2d
+B-4 -- --
+B-4  8 --
+B-4 -- --
+B-4 12 --
+C-5 -- --
+D-5  8 --
+C-5 -- --
+B-4 -- --
+--- 96 --
+--- 24 --
+B-4  4 --
+B-4 -- --
+B-4  8 --
+B-4 -- --
+B-4 12 --
+C-5 -- --
+D-5  8 --
+C-5 -- --
+B-4 -- --
+Fallthrough 
+
+[Pattern_0xd4c6]
+Volume 200
+Instrument 10
+Vibrato 29 20 30
+Pan 15
+F-4 32 6d
+D#4  8 --
+D-4 -- --
+C-4 12 --
+D-4 12 4d
+F-4 12 3d
+C-5 -- --
+Call Pattern_0xd9e7 1
+G-4 96 5d
+Fallthrough 
+
+[Pattern_0xd4e6]
+Volume 200
+Instrument 2
+Call Pattern_0xd9fa 2
+Fallthrough 
+
+[Pattern_0xd4ee]
+Volume 200
+Instrument 2
+Pan 10
+G#1  3 6d
+G#1  6 6b
+G#1  6 68
+G#1  6 69
+G#1  6 6a
+G#1  6 6b
+G#1  6 6c
+G#1  6 6d
+--- 51 --
+--- 96 --
+G#1  3 --
+G#1  6 6b
+G#1  6 68
+G#1  6 69
+G#1  6 6a
+G#1  6 6b
+G#1  6 6c
+G#1  6 6d
+--- 51 --
+--- 96 --
+Fallthrough 
+
+[Pattern_0xd52b]
+---  8 --
+F-4 32 6d
+D#4  8 --
+D-4 -- --
+C-4 12 --
+D-4 12 4d
+F-4 12 3d
+C-5 -- --
+Call Pattern_0xd9e7 1
+G-4 88 5d
+Fallthrough 
+
+[Pattern_0xd543]
+Instrument 10
+Volume 200
+Pan 12
+--- 96 --
+D-4 32 6d
+C-4  8 --
+A#3 -- --
+G#3 12 --
+A#3 12 4d
+C-4 12 3d
+D-4 -- --
+D#4 32 6d
+D-4  8 --
+C-4 -- --
+A#3 12 --
+C-4 12 4d
+D-4 12 3d
+D#4 -- --
+G-4 48 6d
+F#4 -- --
+
+[Pattern_0xd56e]
+Volume 200
+Instrument 10
+Vibrato 20 30 20
+A#2 40 7d
+F-3  8 --
+A#3 48 78
+G#2 40 7d
+D#3  8 --
+G#3 48 78
+A-2 40 7d
+D#3  8 --
+A-3 48 78
+D-3 40 7d
+A-3  8 --
+D-4 48 78
+Fallthrough 
+
+[Pattern_0xd596]
+Instrument 11
+Volume 200
+Pan 9
+--- 64 --
+F-5  4 5d
+F-5  4 3d
+F-5  8 --
+F-5 -- --
+F-5 -- --
+Call Pattern_0xda27 2
+A-5 96 5d
+Fallthrough 
+
+[Pattern_0xd5af]
+Volume 200
+Instrument 10
+F-4 32 6d
+D#4  8 --
+D-4 -- --
+C-4 12 --
+D-4 12 4d
+F-4 12 3d
+G-4 -- --
+Call Pattern_0xda33 1
+D-5 96 6d
+Fallthrough 
+
+[Pattern_0xd5c9]
+Volume 200
+Instrument 2
+A#1  6 6d
+A#1  6 6b
+A#1  6 68
+A#1  6 69
+A#1  6 6a
+A#1  6 6b
+A#1  6 6c
+A#1  6 6d
+A#1 12 --
+A#1 -- --
+A#1 12 2d
+A#1 -- --
+G#1 32 5d
+G#1  8 --
+G#1 -- --
+G#1 12 --
+G#1 -- --
+G#1  8 --
+G#1 -- --
+G#1 -- --
+A-1  6 6d
+A-1  6 6b
+A-1  6 68
+A-1  6 69
+A-1  6 6a
+A-1  6 6b
+A-1  6 6c
+A-1  6 6d
+A-1 12 --
+A-1 -- --
+A-1 12 2d
+A-1 -- --
+D-2 32 5d
+D-2  8 --
+D-2 -- --
+D-2 12 --
+D-2 -- --
+D-2  8 --
+D-2 -- --
+D-2 -- --
+Fallthrough 
+
+[Pattern_0xd625]
+Volume 200
+Instrument 2
+Pan 10
+A#1  3 6d
+A#1  6 6b
+A#1  6 68
+A#1  6 69
+A#1  6 6a
+A#1  6 6b
+A#1  6 6c
+A#1  6 6d
+--- 51 --
+--- 96 --
+A-1  3 --
+A-1  6 6b
+A-1  6 68
+A-1  6 69
+A-1  6 6a
+A-1  6 6b
+A-1  6 6c
+A-1  6 6d
+--- 51 --
+--- 96 --
+Fallthrough 
+
+[Pattern_0xd662]
+---  8 --
+F-4 32 6d
+D#4  8 --
+D-4 -- --
+C-4 12 --
+D-4 12 4d
+F-4 12 3d
+G-4 -- --
+Call Pattern_0xda33 1
+D-5 88 6d
+Fallthrough 
+
+[Pattern_0xd67a]
+Instrument 11
+Volume 200
+Pan 7
+--- 64 --
+D-5  4 5d
+D-5  4 3d
+D-5  8 --
+D-5 -- --
+D-5 -- --
+Call Pattern_0xda52 2
+C-5 96 5d
+Fallthrough 
+
+[Pattern_0xd693]
+Call Pattern_0xda5e 1
+Call Pattern_0xda73 1
+A#4 96 6d
+
+[Pattern_0xd69f]
+Call Pattern_0xda82 1
+G-2 12 --
+G-2 -- --
+G-2 -- --
+G-2 -- --
+G-2 -- --
+G-2 -- --
+G-2  8 --
+G-2 -- --
+G-2 -- --
+Fallthrough 
+
+[Pattern_0xd6ae]
+Instrument 10
+Pan 15
+Call Pattern_0xdaa7 3
+G-4 12 59
+--- -- --
+G-4  8 49
+G-4 -- --
+G-4 -- --
+G-4 12 69
+--- -- --
+G-4 12 49
+--- -- --
+Fallthrough 
+
+[Pattern_0xd6c7]
+Pan 12
+Call Pattern_0xdab9 2
+Fallthrough 
+
+[Pattern_0xd6cd]
+C-2 24 6f
+C-2  8 --
+C-2 -- --
+C-2 -- --
+C-2 36 --
+A#1  6 4d
+A#1 -- --
+A#1 24 6f
+A#1  8 --
+A#1 -- --
+A#1 -- --
+A#1 36 --
+A-1  6 4d
+A-1 -- --
+A-1 24 6f
+A-1  8 --
+A-1 -- --
+A-1 -- --
+A-1 36 --
+G-1  6 4d
+G-1 -- --
+G-1 24 6f
+G-1  8 --
+G-1 -- --
+G-1 -- --
+G-1 36 --
+C-2  6 4d
+C-2 -- --
+Fallthrough 
+
+[Pattern_0xd701]
+Call Pattern_0xdae8 1
+Call Pattern_0xda73 1
+A#4 90 6d
+Fallthrough 
+
+[Pattern_0xd70c]
+Call Pattern_0xdaff 1
+C#4 48 --
+A-3 -- --
+C-4 -- --
+A#3 16 --
+F#3 -- --
+A#3 -- --
+G-3 96 --
+
+[Pattern_0xd71b]
+Call Pattern_0xdb0b 1
+Fallthrough 
+
+[Pattern_0xd71f]
+Volume 180
+Instrument 10
+Pan 15
+Call Pattern_0xdaa7 2
+Call Pattern_0xdb3b 1
+Fallthrough 
+
+[Pattern_0xd72d]
+Volume 180
+Pan 12
+Call Pattern_0xdb5e 1
+Fallthrough 
+
+[Pattern_0xd735]
+Call Pattern_0xdbc3 1
+G-1 84 6f
+D-1  6 4d
+D-1 -- --
+Fallthrough 
+
+[Pattern_0xd740]
+Instrument 10
+---  8 --
+G-3 60 6d
+A-3 12 --
+A#3 -- --
+D-4 -- --
+C#4 48 --
+A-3 -- --
+C-4 72 --
+F#3 12 --
+A-3 -- --
+G-3 88 --
+Fallthrough 
+
+[Pattern_0xd755]
+Call Pattern_0xdaff 1
+C#4 48 --
+A-3 -- --
+C-4 -- --
+A#3 16 --
+F#3 -- --
+A#3 -- --
+G-3 66 --
+Instrument 11
+G-4  6 --
+A-4 -- --
+A#4 -- --
+C-5 -- --
+D-5 -- --
+
+[Pattern_0xd76c]
+Call Pattern_0xdb0b 1
+Fallthrough 
+
+[Pattern_0xd770]
+Instrument 10
+Pan 15
+Call Pattern_0xdaa7 2
+Call Pattern_0xdb3b 1
+Fallthrough 
+
+[Pattern_0xd77c]
+Pan 12
+Call Pattern_0xdb5e 1
+Fallthrough 
+
+[Pattern_0xd782]
+Call Pattern_0xdbc3 1
+G-1 84 6f
+C-2  6 4d
+C-2 -- --
+Fallthrough 
+
+[Pattern_0xd78d]
+Instrument 22
+Pan 11
+Volume 140
+Vibrato 30 20 20
+G-4 60 6d
+A-4 12 --
+A#4 -- --
+D-5 -- --
+C#5 48 --
+A-4 -- --
+C-5 -- --
+A#4 16 --
+F#4 -- --
+A#4 -- --
+G-4 96 --
+Fallthrough 
+
+[Pattern_0xd7a8]
+Instrument 10
+---  8 --
+G-3 60 6d
+A-3 12 --
+A#3 -- --
+D-4 -- --
+C#4 48 --
+A-3 -- --
+C-4 72 --
+F#3 12 --
+A-3 -- --
+G-3 88 --
+Fallthrough 
+
+[Pattern_0xd7bd]
+Call Pattern_0xda5e 1
+D-5 36 6d
+D-5  6 2d
+D-5 -- --
+D-5 12 --
+A#4 -- --
+G-4 -- --
+D-5 -- --
+C-5 36 6d
+C-5  6 2d
+C-5 -- --
+C-5 12 --
+F#4 -- --
+D#4 -- --
+C-5 -- --
+
+[Pattern_0xd7da]
+Call Pattern_0xda82 1
+Fallthrough 
+
+[Pattern_0xd7de]
+Volume 200
+Instrument 10
+Pan 15
+Call Pattern_0xdbd9 2
+F#4 12 59
+--- -- --
+F#4  8 49
+F#4 -- --
+F#4 -- --
+F#4 12 59
+--- -- --
+F#4  8 49
+F#4 -- --
+F#4 -- --
+Fallthrough 
+
+[Pattern_0xd7fa]
+Volume 200
+Pan 12
+C-5 12 5d
+D#4 12 39
+C-5  8 4b
+C-5 -- --
+C-5 -- --
+C-5 12 5c
+D#4 12 39
+C-5  8 4b
+C-5  8 39
+C-5 -- --
+A#4 12 5d
+D-4 12 39
+A#4  8 4b
+A#4 -- --
+A#4 -- --
+A#4 12 5c
+D-4 12 39
+A#4  8 4b
+A#4  8 39
+A#4 -- --
+A-4 12 5d
+D#4 12 39
+A-4  8 4b
+A-4 -- --
+A-4 -- --
+A-4 12 5c
+D#4 12 39
+A-4  8 4b
+A-4  8 39
+A-4 -- --
+Fallthrough 
+
+[Pattern_0xd846]
+C-2 32 6f
+C-2  8 4f
+C-2 -- --
+C-2 12 6f
+C-2 -- --
+C-2  8 4d
+C-2 -- --
+C-2 -- --
+A#1 32 6f
+A#1  8 4f
+A#1 -- --
+A#1 12 6f
+A#1 -- --
+A#1  8 4d
+A#1 -- --
+A#1 -- --
+A-1 32 6f
+A-1  8 --
+A-1 -- --
+A-1 12 --
+A-1 -- --
+G-1  8 4d
+G-1 -- --
+G-1 -- --
+Fallthrough 
+
+[Pattern_0xd874]
+Instrument 11
+Volume 200
+Pan 9
+Vibrato 29 27 24
+G-4 36 6d
+G-4  6 2d
+G-4 -- --
+G-4 12 --
+E-4 -- --
+B-3 -- --
+G-4 -- --
+F-4 36 6d
+F-4  6 2d
+F-4 -- --
+F-4 12 --
+D-4 -- --
+A#3 -- --
+F-4 -- --
+D#4 36 6d
+D#4  6 2d
+D#4 -- --
+D#4 12 --
+C-4 -- --
+A#3 -- --
+D#4 -- --
+Fallthrough 
+
+[Pattern_0xd8a2]
+Call Pattern_0xdae8 1
+D-5 36 6d
+D-5  6 2d
+D-5 -- --
+D-5 12 --
+A#4 -- --
+G-4 -- --
+D-5 -- --
+C-5 36 6d
+C-5  6 2d
+C-5 -- --
+C-5 12 --
+F#4 -- --
+D#4 -- --
+C-5  6 --
+Fallthrough 
+
+[Pattern_0xd8bf]
+Tempo 27
+Volume 200
+Instrument 11
+Vibrato 20 30 20
+D-4 96 6d
+--- -- --
+Call Pattern_0xd90c 1
+
+[Pattern_0xd8d2]
+Call Pattern_0xd925 1
+Fallthrough 
+
+[Pattern_0xd8d6]
+Call Pattern_0xd93f 1
+Call Pattern_0xd960 1
+Fallthrough 
+
+[Pattern_0xd8de]
+Volume 200
+Instrument 11
+Vibrato 29 20 30
+Pan 7
+A#4 96 6d
+Pan 15
+--- -- --
+--- -- --
+--- -- --
+Fallthrough 
+
+[Pattern_0xd8f0]
+Call Pattern_0xd976 1
+Fallthrough 
+
+[Pattern_0xd8f4]
+---  6 --
+A#4 96 6d
+--- 90 --
+--- 96 --
+--- -- --
+Fallthrough 
+
+[Pattern_0xd8fe]
+Volume 140
+Instrument 10
+Vibrato 29 20 30
+--- 96 --
+--- -- --
+--- -- --
+--- -- --
+
+[Pattern_0xd90c]
+--- 12 --
+G-4 12 2d
+--- -- --
+G-4 -- --
+F-4 -- --
+--- -- --
+F-4 -- --
+G-4 -- --
+--- -- --
+G-4 -- --
+G-4 -- --
+G-4  6 4d
+G-4 -- --
+G-4 12 2d
+G-4 -- --
+G#4 -- --
+F#4 -- --
+
+[Pattern_0xd925]
+Volume 140
+Instrument 10
+Vibrato 20 30 20
+Pan 5
+G-3 48 7d
+F-3 -- --
+G-3 -- --
+G#3 24 --
+F#3 -- --
+G-3 48 --
+F-3 -- --
+G-3 -- --
+G#3 24 --
+F#3 -- --
+
+[Pattern_0xd93f]
+Volume 200
+Instrument 11
+Vibrato 25 30 23
+--- 12 --
+D-4 12 2d
+--- -- --
+D-4 -- --
+C-4 -- --
+--- -- --
+C-4 -- --
+D-4 -- --
+--- -- --
+D-4 -- --
+D-4 -- --
+D-4  6 4d
+D-4 -- --
+D-4 12 2d
+D-4 -- --
+D#4 -- --
+C#4 -- --
+
+[Pattern_0xd960]
+--- -- --
+D-4 -- --
+--- -- --
+D-4 -- --
+C-4 -- --
+--- -- --
+C-4 -- --
+D-4 -- --
+--- -- --
+D-4 -- --
+D-4 -- --
+D-4  6 4d
+D-4 -- --
+D-4 12 2d
+D-4 -- --
+D#4 -- --
+C#4 -- --
+
+[Pattern_0xd976]
+Volume 200
+Instrument 2
+G-1 12 6d
+G-1 24 --
+G-1 12 --
+F-1 36 --
+G-1 12 --
+--- -- --
+G-1 -- --
+G-1 -- --
+G-1  6 --
+G-1 -- --
+G-1 12 --
+G-1 -- --
+G#1 -- --
+F#1 -- --
+G-1 -- --
+G-1 24 3d
+G-1 12 --
+F-1 36 --
+G-1 12 6d
+--- -- --
+G-1 -- --
+G-1 -- --
+G-1  6 --
+G-1 -- --
+G-1 12 --
+G-1 -- --
+G#1 -- --
+F#1 -- --
+
+[Pattern_0xd9a7]
+G-3 48 7d
+F-3 -- --
+G-3 -- --
+G#3 24 --
+F#3 -- --
+G-3 48 --
+F-3 -- --
+G-3 -- --
+G#3 24 --
+F#3 -- --
+
+[Pattern_0xd9b7]
+G-1 12 3d
+G-1 24 --
+G-1 12 --
+F-1 36 --
+G-1 12 6d
+--- -- --
+G-1 -- --
+G-1 -- --
+G-1  6 --
+G-1 -- --
+G-1 12 --
+G-1 -- --
+G#1 -- --
+F#1 -- --
+
+[Pattern_0xd9cf]
+C-2 12 3d
+C-2 24 --
+C-2 12 --
+A#1 36 --
+C-2 12 6d
+--- -- --
+C-2 -- --
+C-2 -- --
+C-2  6 --
+C-2 -- --
+C-2 12 --
+C-2 -- --
+C#2 -- --
+B-1 -- --
+
+[Pattern_0xd9e7]
+G-4 96 5d
+F-4 32 6d
+D#4  8 --
+D-4 -- --
+C-4 12 --
+D-4 12 4d
+F-4 12 3d
+C-5 -- --
+
+[Pattern_0xd9fa]
+G#1  6 6d
+G#1  6 6b
+G#1  6 68
+G#1  6 69
+G#1  6 6a
+G#1  6 6b
+G#1  6 6c
+G#1  6 6d
+G#1 12 --
+G#1 -- --
+G#1 12 2d
+G#1 -- --
+G-1 32 5d
+G-1  8 --
+G-1 -- --
+G-1 12 --
+G-1 -- --
+G-1  8 --
+G-1 -- --
+G-1 -- --
+
+[Pattern_0xda27]
+G-5 64 5d
+G-5  4 3d
+G-5 -- --
+G-5  8 --
+G-5 -- --
+G-5 -- --
+
+[Pattern_0xda33]
+A#4 32 6d
+G#4  8 --
+G-4 -- --
+F-4 12 --
+G-4 12 4d
+G#4 12 3d
+A#4 -- --
+C-5 32 6d
+A#4  8 --
+A-4 -- --
+G-4 12 --
+A-4 12 4d
+A#4 12 3d
+C-5 -- --
+
+[Pattern_0xda52]
+C-5 64 5d
+C-5  4 3d
+C-5 -- --
+C-5  8 --
+C-5 -- --
+C-5 -- --
+
+[Pattern_0xda5e]
+Instrument 11
+Pan 7
+Vibrato 30 26 20
+D#5 36 6d
+D#5  6 2d
+D#5 -- --
+D#5 12 --
+C-5 -- --
+G-4 -- --
+D#5 -- --
+
+[Pattern_0xda73]
+D-5 96 6d
+C-5 36 --
+C-5  6 2d
+C-5 -- --
+C-5 12 --
+G-4 -- --
+D#4 -- --
+C-5 -- --
+
+[Pattern_0xda82]
+Instrument 10
+C-3 12 6d
+C-3 -- --
+C-3 -- --
+C-3 -- --
+C-3 -- --
+C-3 -- --
+C-3  8 --
+C-3 -- --
+C-3 -- --
+A#2 12 --
+A#2 -- --
+A#2 -- --
+A#2 -- --
+A#2 -- --
+A#2 -- --
+A#2  8 --
+A#2 -- --
+A#2 -- --
+A-2 12 --
+A-2 -- --
+A-2 -- --
+A-2 -- --
+A-2 -- --
+A-2 -- --
+A-2  8 --
+A-2 -- --
+A-2 -- --
+
+[Pattern_0xdaa7]
+G-4 12 59
+--- -- --
+G-4  8 49
+G-4 -- --
+G-4 -- --
+G-4 12 59
+--- -- --
+G-4 12 49
+--- -- --
+
+[Pattern_0xdab9]
+C-5 12 5d
+D#4 12 39
+C-5  8 4b
+C-5 -- --
+C-5 -- --
+C-5 12 5c
+D#4 12 39
+C-5 12 4b
+D#4 12 39
+A#4 12 5d
+D-4 12 39
+A#4  8 4b
+A#4 -- --
+A#4 -- --
+A#4 12 5c
+D-4 12 39
+A#4 12 4b
+D-4 12 39
+
+[Pattern_0xdae8]
+Instrument 11
+Pan 14
+Vibrato 30 20 20
+---  6 --
+D#5 36 6d
+D#5  6 2d
+D#5 -- --
+D#5 12 --
+C-5 -- --
+G-4 -- --
+D#5 -- --
+
+[Pattern_0xdaff]
+Instrument 10
+Pan 7
+G-3 60 6d
+A-3 12 --
+A#3 -- --
+D-4 -- --
+
+[Pattern_0xdb0b]
+Instrument 10
+G-2 12 6d
+G-2 -- --
+G-2 -- --
+G-2 -- --
+G-2 -- --
+G-2 -- --
+G-2  8 --
+G-2 -- --
+G-2 -- --
+A-2 12 --
+A-2 -- --
+A-2 -- --
+A-2 -- --
+A-2 -- --
+A-2 -- --
+A-2  8 --
+A-2 -- --
+A-2 -- --
+F#2 12 --
+F#2 -- --
+F#2 -- --
+F#2 -- --
+F#2 -- --
+F#2 -- --
+F#2  8 --
+F#2 -- --
+F#2 -- --
+G-2 12 --
+G-2 -- --
+G-2 -- --
+G-2 -- --
+G-2 -- --
+G-2 -- --
+G-2  8 --
+G-2 -- --
+G-2 -- --
+
+[Pattern_0xdb3b]
+A-4 12 59
+--- -- --
+A-4  8 49
+A-4 -- --
+A-4 -- --
+A-4 12 59
+--- -- --
+A-4 12 49
+--- -- --
+G-4 12 59
+--- -- --
+G-4  8 49
+G-4 -- --
+G-4 -- --
+G-4 12 59
+--- -- --
+G-4 12 49
+--- -- --
+
+[Pattern_0xdb5e]
+A#4 12 5d
+D-4 12 39
+A#4  8 4b
+A#4  8 39
+A#4 -- --
+A#4 12 5c
+D-4 12 39
+A#4 12 4b
+D-4 12 39
+C#5 12 5d
+E-4 12 39
+C#5  8 4b
+C#5  8 39
+C#5 -- --
+C#5 12 5c
+E-4 12 39
+C#5 12 4b
+E-4 12 39
+C-5 12 5d
+D#4 12 39
+C-5  8 4b
+C-5  8 39
+C-5 -- --
+C-5 12 5c
+D#4 12 39
+C-5 12 4b
+D#4 12 39
+A#4 12 5d
+D-4 12 39
+A#4  8 4b
+A#4  8 39
+A#4 -- --
+A#4 12 5c
+D-4 12 39
+A#4 12 4b
+D-4 12 39
+
+[Pattern_0xdbc3]
+G-1 84 6f
+A-1  6 4d
+A-1 -- --
+A-1 84 6f
+F#1  6 4d
+F#1 -- --
+F#1 84 6f
+G-1  6 4d
+G-1 -- --
+
+[Pattern_0xdbd9]
+G-4 12 59
+--- -- --
+G-4  8 49
+G-4 -- --
+G-4 -- --
+G-4 12 59
+--- -- --
+G-4  8 49
+G-4 -- --
+G-4 -- --
+
+# Song index 16
+[Song_0xdbec]
+Phrase_0xdbfe
+Phrase_0xdc0e
+Phrase_0xdc1e
+Phrase_0xdc2e
+Phrase_0xdc3e
+Phrase_0xdc4e
+PhraseLoop 255 -3
+
+[Phrase_0xdbfe]
+Pattern_0xdc7e
+Pattern_0xdc9d
+Pattern_0xdcac
+Pattern_0xdcbb
+Pattern_0xdcca
+None
+None
+None
+
+[Phrase_0xdc0e]
+Pattern_0xdcd9
+Pattern_0xdcde
+Pattern_0xdce5
+Pattern_0xdcec
+Pattern_0xdcf3
+Pattern_0xdcfa
+None
+None
+
+[Phrase_0xdc1e]
+Pattern_0xdd09
+Pattern_0xdd25
+Pattern_0xdd3f
+Pattern_0xdd53
+Pattern_0xdd78
+Pattern_0xdd8c
+None
+None
+
+[Phrase_0xdc2e]
+Pattern_0xdd9f
+Pattern_0xddb0
+Pattern_0xddc0
+Pattern_0xddd0
+None
+None
+None
+None
+
+[Phrase_0xdc3e]
+Pattern_0xdde0
+Pattern_0xddf1
+Pattern_0xde06
+Pattern_0xde16
+Pattern_0xde26
+None
+None
+None
+
+[Phrase_0xdc4e]
+Pattern_0xde54
+Pattern_0xde86
+Pattern_0xdeb7
+Pattern_0xdee8
+Pattern_0xdf08
+Pattern_0xdf24
+None
+None
+
+[Phrase_0xdc5e]
+Pattern_0xdf28
+Pattern_0xdf52
+Pattern_0xdf77
+Pattern_0xdfa0
+Pattern_0xdfb0
+Pattern_0xdfca
+None
+None
+
+[Phrase_0xdc6e]
+Pattern_0xdfce
+Pattern_0xdfdf
+Pattern_0xdff4
+Pattern_0xe004
+None
+None
+None
+None
+
+[Pattern_0xdc7e]
+PercussionDefine 23
+SongVolume 200
+Tempo 14
+EchoEnable 255 0 0
+EchoSetup 2 30 2
+EchoVolumeFade 30 40 40
+Instrument 10
+Volume 200
+Vibrato 20 24 30
+C#3 96 7d
+-+- -- --
+
+[Pattern_0xdc9d]
+Instrument 10
+Volume 200
+Vibrato 20 24 30
+--- 12 --
+G-2 84 7d
+-+- 96 --
+Fallthrough 
+
+[Pattern_0xdcac]
+Instrument 10
+Volume 200
+Vibrato 20 24 30
+--- 24 --
+F#2 72 7d
+-+- 96 --
+Fallthrough 
+
+[Pattern_0xdcbb]
+Instrument 10
+Volume 200
+Vibrato 20 24 30
+--- 36 --
+F#3 60 7d
+-+- 96 --
+Fallthrough 
+
+[Pattern_0xdcca]
+Instrument 10
+Volume 200
+Vibrato 20 24 30
+--- 48 --
+C-3 48 7d
+-+- 96 --
+Fallthrough 
+
+[Pattern_0xdcd9]
+C#3 96 7d
+-+- -- --
+
+[Pattern_0xdcde]
+--- 12 --
+G-2 84 7d
+-+- 96 --
+Fallthrough 
+
+[Pattern_0xdce5]
+--- 24 --
+F#2 72 7d
+-+- 96 --
+Fallthrough 
+
+[Pattern_0xdcec]
+--- 36 --
+F#3 60 7d
+-+- 96 --
+Fallthrough 
+
+[Pattern_0xdcf3]
+--- 48 --
+C-3 48 7d
+-+- 96 --
+Fallthrough 
+
+[Pattern_0xdcfa]
+Instrument 10
+Volume 200
+Vibrato 20 25 30
+--- 60 --
+D-3 36 7d
+-+- 96 --
+Fallthrough 
+
+[Pattern_0xdd09]
+D#3 72 7d
+B-2 24 --
+-+- 48 --
+-+- 24 --
+G-3 72 --
+-+- 12 --
+G#2 84 --
+TempoFade 96 29
+G-2 72 --
+A#3 24 --
+A#3 96 --
+-+- 96 58
+
+[Pattern_0xdd25]
+--- 12 --
+E-3 84 7d
+-+- 48 --
+-+- 36 --
+F#3 60 --
+-+- 24 --
+G-2 72 --
+-+- 12 --
+F#2 72 --
+A-3 12 --
+A-3 96 --
+-+- 96 58
+Fallthrough 
+
+[Pattern_0xdd3f]
+--- 24 --
+F-3 72 7d
+-+- 48 --
+-+- -- --
+A#2 -- --
+-+- 96 --
+-+- 24 --
+C-3 72 --
+D#4 96 --
+-+- 96 58
+Fallthrough 
+
+[Pattern_0xdd53]
+--- 36 --
+A-3 60 7d
+-+- 48 --
+-+- 60 --
+A-2 36 --
+-+- 96 --
+-+- 36 --
+B-2 60 --
+B-2 96 --
+Instrument 9
+B-2 12 7f
+B-2 12 7d
+B-2 -- --
+B-2 -- --
+B-2 12 7f
+B-2 12 7d
+B-2 -- --
+B-2 -- --
+Fallthrough 
+
+[Pattern_0xdd78]
+--- 48 --
+G#3 48 7d
+-+- -- --
+-+- 84 --
+F-3 12 --
+-+- 96 --
+-+- 48 --
+F-3 -- --
+F-3 96 --
+-+- 96 58
+Fallthrough 
+
+[Pattern_0xdd8c]
+--- 60 --
+C-3 36 7d
+-+- 48 --
+-+- 96 --
+E-3 -- --
+-+- 60 --
+E-3 36 --
+E-3 96 --
+-+- 96 58
+Fallthrough 
+
+[Pattern_0xdd9f]
+Call Pattern_0xe015 1
+Call Pattern_0xe021 1
+Call Pattern_0xe02c 1
+Call Pattern_0xe021 1
+
+[Pattern_0xddb0]
+Call Pattern_0xe037 1
+Call Pattern_0xe042 1
+Call Pattern_0xe04c 1
+Call Pattern_0xe042 1
+Fallthrough 
+
+[Pattern_0xddc0]
+Call Pattern_0xe056 1
+Call Pattern_0xe062 1
+Call Pattern_0xe06d 1
+Call Pattern_0xe062 1
+Fallthrough 
+
+[Pattern_0xddd0]
+Call Pattern_0xe078 2
+Call Pattern_0xe085 2
+Call Pattern_0xe092 2
+Call Pattern_0xe085 2
+Fallthrough 
+
+[Pattern_0xdde0]
+Call Pattern_0xe015 1
+Call Pattern_0xe021 1
+Call Pattern_0xe02c 1
+Call Pattern_0xe09f 1
+
+[Pattern_0xddf1]
+Call Pattern_0xe037 1
+Call Pattern_0xe042 1
+Call Pattern_0xe04c 1
+--- 24 --
+B-3 48 --
+B-3 24 --
+-+- -- --
+B-3 72 --
+Fallthrough 
+
+[Pattern_0xde06]
+Call Pattern_0xe056 1
+Call Pattern_0xe062 1
+Call Pattern_0xe06d 1
+Call Pattern_0xe0aa 1
+Fallthrough 
+
+[Pattern_0xde16]
+Call Pattern_0xe078 2
+Call Pattern_0xe085 2
+Call Pattern_0xe092 2
+Call Pattern_0xe0b5 2
+Fallthrough 
+
+[Pattern_0xde26]
+Instrument 17
+Volume 220
+A-4 72 7d
+G#4 12 --
+A-4 -- --
+B-4 72 --
+A-4 12 --
+G#4 -- --
+C#4 96 --
+-+- 72 --
+C#4  8 --
+C-4 -- --
+C#4  8 78
+G-4 72 7d
+F#4 12 --
+G-4 -- --
+A-4 72 --
+G-4 12 --
+F#4 -- --
+B-3 96 --
+-+- 72 --
+B-3  8 --
+A#3 -- --
+B-3  8 78
+Fallthrough 
+
+[Pattern_0xde54]
+--- 12 --
+F-4 48 7d
+F-4 36 --
+-+- 12 6d
+F-4 84 7d
+--- 12 --
+E-4 48 --
+E-4 36 --
+-+- 12 6d
+E-4 84 7d
+--- 12 --
+G-4 48 --
+G-4 36 --
+-+- 12 6d
+G-4 84 7d
+--- 12 --
+G#4 48 --
+G#4 36 --
+-+- 12 6d
+G#4 84 7d
+
+[Pattern_0xde86]
+--- 24 --
+F#4 48 7d
+F#4 24 --
+-+- 24 6d
+F#4 72 7d
+--- 24 --
+F-4 48 --
+F-4 24 --
+-+- 24 6d
+F-4 72 7d
+--- 24 --
+G#4 48 --
+G#4 24 --
+-+- 24 6d
+G#4 72 7d
+--- 24 --
+A-4 48 --
+A-4 24 --
+-+- 24 6d
+A-4 72 7d
+Fallthrough 
+
+[Pattern_0xdeb7]
+--- 36 --
+C#5 48 7d
+C#5 12 --
+-+- 36 6d
+C#5 60 7d
+--- 36 --
+C-5 48 --
+C-5 12 --
+-+- 36 6d
+C-5 60 7d
+--- 36 --
+D#5 48 --
+D#5 12 --
+-+- 36 6d
+D#5 60 7d
+--- 36 --
+E-5 48 --
+E-5 12 --
+-+- 36 6d
+E-5 60 7d
+Fallthrough 
+
+[Pattern_0xdee8]
+Call Pattern_0xe0c2 2
+Call Pattern_0xe0cf 2
+F-3 12 5f
+F-3 12 5d
+F-3 -- --
+F-3 -- --
+F-3 -- --
+F-3 -- --
+F-3 -- --
+F-3 -- --
+F-3 -- --
+F-3 -- --
+F-3 -- --
+F-3 -- --
+F-3 -- --
+F-3 -- --
+F-3 -- --
+F-3 -- --
+Call Pattern_0xe0dc 2
+Fallthrough 
+
+[Pattern_0xdf08]
+Volume 220
+Call Pattern_0xe0e5 1
+C-5 12 --
+B-4 60 --
+F-4 12 --
+E-4 -- --
+-+- 96 --
+D#4 60 --
+D-4 12 --
+D#4 -- --
+G#4 -- --
+D-5 72 --
+A#4 24 --
+A-4 96 --
+-+- -- --
+Fallthrough 
+
+[Pattern_0xdf24]
+Call Pattern_0xe0f1 1
+Fallthrough 
+
+[Pattern_0xdf28]
+--- 12 --
+F-4 48 7d
+F-4 36 --
+-+- 12 --
+F-4 84 --
+--- 12 --
+E-4 48 --
+E-4 36 --
+-+- 12 --
+E-4 84 --
+--- 12 --
+D#4 48 --
+D#4 36 --
+-+- 12 --
+D#4 84 --
+--- 12 --
+D-4 48 --
+D-4 36 --
+-+- 12 --
+D-4 84 --
+
+[Pattern_0xdf52]
+--- 24 --
+F#4 48 7d
+F#4 24 --
+-+- -- --
+F#4 72 --
+--- 24 --
+F-4 48 --
+F-4 24 --
+-+- -- --
+F-4 72 --
+--- 24 --
+E-4 48 --
+E-4 24 --
+-+- -- --
+E-4 72 --
+--- 24 --
+D#4 48 --
+D#4 24 --
+-+- -- --
+D#4 72 --
+Fallthrough 
+
+[Pattern_0xdf77]
+--- 36 --
+C#5 48 7d
+C#5 12 --
+-+- 36 --
+C#5 60 --
+--- 36 --
+C-5 48 --
+C-5 12 --
+-+- 36 --
+C-5 60 --
+--- 36 --
+B-4 48 --
+B-4 12 --
+-+- 36 --
+B-4 60 --
+--- 36 --
+A#4 48 --
+A#4 12 --
+-+- 36 --
+A#4 60 --
+Fallthrough 
+
+[Pattern_0xdfa0]
+Call Pattern_0xe0c2 2
+Call Pattern_0xe0cf 2
+Call Pattern_0xe120 2
+Call Pattern_0xe12d 2
+Fallthrough 
+
+[Pattern_0xdfb0]
+Call Pattern_0xe0e5 1
+B-4 12 --
+A#4 60 --
+F-4 12 --
+E-4 -- --
+-+- 96 --
+D#4 60 --
+D-4 12 --
+D#4 -- --
+A#4 -- --
+B-4 72 --
+C#5 24 --
+C-5 96 --
+A#4 -- --
+Fallthrough 
+
+[Pattern_0xdfca]
+Call Pattern_0xe0f1 1
+Fallthrough 
+
+[Pattern_0xdfce]
+Call Pattern_0xe015 1
+Call Pattern_0xe021 1
+Call Pattern_0xe02c 1
+Call Pattern_0xe09f 1
+
+[Pattern_0xdfdf]
+Call Pattern_0xe037 1
+Call Pattern_0xe042 1
+Call Pattern_0xe04c 1
+--- 24 --
+B-3 48 --
+B-3 24 --
+-+- -- --
+B-3 72 --
+Fallthrough 
+
+[Pattern_0xdff4]
+Call Pattern_0xe056 1
+Call Pattern_0xe062 1
+Call Pattern_0xe06d 1
+Call Pattern_0xe0aa 1
+Fallthrough 
+
+[Pattern_0xe004]
+Call Pattern_0xe078 2
+Call Pattern_0xe085 2
+Call Pattern_0xe092 2
+Call Pattern_0xe0b5 2
+
+[Pattern_0xe015]
+--- 12 --
+C#4 48 7d
+C#4 36 --
+-+- 12 --
+C#4 84 --
+
+[Pattern_0xe021]
+--- 12 --
+C-4 48 --
+C-4 36 --
+-+- 12 --
+C-4 84 --
+
+[Pattern_0xe02c]
+--- 12 --
+B-3 48 --
+B-3 36 --
+-+- 12 --
+B-3 84 --
+
+[Pattern_0xe037]
+--- 24 --
+D-4 48 7d
+D-4 24 --
+-+- -- --
+D-4 72 --
+
+[Pattern_0xe042]
+--- 24 --
+C#4 48 --
+C#4 24 --
+-+- -- --
+C#4 72 --
+
+[Pattern_0xe04c]
+--- 24 --
+C-4 48 --
+C-4 24 --
+-+- -- --
+C-4 72 --
+
+[Pattern_0xe056]
+--- 36 --
+A-4 48 7d
+A-4 12 --
+-+- 36 --
+A-4 60 --
+
+[Pattern_0xe062]
+--- 36 --
+G#4 48 --
+G#4 12 --
+-+- 36 --
+G#4 60 --
+
+[Pattern_0xe06d]
+--- 36 --
+G-4 48 --
+G-4 12 --
+-+- 36 --
+G-4 60 --
+
+[Pattern_0xe078]
+B-2 12 5f
+B-2 12 5d
+B-2 -- --
+B-2 -- --
+B-2 -- --
+B-2 -- --
+B-2 -- --
+B-2 -- --
+
+[Pattern_0xe085]
+A#2 12 5f
+A#2 12 5d
+A#2 -- --
+A#2 -- --
+A#2 -- --
+A#2 -- --
+A#2 -- --
+A#2 -- --
+
+[Pattern_0xe092]
+A-2 12 5f
+A-2 12 5d
+A-2 -- --
+A-2 -- --
+A-2 -- --
+A-2 -- --
+A-2 -- --
+A-2 -- --
+
+[Pattern_0xe09f]
+--- 12 --
+A#3 48 --
+A#3 36 --
+-+- 12 --
+A#3 84 --
+
+[Pattern_0xe0aa]
+--- 36 --
+F#4 48 --
+F#4 12 --
+-+- 36 --
+F#4 60 --
+
+[Pattern_0xe0b5]
+G#2 12 5f
+G#2 12 5d
+G#2 -- --
+G#2 -- --
+G#2 -- --
+G#2 -- --
+G#2 -- --
+G#2 -- --
+
+[Pattern_0xe0c2]
+D#3 12 5f
+D#3 12 5d
+D#3 -- --
+D#3 -- --
+D#3 -- --
+D#3 -- --
+D#3 -- --
+D#3 -- --
+
+[Pattern_0xe0cf]
+D-3 12 5f
+D-3 12 5d
+D-3 -- --
+D-3 -- --
+D-3 -- --
+D-3 -- --
+D-3 -- --
+D-3 -- --
+
+[Pattern_0xe0dc]
+F#3 -- --
+F#3 -- --
+F#3 -- --
+F#3 -- --
+F#3 -- --
+F#3 -- --
+F#3 -- --
+F#3 -- --
+
+[Pattern_0xe0e5]
+A#3 60 7d
+C#4 12 --
+F-4 -- --
+C#5 -- --
+C-5 72 --
+G#4 24 --
+
+[Pattern_0xe0f1]
+Instrument 17
+Volume 0
+C#5 72 7d
+C-5 12 --
+C#5 -- --
+D#5 72 --
+C#5 12 --
+C-5 -- --
+F-4 96 --
+-+- 72 --
+F-4  8 --
+E-4 -- --
+F-4  8 78
+B-4 72 7d
+A#4 12 --
+B-4 -- --
+C#5 72 --
+B-4 12 --
+A#4 -- --
+D#4 96 --
+-+- 72 --
+D#4  8 --
+D-4 -- --
+D#4  8 78
+
+[Pattern_0xe120]
+C#3 12 5f
+C#3 12 5d
+C#3 -- --
+C#3 -- --
+C#3 -- --
+C#3 -- --
+C#3 -- --
+C#3 -- --
+
+[Pattern_0xe12d]
+C-3 12 5f
+C-3 12 5d
+C-3 -- --
+C-3 -- --
+C-3 -- --
+C-3 -- --
+C-3 -- --
+C-3 -- --
+
+# Song index 23
+[Song_0xe13a]
+Phrase_0xe156
+Phrase_0xe146
+Phrase_0xe166
+PhraseLoop 255 -2
+
+[Phrase_0xe146]
+Pattern_0xe176
+Pattern_0xe185
+Pattern_0xe193
+Pattern_0xe1ae
+Pattern_0xe1c9
+Pattern_0xe1d6
+Pattern_0xe219
+None
+
+[Phrase_0xe156]
+Pattern_0xe25c
+Pattern_0xe27d
+Pattern_0xe28b
+Pattern_0xe2a6
+Pattern_0xe2c1
+Pattern_0xe2ce
+None
+None
+
+[Phrase_0xe166]
+Pattern_0xe30c
+Pattern_0xe31b
+Pattern_0xe329
+Pattern_0xe344
+Pattern_0xe35f
+Pattern_0xe36c
+Pattern_0xe3af
+None
+
+[Pattern_0xe176]
+Volume 200
+Instrument 10
+Pan 7
+Vibrato 20 25 30
+Call Pattern_0xe3f3 4
+
+[Pattern_0xe185]
+Instrument 10
+Volume 200
+Pan 5
+Vibrato 20 25 30
+Call Pattern_0xe400 4
+Fallthrough 
+
+[Pattern_0xe193]
+Instrument 17
+Volume 200
+Pan 9
+Vibrato 20 25 30
+--- 96 --
+--- -- --
+G-4  6 2d
+G-4 -- --
+F#4 -- --
+F#4 -- --
+A-4 -- --
+A-4 -- --
+G#4 -- --
+G#4 -- --
+--- 48 --
+--- 96 --
+Fallthrough 
+
+[Pattern_0xe1ae]
+Instrument 17
+Volume 200
+Pan 11
+Vibrato 20 25 30
+--- 96 --
+--- -- --
+D-4  6 2d
+D-4 -- --
+C#4 -- --
+C#4 -- --
+E-4 -- --
+E-4 -- --
+D#4 -- --
+D#4 -- --
+--- 48 --
+--- 96 --
+Fallthrough 
+
+[Pattern_0xe1c9]
+Instrument 2
+Volume 200
+F-1 84 7d
+F-1 12 --
+Call Pattern_0xe40d 3
+Fallthrough 
+
+[Pattern_0xe1d6]
+Instrument 16
+Volume 200
+--- 96 --
+--- 48 --
+G-5 48 7d
+Instrument 10
+Volume 140
+A#5 18 1d
+G#5  3 7d
+A-5 -- --
+A#5 18 1d
+G#5  3 7d
+A-5 -- --
+A#5 18 1d
+G#5  3 7d
+A-5 -- --
+A#5 18 1d
+G-5  3 7d
+G#5 -- --
+A#5 18 1d
+G#5  3 7d
+A-5 -- --
+A#5 18 1d
+G#5  3 7d
+A-5 -- --
+A#5 18 1d
+G#5  3 7d
+A-5 -- --
+A#5 24 1d
+Fallthrough 
+
+[Pattern_0xe219]
+Instrument 16
+Volume 200
+--- 96 --
+--- 60 --
+B-5 36 7d
+Instrument 10
+Volume 140
+G#5 18 1d
+F#5  3 7d
+G-5 -- --
+G#5 18 1d
+F#5  3 7d
+G-5 -- --
+G#5 18 1d
+F#5  3 7d
+G-5 -- --
+G#5 18 1d
+F#5  3 7d
+G-5 -- --
+G#5 18 1d
+F#5  3 7d
+G-5 -- --
+G#5 18 1d
+F#5  3 7d
+G-5 -- --
+G#5 18 1d
+F#5  3 7d
+G-5 -- --
+G#5 24 1d
+Fallthrough 
+
+[Pattern_0xe25c]
+PercussionDefine 25
+SongVolume 200
+Tempo 25
+EchoEnable 255 0 0
+EchoSetup 2 95 2
+EchoVolumeFade 20 30 30
+Volume 200
+Instrument 10
+Pan 7
+Vibrato 20 25 30
+Call Pattern_0xe3f3 4
+
+[Pattern_0xe27d]
+Instrument 10
+Volume 200
+Pan 5
+Vibrato 20 25 30
+Call Pattern_0xe400 4
+Fallthrough 
+
+[Pattern_0xe28b]
+Instrument 17
+Volume 200
+Pan 9
+Vibrato 20 25 30
+--- 96 --
+--- -- --
+G-4  6 2d
+G-4 -- --
+F#4 -- --
+F#4 -- --
+A-4 -- --
+A-4 -- --
+G#4 -- --
+G#4 -- --
+--- 48 --
+--- 96 --
+Fallthrough 
+
+[Pattern_0xe2a6]
+Instrument 17
+Volume 200
+Pan 11
+Vibrato 20 25 30
+--- 96 --
+--- -- --
+D-4  6 2d
+D-4 -- --
+C#4 -- --
+C#4 -- --
+E-4 -- --
+E-4 -- --
+D#4 -- --
+D#4 -- --
+--- 48 --
+--- 96 --
+Fallthrough 
+
+[Pattern_0xe2c1]
+Instrument 2
+Volume 200
+--- 84 --
+F-1 12 7d
+Call Pattern_0xe40d 3
+Fallthrough 
+
+[Pattern_0xe2ce]
+Instrument 16
+Volume 200
+--- 96 --
+--- 48 --
+G-5 48 7d
+Instrument 10
+Volume 140
+A#5 18 1d
+G#5  3 7d
+A-5 -- --
+A#5 18 1d
+G#5  3 7d
+A-5 -- --
+A#5 18 1d
+G#5  3 7d
+A-5 -- --
+A#5 24 1d
+A#5 18 --
+G#5  3 7d
+A-5 -- --
+A#5 18 1d
+G#5  3 7d
+A-5 -- --
+A#5 18 1d
+G#5  3 7d
+A-5 -- --
+A#5 24 1d
+Fallthrough 
+
+[Pattern_0xe30c]
+Volume 200
+Instrument 10
+Pan 7
+Vibrato 20 25 30
+Call Pattern_0xe412 4
+
+[Pattern_0xe31b]
+Instrument 10
+Volume 200
+Pan 5
+Vibrato 20 25 30
+Call Pattern_0xe41f 4
+Fallthrough 
+
+[Pattern_0xe329]
+Instrument 17
+Volume 200
+Pan 9
+Vibrato 20 25 30
+--- 96 --
+--- -- --
+G#4  6 2d
+G#4 -- --
+G-4 -- --
+G-4 -- --
+A#4 -- --
+A#4 -- --
+A-4 -- --
+A-4 -- --
+--- 48 --
+--- 96 --
+Fallthrough 
+
+[Pattern_0xe344]
+Instrument 17
+Volume 200
+Pan 11
+Vibrato 20 25 30
+--- 96 --
+--- -- --
+D#4  6 2d
+D#4 -- --
+D-4 -- --
+D-4 -- --
+F-4 -- --
+F-4 -- --
+E-4 -- --
+E-4 -- --
+--- 48 --
+--- 96 --
+Fallthrough 
+
+[Pattern_0xe35f]
+Instrument 2
+Volume 200
+F#1 84 7d
+F#1 12 --
+Call Pattern_0xe42c 3
+Fallthrough 
+
+[Pattern_0xe36c]
+Instrument 16
+Volume 200
+--- 96 --
+--- 48 --
+G#5 48 7d
+Instrument 10
+Volume 140
+B-5 18 1d
+A-5  3 7d
+A#5 -- --
+B-5 18 1d
+A-5  3 7d
+A#5 -- --
+B-5 18 1d
+A-5  3 7d
+A#5 -- --
+B-5 18 1d
+G#5  3 7d
+A-5 -- --
+B-5 18 1d
+A-5  3 7d
+A#5 -- --
+B-5 18 1d
+A-5  3 7d
+A#5 -- --
+B-5 18 1d
+A-5  3 7d
+A#5 -- --
+B-5 24 1d
+Fallthrough 
+
+[Pattern_0xe3af]
+Instrument 16
+Volume 200
+--- 96 --
+--- 60 --
+C-6 36 7d
+Instrument 10
+Volume 140
+A-5 18 1d
+G-5  3 7d
+G#5 -- --
+A-5 18 1d
+G-5  3 7d
+G#5 -- --
+A-5 18 1d
+G-5  3 7d
+G#5 -- --
+A-5 18 1d
+G-5  3 7d
+G#5 -- --
+A-5 18 1d
+G-5  3 7d
+G#5 -- --
+A-5 18 1d
+G-5  3 7d
+G#5 -- --
+A-5 18 1d
+G-5  3 7d
+G#5 -- --
+A-5 24 1d
+
+[Pattern_0xe3f3]
+C-3 24 1d
+C-3 24 19
+C-3 24 18
+C-3 24 17
+
+[Pattern_0xe400]
+F-2 24 1d
+F-2 24 19
+F-2 24 18
+F-2 24 17
+
+[Pattern_0xe40d]
+F-1 84 --
+F-1 12 --
+
+[Pattern_0xe412]
+C#3 24 1d
+C#3 24 19
+C#3 24 18
+C#3 24 17
+
+[Pattern_0xe41f]
+F#2 24 1d
+F#2 24 19
+F#2 24 18
+F#2 24 17
+
+[Pattern_0xe42c]
+F#1 84 --
+F#1 12 --
+
+# Song index 18
+[Song_0xe431]
+Phrase_0xe435
+
+[Phrase_0xe435]
+Pattern_0xe445
+Pattern_0xe49f
+Pattern_0xe4d5
+Pattern_0xe539
+Pattern_0xe59d
+Pattern_0xe601
+Pattern_0xe64b
+Pattern_0xe691
+
+[Pattern_0xe445]
+PercussionDefine 21
+SongVolume 180
+Tempo 31
+EchoEnable 255 40 40
+EchoSetup 2 40 2
+Instrument 11
+Vibrato 30 40 21
+Volume 240
+--- 12 --
+D-5  6 3d
+D-5 -- --
+D-5 12 5d
+C-5  6 3d
+C-5 -- --
+C-5 12 5d
+A#4  6 3d
+A#4 -- --
+A#4 12 --
+C-5 12 5d
+Call Pattern_0xe6dc 1
+-+- 72 --
+TempoFade 72 25
+--- 12 --
+G#5  6 3d
+G#5 -- --
+G#5 12 5d
+F#5  6 3d
+F#5 -- --
+F#5 12 5d
+E-5  6 3d
+E-5 -- --
+E-5 12 --
+G#5 16 5d
+A#5 96 6d
+--- 24 --
+--- -- --
+---  8 --
+
+[Pattern_0xe49f]
+Instrument 17
+Vibrato 30 30 30
+Volume 250
+F-2 96 6d
+--- 12 --
+F-2  6 3d
+F-2 -- --
+F-2 12 6d
+F-2 -- --
+F-2  8 5d
+F#2 -- --
+G-2 -- --
+G#2 96 6d
+--- 12 --
+G#2  6 3d
+G#2 -- --
+G#2 12 6d
+G#2 -- --
+G#2  8 5d
+A-2 -- --
+A#2 -- --
+B-2 100 6d
+A#1 96 --
+--- 24 --
+--- -- --
+---  8 --
+Fallthrough 
+
+[Pattern_0xe4d5]
+Instrument 11
+Vibrato 34 48 10
+Volume 220
+FineTune 10
+Pan 8
+--- 12 --
+A#4  6 3d
+A#4 -- --
+A#4 12 5d
+A-4  6 3d
+A-4 -- --
+A-4 12 5d
+G-4  6 3d
+G-4 -- --
+G-4 12 --
+A-4 12 5d
+-+- 72 48
+--- 12 --
+C#5  6 3d
+C#5 -- --
+C#5 12 5d
+C-5  6 3d
+C-5 -- --
+C-5 12 5d
+A#4  6 3d
+A#4 -- --
+A#4 12 --
+C-5 12 5d
+-+- 72 --
+--- 12 --
+E-5  6 3d
+E-5 -- --
+E-5 12 5d
+D#5  6 3d
+D#5 -- --
+D#5 12 5d
+C#5  6 3d
+C#5 -- --
+C#5 12 --
+E-5 16 5d
+G-5 96 6d
+--- 24 --
+--- -- --
+---  8 --
+Fallthrough 
+
+[Pattern_0xe539]
+Instrument 11
+Vibrato 20 44 10
+Volume 220
+FineTune 15
+Pan 12
+--- 12 --
+G-4  6 3d
+G-4 -- --
+G-4 12 5d
+F-4  6 3d
+F-4 -- --
+F-4 12 5d
+D#4  6 3d
+D#4 -- --
+D#4 12 --
+F-4 12 5d
+-+- 72 48
+--- 12 --
+A#4  6 3d
+A#4 -- --
+A#4 12 5d
+G#4  6 3d
+G#4 -- --
+G#4 12 5d
+F#4  6 3d
+F#4 -- --
+F#4 12 --
+G#4 12 5d
+-+- 72 --
+--- 12 --
+C#5  6 3d
+C#5 -- --
+C#5 12 5d
+B-4  6 3d
+B-4 -- --
+B-4 12 5d
+A-4  6 3d
+A-4 -- --
+A-4 12 --
+D#5 16 5d
+D#5 96 6d
+--- 24 --
+--- -- --
+---  8 --
+Fallthrough 
+
+[Pattern_0xe59d]
+Instrument 11
+Vibrato 25 50 14
+Volume 220
+FineTune 5
+Pan 14
+--- 12 --
+D#4  6 3d
+D#4 -- --
+D#4 12 5d
+D-4  6 3d
+D-4 -- --
+D-4 12 5d
+C-4  6 3d
+C-4 -- --
+C-4 12 --
+D-4 12 5d
+-+- 72 48
+--- 12 --
+F#4  6 3d
+F#4 -- --
+F#4 12 5d
+F-4  6 3d
+F-4 -- --
+F-4 12 5d
+D#4  6 3d
+D#4 -- --
+D#4 12 --
+F-4 12 5d
+-+- 72 --
+--- 12 --
+A-4  6 3d
+A-4 -- --
+A-4 12 5d
+G#4  6 3d
+G#4 -- --
+G#4 12 5d
+F#4  6 3d
+F#4 -- --
+F#4 12 --
+B-4 16 5d
+A#4 96 6d
+--- 24 --
+--- -- --
+---  8 --
+Fallthrough 
+
+[Pattern_0xe601]
+Instrument 11
+Vibrato 27 30 28
+Volume 160
+Pan 6
+--- 20 --
+D-5  6 3d
+D-5 -- --
+D-5 12 5d
+C-5  6 3d
+C-5 -- --
+C-5 12 5d
+A#4  6 3d
+A#4 -- --
+A#4 12 --
+C-5 12 5d
+Call Pattern_0xe6dc 1
+-+- 72 --
+--- 12 --
+G#5  6 3d
+G#5 -- --
+G#5 12 5d
+F#5  6 3d
+F#5 -- --
+F#5 12 5d
+E-5  6 3d
+E-5 -- --
+E-5 12 --
+G#5 16 5d
+A#5 92 6d
+--- 24 --
+--- -- --
+---  4 --
+Fallthrough 
+
+[Pattern_0xe64b]
+Instrument 15
+Volume 180
+Pan 20
+--- 84 --
+A-3 12 4d
+PanFade 96 0
+D-4 -- --
+D-4 -- --
+A-4 -- --
+D-5 -- --
+C-5 12 3d
+F-5 -- --
+C-6 84 4d
+Pan 20
+PanFade 96 0
+C-4 12 --
+F-4 -- --
+F-4 -- --
+C-5 -- --
+F-5 -- --
+D#5 12 3d
+G#5 -- --
+D#6 100 4d
+Instrument 2
+Volume 240
+Pan 10
+D#2 12 79
+D#2 12 7a
+D#2 12 7b
+D#2 12 7c
+D#2 12 7d
+D#2 12 7e
+D#2 80 7f
+Fallthrough 
+
+[Pattern_0xe691]
+Instrument 15
+Volume 180
+Pan 20
+--- 90 --
+C-4 12 4d
+PanFade 96 0
+F-4 -- --
+F-4 -- --
+C-5 -- --
+F-5 -- --
+D-5 12 3d
+A-5 -- --
+--- 84 --
+Pan 20
+PanFade 96 0
+D#4 12 4d
+G#4 -- --
+G#4 -- --
+D#5 -- --
+G#5 -- --
+F-5 12 3d
+C-6 -- --
+--- 96 --
+Instrument 2
+Volume 240
+Pan 10
+D#2  6 77
+D#2 12 78
+D#2 12 79
+D#2 12 7a
+D#2 12 7b
+D#2 12 7c
+D#2 12 7d
+D#2 60 7f
+--- 12 --
+
+[Pattern_0xe6dc]
+-+- 72 48
+--- 12 --
+F-5  6 3d
+F-5 -- --
+F-5 12 5d
+D#5  6 3d
+D#5 -- --
+D#5 12 5d
+C#5  6 3d
+C#5 -- --
+C#5 12 --
+D#5 12 5d
+
+# Song index 19
+[Song_0xe6f9]
+Phrase_0xe749
+Phrase_0xe719
+Phrase_0xe739
+Phrase_0xe709
+Phrase_0xe729
+PhraseLoop 255 -2
+
+[Phrase_0xe709]
+Pattern_0xe759
+Pattern_0xe764
+Pattern_0xe772
+Pattern_0xe778
+Pattern_0xe786
+Pattern_0xe78c
+None
+None
+
+[Phrase_0xe719]
+Pattern_0xe7a1
+Pattern_0xe7bd
+Pattern_0xe7d7
+Pattern_0xe7f6
+Pattern_0xe80c
+Pattern_0xe823
+None
+None
+
+[Phrase_0xe729]
+Pattern_0xe842
+Pattern_0xe854
+Pattern_0xe877
+Pattern_0xe881
+Pattern_0xe8a4
+Pattern_0xe8ae
+None
+None
+
+[Phrase_0xe739]
+Pattern_0xe8ce
+Pattern_0xe8d5
+Pattern_0xe8d9
+Pattern_0xe8dc
+None
+Pattern_0xe8df
+None
+None
+
+[Phrase_0xe749]
+Pattern_0xe8ec
+None
+None
+None
+None
+None
+None
+None
+
+[Pattern_0xe759]
+G-4 48 7d
+C-4 -- --
+B-4 -- --
+D-4 -- --
+G-4 -- --
+C-4 -- --
+B-4 -- --
+D-5 -- --
+
+[Pattern_0xe764]
+Call Pattern_0xe906 1
+--- -- --
+D#4 48 --
+C-5 24 --
+-+- -- --
+C-5 48 --
+B-4 24 --
+Fallthrough 
+
+[Pattern_0xe772]
+C-2 96 6d
+B-1 -- --
+A#1 -- --
+A-1 -- --
+Fallthrough 
+
+[Pattern_0xe778]
+--- 96 --
+--- -- --
+G-2 24 7d
+G#2 -- --
+G-2 48 --
+G-2 24 --
+G#2 -- --
+G-2 48 --
+Fallthrough 
+
+[Pattern_0xe786]
+C-3 96 6d
+B-2 -- --
+A#2 -- --
+A-2 -- --
+Fallthrough 
+
+[Pattern_0xe78c]
+---  8 --
+G-4 24 7d
+D#4 -- --
+C-4 -- --
+C-5 -- --
+B-4 -- --
+G-4 -- --
+D-4 -- --
+B-3 -- --
+G-4 -- --
+D#4 -- --
+C-4 -- --
+C-5 -- --
+B-4 -- --
+C-5 -- --
+D-5 -- --
+B-4 16 --
+Fallthrough 
+
+[Pattern_0xe7a1]
+Volume 200
+Instrument 21
+Vibrato 10 30 100
+D#3 24 7d
+F-3 -- --
+D-3 48 --
+Call Pattern_0xe913 1
+D#3 24 7d
+F-3 -- --
+D-3 48 --
+-+- 96 68
+
+[Pattern_0xe7bd]
+Volume 200
+Instrument 21
+Vibrato 14 40 80
+C-3 48 7d
+B-2 -- --
+-+- 48 5d
+C-3 48 7d
+B-2 96 --
+C-3 48 --
+B-2 -- --
+-+- 96 68
+Fallthrough 
+
+[Pattern_0xe7d7]
+Volume 200
+Instrument 21
+Vibrato 20 26 70
+G#1 96 7d
+PitchSlide 40 8 135
+-+- 48 6d
+G#1 48 7d
+G-1 96 6d
+G#1 48 7d
+G-1 -- --
+-+- 96 68
+Fallthrough 
+
+[Pattern_0xe7f6]
+Volume 200
+Instrument 21
+Vibrato 20 30 90
+--- 96 --
+--- 48 --
+--- -- --
+--- 96 --
+F#2 48 7d
+F-2 -- --
+-+- 96 68
+Fallthrough 
+
+[Pattern_0xe80c]
+Volume 200
+Instrument 21
+Vibrato 10 18 60
+--- 96 --
+--- -- --
+--- -- --
+C-4 48 7d
+PitchSlide 22 2 166
+B-3 -- --
+-+- 96 68
+Fallthrough 
+
+[Pattern_0xe823]
+Volume 160
+Instrument 21
+Vibrato 14 30 80
+---  8 --
+D#3 48 7d
+PitchSlide 20 4 157
+D-3 -- --
+Call Pattern_0xe913 1
+D#3 24 7d
+F-3 -- --
+D-3 48 --
+-+- 88 68
+Fallthrough 
+
+[Pattern_0xe842]
+C-5 48 7d
+C-5 -- --
+-+- -- --
+B-4 -- --
+C-5 -- --
+C-5 -- --
+-+- -- --
+B-4 -- --
+C-5 -- --
+D#4 -- --
+-+- -- --
+F#4 -- --
+B-4 96 --
+-+- -- --
+
+[Pattern_0xe854]
+--- 24 --
+G-4 48 7d
+G-5 24 --
+-+- -- --
+D-5 48 --
+G-4 24 --
+-+- -- --
+G-4 48 --
+G-5 24 --
+-+- -- --
+D-5 48 --
+G-4 24 --
+-+- -- --
+A-4 48 --
+C-4 24 --
+-+- -- --
+D#4 48 --
+C-5 24 --
+G-4 96 --
+-+- -- --
+Fallthrough 
+
+[Pattern_0xe877]
+G#1 96 6d
+G-1 -- --
+G#1 -- --
+G-1 -- --
+F#1 -- --
+F#1 -- --
+G-1 -- --
+G-1 -- --
+Fallthrough 
+
+[Pattern_0xe881]
+--- 48 --
+D#4 24 7d
+C-4 -- --
+B-3 -- --
+C-4 -- --
+D-4 -- --
+B-3 -- --
+--- 48 --
+D#4 24 --
+C-4 -- --
+B-3 -- --
+C-4 -- --
+D-4 -- --
+B-3 -- --
+C-4 -- --
+B-3 -- --
+C-4 -- --
+A-3 -- --
+F#3 -- --
+A-3 -- --
+D#4 -- --
+D-4 -- --
+D-4 -- --
+F-4 -- --
+G#4 -- --
+G-4 -- --
+-+- -- --
+F-4 -- --
+D-4 -- --
+B-3 -- --
+Fallthrough 
+
+[Pattern_0xe8a4]
+G#2 96 6d
+G-2 -- --
+G#2 -- --
+G-2 -- --
+F#2 -- --
+F#2 -- --
+G-2 -- --
+G-2 -- --
+Fallthrough 
+
+[Pattern_0xe8ae]
+---  8 --
+C-5 24 7d
+G-4 -- --
+C-5 -- --
+G-5 -- --
+-+- -- --
+D-5 -- --
+B-4 -- --
+G-4 -- --
+C-5 -- --
+G-4 -- --
+C-5 -- --
+G-5 -- --
+-+- -- --
+D-5 -- --
+B-4 -- --
+G-4 -- --
+C-5 -- --
+A-4 -- --
+D#4 -- --
+C-4 -- --
+-+- -- --
+D#4 -- --
+F#4 -- --
+C-5 -- --
+B-4 96 --
+-+- 88 --
+Fallthrough 
+
+[Pattern_0xe8ce]
+G-4 48 7d
+C-4 -- --
+B-4 -- --
+D-4 -- --
+
+[Pattern_0xe8d5]
+Call Pattern_0xe906 1
+Fallthrough 
+
+[Pattern_0xe8d9]
+--- 96 --
+--- -- --
+Fallthrough 
+
+[Pattern_0xe8dc]
+--- 96 --
+--- -- --
+Fallthrough 
+
+[Pattern_0xe8df]
+---  8 --
+G-4 24 7d
+D#4 -- --
+C-4 -- --
+C-5 -- --
+B-4 -- --
+G-4 -- --
+D-4 -- --
+B-3 16 --
+Fallthrough 
+
+[Pattern_0xe8ec]
+PercussionDefine 24
+SongVolume 200
+Tempo 25
+EchoEnable 255 30 30
+EchoSetup 2 20 2
+Volume 200
+Instrument 21
+Vibrato 10 30 100
+--- 48 --
+
+[Pattern_0xe905]
+
+[Pattern_0xe906]
+--- 24 --
+D#4 48 7d
+C-5 24 --
+-+- -- --
+G-4 48 --
+B-3 24 --
+
+[Pattern_0xe913]
+-+- 48 5d
+D#3 24 7d
+F-3 -- --
+D-3 96 6d
+
+# Song index 20
+[Song_0xe91e]
+Phrase_0xe93a
+Phrase_0xe92a
+Phrase_0xe95a
+PhraseLoop 255 -2
+
+[Phrase_0xe92a]
+Pattern_0xe96a
+Pattern_0xe97d
+Pattern_0xe9a3
+Pattern_0xe9d0
+Pattern_0xe9fd
+None
+None
+None
+
+[Phrase_0xe93a]
+Pattern_0xea19
+Pattern_0xea49
+Pattern_0xea66
+Pattern_0xea83
+Pattern_0xea99
+None
+None
+None
+
+[Phrase_0xe94a]
+Pattern_0xeadb
+Pattern_0xeaf2
+Pattern_0xeb18
+None
+None
+None
+None
+None
+
+[Phrase_0xe95a]
+Pattern_0xeb3e
+Pattern_0xeb51
+Pattern_0xeb77
+Pattern_0xeba4
+Pattern_0xebd1
+None
+None
+None
+
+[Pattern_0xe96a]
+Volume 200
+Instrument 2
+D-2 12 5d
+A-1 -- --
+D-2 -- --
+A-1 -- --
+D-2 -- --
+A-1 -- --
+D-2 -- --
+A-1 -- --
+Call Pattern_0xebee 3
+
+[Pattern_0xe97d]
+Volume 220
+Instrument 11
+A-2 12 6d
+E-3 -- --
+A-3 -- --
+A-2 -- --
+E-3 -- --
+A-3 -- --
+A#2 -- --
+A#3 -- --
+A-2 -- --
+E-3 -- --
+A-3 -- --
+A-2 -- --
+E-3 -- --
+A-3 -- --
+G#2 -- --
+G#3 -- --
+A-2 -- --
+E-3 -- --
+A-3 -- --
+A-2 -- --
+E-3 -- --
+A-3 -- --
+A#2 -- --
+A#3 -- --
+A-2 -- --
+E-3 -- --
+A-3 -- --
+A-2 -- --
+E-3 -- --
+A-3 -- --
+G#2 -- --
+G#3 -- --
+Fallthrough 
+
+[Pattern_0xe9a3]
+Volume 200
+Instrument 11
+--- 24 --
+A-5 12 6d
+--- 24 --
+A-5 12 --
+--- -- --
+A#5 -- --
+--- 24 --
+A-5 12 --
+--- 24 --
+A-5 12 --
+--- -- --
+G#5 -- --
+--- 24 --
+A-5 12 --
+--- 24 --
+A-5 12 --
+--- -- --
+A#5 -- --
+--- 24 --
+A-5 12 --
+--- 24 --
+A-5 12 --
+--- -- --
+G#5 -- --
+Fallthrough 
+
+[Pattern_0xe9d0]
+Volume 200
+Instrument 11
+--- 24 --
+E-5 12 6d
+--- 24 --
+E-5 12 --
+--- -- --
+F-5 -- --
+--- 24 --
+E-5 12 --
+--- 24 --
+E-5 12 --
+--- -- --
+D#5 -- --
+--- 24 --
+E-5 12 --
+--- 24 --
+E-5 12 --
+--- -- --
+F-5 -- --
+--- 24 --
+E-5 12 --
+--- 24 --
+E-5 12 --
+--- -- --
+D#5 -- --
+Fallthrough 
+
+[Pattern_0xe9fd]
+Volume 170
+Instrument 20
+E-4  4 6d
+E-4 -- --
+E-4 -- --
+E-4 12 --
+E-4  6 --
+E-4 -- --
+E-4 12 --
+E-4 -- --
+E-4 -- --
+E-4  4 --
+E-4 -- --
+E-4 -- --
+E-4 12 --
+Call Pattern_0xebf7 3
+Fallthrough 
+
+[Pattern_0xea19]
+PercussionDefine 23
+SongVolume 200
+Tempo 37
+EchoEnable 255 0 0
+EchoSetup 2 30 2
+EchoVolumeFade 30 30 30
+Volume 200
+Instrument 11
+Vibrato 20 30 20
+C-6 36 6d
+B-5 -- --
+F-5 24 --
+E-5 36 --
+D#5 -- --
+B-4 12 --
+A#4 -- --
+-+- 72 --
+E-5  4 --
+D#5 -- --
+D-5 -- --
+C#5 -- --
+B-4 -- --
+A#4 -- --
+
+[Pattern_0xea49]
+Volume 200
+Instrument 11
+Vibrato 20 30 20
+G-5 36 6d
+F#5 -- --
+C-5 24 --
+B-4 36 --
+A#4 -- --
+F#4 12 --
+F-4 -- --
+-+- 72 --
+C-5  4 --
+B-4 -- --
+A#4 -- --
+A-4 -- --
+G#4 -- --
+F-4 -- --
+Fallthrough 
+
+[Pattern_0xea66]
+Volume 200
+Instrument 11
+Vibrato 20 30 20
+D-5 36 6d
+C#5 -- --
+G-4 24 --
+F#4 36 --
+F-4 -- --
+C#4 12 --
+C-4 -- --
+-+- 72 --
+E-4  4 --
+D#4 -- --
+D-4 -- --
+C#4 -- --
+B-3 -- --
+A#3 -- --
+Fallthrough 
+
+[Pattern_0xea83]
+Volume 200
+Instrument 11
+Vibrato 20 30 20
+G#4 36 6d
+G-4 -- --
+C#4 24 --
+C-4 36 --
+B-3 -- --
+G-3 12 --
+F#3 -- --
+-+- 96 --
+Fallthrough 
+
+[Pattern_0xea99]
+Volume 250
+Instrument 2
+A-1  4 6d
+A-1 -- --
+A-1 64 --
+A-1 24 --
+G-1  4 --
+G-1 -- --
+G-1 64 --
+G-1 24 --
+F-1  4 --
+F-1 -- --
+F-1  4 69
+F-1  4 65
+F-1  4 66
+F-1  4 67
+F-1  4 68
+F-1 -- --
+F-1  4 69
+F-1 -- --
+F-1 -- --
+F-1  4 6a
+F-1 -- --
+F-1  4 6b
+F-1 -- --
+F-1 -- --
+F-1  4 6c
+F-1 -- --
+F-1 -- --
+F-1  4 6d
+F-1 -- --
+F-1  4 6f
+F-1 -- --
+F-1 -- --
+Fallthrough 
+
+[Pattern_0xeadb]
+SongVolume 200
+Tempo 25
+Volume 250
+Instrument 2
+D-2 12 5d
+A-1 -- --
+D-2 -- --
+A-1 -- --
+D-2 -- --
+A-1 -- --
+D-2 -- --
+A-1 -- --
+Call Pattern_0xebee 3
+
+[Pattern_0xeaf2]
+Volume 200
+Instrument 11
+F#2 12 6d
+G-2 -- --
+F#2 -- --
+G-2 -- --
+A#2 -- --
+A-2 -- --
+A#2 -- --
+A-2 -- --
+F#2 -- --
+G-2 -- --
+A#2 -- --
+A-2 -- --
+G#2 -- --
+G-2 -- --
+F-2 -- --
+F#2 -- --
+F#2 -- --
+G-2 -- --
+F#2 -- --
+G-2 -- --
+A#2 -- --
+A-2 -- --
+A#2 -- --
+A-2 -- --
+F#2 -- --
+G-2 -- --
+A#2 -- --
+A-2 -- --
+G#2 -- --
+G-2 -- --
+F-2 -- --
+F#2 -- --
+Fallthrough 
+
+[Pattern_0xeb18]
+Volume 200
+Instrument 11
+F#3 12 6d
+G-3 -- --
+F#3 -- --
+G-3 -- --
+A#3 -- --
+A-3 -- --
+A#3 -- --
+A-3 -- --
+F#3 -- --
+G-3 -- --
+A#3 -- --
+A-3 -- --
+G#3 -- --
+G-3 -- --
+F-3 -- --
+F#3 -- --
+F#3 -- --
+G-3 -- --
+F#3 -- --
+G-3 -- --
+A#3 -- --
+A-3 -- --
+A#3 -- --
+A-3 -- --
+F#3 -- --
+G-3 -- --
+A#3 -- --
+A-3 -- --
+G#3 -- --
+G-3 -- --
+F-3 -- --
+F#3 -- --
+Fallthrough 
+
+[Pattern_0xeb3e]
+Volume 200
+Instrument 2
+D-2 12 5d
+A-1 -- --
+D-2 -- --
+A-1 -- --
+D-2 -- --
+A-1 -- --
+D-2 -- --
+A-1 -- --
+Call Pattern_0xebee 3
+
+[Pattern_0xeb51]
+Volume 220
+Instrument 11
+D-3 12 6d
+A-3 -- --
+D-4 -- --
+D-3 -- --
+A-3 -- --
+D-4 -- --
+D#3 -- --
+D#4 -- --
+D-3 -- --
+A-3 -- --
+D-4 -- --
+D-3 -- --
+A-3 -- --
+D-4 -- --
+C#3 -- --
+C#4 -- --
+D-3 -- --
+A-3 -- --
+D-4 -- --
+D-3 -- --
+A-3 -- --
+D-4 -- --
+D#3 -- --
+D#4 -- --
+D-3 -- --
+A-3 -- --
+D-4 -- --
+D-3 -- --
+A-3 -- --
+D-4 -- --
+C#3 -- --
+C#4 -- --
+Fallthrough 
+
+[Pattern_0xeb77]
+Volume 200
+Instrument 11
+--- 24 --
+D-6 12 6d
+--- 24 --
+D-6 12 --
+--- -- --
+D#6 -- --
+--- 24 --
+D-6 12 --
+--- 24 --
+D-6 12 --
+--- -- --
+C#6 -- --
+--- 24 --
+D-6 12 --
+--- 24 --
+D-6 12 --
+--- -- --
+D#6 -- --
+--- 24 --
+D-6 12 --
+--- 24 --
+D-6 12 --
+--- -- --
+C#6 -- --
+Fallthrough 
+
+[Pattern_0xeba4]
+Volume 200
+Instrument 11
+--- 24 --
+A-5 12 6d
+--- 24 --
+A-5 12 --
+--- -- --
+A#5 -- --
+--- 24 --
+A-5 12 --
+--- 24 --
+A-5 12 --
+--- -- --
+G#5 -- --
+--- 24 --
+A-5 12 --
+--- 24 --
+A-5 12 --
+--- -- --
+A#5 -- --
+--- 24 --
+A-5 12 --
+--- 24 --
+A-5 12 --
+--- -- --
+G#5 -- --
+Fallthrough 
+
+[Pattern_0xebd1]
+Volume 170
+Instrument 20
+E-4  4 6d
+E-4 -- --
+E-4 -- --
+E-4 12 --
+E-4  6 --
+E-4 -- --
+E-4 12 --
+E-4 -- --
+E-4 -- --
+E-4  4 --
+E-4 -- --
+E-4 -- --
+E-4 12 --
+Call Pattern_0xebf7 3
+
+[Pattern_0xebee]
+D-2 -- --
+A-1 -- --
+D-2 -- --
+A-1 -- --
+D-2 -- --
+A-1 -- --
+D-2 -- --
+A-1 -- --
+
+[Pattern_0xebf7]
+E-4  4 --
+E-4 -- --
+E-4 -- --
+E-4 12 --
+E-4  6 --
+E-4 -- --
+E-4 12 --
+E-4 -- --
+E-4 -- --
+E-4  4 --
+E-4 -- --
+E-4 -- --
+E-4 12 --
+
+# Song index 21
+[Song_0xec0b]
+Phrase_0xec2d
+Phrase_0xec1d
+Phrase_0xec3d
+Phrase_0xec4d
+Phrase_0xec5d
+Phrase_0xec6d
+PhraseLoop 255 -5
+
+[Phrase_0xec1d]
+Pattern_0xec7d
+Pattern_0xec86
+Pattern_0xec8e
+Pattern_0xeca5
+Pattern_0xecb5
+None
+None
+None
+
+[Phrase_0xec2d]
+Pattern_0xeccc
+Pattern_0xecec
+None
+None
+None
+None
+None
+None
+
+[Phrase_0xec3d]
+Pattern_0xecf6
+Pattern_0xed3f
+Pattern_0xed87
+Pattern_0xed98
+Pattern_0xeda8
+None
+None
+None
+
+[Phrase_0xec4d]
+Pattern_0xedb9
+Pattern_0xee42
+Pattern_0xee8a
+Pattern_0xeea0
+Pattern_0xeec9
+Pattern_0xeedf
+None
+None
+
+[Phrase_0xec5d]
+Pattern_0xeef8
+Pattern_0xef0f
+Pattern_0xef25
+Pattern_0xef35
+Pattern_0xef47
+Pattern_0xef58
+None
+None
+
+[Phrase_0xec6d]
+Pattern_0xef66
+Pattern_0xef87
+Pattern_0xef8b
+Pattern_0xef91
+Pattern_0xef97
+Pattern_0xefa0
+None
+None
+
+[Pattern_0xec7d]
+Instrument 9
+Volume 200
+Call Pattern_0xefa7 1
+
+[Pattern_0xec86]
+Instrument 9
+Volume 200
+Call Pattern_0xf028 1
+Fallthrough 
+
+[Pattern_0xec8e]
+Instrument 9
+Volume 240
+Pan 8
+Vibrato 28 28 16
+--- 48 --
+D#3 16 6d
+D-3 -- --
+G#3 -- --
+Call Pattern_0xf0a9 1
+-+- 96 --
+Fallthrough 
+
+[Pattern_0xeca5]
+Instrument 9
+Volume 200
+Pan 6
+Vibrato 26 29 18
+Call Pattern_0xf0b5 1
+-+- 96 --
+Fallthrough 
+
+[Pattern_0xecb5]
+Instrument 9
+Volume 180
+Pan 14
+Vibrato 28 28 16
+--- 56 --
+D#3 16 6d
+D-3 -- --
+G#3 -- --
+Call Pattern_0xf0a9 1
+-+- 88 --
+Fallthrough 
+
+[Pattern_0xeccc]
+PercussionDefine 25
+SongVolume 80
+SongVolumeFade 40 180
+Tempo 29
+EchoEnable 255 0 0
+EchoSetup 2 30 2
+EchoVolumeFade 50 40 40
+Instrument 9
+Volume 200
+Pan 14
+Call Pattern_0xefa7 1
+
+[Pattern_0xecec]
+Instrument 9
+Volume 200
+Pan 12
+Call Pattern_0xf028 1
+Fallthrough 
+
+[Pattern_0xecf6]
+Instrument 9
+Volume 200
+Call Pattern_0xefa7 1
+D#5  6 6d
+D#5  6 69
+D#5 -- --
+D#5 -- --
+D#5  6 6b
+D#5  6 69
+D#5 -- --
+D#5 -- --
+D#5  6 6c
+D#5  6 69
+D#5 -- --
+D#5 -- --
+D#5  6 6b
+D#5  6 69
+D#5 -- --
+D#5 -- --
+F-5  6 6d
+F-5  6 69
+F-5 -- --
+F-5 -- --
+F-5  6 6b
+F-5  6 69
+F-5 -- --
+F-5 -- --
+F-5  6 6c
+F-5  6 69
+F-5 -- --
+F-5 -- --
+F-5  6 6b
+F-5  6 69
+F-5 -- --
+F-5 -- --
+
+[Pattern_0xed3f]
+Instrument 9
+Volume 200
+Call Pattern_0xf028 1
+A-4  6 6d
+A-4  6 69
+A-4 -- --
+A-4 -- --
+A-4  6 6b
+A-4  6 69
+A-4 -- --
+A-4 -- --
+A-4  6 6c
+A-4  6 69
+A-4 -- --
+A-4 -- --
+A-4  6 6b
+A-4  6 69
+A-4 -- --
+A-4 -- --
+B-4  6 6d
+B-4  6 69
+B-4 -- --
+B-4 -- --
+B-4  6 6b
+B-4  6 69
+B-4 -- --
+B-4 -- --
+B-4  6 6c
+B-4  6 69
+B-4 -- --
+B-4 -- --
+B-4  6 6b
+B-4  6 69
+B-4 -- --
+B-4 -- --
+Fallthrough 
+
+[Pattern_0xed87]
+--- 48 --
+D#3 16 6d
+D-3 -- --
+G#3 -- --
+Call Pattern_0xf0a9 1
+Call Pattern_0xf0c8 1
+-+- 96 --
+Fallthrough 
+
+[Pattern_0xed98]
+Call Pattern_0xf0b5 1
+-+- 72 --
+G#2 12 --
+G-2 -- --
+-+- 72 --
+A#2 12 --
+A-2 -- --
+-+- 96 --
+Fallthrough 
+
+[Pattern_0xeda8]
+--- 56 --
+D#3 16 6d
+D-3 -- --
+G#3 -- --
+Call Pattern_0xf0a9 1
+Call Pattern_0xf0c8 1
+-+- 88 --
+Fallthrough 
+
+[Pattern_0xedb9]
+Instrument 9
+Volume 180
+D#5  6 6d
+D#5  6 69
+D#5 -- --
+D#5 -- --
+D#5  6 6b
+D#5  6 69
+D#5 -- --
+D#5 -- --
+D#5  6 6c
+D#5  6 69
+D#5 -- --
+D#5 -- --
+D#5  6 6b
+D#5  6 69
+D#5 -- --
+D#5 -- --
+D-5  6 6d
+D-5  6 69
+D-5 -- --
+D-5 -- --
+D-5  6 6b
+D-5  6 69
+D-5 -- --
+D-5 -- --
+D-5  6 6c
+D-5  6 69
+D-5 -- --
+D-5 -- --
+D-5  6 6b
+D-5  6 69
+D-5 -- --
+D-5 -- --
+C#5  6 6d
+C#5  6 69
+C#5 -- --
+C#5 -- --
+C#5  6 6b
+C#5  6 69
+C#5 -- --
+C#5 -- --
+C#5  6 6c
+C#5  6 69
+C#5 -- --
+C#5 -- --
+C#5  6 6b
+C#5 -- --
+C#5 -- --
+C#5  6 69
+C-5  6 6d
+C-5  6 69
+C-5 -- --
+C-5 -- --
+C-5  6 6b
+C-5  6 69
+C-5 -- --
+C-5 -- --
+C-5  6 6c
+C-5  6 69
+C-5 -- --
+C-5 -- --
+C-5  6 6b
+C-5  6 69
+C-5 -- --
+C-5 -- --
+Call Pattern_0xf0d3 4
+
+[Pattern_0xee42]
+Instrument 9
+Volume 180
+A-4  6 6d
+A-4  6 69
+A-4 -- --
+A-4 -- --
+A-4  6 6b
+A-4  6 69
+A-4 -- --
+A-4 -- --
+A-4  6 6c
+A-4  6 69
+A-4 -- --
+A-4 -- --
+A-4  6 6b
+A-4  6 69
+A-4 -- --
+A-4 -- --
+Call Pattern_0xf0e4 1
+F#4  6 6d
+F#4  6 69
+F#4 -- --
+F#4 -- --
+F#4  6 6b
+F#4  6 69
+F#4 -- --
+F#4 -- --
+F#4 -- --
+F#4 -- --
+F#4 -- --
+F#4 -- --
+F#4  6 6b
+F#4  6 69
+F#4 -- --
+F#4 -- --
+Call Pattern_0xf125 4
+Fallthrough 
+
+[Pattern_0xee8a]
+--- 48 --
+G-3 16 6d
+F#3 -- --
+C-4 -- --
+Call Pattern_0xf136 1
+-+- 96 --
+-+- 24 --
+D-4 12 --
+C#4 -- --
+-+- 48 --
+-+- 96 --
+Fallthrough 
+
+[Pattern_0xeea0]
+--- 48 --
+G-2 16 6d
+F#2 -- --
+C-3 -- --
+B-2 48 --
+F-2 36 --
+E-2 12 --
+-+- 48 --
+E-2 16 --
+D#2 -- --
+A#2 -- --
+A-2 48 --
+D#2 36 --
+D-2 12 --
+-+- 96 --
+-+- 24 --
+F-3 12 --
+E-3 -- --
+-+- 48 --
+-+- 72 --
+F-4 12 --
+E-4 -- --
+-+- 96 --
+Fallthrough 
+
+[Pattern_0xeec9]
+--- 56 --
+G-3 16 6d
+F#3 -- --
+C-4 -- --
+Call Pattern_0xf136 1
+-+- 96 --
+-+- 24 --
+D-4 12 --
+C#4 -- --
+-+- 48 --
+-+- 88 --
+Fallthrough 
+
+[Pattern_0xeedf]
+Instrument 9
+Volume 240
+Pan 8
+Vibrato 28 28 16
+--- 96 --
+--- -- --
+--- -- --
+--- -- --
+--- -- --
+-+- 72 6d
+G#3 12 --
+G-3 -- --
+-+- 96 --
+-+- -- --
+Fallthrough 
+
+[Pattern_0xeef8]
+A#4  6 69
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+Call Pattern_0xf14e 3
+
+[Pattern_0xef0f]
+E-4  6 69
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+Call Pattern_0xf15f 3
+Fallthrough 
+
+[Pattern_0xef25]
+-+- 48 6d
+C#3 12 --
+C-3 36 --
+-+- 96 --
+C#4 12 --
+C-4 -- --
+-+- 72 --
+-+- 96 --
+Fallthrough 
+
+[Pattern_0xef35]
+-+- 96 68
+E-3 12 6d
+D#3 -- --
+-+- 72 --
+-+- 48 --
+E-4 12 --
+D#4 -- --
+-+- 24 --
+-+- 96 --
+Fallthrough 
+
+[Pattern_0xef47]
+-+- 56 6d
+C#3 12 --
+C-3 -- --
+-+- 24 --
+-+- 96 --
+C#4 12 --
+C-4 -- --
+-+- 72 --
+-+- 88 --
+Fallthrough 
+
+[Pattern_0xef58]
+-+- 96 68
+-+- 48 --
+G-3 12 6d
+F#3 -- --
+-+- 24 --
+-+- 96 --
+-+- -- --
+Fallthrough 
+
+[Pattern_0xef66]
+B-4  6 6b
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4  6 69
+B-4 -- --
+B-4  6 6c
+B-4  6 69
+B-4 -- --
+B-4 -- --
+B-4  6 6b
+B-4  6 69
+B-4 -- --
+B-4 -- --
+Call Pattern_0xf170 1
+
+[Pattern_0xef87]
+Call Pattern_0xf028 1
+Fallthrough 
+
+[Pattern_0xef8b]
+E-4 96 7d
+-+- -- --
+-+- -- --
+-+- -- --
+Fallthrough 
+
+[Pattern_0xef91]
+C#3 96 6d
+-+- -- --
+-+- -- --
+-+- -- --
+Fallthrough 
+
+[Pattern_0xef97]
+---  8 --
+E-4 88 7d
+-+- 96 --
+-+- -- --
+-+- -- --
+Fallthrough 
+
+[Pattern_0xefa0]
+G-3 96 6d
+-+- -- --
+-+- -- --
+-+- -- --
+
+[Pattern_0xefa7]
+B-4  6 6d
+B-4  6 69
+B-4 -- --
+B-4 -- --
+B-4  6 6b
+B-4  6 69
+B-4 -- --
+B-4 -- --
+B-4  6 6c
+B-4  6 69
+B-4 -- --
+B-4 -- --
+B-4  6 6b
+B-4  6 69
+B-4 -- --
+B-4 -- --
+A#4  6 6d
+A#4  6 69
+A#4 -- --
+A#4 -- --
+A#4  6 6b
+A#4  6 69
+A#4 -- --
+A#4 -- --
+A#4  6 6c
+A#4  6 69
+A#4 -- --
+A#4 -- --
+A#4  6 6b
+A#4  6 69
+A#4 -- --
+A#4 -- --
+D-5  6 6d
+D-5  6 69
+D-5 -- --
+D-5 -- --
+D-5  6 6b
+D-5  6 69
+D-5 -- --
+D-5 -- --
+D-5  6 6c
+D-5  6 69
+D-5 -- --
+D-5 -- --
+D-5  6 6b
+D-5  6 69
+D-5 -- --
+D-5 -- --
+C#5  6 6d
+C#5  6 69
+C#5 -- --
+C#5 -- --
+C#5  6 6b
+C#5  6 69
+C#5 -- --
+C#5 -- --
+C#5  6 6c
+C#5  6 69
+C#5 -- --
+C#5 -- --
+C#5  6 6b
+C#5  6 69
+C#5 -- --
+C#5 -- --
+
+[Pattern_0xf028]
+F-4  6 6d
+F-4  6 69
+F-4 -- --
+F-4 -- --
+F-4  6 6b
+F-4  6 69
+F-4 -- --
+F-4 -- --
+F-4  6 6c
+F-4  6 69
+F-4 -- --
+F-4 -- --
+F-4  6 6b
+F-4  6 69
+F-4 -- --
+F-4 -- --
+E-4  6 6d
+E-4  6 69
+E-4 -- --
+E-4 -- --
+E-4  6 6b
+E-4  6 69
+E-4 -- --
+E-4 -- --
+E-4  6 6c
+E-4  6 69
+E-4 -- --
+E-4 -- --
+E-4  6 6b
+E-4  6 69
+E-4 -- --
+E-4 -- --
+G#4  6 6d
+G#4  6 69
+G#4 -- --
+G#4 -- --
+G#4  6 6b
+G#4  6 69
+G#4 -- --
+G#4 -- --
+G#4  6 6c
+G#4  6 69
+G#4 -- --
+G#4 -- --
+G#4  6 6b
+G#4  6 69
+G#4 -- --
+G#4 -- --
+G-4  6 6d
+G-4  6 69
+G-4 -- --
+G-4 -- --
+G-4  6 6b
+G-4  6 69
+G-4 -- --
+G-4 -- --
+G-4  6 6c
+G-4  6 69
+G-4 -- --
+G-4 -- --
+G-4  6 6b
+G-4  6 69
+G-4 -- --
+G-4 -- --
+
+[Pattern_0xf0a9]
+G-3 48 --
+A#2 36 --
+A-2 12 --
+-+- 72 --
+A#3 12 --
+A-3 -- --
+
+[Pattern_0xf0b5]
+--- 48 --
+D#2 16 6d
+D-2 -- --
+G#2 -- --
+G-2 48 --
+A#1 36 --
+A-1 12 --
+-+- 72 --
+F#2 12 --
+F-2 -- --
+
+[Pattern_0xf0c8]
+-+- 72 --
+C-4 12 --
+B-3 -- --
+-+- 72 --
+D-4 12 --
+C#4 -- --
+
+[Pattern_0xf0d3]
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+
+[Pattern_0xf0e4]
+G#4  6 6d
+G#4  6 69
+G#4 -- --
+G#4 -- --
+G#4  6 6b
+G#4  6 69
+G#4 -- --
+G#4 -- --
+G#4  6 6c
+G#4  6 69
+G#4 -- --
+G#4 -- --
+G#4  6 6b
+G#4  6 69
+G#4 -- --
+G#4 -- --
+G-4  6 6d
+G-4  6 69
+G-4 -- --
+G-4 -- --
+G-4  6 6b
+G-4  6 69
+G-4 -- --
+G-4 -- --
+G-4  6 6c
+G-4  6 69
+G-4 -- --
+G-4 -- --
+G-4  6 6b
+G-4  6 69
+G-4 -- --
+G-4 -- --
+
+[Pattern_0xf125]
+F-4 -- --
+F-4 -- --
+F-4 -- --
+F-4 -- --
+F-4 -- --
+F-4 -- --
+F-4 -- --
+F-4 -- --
+F-4 -- --
+F-4 -- --
+F-4 -- --
+F-4 -- --
+F-4 -- --
+F-4 -- --
+F-4 -- --
+F-4 -- --
+
+[Pattern_0xf136]
+B-3 48 --
+F-3 36 --
+E-3 12 --
+-+- 48 --
+E-3 16 --
+D#3 -- --
+A#3 -- --
+A-3 48 --
+D#3 36 --
+D-3 12 --
+-+- 72 --
+D-3 12 --
+C#3 -- --
+
+[Pattern_0xf14e]
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+
+[Pattern_0xf15f]
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+
+[Pattern_0xf170]
+A#4  6 6d
+A#4  6 69
+A#4 -- --
+A#4 -- --
+A#4  6 6b
+A#4  6 69
+A#4 -- --
+A#4 -- --
+A#4  6 6c
+A#4  6 69
+A#4 -- --
+A#4 -- --
+A#4  6 6b
+A#4  6 69
+A#4 -- --
+A#4 -- --
+D-5  6 6d
+D-5  6 69
+D-5 -- --
+D-5 -- --
+D-5  6 6b
+D-5  6 69
+D-5 -- --
+D-5 -- --
+D-5  6 6c
+D-5  6 69
+D-5 -- --
+D-5 -- --
+D-5  6 6b
+D-5  6 69
+D-5 -- --
+D-5 -- --
+C#5  6 6d
+C#5  6 69
+C#5 -- --
+C#5 -- --
+C#5  6 6b
+C#5  6 69
+C#5 -- --
+C#5 -- --
+C#5  6 6c
+C#5  6 69
+C#5 -- --
+C#5 -- --
+C#5  6 6b
+C#5  6 69
+C#5 -- --
+C#5 -- --
+
+# Song index 22
+[Song_0xf1d1]
+Phrase_0xf1eb
+Phrase_0xf1db
+PhraseLoop 255 -2
+
+[Phrase_0xf1db]
+Pattern_0xf1fb
+Pattern_0xf20a
+Pattern_0xf22c
+Pattern_0xf24a
+None
+None
+None
+None
+
+[Phrase_0xf1eb]
+Pattern_0xf256
+None
+None
+Pattern_0xf265
+None
+None
+None
+None
+
+[Pattern_0xf1fb]
+Call Pattern_0xf272 1
+-+- -- --
+F#1 -- --
+A#1 24 --
+E-1 -- --
+G#1 -- --
+Call Pattern_0xf28f 2
+
+[Pattern_0xf20a]
+Instrument 14
+Volume 100
+G#4  8 2d
+G#4 -- --
+D#4 -- --
+D#4 -- --
+F#4 -- --
+F#4 -- --
+C#4 -- --
+C#4 -- --
+G#4 -- --
+G#4 -- --
+D#4 -- --
+D#4 -- --
+F#4 -- --
+F#4 -- --
+C#4 -- --
+C#4 -- --
+G#4 -- --
+G#4 -- --
+D#4 -- --
+D#4 -- --
+F#4 -- --
+F#4 -- --
+C#4 -- --
+C#4 -- --
+Call Pattern_0xf29c 2
+Fallthrough 
+
+[Pattern_0xf22c]
+Instrument 15
+Volume 160
+F#5 12 6d
+A#5 -- --
+E-5 -- --
+G#5 -- --
+D-5 -- --
+G-5 -- --
+F#5 -- --
+A#5 -- --
+Call Pattern_0xf2b5 1
+F#5 -- --
+A#5 -- --
+E-5 -- --
+G#5 -- --
+D-5 -- --
+G-5 -- --
+F#5 -- --
+A#5 -- --
+Call Pattern_0xf2b5 1
+Fallthrough 
+
+[Pattern_0xf24a]
+Instrument 14
+Volume 230
+Call Pattern_0xf2c6 1
+Call Pattern_0xf2e3 1
+Fallthrough 
+
+[Pattern_0xf256]
+PercussionDefine 25
+Call Pattern_0xf272 1
+Call Pattern_0xf2f1 1
+Call Pattern_0xf28f 1
+
+[Pattern_0xf265]
+Instrument 14
+Volume 230
+Call Pattern_0xf2c6 1
+Call Pattern_0xf2e3 1
+
+[Pattern_0xf272]
+SongVolume 180
+Tempo 31
+EchoEnable 255 0 0
+EchoSetup 2 30 2
+EchoVolumeFade 40 80 80
+Instrument 14
+Volume 250
+F#1 24 6d
+A#1 -- --
+E-1 -- --
+G#1 12 --
+D-1 -- --
+
+[Pattern_0xf28f]
+F#1 -- --
+A#1 -- --
+E-1 -- --
+G#1 12 --
+D-1 -- --
+-+- -- --
+F#1 -- --
+A#1 24 --
+E-1 -- --
+G#1 -- --
+
+[Pattern_0xf29c]
+G#4 -- --
+G#4 -- --
+D#4 -- --
+D#4 -- --
+F#4 -- --
+F#4 -- --
+C#4 -- --
+C#4 -- --
+G#4 -- --
+G#4 -- --
+D#4 -- --
+D#4 -- --
+F#4 -- --
+F#4 -- --
+C#4 -- --
+C#4 -- --
+G#4 -- --
+G#4 -- --
+D#4 -- --
+D#4 -- --
+F#4 -- --
+F#4 -- --
+C#4 -- --
+C#4 -- --
+
+[Pattern_0xf2b5]
+E-5 -- --
+G#5 -- --
+D-5 -- --
+G-5 -- --
+F#5 -- --
+A#5 -- --
+E-5 -- --
+G#5 -- --
+D-5 -- --
+G-5 -- --
+F#5 -- --
+A#5 -- --
+E-5 -- --
+G#5 -- --
+D-5 -- --
+G-5 -- --
+
+[Pattern_0xf2c6]
+---  6 --
+F#1 24 6d
+A#1 -- --
+E-1 -- --
+G#1 12 --
+D-1 -- --
+-+- -- --
+F#1 -- --
+A#1 24 --
+E-1 -- --
+G#1 -- --
+F#1 -- --
+A#1 -- --
+E-1 -- --
+G#1 12 --
+D-1 -- --
+-+- -- --
+F#1 -- --
+A#1 24 --
+E-1 -- --
+G#1 -- --
+
+[Pattern_0xf2e3]
+F#1 -- --
+A#1 -- --
+E-1 -- --
+G#1 12 --
+D-1 -- --
+-+- -- --
+F#1 -- --
+A#1 24 --
+E-1 -- --
+G#1 18 --
+
+[Pattern_0xf2f1]
+-+- -- --
+F#1 -- --
+A#1 24 --
+E-1 -- --
+G#1 -- --
+F#1 -- --
+A#1 -- --
+E-1 -- --
+G#1 12 --
+D-1 -- --
+-+- -- --
+F#1 -- --
+A#1 24 --
+E-1 -- --
+G#1 -- --
+
+# Song index 24
+[Song_0xf304]
+Phrase_0xf342
+Phrase_0xf312
+Phrase_0xf322
+Phrase_0xf332
+PhraseLoop 255 -3
+
+[Phrase_0xf312]
+Pattern_0xf352
+Pattern_0xf374
+None
+Pattern_0xf387
+Pattern_0xf398
+None
+None
+None
+
+[Phrase_0xf322]
+Pattern_0xf3b7
+Pattern_0xf3c4
+Pattern_0xf3ce
+Pattern_0xf3e0
+Pattern_0xf3e4
+None
+None
+None
+
+[Phrase_0xf332]
+Pattern_0xf3f3
+Pattern_0xf3fb
+Pattern_0xf408
+Pattern_0xf42f
+Pattern_0xf45a
+None
+None
+None
+
+[Phrase_0xf342]
+Pattern_0xf45f
+Pattern_0xf497
+Pattern_0xf4bc
+Pattern_0xf4d0
+Pattern_0xf4ef
+Pattern_0xf50e
+None
+None
+
+[Pattern_0xf352]
+Instrument 10
+Tempo 21
+Volume 100
+VolumeFade 60 200
+Transpose 0
+Vibrato 26 28 30
+Pan 14
+B-4 48 7d
+D-5 24 --
+Call Pattern_0xf523 1
+D-5 48 --
+C-5 12 --
+B-4 -- --
+A-4 72 --
+
+[Pattern_0xf374]
+Instrument 10
+Volume 100
+VolumeFade 80 200
+Pan 6
+C-3 72 6d
+C-3 -- --
+C-3 -- --
+C-3 -- --
+B-2 -- --
+A#2 -- --
+A-2 -- --
+D-3 -- --
+Fallthrough 
+
+[Pattern_0xf387]
+Instrument 10
+Volume 100
+VolumeFade 80 200
+Pan 10
+Vibrato 24 26 24
+Call Pattern_0xf537 1
+Fallthrough 
+
+[Pattern_0xf398]
+Instrument 10
+Volume 100
+VolumeFade 80 160
+Vibrato 26 28 30
+Pan 11
+---  8 --
+B-4 48 7d
+D-5 24 --
+Call Pattern_0xf523 1
+D-5 48 --
+C-5 12 --
+B-4 -- --
+A-4 64 --
+Fallthrough 
+
+[Pattern_0xf3b7]
+B-4 48 7d
+D-5 24 --
+Call Pattern_0xf523 1
+D-6 72 --
+-+- -- --
+
+[Pattern_0xf3c4]
+C-3 72 6d
+C-3 -- --
+C-3 -- --
+C-3 -- --
+B-2 -- --
+A#2 -- --
+A-2 -- --
+D-3 -- --
+Fallthrough 
+
+[Pattern_0xf3ce]
+Instrument 21
+Volume 130
+Vibrato 28 28 28
+E-4 72 7d
+F#4 -- --
+E-4 -- --
+F#4 -- --
+F#4 -- --
+F-4 -- --
+E-4 -- --
+D-4 -- --
+Fallthrough 
+
+[Pattern_0xf3e0]
+Call Pattern_0xf537 1
+Fallthrough 
+
+[Pattern_0xf3e4]
+---  8 --
+B-4 48 7d
+D-5 24 --
+Call Pattern_0xf523 1
+D-6 72 --
+-+- 64 --
+Fallthrough 
+
+[Pattern_0xf3f3]
+Instrument 22
+Call Pattern_0xf562 1
+-+- -- --
+
+[Pattern_0xf3fb]
+F-3 72 6d
+E-3 -- --
+D-3 -- --
+C-3 -- --
+F-3 -- --
+E-3 -- --
+D#3 -- --
+D-3 48 --
+G-2 24 --
+Fallthrough 
+
+[Pattern_0xf408]
+Instrument 10
+Vibrato 28 28 28
+--- 24 --
+C-4 48 6d
+--- 24 --
+B-3 48 --
+--- 24 --
+A-3 48 --
+--- 24 --
+G-3 48 --
+--- 24 --
+C-4 48 --
+--- 24 --
+B-3 48 --
+--- 24 --
+A#3 48 --
+--- 24 --
+A-3 -- --
+F-3 -- --
+Fallthrough 
+
+[Pattern_0xf42f]
+--- 12 --
+C-4 12 6d
+E-4 48 --
+--- 12 --
+B-3 -- --
+D-4 48 --
+--- 12 --
+A-3 -- --
+C-4 48 --
+--- 12 --
+G-3 -- --
+B-3 48 --
+--- 12 --
+C-4 -- --
+E-4 48 --
+--- 12 --
+B-3 -- --
+D-4 48 --
+--- 12 --
+A#3 -- --
+C#4 48 --
+--- 12 --
+A-3 -- --
+C-4 24 --
+B-3 -- --
+Fallthrough 
+
+[Pattern_0xf45a]
+Call Pattern_0xf562 1
+-+- -- --
+Fallthrough 
+
+[Pattern_0xf45f]
+PercussionDefine 24
+SongVolume 180
+EchoEnable 255 0 0
+EchoSetup 2 60 2
+EchoVolumeFade 30 40 40
+Tempo 29
+Instrument 10
+Volume 200
+Vibrato 26 28 22
+Pan 14
+--- 12 --
+G-4 14 6d
+A-4 13 --
+B-4 12 --
+C-5 11 --
+D-5 10 --
+E-5  9 --
+F-5  8 --
+G-5 24 --
+F-5 -- --
+C-6 -- --
+A#5 -- --
+B-5 96 7d
+-+- 48 --
+
+[Pattern_0xf497]
+Instrument 10
+Volume 160
+Vibrato 24 26 23
+Pan 12
+--- 20 --
+G-4 14 6d
+A-4 13 --
+B-4 12 --
+C-5 11 --
+D-5 10 --
+E-5  9 --
+F-5  8 --
+G-5 24 --
+F-5 -- --
+C-6 -- --
+A#5 -- --
+B-5 96 7d
+-+- 40 --
+Fallthrough 
+
+[Pattern_0xf4bc]
+Instrument 10
+Volume 200
+Vibrato 28 26 20
+Pan 6
+--- 89 --
+G#3 48 7d
+A#3 -- --
+G-3 96 --
+-+- 48 --
+Fallthrough 
+
+[Pattern_0xf4d0]
+Instrument 10
+Volume 200
+Vibrato 24 26 23
+Pan 10
+--- 51 --
+E-4 11 6d
+F-4 10 --
+G-4  9 --
+A-4  8 --
+D#4 24 --
+D-4 -- --
+G#4 -- --
+G-4 -- --
+F#4 96 7d
+-+- 48 --
+Fallthrough 
+
+[Pattern_0xf4ef]
+Instrument 10
+Volume 200
+Vibrato 24 26 23
+Pan 8
+--- 51 --
+G-3 11 6d
+A-3 10 --
+B-3  9 --
+C-4  8 --
+C-5 24 --
+A#4 -- --
+F-5 -- --
+D#5 -- --
+D-5 96 7d
+-+- 48 --
+Fallthrough 
+
+[Pattern_0xf50e]
+Instrument 10
+Volume 200
+Vibrato 28 26 20
+Pan 4
+--- 89 --
+G#2 48 7d
+A#2 -- --
+G-2 96 --
+-+- 48 --
+
+[Pattern_0xf523]
+A-4 48 --
+G-4 12 --
+A-4 -- --
+B-4 48 --
+D-5 24 --
+A-4 72 --
+B-4 48 --
+D-5 24 --
+A-5 48 --
+G-5 24 --
+
+[Pattern_0xf537]
+--- 12 --
+G-3 12 6d
+E-4 48 --
+--- 12 --
+A-3 -- --
+F#4 48 --
+--- 12 --
+G-3 -- --
+E-4 48 --
+--- 12 --
+A-3 -- --
+F#4 48 --
+--- 12 --
+D-4 -- --
+G-4 48 --
+--- 12 --
+C#4 -- --
+G-4 48 --
+--- 12 --
+C-4 -- --
+G-4 48 --
+--- 12 --
+C-4 -- --
+F#4 48 --
+
+[Pattern_0xf562]
+D-5 48 7d
+C-5 12 --
+B-4 -- --
+C-5 -- --
+B-4 -- --
+G-4 48 --
+C-5 -- --
+B-4 12 --
+A-4 -- --
+B-4 -- --
+A-4 -- --
+E-4 48 --
+D-5 -- --
+C-5 12 --
+B-4 -- --
+C-5 -- --
+B-4 -- --
+G-4 24 --
+C-5 -- --
+G-5 72 --
+
+# Song index 25
+[Song_0xf580]
+Phrase_0xf59c
+Phrase_0xf58c
+Phrase_0xf5ac
+PhraseLoop 255 -2
+
+[Phrase_0xf58c]
+Pattern_0xf5bc
+Pattern_0xf5d9
+Pattern_0xf603
+Pattern_0xf630
+Pattern_0xf65d
+Pattern_0xf68a
+Pattern_0xf6a1
+Pattern_0xf6d8
+
+[Phrase_0xf59c]
+Pattern_0xf6f4
+Pattern_0xf724
+Pattern_0xf73e
+Pattern_0xf75e
+Pattern_0xf77e
+Pattern_0xf79d
+Pattern_0xf7b4
+Pattern_0xf7cb
+
+[Phrase_0xf5ac]
+Pattern_0xf7e2
+Pattern_0xf7ee
+Pattern_0xf816
+Pattern_0xf841
+Pattern_0xf86c
+Pattern_0xf897
+Pattern_0xf8a1
+Pattern_0xf8cb
+
+[Pattern_0xf5bc]
+Instrument 10
+Volume 100
+VolumeFade 150 240
+Vibrato 26 28 30
+Pan 14
+Call Pattern_0xf8d8 1
+Call Pattern_0xf8e4 1
+D-5 48 --
+C-5 12 --
+B-4 -- --
+A-4 72 --
+
+[Pattern_0xf5d9]
+Volume 120
+Pan 20
+PanFade 144 0
+G-4 24 7d
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+PanFade 144 20
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+PanFade 144 0
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+PanFade 144 20
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+Fallthrough 
+
+[Pattern_0xf603]
+Volume 120
+Pan 20
+PanFade 144 0
+---  6 --
+E-4 24 7d
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+PanFade 144 20
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+PanFade 144 0
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+PanFade 144 20
+E-4 -- --
+E-4 -- --
+E-4 -- --
+D-4 -- --
+D-4 -- --
+D-4 18 --
+Fallthrough 
+
+[Pattern_0xf630]
+Volume 120
+Pan 0
+PanFade 144 20
+--- 12 --
+D-4 24 7d
+D-4 -- --
+D-4 -- --
+D-4 -- --
+D-4 -- --
+D-4 -- --
+PanFade 144 0
+D-4 -- --
+D-4 -- --
+D-4 -- --
+D-4 -- --
+D-4 -- --
+D-4 -- --
+PanFade 144 20
+D-4 -- --
+D-4 -- --
+D-4 -- --
+D-4 -- --
+D-4 -- --
+D-4 -- --
+PanFade 144 0
+D-4 -- --
+D-4 -- --
+D-4 -- --
+C-4 -- --
+C-4 -- --
+C-4 12 --
+Fallthrough 
+
+[Pattern_0xf65d]
+Volume 120
+Pan 0
+PanFade 144 20
+--- 18 --
+B-3 24 7d
+B-3 -- --
+B-3 -- --
+B-3 -- --
+B-3 -- --
+B-3 -- --
+PanFade 144 0
+B-3 -- --
+B-3 -- --
+B-3 -- --
+B-3 -- --
+B-3 -- --
+B-3 -- --
+PanFade 144 20
+B-3 -- --
+B-3 -- --
+B-3 -- --
+A#3 -- --
+A#3 -- --
+A#3 -- --
+PanFade 144 0
+A-3 -- --
+A-3 -- --
+A-3 -- --
+A-3 -- --
+A-3 -- --
+A-3  6 --
+Fallthrough 
+
+[Pattern_0xf68a]
+Instrument 10
+Volume 100
+VolumeFade 140 220
+Pan 6
+Vibrato 26 16 20
+Call Pattern_0xf8f3 1
+C-4 -- --
+C-4 -- --
+B-3 -- --
+A#3 -- --
+A-3 -- --
+D-4 -- --
+Fallthrough 
+
+[Pattern_0xf6a1]
+Instrument 10
+Volume 100
+VolumeFade 150 220
+Pan 10
+Vibrato 20 20 20
+--- 12 --
+G-3 12 6d
+E-4 48 --
+--- 12 --
+A-3 -- --
+F#4 48 --
+--- 12 --
+G-3 -- --
+E-4 48 --
+--- 12 --
+A-3 -- --
+F#4 48 --
+--- 12 --
+G-3 -- --
+D-4 48 --
+--- 12 --
+G-3 -- --
+C#4 48 --
+--- 12 --
+G-3 -- --
+C-4 48 --
+--- 12 --
+A-3 -- --
+F#4 48 --
+Fallthrough 
+
+[Pattern_0xf6d8]
+Instrument 10
+Volume 100
+VolumeFade 160 200
+Vibrato 26 28 30
+Pan 12
+Call Pattern_0xf8f8 1
+Call Pattern_0xf8e4 1
+D-5 48 --
+C-5 12 --
+B-4 -- --
+A-4 64 --
+Fallthrough 
+
+[Pattern_0xf6f4]
+PercussionDefine 24
+SongVolume 180
+EchoEnable 255 0 0
+EchoSetup 2 60 2
+EchoVolumeFade 30 40 40
+Tempo 33
+TempoFade 180 62
+Instrument 14
+Volume 20
+Call Pattern_0xf905 1
+--- -- --
+--- -- --
+Tempo 21
+Instrument 14
+Pan 20
+VolumeFade 80 120
+--- 24 --
+G-4 24 7d
+G-4 -- --
+G-4 -- --
+
+[Pattern_0xf724]
+Instrument 14
+Volume 160
+Pan 20
+D-3 48 7d
+F-3 -- --
+B-3 -- --
+D-4 -- --
+VolumeFade 250 60
+A-4 -- --
+A-4 -- --
+A-4 -- --
+A-4 -- --
+A-4 16 --
+A-4 -- --
+A-4 -- --
+A-4 -- --
+A-4 -- --
+A-4 -- --
+Fallthrough 
+
+[Pattern_0xf73e]
+Instrument 14
+Volume 160
+Pan 13
+--- 12 --
+F-3 48 7d
+A-3 -- --
+D-4 -- --
+F-4 -- --
+VolumeFade 250 60
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 36 --
+-+-  4 --
+B-4 16 --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 12 --
+Fallthrough 
+
+[Pattern_0xf75e]
+Instrument 14
+Volume 160
+Pan 8
+--- 24 --
+A-3 48 7d
+B-3 -- --
+F-4 -- --
+A-4 -- --
+VolumeFade 250 60
+A-4 -- --
+A-4 -- --
+A-4 -- --
+A-4 24 --
+-+-  8 --
+A-4 16 --
+A-4 -- --
+A-4 -- --
+A-4 -- --
+A-4 -- --
+A-4  8 --
+Fallthrough 
+
+[Pattern_0xf77e]
+Instrument 14
+Volume 160
+Pan 0
+--- 36 --
+B-3 48 7d
+D-4 -- --
+A-4 -- --
+B-4 -- --
+VolumeFade 250 60
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 12 --
+-+- -- --
+B-4 16 --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4  4 --
+Fallthrough 
+
+[Pattern_0xf79d]
+Instrument 14
+Volume 20
+Pan 13
+Call Pattern_0xf905 1
+--- -- --
+--- -- --
+VolumeFade 80 120
+--- 30 --
+E-4 24 7d
+E-4 -- --
+E-4 18 --
+Fallthrough 
+
+[Pattern_0xf7b4]
+Instrument 14
+Volume 20
+Pan 7
+Call Pattern_0xf905 1
+--- -- --
+--- -- --
+VolumeFade 80 120
+--- 36 --
+D-4 24 7d
+D-4 -- --
+D-4 12 --
+Fallthrough 
+
+[Pattern_0xf7cb]
+Instrument 14
+Volume 20
+Pan 0
+Call Pattern_0xf905 1
+--- -- --
+--- -- --
+VolumeFade 80 120
+--- 42 --
+B-3 24 7d
+B-3 -- --
+B-3  6 --
+Fallthrough 
+
+[Pattern_0xf7e2]
+Call Pattern_0xf8d8 1
+Call Pattern_0xf8e4 1
+D-6 72 --
+-+- -- --
+
+[Pattern_0xf7ee]
+Pan 20
+PanFade 144 0
+G-4 24 7d
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+PanFade 144 20
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+PanFade 144 0
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+PanFade 144 20
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+Fallthrough 
+
+[Pattern_0xf816]
+Pan 20
+PanFade 144 0
+---  6 --
+E-4 24 7d
+E-4 -- --
+E-4 -- --
+F#4 -- --
+F#4 -- --
+F#4 -- --
+PanFade 144 20
+E-4 -- --
+E-4 -- --
+E-4 -- --
+F#4 -- --
+F#4 -- --
+F#4 -- --
+PanFade 144 0
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+E-4 -- --
+PanFade 144 20
+E-4 -- --
+E-4 -- --
+E-4 -- --
+D-4 -- --
+D-4 -- --
+D-4 18 --
+Fallthrough 
+
+[Pattern_0xf841]
+Pan 0
+PanFade 144 20
+--- 12 --
+D-4 24 7d
+D-4 -- --
+D-4 -- --
+D-4 -- --
+D-4 -- --
+D-4 -- --
+PanFade 144 0
+D-4 -- --
+D-4 -- --
+D-4 -- --
+D-4 -- --
+D-4 -- --
+D-4 -- --
+PanFade 144 20
+D-4 -- --
+D-4 -- --
+D-4 -- --
+D-4 -- --
+D-4 -- --
+D-4 -- --
+PanFade 144 0
+D-4 -- --
+D-4 -- --
+D-4 -- --
+C-4 -- --
+C-4 -- --
+C-4 12 --
+Fallthrough 
+
+[Pattern_0xf86c]
+Pan 0
+PanFade 144 20
+--- 18 --
+B-3 24 7d
+B-3 -- --
+B-3 -- --
+A-3 -- --
+A-3 -- --
+A-3 -- --
+PanFade 144 0
+B-3 -- --
+B-3 -- --
+B-3 -- --
+A-3 -- --
+A-3 -- --
+A-3 -- --
+PanFade 144 20
+B-3 -- --
+B-3 -- --
+B-3 -- --
+A#3 -- --
+A#3 -- --
+A#3 -- --
+PanFade 144 0
+A-3 -- --
+A-3 -- --
+A-3 -- --
+A-3 -- --
+A-3 -- --
+A-3  6 --
+Fallthrough 
+
+[Pattern_0xf897]
+Call Pattern_0xf8f3 1
+C-4 -- --
+C-4 -- --
+B-3 -- --
+A#3 -- --
+A-3 -- --
+D-4 -- --
+Fallthrough 
+
+[Pattern_0xf8a1]
+--- 12 --
+G-3 12 6d
+E-4 48 --
+--- 12 --
+A-3 -- --
+F#4 48 --
+--- 12 --
+G-3 -- --
+E-4 48 --
+--- 12 --
+A-3 -- --
+F#4 48 --
+--- 12 --
+G-3 -- --
+D-4 48 --
+--- 12 --
+G-3 -- --
+C#4 48 --
+--- 12 --
+G-3 -- --
+C-4 48 --
+--- 12 --
+A-3 -- --
+F#4 48 --
+Fallthrough 
+
+[Pattern_0xf8cb]
+Call Pattern_0xf8f8 1
+Call Pattern_0xf8e4 1
+D-6 72 --
+-+- 64 --
+
+[Pattern_0xf8d8]
+B-4 48 6d
+D-5 24 --
+A-4 48 7d
+G-4 12 --
+A-4 -- --
+
+[Pattern_0xf8e4]
+B-4 48 --
+D-5 24 --
+A-4 72 --
+B-4 48 --
+D-5 24 --
+A-5 48 --
+G-5 24 --
+
+[Pattern_0xf8f3]
+C-4 72 6d
+C-4 -- --
+
+[Pattern_0xf8f8]
+---  8 --
+B-4 48 6d
+D-5 24 --
+A-4 48 --
+G-4 12 --
+A-4 -- --
+
+[Pattern_0xf905]
+--- 96 --
+--- -- --
+
+# Song index 26
+[Song_0xf909]
+Phrase_0xf925
+Phrase_0xf915
+Phrase_0xf935
+PhraseLoop 255 -2
+
+[Phrase_0xf915]
+Pattern_0xf945
+Pattern_0xf96a
+Pattern_0xf985
+Pattern_0xf9a0
+Pattern_0xf9bb
+Pattern_0xf9e6
+Pattern_0xfa14
+None
+
+[Phrase_0xf925]
+Pattern_0xfa3f
+Pattern_0xfa61
+Pattern_0xfa70
+Pattern_0xfa81
+Pattern_0xfa92
+None
+None
+None
+
+[Phrase_0xf935]
+Pattern_0xfaa3
+Pattern_0xfab6
+Pattern_0xfacb
+Pattern_0xfae0
+Pattern_0xfaf5
+Pattern_0xfb1a
+Pattern_0xfb44
+None
+
+[Pattern_0xf945]
+SongVolume 160
+EchoEnable 255 40 40
+EchoSetup 2 80 2
+Tempo 33
+Instrument 15
+Volume 140
+Pan 2
+A#5 48 7d
+G#5 -- --
+G-5 -- --
+G#5 -- --
+G#5 -- --
+F#5 -- --
+F-5 -- --
+F#5 -- --
+F#5 -- --
+F-5 -- --
+E-5 -- --
+F-5 -- --
+F-5 -- --
+D#5 -- --
+D-5 -- --
+D#5 -- --
+
+[Pattern_0xf96a]
+Instrument 15
+Volume 140
+Pan 4
+--- 12 --
+D#5 48 7d
+D#5 -- --
+D#5 -- --
+D#5 -- --
+C#5 -- --
+C#5 -- --
+C#5 -- --
+C#5 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 36 --
+Fallthrough 
+
+[Pattern_0xf985]
+Instrument 15
+Volume 140
+Pan 6
+--- 24 --
+B-4 48 7d
+B-4 -- --
+B-4 -- --
+B-4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+A#4 -- --
+G#4 -- --
+G#4 -- --
+G#4 -- --
+G#4 -- --
+F#4 -- --
+F#4 -- --
+F#4 -- --
+F#4 24 --
+Fallthrough 
+
+[Pattern_0xf9a0]
+Instrument 15
+Volume 140
+Pan 8
+--- 36 --
+G#4 48 7d
+G#4 -- --
+G#4 -- --
+G#4 -- --
+F#4 -- --
+F#4 -- --
+F#4 -- --
+F#4 -- --
+F-4 -- --
+F-4 -- --
+F-4 -- --
+F-4 -- --
+D#4 -- --
+D#4 -- --
+D#4 -- --
+D#4 12 --
+Fallthrough 
+
+[Pattern_0xf9bb]
+Instrument 15
+Volume 200
+Pan 10
+B-1 36 7d
+A#3 72 --
+D#3 36 --
+C#4 -- --
+D#3 12 --
+A#1 36 --
+G#3 72 --
+A#1 36 --
+C#4 -- --
+C#3 12 --
+G#1 36 --
+F#3 60 --
+G#1 36 --
+F-3 -- --
+C#3 24 --
+F#1 36 --
+F-3 60 --
+F#1 36 --
+D#3 -- --
+C#4 24 --
+Fallthrough 
+
+[Pattern_0xf9e6]
+Instrument 15
+Volume 200
+Pan 14
+--- 12 --
+B-2 96 7d
+-+- 12 --
+A#3 36 --
+A#3 -- --
+-+- 12 --
+A#2 96 --
+-+- 12 --
+G#3 36 --
+G#3 -- --
+-+- 12 --
+G#2 84 --
+-+- 12 --
+G#2 36 --
+G#3 -- --
+B-2 12 --
+-+- -- --
+F#2 84 --
+-+- 12 --
+F#2 36 --
+G#3 -- --
+B-3 12 --
+Fallthrough 
+
+[Pattern_0xfa14]
+Instrument 15
+Volume 200
+Pan 18
+--- 24 --
+D#3 84 7d
+-+- 24 --
+G#3 36 --
+G#3 24 --
+-+- -- --
+C#3 84 --
+-+- 24 --
+F#3 36 --
+F#3 24 --
+-+- -- --
+B-2 72 --
+-+- 24 --
+F#3 36 --
+F-3 -- --
+-+- 24 --
+A#2 72 --
+-+- 24 --
+F-3 36 --
+F#3 -- --
+Fallthrough 
+
+[Pattern_0xfa3f]
+PercussionDefine 25
+SongVolume 180
+EchoEnable 255 40 40
+EchoSetup 2 80 2
+Tempo 51
+TempoFade 250 78
+Instrument 15
+Volume 200
+Pan 2
+--- 16 --
+D#3 48 7d
+F-3 -- --
+G#3 -- --
+B-3 -- --
+D#4 -- --
+F-4 -- --
+
+[Pattern_0xfa61]
+Instrument 15
+Volume 180
+Pan 18
+C#2 48 7d
+F-2 -- --
+G#2 -- --
+B-2 -- --
+D#3 -- --
+F-3 64 --
+Fallthrough 
+
+[Pattern_0xfa70]
+Instrument 15
+Volume 180
+Pan 14
+---  4 --
+F-2 48 7d
+G#2 -- --
+B-2 -- --
+D#3 -- --
+F-3 -- --
+G#3 60 --
+Fallthrough 
+
+[Pattern_0xfa81]
+Instrument 15
+Volume 180
+Pan 10
+---  8 --
+G#2 48 7d
+B-2 -- --
+D#3 -- --
+F-3 -- --
+G#3 -- --
+B-3 56 --
+Fallthrough 
+
+[Pattern_0xfa92]
+Instrument 15
+Volume 180
+Pan 6
+--- 12 --
+B-2 48 7d
+D#3 -- --
+F-3 -- --
+G#3 -- --
+B-3 -- --
+D#4 52 --
+Fallthrough 
+
+[Pattern_0xfaa3]
+A#5 48 7d
+G#5 -- --
+G-5 -- --
+G#5 -- --
+B-5 -- --
+A#5 -- --
+A-5 -- --
+A#5 -- --
+C#6 -- --
+B-5 -- --
+A#5 -- --
+B-5 -- --
+A#5 -- --
+G#5 -- --
+F#5 -- --
+F-5 -- --
+
+[Pattern_0xfab6]
+--- 12 --
+D#5 48 7d
+D#5 -- --
+D#5 -- --
+D#5 -- --
+E-5 -- --
+E-5 -- --
+E-5 -- --
+E-5 -- --
+D#5 -- --
+D#5 -- --
+D#5 -- --
+D#5 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 36 --
+Fallthrough 
+
+[Pattern_0xfacb]
+--- 24 --
+B-4 48 7d
+B-4 -- --
+B-4 -- --
+B-4 -- --
+C#5 -- --
+C#5 -- --
+C#5 -- --
+C#5 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+B-4 -- --
+G#4 -- --
+G#4 -- --
+G#4 -- --
+G#4 24 --
+Fallthrough 
+
+[Pattern_0xfae0]
+--- 36 --
+G#4 48 7d
+G#4 -- --
+G#4 -- --
+G#4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G-4 -- --
+G#4 -- --
+G#4 -- --
+G#4 -- --
+G#4 -- --
+F-4 -- --
+F-4 -- --
+F-4 -- --
+F-4 12 --
+Fallthrough 
+
+[Pattern_0xfaf5]
+B-1 36 7d
+A#3 60 --
+B-1 36 --
+G#3 -- --
+G#3 24 --
+A#1 36 --
+C#4 60 --
+D#2 36 --
+A#3 -- --
+C#4 24 --
+G#1 36 --
+B-3 60 --
+G#1 36 --
+A#3 -- --
+G#3 24 --
+C#2 36 --
+B-3 60 --
+C#2 36 --
+G#3 -- --
+G#4 24 --
+Fallthrough 
+
+[Pattern_0xfb1a]
+--- 12 --
+B-2 84 7d
+-+- 12 --
+B-2 36 --
+D#4 -- --
+D#3 12 --
+-+- -- --
+A#2 84 --
+-+- 12 --
+D#3 36 --
+E-4 -- --
+A#3 12 --
+-+- -- --
+G#2 84 --
+-+- 12 --
+G#2 36 --
+C#4 -- --
+D#3 12 --
+-+- -- --
+C#3 84 --
+-+- 12 --
+C#3 36 --
+F-4 -- --
+F-4 12 --
+Fallthrough 
+
+[Pattern_0xfb44]
+--- 24 --
+D#3 72 7d
+-+- 24 --
+A#3 36 --
+A#3 -- --
+-+- 24 --
+C#3 72 --
+-+- 24 --
+C#4 36 --
+D#4 -- --
+-+- 24 --
+D#3 72 --
+-+- 24 --
+B-3 36 --
+B-3 -- --
+-+- 24 --
+G#3 72 --
+-+- 24 --
+B-3 36 --
+D#4 -- --
+
+# Song index 27
+[Song_0xfb6a]
+Phrase_0xfb98
+Phrase_0xfb78
+Phrase_0xfb78
+Phrase_0xfb88
+PhraseLoop 255 -3
+
+[Phrase_0xfb78]
+Pattern_0xfba8
+Pattern_0xfbc2
+Pattern_0xfbdb
+Pattern_0xfbef
+Pattern_0xfc06
+None
+None
+None
+
+[Phrase_0xfb88]
+Pattern_0xfc21
+Pattern_0xfc3f
+Pattern_0xfc5c
+Pattern_0xfc79
+Pattern_0xfc8e
+None
+None
+None
+
+[Phrase_0xfb98]
+Pattern_0xfca3
+None
+None
+None
+None
+None
+None
+None
+
+[Pattern_0xfba8]
+Instrument 9
+Volume 200
+Vibrato 26 28 24
+Pan 12
+A#3 88 7d
+A-3  8 --
+B-3 88 --
+A#3  8 --
+D-4 88 --
+C#4  8 --
+E-4 96 --
+
+[Pattern_0xfbc2]
+Instrument 9
+Volume 200
+Vibrato 26 28 24
+Pan 8
+F-3 88 7d
+E-3  8 --
+F#3 88 --
+F-3  8 --
+A-3 88 --
+G#3  8 --
+B-3 96 --
+Fallthrough 
+
+[Pattern_0xfbdb]
+Instrument 9
+Volume 200
+Vibrato 26 28 24
+Pan 4
+C-2 48 7d
+G-2 -- --
+C-2 -- --
+G-2 -- --
+C-2 -- --
+G-2 -- --
+C-2 -- --
+G-2 -- --
+Fallthrough 
+
+[Pattern_0xfbef]
+Instrument 9
+Volume 160
+Vibrato 26 28 24
+Pan 2
+---  8 --
+C-2 48 7d
+G-2 -- --
+C-2 -- --
+G-2 -- --
+C-2 -- --
+G-2 -- --
+C-2 -- --
+G-2 40 --
+Fallthrough 
+
+[Pattern_0xfc06]
+Instrument 9
+Volume 160
+Vibrato 26 28 24
+Pan 10
+---  8 --
+A#3 88 7d
+A-3  8 --
+B-3 88 --
+A#3  8 --
+D-4 88 --
+C#4  8 --
+E-4 88 --
+Fallthrough 
+
+[Pattern_0xfc21]
+Instrument 9
+Volume 200
+Vibrato 26 28 24
+Pan 12
+D#4 96 7d
+D-4 88 --
+F-4 80 --
+E-4 72 --
+G-4 64 --
+F#4 56 --
+A-4 52 --
+G#4 48 --
+B-4 96 --
+
+[Pattern_0xfc3f]
+Instrument 9
+Volume 200
+Vibrato 26 28 24
+Pan 8
+A#3 96 7d
+A-3 88 --
+C-4 80 --
+B-3 72 --
+D-4 64 --
+C#4 56 --
+E-4 52 --
+D#4 48 --
+F#4 96 --
+Fallthrough 
+
+[Pattern_0xfc5c]
+Instrument 9
+Volume 200
+Vibrato 26 28 24
+Pan 4
+F#2 96 7d
+F-2 88 --
+G#2 80 --
+G-2 72 --
+A#2 64 --
+A-2 56 --
+C-3 52 --
+B-2 48 --
+D-3 96 --
+Fallthrough 
+
+[Pattern_0xfc79]
+---  8 --
+F#2 96 7d
+F-2 88 --
+G#2 80 --
+G-2 72 --
+A#2 64 --
+A-2 56 --
+C-3 52 --
+B-2 48 --
+D-3 88 --
+Fallthrough 
+
+[Pattern_0xfc8e]
+---  8 --
+D#3 96 7d
+D-3 88 --
+F-4 80 --
+E-4 72 --
+G-4 64 --
+F#4 56 --
+A-4 52 --
+G#4 48 --
+B-4 88 --
+Fallthrough 
+
+[Pattern_0xfca3]
+PercussionDefine 25
+SongVolume 180
+EchoEnable 255 40 40
+EchoSetup 2 20 2
+Tempo 25
+Instrument 9
+Volume 200
+Vibrato 26 28 24
+Pan 12
+--- 24 --
+

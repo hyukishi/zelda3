@@ -1,0 +1,59 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 1
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 11
+  blockset: 5
+  enemyblk: 8
+  effect: None
+  tag0: Trigger activated chest
+  tag1: None
+  hole0_dest: [5, 0]
+  stair0_dest: [8, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 3]
+  stair3_dest: [0, 3]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [21, 11, upper, 4E-Tentacle2]
+- [27, 11, upper, 4E-Tentacle2]
+- [24, 13, upper, 82-4Bubbles]
+- [24, 19, upper, 83-GreenRocklops]
+- [20, 22, upper, A7-Stalfos]
+- [28, 22, upper, A7-Stalfos]
+Secrets:
+- [48, 26, 88-Switch]
+- [44, 32, 0B-Heart]
+- [52, 32, 0B-Heart]
+Chests: [50]
+Entrances: []
+Layer1:
+- {x: 36, y: 4, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 36, y: 8, s: 3*3, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 36, y: 38, s: 2*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 36, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 36, y: 13, s: 1*2, n: '65-[W]Wall Column [U-D]'}
+- {x: 58, y: 13, s: 1*2, n: '66-[E]Wall Column [U-D]'}
+- {x: 42, y: 12, s: 0*1, n: 'C1-Chest Pedastal [4-way]'}
+- {x: 45, y: 20, s: 0*2, n: '21-Mini Stairs [L-R]'}
+- {x: 42, y: 26, s: 1*2, n: '88-Large Vert: Rail [U-D]'}
+- {x: 54, y: 26, s: 1*2, n: '88-Large Vert: Rail [U-D]'}
+- {x: 44, y: 41, s: 1*0, n: '5D-Large Horz: Rail [L-R]'}
+- {x: 44, y: 48, s: 0*0, n: '88-Large Vert: Rail [U-D]'}
+- {x: 52, y: 48, s: 0*0, n: '88-Large Vert: Rail [U-D]'}
+- {x: 44, y: 32, n: FAF-Pot}
+- {x: 52, y: 32, n: FAF-Pot}
+- {x: 48, y: 26, n: FAF-Pot}
+- {x: 48, y: 16, n: F99-Chest}
+- {x: 34, y: 0, s: 0*0, n: '60-Ceiling [U-D]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 30, pos: 2, dir: 0}
+- {type: 0, pos: 6, dir: 3}

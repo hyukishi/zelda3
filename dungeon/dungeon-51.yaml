@@ -1,0 +1,34 @@
+Header:
+  floor1: 9
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 4
+  blockset: 5
+  enemyblk: 11
+  effect: None
+  tag0: Clear level to open door
+  tag1: Kill enemy to clear level
+  hole0_dest: [8, 0]
+  stair0_dest: [17, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 2]
+  stair3_dest: [0, 2]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [6, 23, upper, 54-Lanmolas]
+- [9, 23, upper, 54-Lanmolas]
+- [7, 25, upper, 54-Lanmolas]
+Secrets: []
+Chests: []
+Entrances: []
+Layer1: []
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 24, pos: 6, dir: 1}

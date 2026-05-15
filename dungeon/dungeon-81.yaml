@@ -1,0 +1,153 @@
+Header:
+  floor1: 3
+  floor2: 7
+  layout: 7
+  start_quadrant: 0
+  bg2: Normal
+  collision: One
+  lights_out: 0
+  palette: 0
+  blockset: 0
+  enemyblk: 3
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [0, 0]
+  stair0_dest: [97, 0]
+  stair1_dest: [192, 0]
+  stair2_dest: [0, 0]
+  stair3_dest: [0, 0]
+  tele_msg: 180
+  sort_sprites: 1
+  pits_hurt_player: false
+Sprites:
+- [14, 2, upper, EE-Mantle]
+- [9, 23, lower, 41.1-BlueSoldier]
+- [22, 23, lower, 41.2-BlueSoldier]
+Secrets: []
+Chests: []
+Entrances:
+- entrance_index: 116
+  name: Hyrule Castle Throne Room
+  scroll_xy: [128, 272]
+  player_xy: [248, 424]
+  camera_xy: [255, 392]
+  blockset: 4
+  music: Same
+  palace: None
+  doorway_orientation: 0
+  plane: 1
+  ladder_level: 1
+  quadrants: [double_x, double_y, lower_left]
+  floor: -1
+  house_exit_door: [none]
+StartingPoints:
+- starting_point_index: 4
+  name: Starting Location 4
+  scroll_xy: [128, 34]
+  player_xy: [248, 143]
+  camera_xy: [255, 154]
+  blockset: 4
+  music: Castle
+  palace: Castle
+  doorway_orientation: 0
+  plane: 0
+  ladder_level: 0
+  quadrants: [double_x, double_y, upper_left]
+  floor: 1
+  house_exit_door: [none]
+  associated_entrance_index: 4
+Layer1:
+- {x: 16, y: 36, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 6, y: 36, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 10, y: 36, s: 0*3, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 6, y: 40, s: 2*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 6, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 44, y: 36, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 48, y: 36, s: 0*3, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 54, y: 36, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 54, y: 40, s: 2*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 54, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 23, y: 38, s: 0*3, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 58, y: 36, s: 0*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 58, y: 52, s: 0*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 20, y: 4, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 20, y: 8, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 16, y: 8, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 16, y: 12, s: 3*0, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 40, y: 4, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 40, y: 8, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 44, y: 8, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 44, y: 12, s: 3*0, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 24, y: 7, s: 3*2, n: 'DC-Chest Platform? [4-way]'}
+- {x: 30, y: 18, s: 1*0, n: '70-Red Floor/Wire Floor [U-D]'}
+- {x: 29, y: 18, s: 3*3, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 34, y: 18, s: 3*3, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 29, y: 34, s: 0*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 34, y: 34, s: 0*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 25, y: 22, s: 0*2, n: '75-Column [U-D]'}
+- {x: 37, y: 22, s: 0*2, n: '75-Column [U-D]'}
+- {x: 16, y: 14, s: 0*3, n: '65-[W]Wall Column [U-D]'}
+- {x: 44, y: 14, s: 0*3, n: '66-[E]Wall Column [U-D]'}
+- {x: 16, y: 16, s: 0*2, n: '73-[W]Curtain [U-D]'}
+- {x: 44, y: 16, s: 0*2, n: '74-[E]Curtain [U-D]'}
+- {x: 24, y: 39, n: '108-Wall Outer Corner (LOW) [NW]'}
+- {x: 28, y: 39, s: 0*3, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 36, y: 39, n: '10A-Wall Outer Corner (LOW) [NE]'}
+- {x: 24, y: 43, n: '10C-Wall Inner Corner (LOW) [NW]'}
+- {x: 16, y: 43, s: 0*3, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 13, y: 43, n: '108-Wall Outer Corner (LOW) [NW]'}
+- {x: 13, y: 47, s: 0*2, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 24, y: 55, s: 1*3, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 36, y: 43, n: '10E-Wall Inner Corner (LOW) [NE]'}
+- {x: 40, y: 43, s: 0*3, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 47, y: 43, n: '10A-Wall Outer Corner (LOW) [NE]'}
+- {x: 47, y: 47, s: 0*2, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 30, y: 38, s: 0*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 23, y: 38, s: 0*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 12, y: 42, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 12, y: 42, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 34, y: 38, s: 0*3, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 40, y: 38, s: 0*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 48, y: 42, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 51, y: 42, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 2, y: 4, s: 2*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 12, y: 4, s: 1*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 2, y: 20, s: 2*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 14, y: 8, s: 3*2, n: '60-Ceiling [U-D]'}
+- {x: 2, y: 36, s: 0*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 2, y: 52, s: 0*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 44, y: 4, s: 1*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 50, y: 4, s: 2*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 50, y: 20, s: 2*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 48, y: 8, s: 3*2, n: '60-Ceiling [U-D]'}
+- {x: 30, y: 39, n: '131-Stairs [N](layer)'}
+- {x: 26, y: 11, n: 124-Decoration}
+- {x: 34, y: 11, n: 124-Decoration}
+Layer2:
+- {x: 13, y: 53, s: 0*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 16, y: 55, s: 1*0, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 13, y: 55, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 40, y: 55, s: 1*0, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 47, y: 55, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 47, y: 53, s: 0*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 30, y: 55, n: FA9-Staircase Going Down (Lower)}
+Layer3:
+- {x: 0, y: 9, s: 2*0, n: '60-Ceiling [U-D]'}
+- {x: 62, y: 9, s: 2*0, n: '60-Ceiling [U-D]'}
+- {x: 12, y: 50, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 12, y: 53, s: 2*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 23, y: 53, s: 0*2, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 40, y: 53, s: 0*2, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 51, y: 50, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 40, y: 53, s: 2*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 14, y: 44, s: 3*1, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 25, y: 40, s: 2*3, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 35, y: 40, s: 0*3, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 38, y: 44, s: 2*1, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 14, y: 49, s: 2*0, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 38, y: 49, s: 2*0, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 24, y: 50, s: 3*1, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+Layer3.doors:
+- {type: 0, pos: 1, dir: 0}
+- {type: 20, pos: 1, dir: 0}

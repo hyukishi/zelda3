@@ -1,0 +1,146 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 1
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 24
+  blockset: 13
+  enemyblk: 30
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [13, 0]
+  stair0_dest: [38, 0]
+  stair1_dest: [0, 2]
+  stair2_dest: [0, 0]
+  stair3_dest: [0, 0]
+  tele_msg: 195
+  sort_sprites: 0
+  pits_hurt_player: true
+Sprites:
+- [7, 2, upper, 97-EyeLaser(Down)]
+- [3, 22, upper, C5-Shooter]
+- [12, 22, upper, C5-Shooter]
+Secrets:
+- [46, 44, 0D-BigMagic]
+- [48, 44, 0A-Bomb]
+Chests: [37]
+Entrances:
+- entrance_index: 53
+  name: Turtle Rock Main
+  scroll_xy: [256, 272]
+  player_xy: [376, 472]
+  camera_xy: [383, 391]
+  blockset: 13
+  music: Dungeon
+  palace: Mountain
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, double_y, lower_right]
+  floor: 0
+  house_exit_door: [none]
+Layer1:
+- {x: 10, y: 4, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 10, y: 8, s: 2*0, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 10, y: 24, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 6, y: 24, s: 0*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 2, y: 24, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 2, y: 46, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 6, y: 46, s: 2*2, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 26, y: 46, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 26, y: 24, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 22, y: 24, s: 0*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 18, y: 24, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 18, y: 8, s: 2*0, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 18, y: 4, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 6, y: 28, s: 1*0, n: 'DF-Spike Floor [4-way]'}
+- {x: 6, y: 32, s: 0*2, n: 'DF-Spike Floor [4-way]'}
+- {x: 6, y: 42, s: 3*0, n: 'DF-Spike Floor [4-way]'}
+- {x: 18, y: 28, s: 1*0, n: 'DF-Spike Floor [4-way]'}
+- {x: 22, y: 32, s: 0*2, n: 'DF-Spike Floor [4-way]'}
+- {x: 22, y: 42, s: 0*0, n: 'DF-Spike Floor [4-way]'}
+- {x: 14, y: 28, s: 0*1, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 17, y: 28, s: 0*1, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 10, y: 32, s: 0*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 10, y: 33, s: 1*1, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 11, y: 41, s: 1*2, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 21, y: 32, s: 1*2, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 18, y: 32, s: 0*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 46, y: 44, n: FAF-Pot}
+- {x: 48, y: 44, n: FAF-Pot}
+- {x: 15, y: 36, n: F99-Chest}
+- {x: 6, y: 44, n: FE4-Fireball Shooter}
+- {x: 24, y: 44, n: FE4-Fireball Shooter}
+- {x: 34, y: 42, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 38, y: 42, s: 0*2, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 42, y: 42, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 42, y: 46, s: 0*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 42, y: 48, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 38, y: 48, s: 0*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 34, y: 48, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 34, y: 54, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 38, y: 54, s: 0*1, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 40, y: 54, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 40, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 52, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 52, y: 54, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 56, y: 54, s: 0*1, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 58, y: 54, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 58, y: 42, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 54, y: 42, s: 0*2, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 50, y: 42, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 50, y: 46, s: 0*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 50, y: 48, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 54, y: 48, s: 0*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 58, y: 48, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 37, y: 7, n: '108-Wall Outer Corner (LOW) [NW]'}
+- {x: 41, y: 7, s: 1*2, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 55, y: 7, n: '10A-Wall Outer Corner (LOW) [NE]'}
+- {x: 37, y: 11, s: 3*1, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 37, y: 39, n: '109-Wall Outer Corner (LOW) [SW]'}
+- {x: 41, y: 39, s: 1*2, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 55, y: 39, n: '10B-Wall Outer Corner (LOW) [SE]'}
+- {x: 55, y: 11, s: 3*1, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 40, y: 10, n: '118-Wall Pit Corner (Lower) [NW]'}
+- {x: 42, y: 10, s: 1*1, n: '07-[N]Wall Pit [L-R]'}
+- {x: 54, y: 10, n: '11A-Wall Pit Corner (Lower) [NE]'}
+- {x: 40, y: 12, s: 3*0, n: '67-[W]Wall Pit [U-D]'}
+- {x: 40, y: 38, n: '119-Wall Pit Corner (Lower) [SW]'}
+- {x: 42, y: 38, s: 1*1, n: '08-[S]Wall Pit [L-R]'}
+- {x: 54, y: 38, n: '11B-Wall Pit Corner (Lower) [SE]'}
+- {x: 54, y: 12, s: 3*0, n: '68-[E]Wall Pit [U-D]'}
+- {x: 42, y: 12, s: 2*3, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 42, y: 26, s: 2*2, n: 'C2-Falling Edge Mask [4-way]'}
+- {x: 46, y: 6, s: 0*1, n: C4-Doorless Room Transition}
+- {x: 46, y: 4, s: 0*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 45, y: 14, s: 0*3, n: '27-Pit [N]Edge [L-R]'}
+- {x: 45, y: 7, s: 1*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 50, y: 7, s: 1*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 47, y: 17, s: 3*2, n: '7C-Cane Ride [U-D]'}
+- {x: 38, y: 49, n: F93-Telepathic Tile}
+- {x: 47, y: 16, n: 'F83-Cane Ride Spawn [?]Block'}
+- {x: 47, y: 33, n: 'F83-Cane Ride Spawn [?]Block'}
+- {x: 46, y: 36, s: 0*1, n: C4-Doorless Room Transition}
+- {x: 45, y: 35, s: 0*3, n: '28-Pit [S]Edge [L-R]'}
+- {x: 45, y: 35, s: 1*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 50, y: 35, s: 1*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 2, y: 4, s: 1*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 2, y: 20, s: 1*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 22, y: 4, s: 1*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 22, y: 20, s: 1*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 2, y: 50, s: 3*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 18, y: 50, s: 2*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 34, y: 46, s: 1*0, n: '00-Ceiling [L-R]'}
+- {x: 54, y: 46, s: 1*0, n: '00-Ceiling [L-R]'}
+- {x: 32, y: 58, s: 1*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 56, y: 58, s: 1*0, n: 'C0-Ceiling Large [4-way]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 26, pos: 0, dir: 0}
+- {type: 10, pos: 8, dir: 1}
+- {type: 0, pos: 2, dir: 0}

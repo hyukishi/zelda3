@@ -1,0 +1,123 @@
+Header:
+  floor1: 9
+  floor2: 1
+  layout: 4
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 9
+  blockset: 5
+  enemyblk: 10
+  effect: None
+  tag0: Trigger activated chest
+  tag1: None
+  hole0_dest: [5, 0]
+  stair0_dest: [10, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [1, 0]
+  stair3_dest: [0, 1]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [8, 24, upper, 64-SandCrab2]
+- [23, 24, upper, 64-SandCrab2]
+- [12, 5, upper, 83-GreenRocklops]
+- [19, 5, upper, 83-GreenRocklops]
+- [12, 10, upper, 71-Leever]
+- [19, 10, upper, 71-Leever]
+- [14, 27, upper, 71-Leever]
+- [18, 27, upper, 71-Leever]
+Secrets:
+- [15, 10, 0C-Magic]
+- [31, 10, 88-Switch]
+- [47, 10, 0C-Magic]
+- [7, 22, 0B-Heart]
+- [23, 22, 09-Arrow]
+- [39, 22, 09-Arrow]
+- [55, 22, 0B-Heart]
+Chests: [51]
+Entrances: []
+Layer1:
+- {x: 0, y: 36, s: 0*3, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 58, y: 36, s: 0*3, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 0, y: 40, s: 1*0, n: C4-Doorless Room Transition}
+- {x: 56, y: 40, s: 1*0, n: C4-Doorless Room Transition}
+- {x: 0, y: 44, s: 1*2, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 11, y: 44, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 11, y: 48, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 6, y: 52, s: 0*3, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 11, y: 52, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 2, y: 52, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 2, y: 58, s: 0*3, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 6, y: 56, s: 0*1, n: C4-Doorless Room Transition}
+- {x: 10, y: 58, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 10, y: 62, s: 0*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 18, y: 58, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 18, y: 62, s: 0*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 42, y: 58, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 42, y: 62, s: 0*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 22, y: 56, s: 3*1, n: C4-Doorless Room Transition}
+- {x: 38, y: 56, s: 0*1, n: C4-Doorless Room Transition}
+- {x: 50, y: 58, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 50, y: 62, s: 0*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 54, y: 56, s: 0*1, n: C4-Doorless Room Transition}
+- {x: 58, y: 58, s: 0*3, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 58, y: 52, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 52, y: 52, s: 0*3, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 49, y: 52, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 49, y: 48, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 52, y: 44, s: 1*2, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 49, y: 44, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 19, y: 44, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 23, y: 44, s: 2*1, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 41, y: 44, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 19, y: 48, s: 0*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 19, y: 50, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 23, y: 50, s: 2*1, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 41, y: 50, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 41, y: 48, s: 0*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 11, y: 13, s: 1*2, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 11, y: 14, s: 0*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 20, y: 14, s: 0*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 11, y: 18, s: 1*2, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 12, y: 14, s: 1*0, n: 'DB-Floor2 [4-way]'}
+- {x: 31, y: 10, n: FAF-Pot}
+- {x: 27, y: 13, s: 1*2, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 27, y: 14, s: 0*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 36, y: 14, s: 0*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 27, y: 18, s: 1*2, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 28, y: 14, s: 1*0, n: 'DB-Floor2 [4-way]'}
+- {x: 31, y: 15, n: F99-Chest}
+- {x: 43, y: 13, s: 1*2, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 43, y: 14, s: 0*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 52, y: 14, s: 0*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 43, y: 18, s: 1*2, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 44, y: 14, s: 1*0, n: 'DB-Floor2 [4-way]'}
+- {x: 13, y: 13, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 17, y: 13, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 19, y: 53, s: 0*0, n: '88-Large Vert: Rail [U-D]'}
+- {x: 43, y: 53, s: 0*0, n: '88-Large Vert: Rail [U-D]'}
+- {x: 10, y: 4, s: 1*3, n: '05-[N]Wall Column [L-R]'}
+- {x: 22, y: 36, s: 1*3, n: 'B6-[N]Wall Decor: 1/2 [L-R]'}
+- {x: 34, y: 50, s: 0*3, n: 'B6-[N]Wall Decor: 1/2 [L-R]'}
+- {x: 54, y: 44, s: 0*2, n: 'B7-[S]Wall Decor: 1/2 [L-R]'}
+- {x: 15, y: 10, n: FAF-Pot}
+- {x: 7, y: 22, n: FAF-Pot}
+- {x: 23, y: 22, n: FAF-Pot}
+- {x: 39, y: 22, n: FAF-Pot}
+- {x: 55, y: 22, n: FAF-Pot}
+- {x: 47, y: 10, n: FAF-Pot}
+- {x: 45, y: 13, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 49, y: 13, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 2, y: 48, s: 1*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 9, y: 48, s: 0*2, n: '60-Ceiling [U-D]'}
+- {x: 23, y: 48, s: 2*1, n: '00-Ceiling [L-R]'}
+- {x: 53, y: 48, s: 1*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 60, y: 48, s: 0*2, n: '60-Ceiling [U-D]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 0, pos: 8, dir: 0}
+- {type: 0, pos: 6, dir: 0}

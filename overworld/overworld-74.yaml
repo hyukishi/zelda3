@@ -1,0 +1,40 @@
+Header:
+  name: 'DW 074 : Bungie Cave Fun Zone'
+  size: small
+  gfx: 62
+  palette: 30
+  sign_text: 168
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances:
+- {index: 21, x: 26, y: 12, entrance_id: 22}
+- {index: 22, x: 27, y: 6, entrance_id: 23}
+Exits:
+- index: 23
+  room: 251
+  xy: [424, 183]
+  scroll_xy: [256, 99]
+  camera_xy: [397, 210]
+  load_xy: [0, 1]
+  unk: [11, 0]
+- index: 24
+  room: 235
+  xy: [440, 88]
+  scroll_xy: [256, 10]
+  camera_xy: [397, 119]
+  load_xy: [0, 1]
+  unk: [6, 0]
+Items: []
+Sprites:
+  info: {gfx: 23, palette: 16}
+  sprites:
+  - [14, 6, 33-PullForRupees]
+  - [24, 8, EB-HeartPie]
+  - [11, 15, 12-PigSpearMan]
+  - [8, 16, 12-PigSpearMan]
+  - [22, 19, 12-PigSpearMan]
+  - [19, 19, 00-Raven]
+  - [19, 20, 00-Raven]
+  - [14, 24, 22-HoppingBulbPlan]
+  - [20, 26, D3-AliveRock]

@@ -1,0 +1,115 @@
+Header:
+  name: 'LW 005 : Death Mountain Bridge NW'
+  size: big
+  gfx: 34
+  palette: 7
+  sign_text: 167
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: Stop, sword: Stop, agahnim: Stop}
+Travel: []
+Entrances:
+- {index: 25, x: 49, y: 34, entrance_id: 26}
+- {index: 26, x: 49, y: 28, entrance_id: 27}
+- {index: 27, x: 44, y: 32, entrance_id: 28}
+- {index: 28, x: 43, y: 22, entrance_id: 29}
+- {index: 29, x: 58, y: 36, entrance_id: 30}
+- {index: 30, x: 60, y: 54, entrance_id: 31}
+- {index: 31, x: 59, y: 15, entrance_id: 32}
+- {index: 78, x: 55, y: 22, entrance_id: 79}
+- {index: 79, x: 55, y: 36, entrance_id: 80}
+Exits:
+- index: 27
+  room: 253
+  xy: [792, 536]
+  scroll_xy: [678, 452]
+  camera_xy: [803, 563]
+  load_xy: [0, 63]
+  unk: [10, -6]
+- index: 28
+  room: 237
+  xy: [792, 439]
+  scroll_xy: [678, 355]
+  camera_xy: [803, 466]
+  load_xy: [0, 63]
+  unk: [11, -6]
+- index: 29
+  room: 254
+  xy: [712, 503]
+  scroll_xy: [598, 419]
+  camera_xy: [723, 530]
+  load_xy: [0, 63]
+  unk: [11, -6]
+- index: 30
+  room: 238
+  xy: [696, 344]
+  scroll_xy: [582, 264]
+  camera_xy: [707, 375]
+  load_xy: [0, 63]
+  unk: [6, -6]
+- index: 31
+  room: 255
+  xy: [936, 567]
+  scroll_xy: [768, 483]
+  camera_xy: [893, 594]
+  load_xy: [0, 63]
+  unk: [11, 0]
+- index: 32
+  room: 239
+  xy: [968, 856]
+  scroll_xy: [768, 772]
+  camera_xy: [893, 883]
+  load_xy: [0, 63]
+  unk: [10, 0]
+- index: 33
+  room: 223
+  xy: [952, 231]
+  scroll_xy: [768, 147]
+  camera_xy: [893, 258]
+  load_xy: [0, 63]
+  unk: [11, 0]
+- index: 66
+  room: 4104
+  xy: [735, 170]
+  scroll_xy: [621, 92]
+  camera_xy: [746, 201]
+  load_xy: [1, 1]
+  unk: [4, 3]
+Items:
+- [37, 58, 82-Warp]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 16, palette: 9}
+  sprites:
+  - [30, 14, 27-Squirrel]
+  - [31, 15, C9-Tektite]
+  - [47, 3, EB-HeartPie]
+  - [53, 13, 27-Squirrel]
+  - [41, 15, C9-Tektite]
+  - [53, 15, 27-Squirrel]
+  - [52, 16, E3-Fairy]
+  - [30, 49, C9-Tektite]
+  - [53, 42, C9-Tektite]
+  - [42, 47, 27-Squirrel]
+  - [47, 47, C9-Tektite]
+  - [41, 54, 27-Squirrel]
+  - [54, 54, 27-Squirrel]
+Sprites.SecondPart:
+  info: {gfx: 16, palette: 9}
+  sprites:
+  - [7, 11, 27-Squirrel]
+  - [8, 13, C9-Tektite]
+  - [30, 14, 27-Squirrel]
+  - [31, 15, C9-Tektite]
+  - [47, 3, EB-HeartPie]
+  - [53, 13, 27-Squirrel]
+  - [41, 15, C9-Tektite]
+  - [53, 15, 27-Squirrel]
+  - [52, 16, E3-Fairy]
+  - [30, 49, C9-Tektite]
+  - [53, 42, C9-Tektite]
+  - [42, 47, 27-Squirrel]
+  - [47, 47, C9-Tektite]
+  - [41, 54, 27-Squirrel]
+  - [54, 54, 27-Squirrel]

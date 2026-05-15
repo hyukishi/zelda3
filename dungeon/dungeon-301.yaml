@@ -1,0 +1,29 @@
+Header:
+  floor1: 0
+  floor2: 0
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 0
+  blockset: 0
+  enemyblk: 0
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [0, 0]
+  stair0_dest: [0, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 0]
+  stair3_dest: [0, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites: []
+Secrets: []
+Chests: [54]
+Entrances: []
+Layer1: []
+Layer2: []
+Layer3: []

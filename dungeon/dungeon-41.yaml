@@ -1,0 +1,63 @@
+Header:
+  floor1: 5
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: Normal
+  collision: Moving floor
+  lights_out: 0
+  palette: 14
+  blockset: 9
+  enemyblk: 26
+  effect: Moving floor
+  tag0: Kill enemy to clear level
+  tag1: None
+  hole0_dest: [7, 0]
+  stair0_dest: [25, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 0]
+  stair3_dest: [0, 3]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [24, 22, upper, 88-Mothula]
+- [7, 22, upper, 107-MovingFloor]
+Secrets: []
+Chests: []
+Entrances: []
+Layer1:
+- {x: 37, y: 39, s: 3*0, n: 'DE-Spike Block [4-way]'}
+- {x: 45, y: 39, s: 3*0, n: 'DE-Spike Block [4-way]'}
+- {x: 53, y: 39, s: 2*0, n: 'DE-Spike Block [4-way]'}
+- {x: 37, y: 57, s: 3*0, n: 'DE-Spike Block [4-way]'}
+- {x: 45, y: 57, s: 3*0, n: 'DE-Spike Block [4-way]'}
+- {x: 53, y: 57, s: 2*0, n: 'DE-Spike Block [4-way]'}
+- {x: 37, y: 41, s: 0*3, n: 'DE-Spike Block [4-way]'}
+- {x: 37, y: 49, s: 0*3, n: 'DE-Spike Block [4-way]'}
+- {x: 57, y: 41, s: 0*3, n: 'DE-Spike Block [4-way]'}
+- {x: 57, y: 49, s: 0*3, n: 'DE-Spike Block [4-way]'}
+Layer2:
+- {x: 0, y: 0, s: 3*3, n: 'CA-Floor5 [4-way]'}
+- {x: 16, y: 0, s: 3*3, n: 'CA-Floor5 [4-way]'}
+- {x: 32, y: 0, s: 3*3, n: 'CA-Floor5 [4-way]'}
+- {x: 48, y: 0, s: 3*3, n: 'CA-Floor5 [4-way]'}
+- {x: 0, y: 16, s: 3*3, n: 'CA-Floor5 [4-way]'}
+- {x: 16, y: 16, s: 3*3, n: 'CA-Floor5 [4-way]'}
+- {x: 32, y: 16, s: 3*3, n: 'CA-Floor5 [4-way]'}
+- {x: 48, y: 16, s: 3*3, n: 'CA-Floor5 [4-way]'}
+- {x: 0, y: 32, s: 3*3, n: 'CA-Floor5 [4-way]'}
+- {x: 16, y: 32, s: 3*3, n: 'CA-Floor5 [4-way]'}
+- {x: 32, y: 32, s: 3*3, n: 'CA-Floor5 [4-way]'}
+- {x: 48, y: 32, s: 3*3, n: 'CA-Floor5 [4-way]'}
+- {x: 0, y: 48, s: 3*3, n: 'CA-Floor5 [4-way]'}
+- {x: 16, y: 48, s: 3*3, n: 'CA-Floor5 [4-way]'}
+- {x: 32, y: 48, s: 3*3, n: 'CA-Floor5 [4-way]'}
+- {x: 48, y: 48, s: 3*3, n: 'CA-Floor5 [4-way]'}
+Layer3:
+- {x: 39, y: 41, s: 3*3, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 53, y: 41, s: 0*3, n: 'C6-BG2 X-RAY Overlay [4-way]'}
+- {x: 47, y: 39, n: 134-Block}
+- {x: 49, y: 57, n: 134-Block}
+- {x: 37, y: 49, n: 134-Block}
+- {x: 57, y: 49, n: 134-Block}

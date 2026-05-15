@@ -1,0 +1,117 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 24
+  blockset: 13
+  enemyblk: 38
+  effect: None
+  tag0: NW Kill enemy to open
+  tag1: None
+  hole0_dest: [8, 0]
+  stair0_dest: [17, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [22, 0]
+  stair3_dest: [0, 2]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: true
+Sprites:
+- [19, 4, upper, C5-Shooter]
+- [28, 4, upper, C5-Shooter]
+- [27, 6, upper, 60-Roller_4]
+- [5, 8, upper, C7-FuzzyStack]
+- [7, 8, upper, C5-Shooter]
+- [10, 8, upper, C7-FuzzyStack]
+- [12, 12, upper, D1-Transform/Smoke]
+Secrets:
+- [6, 8, 07-Rupee-B]
+- [24, 8, 0B-Heart]
+- [6, 24, 0C-Magic]
+- [24, 24, 01-Rupee-G]
+Chests: [6!]
+Entrances:
+- entrance_index: 25
+  name: Turtle Rock Mountainface 3
+  scroll_xy: [256, 272]
+  player_xy: [376, 472]
+  camera_xy: [383, 391]
+  blockset: 13
+  music: Dungeon
+  palace: Mountain
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, single_y, lower_right]
+  floor: -1
+  house_exit_door: [none]
+Layer1:
+- {x: 6, y: 8, n: FAF-Pot}
+- {x: 24, y: 8, n: FAF-Pot}
+- {x: 6, y: 24, n: FAF-Pot}
+- {x: 24, y: 24, n: FAF-Pot}
+- {x: 14, y: 16, n: FE4-Fireball Shooter}
+- {x: 38, y: 8, n: FE4-Fireball Shooter}
+- {x: 56, y: 8, n: FE4-Fireball Shooter}
+- {x: 45, y: 7, s: 0*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 50, y: 7, s: 0*1, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 46, y: 20, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 10, y: 36, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 10, y: 40, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 10, y: 43, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 6, y: 43, s: 0*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 2, y: 43, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 2, y: 51, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 6, y: 51, s: 2*2, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 26, y: 51, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 22, y: 43, s: 0*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 26, y: 43, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 18, y: 40, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 18, y: 43, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 18, y: 36, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 34, y: 43, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 38, y: 43, s: 0*1, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 39, y: 40, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 39, y: 43, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 39, y: 36, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 53, y: 36, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 53, y: 40, s: 2*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 53, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 39, y: 57, s: 0*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 39, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 38, y: 53, s: 0*1, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 39, y: 53, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 34, y: 53, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 46, y: 43, n: FB1-Big Chest}
+- {x: 42, y: 46, s: 1*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 44, y: 50, s: 2*0, n: 'C3-Falling Edge Mask [4-way]'}
+- {x: 43, y: 49, s: 2*0, n: '27-Pit [N]Edge [L-R]'}
+- {x: 43, y: 50, s: 0*2, n: '6A-[W]Pit Edge [U-D]'}
+- {x: 43, y: 53, s: 2*0, n: '28-Pit [S]Edge [L-R]'}
+- {x: 53, y: 50, s: 0*2, n: '6B-[E]Pit Edge [U-D]'}
+- {x: 48, y: 51, n: 'F83-Cane Ride Spawn [?]Block'}
+- {x: 2, y: 35, s: 1*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 22, y: 35, s: 1*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 2, y: 55, s: 3*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 18, y: 55, s: 2*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 31, y: 57, s: 1*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 33, y: 60, s: 0*3, n: '00-Ceiling [L-R]'}
+- {x: 31, y: 35, s: 1*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 57, y: 36, s: 3*1, n: '60-Ceiling [U-D]'}
+- {x: 59, y: 36, s: 3*1, n: '60-Ceiling [U-D]'}
+- {x: 60, y: 36, s: 3*1, n: '60-Ceiling [U-D]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 30, pos: 2, dir: 0}
+- {type: 56, pos: 6, dir: 2}
+- {type: 56, pos: 6, dir: 0}
+- {type: 56, pos: 8, dir: 0}
+- {type: 10, pos: 8, dir: 1}
+- {type: 0, pos: 0, dir: 0}
+- {type: 0, pos: 2, dir: 2}
+- {type: 0, pos: 8, dir: 2}

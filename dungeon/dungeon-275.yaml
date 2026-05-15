@@ -1,0 +1,80 @@
+Header:
+  floor1: 5
+  floor2: 14
+  layout: 1
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 3
+  blockset: 16
+  enemyblk: 8
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [6, 0]
+  stair0_dest: [7, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 0]
+  stair3_dest: [0, 3]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites: []
+Secrets: []
+Chests: [25]
+Entrances:
+- entrance_index: 91
+  name: Hall of the Invisibility Cape
+  scroll_xy: [0, 272]
+  player_xy: [120, 472]
+  camera_xy: [127, 391]
+  blockset: 1
+  music: Secret_way
+  palace: None
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, double_y, lower_left]
+  floor: 0
+  house_exit_door: [none]
+Layer1:
+- {x: 2, y: 23, s: 0*3, n: '0E-\ Wall Tile Bot (HIGH) [SW]'}
+- {x: 7, y: 32, s: 3*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 7, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 2, y: 23, s: 0*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 21, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 21, y: 31, s: 0*3, n: '10-/ Wall Tile Bot (HIGH) [SE]'}
+- {x: 21, y: 32, s: 3*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 26, y: 23, s: 0*2, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 5, y: 7, n: '108-Wall Outer Corner (LOW) [NW]'}
+- {x: 9, y: 7, s: 1*2, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 23, y: 7, n: '10A-Wall Outer Corner (LOW) [NE]'}
+- {x: 5, y: 23, s: 0*3, n: '1A-\ Wall Tile Bot (LOW)[SW]'}
+- {x: 18, y: 31, s: 0*3, n: '1C-/ Wall Tile Bot (LOW)[SE]'}
+- {x: 5, y: 11, s: 1*3, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 23, y: 11, s: 1*3, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 10, y: 32, s: 2*0, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 18, y: 32, s: 2*0, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 10, y: 50, n: '109-Wall Outer Corner (LOW) [SW]'}
+- {x: 14, y: 50, s: 0*1, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 18, y: 50, n: '10B-Wall Outer Corner (LOW) [SE]'}
+- {x: 10, y: 54, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 18, y: 54, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 14, y: 50, n: 'F9D-Stair Wet [S](Layer)'}
+- {x: 12, y: 20, s: 0*1, n: '3D-Stand Torch [L-R]'}
+- {x: 11, y: 10, s: 0*0, n: 'DC-Chest Platform? [4-way]'}
+- {x: 15, y: 11, n: F99-Chest}
+- {x: 2, y: 28, s: 0*0, n: 'A1-\ Ceiling [SW]'}
+- {x: 26, y: 31, s: 0*0, n: 'A3-/ Ceiling [SE]'}
+- {x: 2, y: 32, s: 0*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 2, y: 48, s: 0*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 5, y: 32, s: 3*3, n: '60-Ceiling [U-D]'}
+- {x: 25, y: 32, s: 3*3, n: '60-Ceiling [U-D]'}
+- {x: 26, y: 32, s: 0*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 26, y: 48, s: 0*3, n: 'C0-Ceiling Large [4-way]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 0, pos: 6, dir: 1}
+- {type: 18, pos: 6, dir: 1}

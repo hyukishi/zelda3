@@ -1,0 +1,89 @@
+Header:
+  floor1: 9
+  floor2: 1
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 9
+  blockset: 5
+  enemyblk: 10
+  effect: None
+  tag0: Switch opens door(Toggle)
+  tag1: None
+  hole0_dest: [5, 0]
+  stair0_dest: [10, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [39, 0]
+  stair3_dest: [0, 1]
+  tele_msg: 192
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [24, 24, upper, 64-SandCrab2]
+- [23, 9, upper, 61-Beamos]
+- [21, 21, upper, 71-Leever]
+- [27, 24, upper, 71-Leever]
+- [7, 25, upper, 61-Beamos]
+- [22, 27, upper, 71-Leever]
+- [20, 6, upper, 3B-DashItem]
+Secrets:
+- [13, 43, 09-Arrow]
+- [15, 43, 01-Rupee-G]
+- [10, 46, 88-Switch]
+- [18, 46, 07-Rupee-B]
+- [8, 49, 0B-Heart]
+- [20, 49, 09-Arrow]
+- [10, 52, 0C-Magic]
+- [18, 52, 0B-Heart]
+- [13, 55, 01-Rupee-G]
+- [15, 55, 07-Rupee-B]
+Chests: [27!]
+Entrances: []
+Layer1:
+- {x: 58, y: 36, s: 0*3, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 56, y: 40, s: 1*0, n: C4-Doorless Room Transition}
+- {x: 58, y: 44, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 62, y: 44, s: 0*1, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 50, y: 58, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 50, y: 62, s: 0*1, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 58, y: 58, s: 0*3, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 54, y: 56, s: 0*1, n: C4-Doorless Room Transition}
+- {x: 8, y: 10, s: 1*2, n: 'C1-Chest Pedastal [4-way]'}
+- {x: 12, y: 20, s: 0*2, n: '21-Mini Stairs [L-R]'}
+- {x: 10, y: 12, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 20, y: 12, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 14, y: 14, n: FB1-Big Chest}
+- {x: 13, y: 46, s: 0*1, n: 'DB-Floor2 [4-way]'}
+- {x: 12, y: 45, s: 0*2, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 12, y: 46, s: 1*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 17, y: 46, s: 1*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 12, y: 54, s: 0*2, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 6, y: 36, s: 0*3, n: '05-[N]Wall Column [L-R]'}
+- {x: 6, y: 4, s: 0*2, n: '3A-[N]Wall Decor: [L-R]'}
+- {x: 13, y: 43, n: FAF-Pot}
+- {x: 15, y: 43, n: FAF-Pot}
+- {x: 10, y: 46, n: FAF-Pot}
+- {x: 8, y: 49, n: FAF-Pot}
+- {x: 10, y: 52, n: FAF-Pot}
+- {x: 13, y: 55, n: FAF-Pot}
+- {x: 15, y: 55, n: FAF-Pot}
+- {x: 18, y: 52, n: FAF-Pot}
+- {x: 20, y: 49, n: FAF-Pot}
+- {x: 18, y: 46, n: FAF-Pot}
+- {x: 38, y: 8, s: 3*3, n: 'DB-Floor2 [4-way]'}
+- {x: 54, y: 8, s: 0*3, n: 'DB-Floor2 [4-way]'}
+- {x: 38, y: 22, s: 3*0, n: 'DB-Floor2 [4-way]'}
+- {x: 54, y: 22, s: 0*0, n: 'DB-Floor2 [4-way]'}
+- {x: 47, y: 5, n: F93-Telepathic Tile}
+- {x: 40, y: 12, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 54, y: 12, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 40, y: 20, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 54, y: 20, s: 0*0, n: '3D-Stand Torch [L-R]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 54, pos: 6, dir: 0}
+- {type: 56, pos: 8, dir: 2}
+- {type: 0, pos: 8, dir: 0}

@@ -1,0 +1,38 @@
+Header:
+  name: 'LW 055 : Frosty Caves'
+  size: small
+  gfx: 39
+  palette: 4
+  sign_text: 167
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances:
+- {index: 106, x: 9, y: 4, entrance_id: 86}
+- {index: 122, x: 6, y: 8, entrance_id: 111}
+- {index: 127, x: 4, y: 4, entrance_id: 132}
+Exits: []
+Items:
+- [4, 5, 86-Bombable]
+- [21, 7, 05-Bomb]
+- [6, 8, 84-Staircase]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 4, palette: 3}
+  sprites:
+  - [8, 8, 58-Crab]
+  - [16, 8, 58-Crab]
+  - [15, 11, 58-Crab]
+  - [22, 17, 58-Crab]
+  - [12, 21, 00-Raven]
+  - [18, 25, 55-FireBallZora]
+Sprites.SecondPart:
+  info: {gfx: 32, palette: 3}
+  sprites:
+  - [8, 8, 58-Crab]
+  - [16, 8, 58-Crab]
+  - [15, 11, 58-Crab]
+  - [22, 17, 58-Crab]
+  - [18, 25, 55-FireBallZora]

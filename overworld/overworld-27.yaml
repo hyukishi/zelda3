@@ -1,0 +1,133 @@
+Header:
+  name: 'LW 027 : Hyrule Castle NW'
+  size: big
+  gfx: 36
+  palette: 2
+  sign_text: 59
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: Heavy rain, zelda: None, sword: None, agahnim: None}
+Travel: []
+Entrances:
+- {index: 2, x: 18, y: 2, entrance_id: 3}
+- {index: 3, x: 31, y: 15, entrance_id: 4}
+- {index: 4, x: 44, y: 2, entrance_id: 5}
+- {index: 35, x: 31, y: 5, entrance_id: 36}
+- {index: 49, x: 44, y: 13, entrance_id: 50}
+Holes:
+- {x: 56, y: 10, entrance_id: 125}
+Exits:
+- index: 2
+  room: 96
+  xy: [296, 4]
+  scroll_xy: [174, 0]
+  camera_xy: [307, 109]
+  load_xy: [1, 0]
+  unk: [0, 2]
+  door: [palace, 18, 2]
+- index: 3
+  room: 97
+  xy: [504, 204]
+  scroll_xy: [388, 146]
+  camera_xy: [515, 255]
+  load_xy: [0, 1]
+  unk: [14, -6]
+  door: [palace, 31, 15]
+- index: 4
+  room: 98
+  xy: [712, 4]
+  scroll_xy: [598, 0]
+  camera_xy: [723, 109]
+  load_xy: [0, 0]
+  unk: [0, -6]
+  door: [palace, 44, 2]
+- index: 37
+  room: 224
+  xy: [504, 52]
+  scroll_xy: [388, 0]
+  camera_xy: [515, 109]
+  load_xy: [1, 0]
+  unk: [0, 10]
+  door: [palace, 31, 5]
+- index: 51
+  room: 85
+  xy: [712, 200]
+  scroll_xy: [596, 122]
+  camera_xy: [723, 231]
+  load_xy: [0, 1]
+  unk: [6, -6]
+- index: 62
+  room: 4096
+  xy: [499, 656]
+  scroll_xy: [383, 578]
+  camera_xy: [510, 687]
+  load_xy: [1, 0]
+  unk: [-2, -1]
+Items:
+- [6, 5, 01-Rupee-G]
+- [6, 8, 04-Random]
+- [7, 8, 04-Random]
+- [18, 14, 03-Bee]
+- [54, 5, 04-Random]
+- [56, 10, 80-Hole]
+- [46, 12, 06-Heart]
+- [56, 17, 01-Rupee-G]
+- [54, 19, 06-Heart]
+- [37, 28, 01-Rupee-G]
+- [44, 29, 01-Rupee-G]
+- [45, 30, 01-Rupee-G]
+- [44, 31, 01-Rupee-G]
+- [26, 33, 03-Bee]
+- [14, 45, 04-Random]
+- [16, 45, 01-Rupee-G]
+- [17, 45, 01-Rupee-G]
+- [4, 57, 01-Rupee-G]
+- [9, 59, 04-Random]
+- [42, 33, 01-Rupee-G]
+- [42, 42, 01-Rupee-G]
+- [45, 43, 01-Rupee-G]
+- [47, 43, 01-Rupee-G]
+- [41, 44, 01-Rupee-G]
+- [51, 44, 01-Rupee-G]
+- [56, 58, 05-Bomb]
+- [45, 59, 04-Random]
+- [48, 59, 06-Heart]
+Sprites.Beginning:
+  info: {gfx: 2, palette: 1}
+  sprites:
+  - [31, 6, 40-ElectricBarrier]
+  - [1, 18, 3F-PalaceGuard]
+  - [1, 20, 3F-PalaceGuard]
+  - [31, 19, 42-GreenSoldier]
+  - [31, 26, 4B-Knight]
+  - [32, 26, 4B-Knight]
+  - [45, 37, 3F-PalaceGuard]
+  - [32, 41, 3F-PalaceGuard]
+Sprites.FirstPart:
+  info: {gfx: 1, palette: 3}
+  sprites:
+  - [31, 6, 40-ElectricBarrier]
+  - [9, 17, 49-RedGrassSpearSo]
+  - [10, 19, 49-RedGrassSpearSo]
+  - [22, 20, AC-Apples]
+  - [14, 25, 4A-RedBombKnight]
+  - [31, 26, 41-BlueSoldier]
+  - [41, 23, 33-PullForRupees]
+  - [49, 25, 4A-RedBombKnight]
+  - [32, 26, 41-BlueSoldier]
+  - [14, 37, 4A-RedBombKnight]
+  - [20, 45, 42-GreenSoldier]
+  - [38, 45, 48-RedSpearKnight]
+  - [33, 50, 48-RedSpearKnight]
+Sprites.SecondPart:
+  info: {gfx: 28, palette: 1}
+  sprites:
+  - [6, 13, 45-HogSpearMan]
+  - [22, 20, AC-Apples]
+  - [31, 26, 45-HogSpearMan]
+  - [55, 19, 41-BlueSoldier]
+  - [30, 37, BA-Whirlpool]
+  - [8, 40, 43-RedSpearSoldier]
+  - [31, 43, 42-GreenSoldier]
+  - [56, 41, 41-BlueSoldier]
+  - [33, 45, 41-BlueSoldier]
+  - [33, 50, 45-HogSpearMan]

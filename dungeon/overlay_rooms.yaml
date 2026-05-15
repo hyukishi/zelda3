@@ -1,0 +1,195 @@
+Overlay0:
+- {x: 43, y: 14, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 47, y: 20, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 44, y: 28, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 50, y: 28, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 37, y: 36, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 44, y: 36, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 50, y: 36, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 37, y: 42, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 55, y: 42, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 46, y: 46, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 40, y: 52, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 52, y: 52, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 41, y: 42, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 40, y: 28, s: 0*0, n: 'A4-Hole [4-way]'}
+Overlay1:
+- {x: 22, y: 22, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 42, y: 22, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 50, y: 22, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 50, y: 40, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 54, y: 44, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 50, y: 48, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 12, y: 22, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 18, y: 22, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 40, y: 50, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 46, y: 32, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 50, y: 44, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 6, y: 18, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 40, y: 54, s: 0*0, n: 'C7-Floor4 [4-way]'}
+Overlay2:
+- {x: 46, y: 32, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 50, y: 44, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 6, y: 18, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 40, y: 54, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 12, y: 22, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 18, y: 22, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 40, y: 50, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 50, y: 40, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 54, y: 44, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 50, y: 48, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 22, y: 22, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 42, y: 22, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 50, y: 22, s: 0*0, n: 'C7-Floor4 [4-way]'}
+Overlay3:
+- {x: 46, y: 14, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 38, y: 20, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 54, y: 20, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 46, y: 40, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 8, y: 40, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 12, y: 44, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 16, y: 44, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 20, y: 40, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 40, y: 28, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 46, y: 28, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 52, y: 28, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 40, y: 44, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 52, y: 44, s: 0*0, n: 'C7-Floor4 [4-way]'}
+Overlay4:
+- {x: 40, y: 28, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 46, y: 28, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 52, y: 28, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 40, y: 44, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 52, y: 44, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 8, y: 40, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 12, y: 44, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 16, y: 44, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 20, y: 40, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 46, y: 14, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 38, y: 20, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 54, y: 20, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 46, y: 40, s: 0*0, n: 'C7-Floor4 [4-way]'}
+Overlay5:
+- {x: 30, y: 30, s: 0*0, n: 'A4-Hole [4-way]'}
+Overlay6:
+- {x: 10, y: 39, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 14, y: 39, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 14, y: 43, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 6, y: 43, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 6, y: 47, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 6, y: 51, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 14, y: 51, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 18, y: 47, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 22, y: 43, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 22, y: 51, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 10, y: 43, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 10, y: 47, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 10, y: 51, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 10, y: 55, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 18, y: 51, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 18, y: 55, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 18, y: 39, s: 0*0, n: 'C7-Floor4 [4-way]'}
+Overlay7:
+- {x: 10, y: 43, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 10, y: 47, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 10, y: 51, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 10, y: 55, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 18, y: 51, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 18, y: 55, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 18, y: 39, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 6, y: 43, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 6, y: 47, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 6, y: 51, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 10, y: 39, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 14, y: 39, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 14, y: 43, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 14, y: 51, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 18, y: 47, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 22, y: 43, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 22, y: 51, s: 0*0, n: 'C7-Floor4 [4-way]'}
+Overlay8:
+- {x: 12, y: 26, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 12, y: 40, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 12, y: 30, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 12, y: 36, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 30, y: 18, s: 0*0, n: 'C7-Floor4 [4-way]'}
+Overlay9:
+- {x: 12, y: 30, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 12, y: 36, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 30, y: 18, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 12, y: 26, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 12, y: 40, s: 0*0, n: 'C7-Floor4 [4-way]'}
+Overlay10:
+- {x: 30, y: 22, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 30, y: 14, s: 0*0, n: 'C7-Floor4 [4-way]'}
+Overlay11:
+- {x: 30, y: 14, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 30, y: 22, s: 0*0, n: 'C7-Floor4 [4-way]'}
+Overlay12:
+- {x: 10, y: 44, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 14, y: 50, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 16, y: 44, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 20, y: 52, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 7, y: 22, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 22, y: 14, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 30, y: 22, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 40, y: 14, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 14, y: 14, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 22, y: 18, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 44, y: 14, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 52, y: 22, s: 0*0, n: 'C7-Floor4 [4-way]'}
+Overlay13:
+- {x: 16, y: 44, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 20, y: 52, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 10, y: 44, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 14, y: 50, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 14, y: 14, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 22, y: 18, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 44, y: 14, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 52, y: 22, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 7, y: 22, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 22, y: 14, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 30, y: 22, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 40, y: 14, s: 0*0, n: 'C7-Floor4 [4-way]'}
+Overlay14:
+- {x: 12, y: 18, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 16, y: 18, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 20, y: 18, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 40, y: 18, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 46, y: 42, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 26, y: 14, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 30, y: 14, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 34, y: 14, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 46, y: 14, s: 0*0, n: 'C7-Floor4 [4-way]'}
+Overlay15:
+- {x: 26, y: 14, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 30, y: 14, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 34, y: 14, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 46, y: 14, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 12, y: 18, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 16, y: 18, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 20, y: 18, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 40, y: 18, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 46, y: 42, s: 0*0, n: 'C7-Floor4 [4-way]'}
+Overlay16:
+- {x: 38, y: 12, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 38, y: 18, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 40, y: 40, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 44, y: 40, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 50, y: 54, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 54, y: 54, s: 0*0, n: 'C7-Floor4 [4-way]'}
+Overlay17:
+- {x: 38, y: 12, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 38, y: 18, s: 0*0, n: 'C7-Floor4 [4-way]'}
+- {x: 40, y: 40, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 44, y: 40, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 50, y: 54, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 54, y: 54, s: 0*0, n: 'A4-Hole [4-way]'}
+Overlay18:
+- {x: 8, y: 8, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 6, y: 20, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 14, y: 16, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 14, y: 22, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 20, y: 8, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 20, y: 14, s: 0*0, n: 'A4-Hole [4-way]'}
+- {x: 22, y: 20, s: 0*0, n: 'A4-Hole [4-way]'}

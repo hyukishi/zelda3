@@ -1,0 +1,21 @@
+Header:
+  name: 'DW 109 : Hammer Time Bridge'
+  size: small
+  gfx: 64
+  palette: 29
+  sign_text: 173
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items: []
+Sprites:
+  info: {gfx: 24, palette: 14}
+  sprites:
+  - [15, 5, 22-HoppingBulbPlan]
+  - [13, 7, 11-Hinox]
+  - [18, 8, 41-BlueSoldier]
+  - [16, 10, 41-BlueSoldier]
+  - [16, 26, D3-AliveRock]
+  - [19, 27, D3-AliveRock]

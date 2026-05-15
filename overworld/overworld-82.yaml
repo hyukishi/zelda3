@@ -1,0 +1,27 @@
+Header:
+  name: 'DW 082 : Northern Pond (Evil Edition)'
+  size: small
+  gfx: 48
+  palette: 16
+  sign_text: 171
+  music: {agahnim: Dark_world}
+  ambient: {agahnim: None}
+Travel: []
+Entrances: []
+Exits: []
+Items:
+- [25, 9, 06-Heart]
+- [24, 10, 06-Heart]
+- [23, 11, 06-Heart]
+- [4, 15, 01-Rupee-G]
+- [4, 16, 01-Rupee-G]
+- [4, 17, 01-Rupee-G]
+- [25, 19, 04-Random]
+Sprites:
+  info: {gfx: 18, palette: 0}
+  sprites:
+  - [18, 9, D3-AliveRock]
+  - [21, 13, 12-PigSpearMan]
+  - [7, 16, 41-BlueSoldier]
+  - [20, 23, 41-BlueSoldier]
+  - [14, 24, 12-PigSpearMan]

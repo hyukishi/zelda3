@@ -1,0 +1,68 @@
+Header:
+  floor1: 3
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 5
+  blockset: 3
+  enemyblk: 40
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [3, 0]
+  stair0_dest: [5, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [0, 0]
+  stair3_dest: [0, 3]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [11, 27, upper, BB-ShopMan]
+Secrets: []
+Chests: []
+Entrances:
+- entrance_index: 60
+  name: Treasure Shell Game 1
+  scroll_xy: [0, 272]
+  player_xy: [120, 472]
+  camera_xy: [127, 391]
+  blockset: 3
+  music: Shop
+  palace: None
+  doorway_orientation: 1
+  plane: 0
+  ladder_level: 0
+  quadrants: [single_x, single_y, lower_left]
+  floor: 0
+  house_exit_door: [none]
+Layer1:
+- {x: 6, y: 36, s: 0*0, n: '3E-[N]Wall Column [L-R]'}
+- {x: 24, y: 36, s: 0*0, n: '3E-[N]Wall Column [L-R]'}
+- {x: 2, y: 47, s: 0*0, n: '76-[W]Wall Decor: [U-D]'}
+- {x: 27, y: 47, s: 0*0, n: '77-[E]Wall Decor: [U-D]'}
+- {x: 8, y: 59, s: 0*0, n: '3B-[S]Wall Decor: [L-R]'}
+- {x: 20, y: 59, s: 0*0, n: '3B-[S]Wall Decor: [L-R]'}
+- {x: 8, y: 47, s: 0*3, n: 'B2-Floor? [L-R]'}
+- {x: 7, y: 46, s: 3*3, n: B3-N/A}
+- {x: 7, y: 51, s: 3*3, n: B4-N/A}
+- {x: 7, y: 47, s: 0*3, n: '8D-[W]Edge [U-D]'}
+- {x: 24, y: 47, s: 0*3, n: '8E-[E]Edge [U-D]'}
+- {x: 10, y: 48, n: FF5-Minigame Chest}
+- {x: 15, y: 48, n: FF5-Minigame Chest}
+- {x: 20, y: 48, n: FF5-Minigame Chest}
+- {x: 5, y: 52, n: 121-Barrel}
+- {x: 25, y: 52, n: 121-Barrel}
+- {x: 13, y: 36, s: 0*1, n: '4F-Shelf [L-R]'}
+- {x: 8, y: 42, s: 1*2, n: '4C-Bar [L-R]'}
+- {x: 14, y: 42, n: FDF-Bottles on Bar}
+- {x: 18, y: 42, n: FDF-Bottles on Bar}
+- {x: 20, y: 42, n: FDF-Bottles on Bar}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 0, pos: 6, dir: 1}
+- {type: 18, pos: 6, dir: 1}

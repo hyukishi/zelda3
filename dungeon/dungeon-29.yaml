@@ -1,0 +1,52 @@
+Header:
+  floor1: 2
+  floor2: 14
+  layout: 4
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 27
+  blockset: 14
+  enemyblk: 24
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [0, 0]
+  stair0_dest: [76, 0]
+  stair1_dest: [32, 0]
+  stair2_dest: [19, 0]
+  stair3_dest: [11, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites: []
+Secrets: []
+Chests: []
+Entrances: []
+Layer1:
+- {x: 46, y: 4, n: 139-Door Staircase Down L}
+- {x: 2, y: 11, s: 0*1, n: '76-[W]Wall Decor: [U-D]'}
+- {x: 59, y: 11, s: 0*1, n: '77-[E]Wall Decor: [U-D]'}
+- {x: 9, y: 8, s: 0*2, n: '87-Floor Torch [U-D]'}
+- {x: 13, y: 20, s: 1*2, n: '3D-Stand Torch [L-R]'}
+- {x: 53, y: 8, s: 0*2, n: '87-Floor Torch [U-D]'}
+- {x: 21, y: 8, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 28, y: 10, s: 0*1, n: '3D-Stand Torch [L-R]'}
+- {x: 41, y: 8, s: 0*0, n: '3D-Stand Torch [L-R]'}
+- {x: 14, y: 11, s: 0*1, n: '70-Red Floor/Wire Floor [U-D]'}
+- {x: 18, y: 15, s: 1*3, n: '33-Red Carpet Floor [L-R]'}
+- {x: 46, y: 8, s: 0*1, n: '70-Red Floor/Wire Floor [U-D]'}
+- {x: 18, y: 11, s: 0*0, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 13, y: 11, s: 1*1, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 14, y: 19, s: 3*3, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 33, y: 19, s: 3*2, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 19, y: 14, s: 3*3, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 38, y: 14, s: 1*0, n: '34-Red Carpet Floor Trim [L-R]'}
+- {x: 45, y: 8, s: 0*2, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 50, y: 8, s: 1*3, n: '71-Red Carpet Floor Trim [U-D]'}
+- {x: 12, y: 4, n: FF4-Boss Entrance}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 30, pos: 0, dir: 0}

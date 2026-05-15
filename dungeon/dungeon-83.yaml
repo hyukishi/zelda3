@@ -1,0 +1,105 @@
+Header:
+  floor1: 1
+  floor2: 5
+  layout: 2
+  start_quadrant: 0
+  bg2: Normal
+  collision: One
+  lights_out: 0
+  palette: 4
+  blockset: 5
+  enemyblk: 10
+  effect: None
+  tag0: SW Kill enemy to open
+  tag1: None
+  hole0_dest: [0, 0]
+  stair0_dest: [99, 0]
+  stair1_dest: [32, 0]
+  stair2_dest: [10, 0]
+  stair3_dest: [8, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [23, 7, upper, 4E-Tentacle2]
+- [28, 9, upper, 61-Beamos]
+- [23, 12, upper, 4F-Tentacle]
+- [26, 12, upper, 4F-Tentacle]
+- [19, 14, upper, 61-Beamos]
+- [5, 21, upper, 4E-Tentacle2]
+- [11, 22, upper, 4E-Tentacle2]
+- [26, 23, upper, 4E-Tentacle2]
+- [7, 25, upper, 61-Beamos]
+- [4, 26, upper, 4E-Tentacle2]
+- [11, 26, upper, 4E-Tentacle2]
+- [27, 26, upper, 61-Beamos]
+- [26, 27, upper, 4E-Tentacle2]
+Secrets:
+- [46, 22, 0B-Heart]
+- [48, 22, 0C-Magic]
+- [50, 22, 08-Key]
+- [52, 22, 0B-Heart]
+Chests: []
+Entrances: []
+Layer1:
+- {x: 42, y: 4, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 42, y: 8, s: 1*2, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 42, y: 20, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 38, y: 20, s: 0*2, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 34, y: 20, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 34, y: 32, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 38, y: 32, s: 1*1, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 48, y: 32, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 48, y: 36, s: 0*3, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 48, y: 42, n: '104-Wall Inner Corner (HIGH) [NW]'}
+- {x: 38, y: 42, s: 1*1, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 34, y: 42, n: '100-Wall Outer Corner (HIGH) [NW]'}
+- {x: 52, y: 4, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 52, y: 8, s: 0*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 52, y: 10, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 56, y: 10, s: 0*1, n: '01-[N]Wall Horz: [L-R]'}
+- {x: 58, y: 10, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 58, y: 22, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 54, y: 22, n: '107-Wall Inner Corner (HIGH) [SE]'}
+- {x: 54, y: 26, s: 0*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 54, y: 28, n: '106-Wall Inner Corner (HIGH) [NE]'}
+- {x: 58, y: 28, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 46, y: 22, n: FAF-Pot}
+- {x: 48, y: 22, n: FAF-Pot}
+- {x: 50, y: 22, n: FAF-Pot}
+- {x: 52, y: 22, n: FAF-Pot}
+- {x: 56, y: 43, s: 0*0, n: '38-Statue [L-R]'}
+- {x: 46, y: 53, s: 0*0, n: '38-Statue [L-R]'}
+- {x: 5, y: 7, n: '108-Wall Outer Corner (LOW) [NW]'}
+- {x: 5, y: 11, s: 1*1, n: '63-[W]Wall Vert: (LOW) [U-D]'}
+- {x: 5, y: 23, n: '109-Wall Outer Corner (LOW) [SW]'}
+- {x: 9, y: 7, s: 0*1, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 9, y: 23, s: 0*1, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 19, y: 7, s: 0*1, n: '03-[N]Wall Horz: (LOW) [L-R]'}
+- {x: 23, y: 7, n: '10A-Wall Outer Corner (LOW) [NE]'}
+- {x: 23, y: 11, s: 1*1, n: '64-[E]Wall Vert: (LOW) [U-D]'}
+- {x: 23, y: 23, n: '10B-Wall Outer Corner (LOW) [SE]'}
+- {x: 19, y: 23, s: 0*1, n: '04-[S]Wall Horz: (LOW) [L-R]'}
+- {x: 9, y: 11, s: 0*2, n: 'DB-Floor2 [4-way]'}
+- {x: 19, y: 11, s: 0*2, n: 'DB-Floor2 [4-way]'}
+- {x: 13, y: 7, s: 3*2, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 13, y: 23, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 18, y: 7, s: 3*2, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 18, y: 23, s: 0*0, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 14, y: 4, n: 139-Door Staircase Down L}
+- {x: 14, y: 42, s: 0*0, n: '38-Statue [L-R]'}
+- {x: 6, y: 36, s: 0*3, n: '05-[N]Wall Column [L-R]'}
+- {x: 8, y: 45, s: 0*0, n: '38-Statue [L-R]'}
+- {x: 20, y: 46, s: 0*0, n: '38-Statue [L-R]'}
+- {x: 18, y: 53, s: 0*0, n: '38-Statue [L-R]'}
+- {x: 34, y: 4, s: 1*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 56, y: 2, s: 1*1, n: 'C0-Ceiling Large [4-way]'}
+- {x: 32, y: 36, s: 3*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 32, y: 38, s: 3*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 58, y: 26, s: 0*2, n: '00-Ceiling [L-R]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 54, pos: 6, dir: 0}
+- {type: 56, pos: 8, dir: 2}
+- {type: 28, pos: 2, dir: 0}

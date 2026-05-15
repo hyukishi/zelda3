@@ -1,0 +1,38 @@
+Header:
+  floor1: 9
+  floor2: 14
+  layout: 0
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 0
+  palette: 16
+  blockset: 7
+  enemyblk: 21
+  effect: None
+  tag0: Kill enemy to clear level
+  tag1: None
+  hole0_dest: [14, 0]
+  stair0_dest: [10, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [23, 3]
+  stair3_dest: [0, 3]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [23, 22, upper, 92-Helmasaur]
+Secrets: []
+Chests: []
+Entrances: []
+Layer1:
+- {x: 42, y: 42, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 44, y: 40, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 46, y: 42, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 48, y: 40, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 50, y: 42, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 52, y: 40, s: 0*0, n: 'DE-Spike Block [4-way]'}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 24, pos: 8, dir: 1}

@@ -1,0 +1,111 @@
+Header:
+  floor1: 1
+  floor2: 8
+  layout: 0
+  start_quadrant: 0
+  bg2: Parallaxing
+  collision: One
+  lights_out: 0
+  palette: 40
+  blockset: 14
+  enemyblk: 19
+  effect: None
+  tag0: Switch opens door(Hold)
+  tag1: None
+  hole0_dest: [28, 0]
+  stair0_dest: [12, 2]
+  stair1_dest: [12, 2]
+  stair2_dest: [28, 0]
+  stair3_dest: [0, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [26, 3, upper, 06-TrapSwitch]
+- [24, 5, upper, 11A-BombDrop]
+- [21, 6, upper, 11A-BombDrop]
+- [26, 6, upper, 11A-BombDrop]
+- [21, 10, upper, 11A-BombDrop]
+- [26, 10, upper, 11A-BombDrop]
+- [8, 8, upper, 5B-WallBubble(L-R)]
+- [23, 8, upper, 8A-SpikeBlock]
+- [11, 9, upper, A7-Stalfos]
+- [3, 11, upper, A7-Stalfos]
+- [5, 23, upper, 80-Lanmola]
+- [22, 23, upper, 5B-WallBubble(L-R)]
+- [20, 24, upper, 15-Bubble]
+- [11, 27, upper, 80-Lanmola]
+- [26, 28, upper, 15-Bubble]
+- [9, 7, upper, 3B-DashItem]
+Secrets:
+- [38, 24, 88-Switch]
+- [56, 24, 0C-Magic]
+- [38, 40, 0A-Bomb]
+- [46, 40, 0A-Bomb]
+- [50, 42, 09-Arrow]
+- [52, 52, 0A-Bomb]
+- [44, 54, 0A-Bomb]
+Chests: [35!, 68, 40, 68]
+Entrances: []
+Layer1:
+- {x: 52, y: 54, n: FC7-Bomb Floor}
+- {x: 14, y: 4, n: 138-Door Staircase Up R}
+- {x: 46, y: 4, n: 138-Door Staircase Up R}
+- {x: 6, y: 4, s: 0*3, n: '05-[N]Wall Column [L-R]'}
+- {x: 38, y: 4, s: 0*3, n: '05-[N]Wall Column [L-R]'}
+- {x: 12, y: 14, s: 0*1, n: '3D-Stand Torch [L-R]'}
+- {x: 40, y: 12, s: 0*1, n: '5E-Block [L-R]'}
+- {x: 50, y: 12, s: 0*1, n: '5E-Block [L-R]'}
+- {x: 38, y: 20, s: 0*0, n: '5E-Block [L-R]'}
+- {x: 40, y: 20, s: 0*1, n: '5E-Block [L-R]'}
+- {x: 50, y: 20, s: 0*1, n: '5E-Block [L-R]'}
+- {x: 56, y: 20, s: 0*0, n: '5E-Block [L-R]'}
+- {x: 42, y: 16, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 52, y: 16, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 38, y: 24, n: FAF-Pot}
+- {x: 56, y: 24, n: FAF-Pot}
+- {x: 10, y: 39, s: 0*0, n: '22-Horz: Rail Thin [L-R]'}
+- {x: 5, y: 39, s: 0*3, n: '69-Vert: Rail Thin [U-D]'}
+- {x: 6, y: 42, s: 0*0, n: '5E-Block [L-R]'}
+- {x: 8, y: 42, s: 0*0, n: '5E-Block [L-R]'}
+- {x: 10, y: 44, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 20, y: 44, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 10, y: 52, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 20, y: 52, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 6, y: 36, n: 139-Door Staircase Down L}
+- {x: 22, y: 39, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 5, y: 46, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 14, y: 47, n: FB1-Big Chest}
+- {x: 25, y: 50, s: 0*0, n: 'DE-Spike Block [4-way]'}
+- {x: 12, y: 57, n: 134-Block}
+- {x: 18, y: 57, n: 134-Block}
+- {x: 38, y: 8, n: F99-Chest}
+- {x: 56, y: 8, n: F99-Chest}
+- {x: 40, y: 40, n: FC8-Fake Bomb Floor}
+- {x: 52, y: 40, n: FC8-Fake Bomb Floor}
+- {x: 40, y: 54, n: FC8-Fake Bomb Floor}
+- {x: 38, y: 40, n: FAF-Pot}
+- {x: 44, y: 54, n: FAF-Pot}
+- {x: 46, y: 40, n: FAF-Pot}
+- {x: 50, y: 42, n: FAF-Pot}
+- {x: 38, y: 44, s: 0*1, n: '5E-Block [L-R]'}
+- {x: 44, y: 42, s: 0*1, n: '5E-Block [L-R]'}
+- {x: 50, y: 44, s: 0*1, n: '5E-Block [L-R]'}
+- {x: 38, y: 52, s: 0*1, n: '5E-Block [L-R]'}
+- {x: 50, y: 52, s: 0*1, n: '5E-Block [L-R]'}
+- {x: 50, y: 54, s: 0*0, n: '5E-Block [L-R]'}
+- {x: 50, y: 56, s: 0*0, n: '5E-Block [L-R]'}
+- {x: 56, y: 52, s: 0*0, n: '5E-Block [L-R]'}
+- {x: 44, y: 52, s: 0*1, n: '89-Block Vert: [U-D]'}
+- {x: 52, y: 52, n: FAF-Pot}
+- {x: 46, y: 46, n: 'FEB-Throne/Decor: Object'}
+- {x: 56, y: 54, n: F99-Chest}
+Layer2: []
+Layer3: []
+Layer3.doors:
+- {type: 24, pos: 6, dir: 3}
+- {type: 56, pos: 6, dir: 0}
+- {type: 28, pos: 6, dir: 2}
+- {type: 0, pos: 0, dir: 2}
+- {type: 0, pos: 6, dir: 1}
+- {type: 0, pos: 8, dir: 1}

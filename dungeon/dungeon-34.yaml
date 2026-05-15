@@ -1,0 +1,88 @@
+Header:
+  floor1: 1
+  floor2: 14
+  layout: 4
+  start_quadrant: 0
+  bg2: None
+  collision: One
+  lights_out: 1
+  palette: 1
+  blockset: 1
+  enemyblk: 1
+  effect: None
+  tag0: None
+  tag1: None
+  hole0_dest: [13, 0]
+  stair0_dest: [38, 0]
+  stair1_dest: [0, 0]
+  stair2_dest: [1, 0]
+  stair3_dest: [0, 0]
+  tele_msg: 180
+  sort_sprites: 0
+  pits_hurt_player: false
+Sprites:
+- [6, 20, upper, 6D-Rat]
+- [8, 20, upper, 6D-Rat]
+- [17, 20, upper, 6D-Rat]
+- [18, 20, upper, 6D-Rat]
+- [17, 21, upper, 6D-Rat]
+- [18, 21, upper, 6D-Rat]
+- [9, 24, upper, 6D-Rat]
+Secrets: []
+Chests: []
+Entrances: []
+Layer1:
+- {x: 6, y: 54, s: 0*3, n: '02-[S]Wall Horz: [L-R]'}
+- {x: 12, y: 54, n: '105-Wall Inner Corner (HIGH) [SW]'}
+- {x: 12, y: 58, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 39, y: 36, n: '102-Wall Outer Corner (HIGH) [NE]'}
+- {x: 39, y: 40, s: 2*1, n: '62-[E]Wall Vert: [U-D]'}
+- {x: 39, y: 58, n: '103-Wall Outer Corner (HIGH) [SE]'}
+- {x: 4, y: 47, s: 0*0, n: 'C8-Water Floor [4-way]'}
+- {x: 4, y: 51, s: 2*0, n: 'C8-Water Floor [4-way]'}
+- {x: 4, y: 43, s: 2*0, n: 'C8-Water Floor [4-way]'}
+- {x: 12, y: 47, s: 0*0, n: 'C8-Water Floor [4-way]'}
+- {x: 16, y: 43, s: 3*0, n: 'C8-Water Floor [4-way]'}
+- {x: 16, y: 51, s: 3*0, n: 'C8-Water Floor [4-way]'}
+- {x: 16, y: 55, s: 1*0, n: 'C8-Water Floor [4-way]'}
+- {x: 20, y: 47, s: 0*0, n: 'C8-Water Floor [4-way]'}
+- {x: 28, y: 47, s: 2*0, n: 'C8-Water Floor [4-way]'}
+- {x: 32, y: 51, s: 0*0, n: 'C8-Water Floor [4-way]'}
+- {x: 8, y: 46, s: 0*2, n: '41-Water Edge [L-R]'}
+- {x: 8, y: 51, s: 0*2, n: '42-Water Edge [L-R]'}
+- {x: 8, y: 47, s: 0*3, n: '7A-Water Edge [U-D]'}
+- {x: 12, y: 47, s: 0*3, n: '79-Water Edge [U-D]'}
+- {x: 16, y: 47, s: 0*2, n: '41-Water Edge [L-R]'}
+- {x: 16, y: 50, s: 0*2, n: '42-Water Edge [L-R]'}
+- {x: 16, y: 48, s: 0*1, n: '7A-Water Edge [U-D]'}
+- {x: 20, y: 48, s: 0*1, n: '79-Water Edge [U-D]'}
+- {x: 23, y: 47, s: 0*2, n: '41-Water Edge [L-R]'}
+- {x: 23, y: 50, s: 0*2, n: '42-Water Edge [L-R]'}
+- {x: 23, y: 48, s: 0*1, n: '7A-Water Edge [U-D]'}
+- {x: 27, y: 48, s: 0*1, n: '79-Water Edge [U-D]'}
+- {x: 2, y: 54, n: '101-Wall Outer Corner (HIGH) [SW]'}
+- {x: 2, y: 40, s: 1*3, n: '61-[W]Wall Vert: [U-D]'}
+- {x: 5, y: 43, s: 3*3, n: '3F-Water Edge [L-R]'}
+- {x: 21, y: 43, s: 2*1, n: '3F-Water Edge [L-R]'}
+- {x: 32, y: 44, s: 0*1, n: '7A-Water Edge [U-D]'}
+- {x: 32, y: 46, s: 1*1, n: '45-Water Edge [L-R]'}
+- {x: 5, y: 54, s: 2*0, n: '44-Water Edge [L-R]'}
+- {x: 5, y: 44, s: 2*1, n: '79-Water Edge [U-D]'}
+- {x: 15, y: 55, s: 0*2, n: '79-Water Edge [U-D]'}
+- {x: 15, y: 58, s: 1*2, n: '40-Water Edge [L-R]'}
+- {x: 23, y: 55, s: 0*2, n: '7A-Water Edge [U-D]'}
+- {x: 23, y: 54, s: 2*3, n: '43-Water Edge [L-R]'}
+- {x: 36, y: 52, s: 0*1, n: '7A-Water Edge [U-D]'}
+- {x: 36, y: 51, s: 0*1, n: '43-Water Edge [L-R]'}
+- {x: 39, y: 47, s: 0*3, n: '7A-Water Edge [U-D]'}
+- {x: 0, y: 58, s: 2*0, n: 'C0-Ceiling Large [4-way]'}
+- {x: 43, y: 36, s: 3*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 43, y: 52, s: 3*2, n: 'C0-Ceiling Large [4-way]'}
+- {x: 56, y: 36, s: 1*3, n: 'C0-Ceiling Large [4-way]'}
+- {x: 56, y: 52, s: 1*2, n: 'C0-Ceiling Large [4-way]'}
+Layer2:
+- {x: 11, y: 15, n: FAA-Dark Room BG2 Mask}
+Layer3: []
+Layer3.doors:
+- {type: 28, pos: 7, dir: 1}
+- {type: 0, pos: 2, dir: 2}

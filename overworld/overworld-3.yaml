@@ -1,0 +1,129 @@
+Header:
+  name: 'LW 003 : Tower of Hera NW'
+  size: big
+  gfx: 34
+  palette: 7
+  sign_text: 64
+  music: {beginning: Beginning, zelda: World_map, sword: World_map, agahnim: World_map}
+  ambient: {beginning: None, zelda: Stop, sword: Stop, agahnim: Stop}
+Travel:
+- bird_travel_id: 0
+  xy: [120, 808]
+  scroll_xy: [14, 714]
+  camera_xy: [131, 823]
+  load_xy: [0, 0]
+  unk: [-10, -14]
+Entrances:
+- {index: 6, x: 7, y: 47, entrance_id: 7}
+- {index: 32, x: 20, y: 34, entrance_id: 33}
+- {index: 33, x: 28, y: 36, entrance_id: 34}
+- {index: 34, x: 28, y: 25, entrance_id: 35}
+- {index: 46, x: 4, y: 34, entrance_id: 47}
+- {index: 47, x: 18, y: 59, entrance_id: 48}
+- {index: 48, x: 40, y: 40, entrance_id: 49}
+- {index: 50, x: 47, y: 7, entrance_id: 51}
+Exits:
+- index: 8
+  room: 241
+  xy: [120, 744]
+  scroll_xy: [4, 660]
+  camera_xy: [131, 771]
+  load_xy: [1, 63]
+  unk: [10, -4]
+- index: 34
+  room: 249
+  xy: [328, 535]
+  scroll_xy: [212, 451]
+  camera_xy: [339, 562]
+  load_xy: [1, 63]
+  unk: [11, -4]
+- index: 35
+  room: 250
+  xy: [456, 567]
+  scroll_xy: [340, 483]
+  camera_xy: [467, 594]
+  load_xy: [1, 63]
+  unk: [11, -4]
+- index: 36
+  room: 234
+  xy: [456, 391]
+  scroll_xy: [340, 307]
+  camera_xy: [467, 418]
+  load_xy: [1, 63]
+  unk: [11, -4]
+- index: 45
+  room: 119
+  xy: [752, 104]
+  scroll_xy: [636, 20]
+  camera_xy: [763, 131]
+  load_xy: [1, 63]
+  unk: [10, -12]
+- index: 48
+  room: 231
+  xy: [72, 536]
+  scroll_xy: [0, 452]
+  camera_xy: [127, 563]
+  load_xy: [1, 63]
+  unk: [10, 0]
+- index: 49
+  room: 228
+  xy: [296, 935]
+  scroll_xy: [180, 798]
+  camera_xy: [307, 909]
+  load_xy: [2, 63]
+  unk: [0, 12]
+- index: 50
+  room: 229
+  xy: [648, 632]
+  scroll_xy: [532, 548]
+  camera_xy: [659, 659]
+  load_xy: [2, 63]
+  unk: [10, 12]
+- index: 64
+  room: 4100
+  xy: [742, 77]
+  scroll_xy: [632, 0]
+  camera_xy: [749, 109]
+  load_xy: [1, 0]
+  unk: [0, 8]
+Items:
+- [53, 48, 05-Bomb]
+- [57, 48, 05-Bomb]
+- [55, 50, 04-Random]
+- [53, 52, 05-Bomb]
+- [57, 52, 05-Bomb]
+Sprites.Beginning:
+  info: {gfx: 0, palette: 1}
+  sprites: []
+Sprites.FirstPart:
+  info: {gfx: 16, palette: 9}
+  sprites:
+  - [0, 0, F4-FallingRocks]
+  - [11, 4, F2-MedallianTablet]
+  - [39, 12, 27-Squirrel]
+  - [34, 22, EB-HeartPie]
+  - [10, 53, 27-Squirrel]
+  - [6, 54, 27-Squirrel]
+  - [13, 59, 27-Squirrel]
+  - [18, 59, F3-PersonsDoor]
+  - [44, 45, 27-Squirrel]
+  - [52, 51, 27-Squirrel]
+  - [47, 52, 27-Squirrel]
+Sprites.SecondPart:
+  info: {gfx: 16, palette: 9}
+  sprites:
+  - [0, 0, F4-FallingRocks]
+  - [11, 4, F2-MedallianTablet]
+  - [16, 26, C9-Tektite]
+  - [26, 30, C9-Tektite]
+  - [39, 12, 27-Squirrel]
+  - [44, 21, C9-Tektite]
+  - [34, 22, EB-HeartPie]
+  - [40, 25, C9-Tektite]
+  - [10, 53, 27-Squirrel]
+  - [6, 54, 27-Squirrel]
+  - [13, 59, 27-Squirrel]
+  - [18, 59, F3-PersonsDoor]
+  - [44, 45, 27-Squirrel]
+  - [52, 51, 27-Squirrel]
+  - [47, 52, 27-Squirrel]
