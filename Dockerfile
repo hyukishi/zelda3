@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:26.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -7,11 +7,18 @@ RUN apt-get update && apt-get install -y \
     libsdl2-dev \
     python3 \
     python3-pip \
+    python3-venv \
     wget \
     file \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install --no-cache-dir pillow pyyaml
+# Create a virtual environment for Python packages to avoid
+# "installing outside a virtual environment" warnings
+RUN python3 -m venv /venv \
+    && /venv/bin/pip install --no-cache-dir pillow pyyaml
+
+# Prepend the venv to PATH so 'python3' and scripts resolve to the venv
+ENV PATH="/venv/bin:${PATH}"
 
 WORKDIR /build
 COPY . .
@@ -20,6 +27,9 @@ COPY . .
 RUN rm -f AppDir/glsl-shaders AppDir/sprites-gfx
 
 RUN make clean && make -j"$(nproc)"
+
+# Pre-extract assets from the ROM so the game runs immediately at startup
+RUN /venv/bin/python3 assets/restool.py --extract-from-rom
 
 # Bundle binary, config, and extraction scripts into AppDir
 RUN cp zelda3 AppDir/ \

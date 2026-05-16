@@ -1,0 +1,22 @@
+services:
+  zelda3-builder:
+    build: .
+    volumes:
+      - .:/out
+    # Default entrypoint copies the AppImage to /out/ (for headless builds)
+
+  zelda3:
+    build: .
+    entrypoint: ["/build/zelda3"]
+    network_mode: host
+    stdin_open: true
+    tty: true
+    environment:
+      - DISPLAY=${DISPLAY:-:0}
+      - PULSE_SERVER=unix:/run/user/${PUID:-1000}/pulse/native
+      - XDG_RUNTIME_DIR=/run/user/${PUID:-1000}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /run/user/${PUID:-1000}/pulse:/run/user/${PUID:-1000}/pulse:ro
+      - ./zelda3.ini:/build/zelda3.ini:ro
+      - ./saves:/build/saves
