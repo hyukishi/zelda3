@@ -230,9 +230,11 @@ static bool SdlRenderer_Init(SDL_Window *window) {
   if (g_config.shader)
     fprintf(stderr, "Warning: Shaders are supported only with the OpenGL backend\n");
 
-  SDL_Renderer *renderer = SDL_CreateRenderer(g_window, -1,
-                                              g_config.output_method == kOutputMethod_SDLSoftware ? SDL_RENDERER_SOFTWARE :
-                                              SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+  uint32 rflags = g_config.output_method == kOutputMethod_SDLSoftware ? SDL_RENDERER_SOFTWARE :
+                  SDL_RENDERER_ACCELERATED;
+  if (g_config.vsync)
+    rflags |= SDL_RENDERER_PRESENTVSYNC;
+  SDL_Renderer *renderer = SDL_CreateRenderer(g_window, -1, rflags);
   if (renderer == NULL) {
     printf("Failed to create renderer: %s\n", SDL_GetError());
     return false;
