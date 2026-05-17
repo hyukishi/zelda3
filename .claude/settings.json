@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(make:*)",
+      "Bash(git diff:*)",
+      "Bash(git diff --cached:*)",
+      "Bash(git log:*)",
+      "Bash(git status:*)",
+      "Bash(git branch:*)",
+      "Bash(ls:*)",
+      "Bash(find .*:*)",
+      "Bash(grep --line-buffered -rn:*)",
+      "Bash(grep -rn:*)",
+      "Bash(./zelda3:*)",
+      "Bash(file:*)",
+      "Bash(wc:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(mkdir:*)"
+    ]
+  }
+}
