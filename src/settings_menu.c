@@ -886,27 +886,34 @@ void SettingsMenu_Input(int key_code, int key_mod, bool pressed) {
 
 void SettingsMenu_ApplyCheats(void) {
   if (g_cheat_health) {
-    g_ram[0xF36D] = g_ram[0xF36C]; // health = capacity
+    g_ram[0xF36D] = g_ram[0xF36C]; // current = capacity
   }
   if (g_cheat_magic) {
     g_ram[0xF373] = 0x80; // magic full
   }
+  // link_bomb_upgrades (0xF370) is the upgrade level (0-2), not capacity.
+  // link_bomb_filler (0xF375) is the current count. Set to a high value
+  // so bombs never run out, but only if the player has acquired bombs.
   if (g_cheat_bombs && g_ram[0xF370] > 0) {
-    g_ram[0xF375] = g_ram[0xF370]; // bombs = capacity
+    g_ram[0xF375] = 99;
   }
+  // link_arrow_upgrades (0xF371) is the upgrade level (0-2).
+  // link_arrow_filler (0xF376) and link_num_arrows (0xF377) both
+  // track arrow count. Set both so neither can decrement.
   if (g_cheat_arrows && g_ram[0xF371] > 0) {
-    g_ram[0xF376] = g_ram[0xF371]; // arrows = capacity
+    g_ram[0xF376] = 99;
+    g_ram[0xF377] = 99;
   }
   if (g_cheat_keys) {
     g_ram[0xF36F] = 1; // small keys
   }
   if (g_cheat_rupees) {
     uint16 r = *(uint16*)(g_ram + 0xF362);
-    if (r < 500) {
-      g_ram[0xF360] = 500 & 0xFF;
-      g_ram[0xF361] = (500 >> 8) & 0xFF;
-      g_ram[0xF362] = 500 & 0xFF;
-      g_ram[0xF363] = (500 >> 8) & 0xFF;
+    if (r < 999) {
+      g_ram[0xF360] = 999 & 0xFF;
+      g_ram[0xF361] = (999 >> 8) & 0xFF;
+      g_ram[0xF362] = 999 & 0xFF;
+      g_ram[0xF363] = (999 >> 8) & 0xFF;
     }
   }
   // Pot carry: preserve carry bit through room transitions
