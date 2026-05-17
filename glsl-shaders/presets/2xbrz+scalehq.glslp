@@ -1,0 +1,16 @@
+shaders = 3
+
+shader0 = ../xbrz/shaders/2xbrz.glsl
+filter_linear0 = false
+scale_type0 = source
+scale0 = 2.0
+
+shader1 = ../scalehq/shaders/2xScaleHQ.glsl
+filter_linear1 = false
+scale_type1 = source
+scale1 = 2.0
+
+shader2 = ../stock.glsl
+filter_linear2 = true
+scale_type2 = source
+scale2 = 1.0
