@@ -63,7 +63,6 @@ static uint8 g_turbo, g_replay_turbo = true, g_cursor = true;
 uint8 g_current_window_scale;
 static uint8 g_gamepad_buttons;
 static int g_input1_state;
-static bool g_display_perf;
 static int g_curr_fps;
 static int g_ppu_render_flags = 0;
 int g_snes_width, g_snes_height;
@@ -156,7 +155,7 @@ static void DrawPpuFrameWithPerf() {
   int fb_h = g_snes_height * render_scale;
 
   g_renderer_funcs.BeginDraw(fb_w, fb_h, &pixel_buffer, &pitch);
-  if (g_display_perf || g_config.display_perf_title) {
+  if (g_config.fps_counter || g_config.display_perf_title) {
     static float history[64], average;
     static int history_pos;
     uint64 before = SDL_GetPerformanceCounter();
@@ -170,9 +169,25 @@ static void DrawPpuFrameWithPerf() {
   } else {
     ZeldaDrawPpuFrame(pixel_buffer, pitch, g_ppu_render_flags);
   }
-  if (g_display_perf)
-    RenderNumber(pixel_buffer + pitch * render_scale, pitch, g_curr_fps, render_scale == 4);
+  if (g_config.fps_counter) {
+    bool big = (render_scale == 4);
+    int margin = render_scale * 6;
+    int th = big ? 20 : 10;
+    int tw = big ? 64 : 32; // per digit, max 3 digits
+    char tmp[16];
+    snprintf(tmp, sizeof(tmp), "%d", g_curr_fps);
+    int digits = strlen(tmp);
+    int x_byte = 0, y_byte = 0;
+    switch (g_config.fps_counter) {
+    case 1: x_byte = margin * 4; y_byte = margin; break;
+    case 2: x_byte = fb_w * 4 - digits * tw - margin * 4; y_byte = margin; break;
+    case 3: x_byte = margin * 4; y_byte = fb_h - th - margin; break;
+    case 4: x_byte = fb_w * 4 - digits * tw - margin * 4; y_byte = fb_h - th - margin; break;
+    }
+    RenderNumber(pixel_buffer + y_byte * pitch + x_byte, pitch, g_curr_fps, big);
+  }
   SettingsMenu_Draw(pixel_buffer, pitch, fb_w, fb_h);
+  Updater_DrawNotify(pixel_buffer, pitch, fb_w, fb_h);
   g_renderer_funcs.EndDraw();
 }
 
@@ -434,7 +449,9 @@ int main(int argc, char** argv) {
         }
         break;
       case SDL_KEYDOWN:
-        if (g_settings_menu_active)
+        if (g_update_notify_active)
+          Updater_NotifyInput(event.key.keysym.sym, true);
+        else if (g_settings_menu_active)
           SettingsMenu_Input(event.key.keysym.sym, event.key.keysym.mod, true);
         else
           HandleInput(event.key.keysym.sym, event.key.keysym.mod, true);
@@ -478,10 +495,10 @@ int main(int argc, char** argv) {
     bool is_replay = ZeldaRunFrame(inputs);
     SDL_UnlockMutex(g_audio_mutex);
 
-    // Check for updates once on startup
+    // Check for updates once on startup (non-blocking background thread)
     if (!g_updater_started) {
       g_updater_started = true;
-      Updater_Check();
+      Updater_StartBackgroundCheck();
     }
     frameCtr++;
 
@@ -662,7 +679,9 @@ static void HandleCommand_Locked(uint32 j, bool pressed) {
     case kKeys_ReplayTurbo: g_replay_turbo = !g_replay_turbo; break;
     case kKeys_WindowBigger: ChangeWindowScale(1); break;
     case kKeys_WindowSmaller: ChangeWindowScale(-1); break;
-    case kKeys_DisplayPerf: g_display_perf ^= 1; break;
+    case kKeys_DisplayPerf:
+      g_config.fps_counter = (g_config.fps_counter + 1) % 5;
+      break;
     case kKeys_ToggleRenderer: g_ppu_render_flags ^= kPpuRenderFlags_NewRenderer; break;
     case kKeys_VolumeUp:
     case kKeys_VolumeDown: HandleVolumeAdjustment(j == kKeys_VolumeUp ? 1 : -1); break;

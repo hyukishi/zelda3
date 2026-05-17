@@ -377,6 +377,9 @@ static bool HandleIniConfig(int section, const char *key, char *value) {
       return true;
     } else if (StringEqualsNoCase(key, "DimFlashes")) {
       return ParseBoolBit(value, &g_config.features0, kFeatures0_DimFlashes);
+    } else if (StringEqualsNoCase(key, "FpsCounter")) {
+      g_config.fps_counter = (uint8)strtol(value, (char**)NULL, 10);
+      return true;
     }
   } else if (section == 2) {
     if (StringEqualsNoCase(key, "EnableAudio")) {
@@ -604,6 +607,7 @@ void SaveConfigFile(const char *filename) {
   if (g_config.shader)
     fprintf(f, "Shader = %s\n", g_config.shader);
   fprintf(f, "DimFlashes = %d\n", (g_config.features0 & kFeatures0_DimFlashes) ? 1 : 0);
+  fprintf(f, "FpsCounter = %d\n", g_config.fps_counter);
 
   fprintf(f, "\n[Sound]\n");
   fprintf(f, "EnableAudio = %d\n", g_config.enable_audio);

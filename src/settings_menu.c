@@ -140,7 +140,7 @@ static void DrawChar(uint8 *buf, int pitch, int x, int y, char c, uint32 color) 
   }
 }
 
-static void DrawString(uint8 *buf, int pitch, int x, int y, const char *s, uint32 color) {
+void DrawString(uint8 *buf, int pitch, int x, int y, const char *s, uint32 color) {
   int ox = x;
   while (s && *s) {
     if (*s == '\n') { x = ox; y += kLineH; s++; continue; }
@@ -196,6 +196,7 @@ enum {
   kOpt_Cheats,
   kOpt_Autosave,
   kOpt_Update,
+  kOpt_FpsCounter,
   kOpt_Close,
   kOpt_MAIN_COUNT,
 };
@@ -214,6 +215,7 @@ static const char *kOptLabels[] = {
   "Cheats",
   "Autosave",
   "Update",
+  "FPS Counter",
   "Close",
 };
 
@@ -221,9 +223,11 @@ static const int kOutputValues[] = { 0, 2, 1, 3 };
 static const int kOutputCount = 4;
 
 // Shader presets
-static const char *kShaderNames[] = { "None", "scalefx-aa", "6xBRZ", "ScaleHQ", "6xBRZ+ScaleHQ" };
-static const char *kShaderPaths[] = { NULL, "glsl-shaders/presets/scalefx-aa.glslp", "glsl-shaders/xbrz/6xbrz-linear.glslp", "glsl-shaders/scalehq/4xScaleHQ.glslp", "glsl-shaders/presets/6xbrz+scalehq.glslp" };
-static const int kShaderCount = 5;
+static const char *kShaderNames[] = { "None", "scalefx-aa", "6xBRZ", "ScaleHQ", "6xBRZ+ScaleHQ", "scalefx+ScaleHQ" };
+static const char *kShaderPaths[] = { NULL, "glsl-shaders/presets/scalefx-aa.glslp", "glsl-shaders/xbrz/6xbrz-linear.glslp", "glsl-shaders/scalehq/4xScaleHQ.glslp", "glsl-shaders/presets/6xbrz+scalehq.glslp", "glsl-shaders/presets/scalefx+ScaleHQ.glslp" };
+static const int kShaderCount = 6;
+
+static const char *kFpsCornerNames[] = { "Off", "Top Left", "Top Right", "Bottom Left", "Bottom Right" };
 
 static int GetShaderIndex(void) {
   if (!g_config.shader) return 0;
@@ -338,6 +342,10 @@ static void DrawMainPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w
         DrawString(buf, pitch, vx, y, "Downloading...", kCol_Action);
       else
         DrawString(buf, pitch, vx, y, "Check...", kCol_Value);
+      break;
+    case kOpt_FpsCounter:
+      DrawString(buf, pitch, vx, y, kFpsCornerNames[g_config.fps_counter],
+                 g_config.fps_counter ? kCol_On : kCol_Off);
       break;
     default: break;
     }
@@ -715,6 +723,9 @@ static void ChangeValue(int opt, int delta) {
   }
   case kOpt_Autosave:
     g_config.autosave = !g_config.autosave;
+    break;
+  case kOpt_FpsCounter:
+    g_config.fps_counter = (g_config.fps_counter + delta + 5) % 5;
     break;
   case kOpt_OutputMethod: {
     int idx = 0;

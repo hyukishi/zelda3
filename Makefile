@@ -7,6 +7,10 @@ PYTHON:=/usr/bin/env python3
 CFLAGS:=$(if $(CFLAGS),$(CFLAGS),-O2 -Wall -Wno-unknown-warning-option -Wno-deprecated-non-prototype -Wno-bitwise-op-parentheses -Wno-logical-op-parentheses -Wno-parentheses -Wno-unused-variable -Wno-unused-const-variable -Wno-unused-function -Wno-unused-but-set-variable -Wno-maybe-uninitialized -Wno-strict-aliasing) -I .
 CFLAGS:=${CFLAGS} $(shell sdl2-config --cflags) -DSYSTEM_VOLUME_MIXER_AVAILABLE=0
 
+# Version — read VERSION file, fall back to git describe
+VERSION := $(shell cat VERSION 2>/dev/null || git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
+CFLAGS := $(CFLAGS) -DCURRENT_VERSION='"$(VERSION)"'
+
 ifeq (${OS},Windows_NT)
     WINDRES:=windres
     RES:=zelda3.res
