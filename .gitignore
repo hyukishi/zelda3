@@ -7,10 +7,16 @@
 *.aps
 /obj/
 /bin/
+# ROM-extracted assets (old paths — restool.py used to chdir to assets/)
 /assets/overworld/*.yaml
 /assets/dungeon/*.yaml
 /assets/img/
 /assets/old/
+# ROM-extracted assets (current paths — restool.py writes to CWD)
+/overworld/
+/dungeon/
+/map32_to_map16.txt
+/tables/
 /zelda3.sfc
 /zelda3.smc
 /saves/*.sav
