@@ -51,9 +51,12 @@ if [ ! -f "$CONFIG_DIR/zelda3_assets.dat" ] && [ -f "$CONFIG_DIR/zelda3.sfc" ]; 
     fi
 fi
 
-# Link bundled shaders and sprites into config dir so relative paths resolve
-[ -d "$HERE/glsl-shaders" ] && [ ! -e "$CONFIG_DIR/glsl-shaders" ] && ln -s "$HERE/glsl-shaders" "$CONFIG_DIR/glsl-shaders"
-[ -d "$HERE/sprites-gfx" ] && [ ! -e "$CONFIG_DIR/sprites-gfx" ] && ln -s "$HERE/sprites-gfx" "$CONFIG_DIR/sprites-gfx"
+# Link bundled shaders and sprites into config dir so relative paths resolve.
+# Force-recreate each launch — the AppImage mount path changes every run,
+# so a symlink from a previous launch always points to a dead mount.
+rm -f "$CONFIG_DIR/glsl-shaders" "$CONFIG_DIR/sprites-gfx"
+[ -d "$HERE/glsl-shaders" ] && ln -s "$HERE/glsl-shaders" "$CONFIG_DIR/glsl-shaders"
+[ -d "$HERE/sprites-gfx" ] && ln -s "$HERE/sprites-gfx" "$CONFIG_DIR/sprites-gfx"
 
 cd "$CONFIG_DIR"
 exec "$HERE/zelda3" "$@"
