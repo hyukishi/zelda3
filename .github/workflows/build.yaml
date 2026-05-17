@@ -43,7 +43,7 @@ jobs:
       run: |
         rm -f AppDir/glsl-shaders AppDir/sprites-gfx
         cp -r glsl-shaders AppDir/
-        cp -r sprites-gfx AppDir/
+        [ -d sprites-gfx ] && cp -r sprites-gfx AppDir/ || true
         cp zelda3 AppDir/
         mkdir -p AppDir/usr/lib
         cp -L /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0 AppDir/usr/lib/

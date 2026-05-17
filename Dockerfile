@@ -20,7 +20,7 @@ COPY . .
 # Replace macOS absolute-path symlinks with the real directories
 RUN rm -f AppDir/glsl-shaders AppDir/sprites-gfx \
     && cp -r glsl-shaders AppDir/ \
-    && cp -r sprites-gfx AppDir/
+    && ( [ -d sprites-gfx ] && cp -r sprites-gfx AppDir/ || true )
 
 RUN make clean_obj && make -j"$(nproc)"
 
