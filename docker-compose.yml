@@ -1,0 +1,8 @@
+services:
+  build:
+    image: zelda3-builder
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./out:/out

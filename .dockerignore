@@ -1,0 +1,41 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Python
+venv/
+__pycache__/
+*.pyc
+tables/__pycache__/
+
+# Build artifacts
+**/*.o
+zelda3
+zelda3.exe
+zelda3_assets.dat
+tables/zelda3_assets.dat
+tables/*.txt
+tables/*.png
+tables/*.yaml
+tables/sprites/
+tables/dungeon/
+tables/img/
+tables/overworld/
+tables/sound/
+
+# ROM (never bundle)
+zelda3.sfc
+zelda3.smc
+
+# Local config (AppDir has its own)
+zelda3.ini
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Docker output
+out/

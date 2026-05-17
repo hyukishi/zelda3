@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     wget \
     file \
+    patchelf \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install --no-cache-dir pillow pyyaml
@@ -16,18 +17,24 @@ RUN pip3 install --no-cache-dir pillow pyyaml
 WORKDIR /build
 COPY . .
 
-# Remove broken symlinks in AppDir (upstream points to macOS paths)
-RUN rm -f AppDir/glsl-shaders AppDir/sprites-gfx
+# Replace macOS absolute-path symlinks with the real directories
+RUN rm -f AppDir/glsl-shaders AppDir/sprites-gfx \
+    && cp -r glsl-shaders AppDir/ \
+    && cp -r sprites-gfx AppDir/
 
-RUN make -j"$(nproc)"
+RUN make clean_obj && make -j"$(nproc)"
 
 # Bundle binary, config, and extraction scripts into AppDir
 RUN cp zelda3 AppDir/ \
-    && cp zelda3.ini AppDir/ \
     && cp assets/restool.py AppDir/ \
     && cp -r assets AppDir/ \
     && cp -r other AppDir/ \
     && chmod +x AppDir/zelda3 AppDir/AppRun
+
+# Bundle SDL2 shared library into AppImage so users don't need it installed
+RUN mkdir -p AppDir/usr/lib \
+    && cp -L /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0 AppDir/usr/lib/ \
+    && patchelf --set-rpath '$ORIGIN/../lib' AppDir/zelda3
 
 # Download appimagetool and create the AppImage
 RUN wget -qO /tmp/appimagetool \

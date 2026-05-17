@@ -29,7 +29,7 @@ jobs:
     - name: Install system deps
       run: |
         sudo apt update
-        sudo apt install -y build-essential libsdl2-dev python3 python3-pip python3-venv wget file
+        sudo apt install -y build-essential libsdl2-dev python3 python3-pip python3-venv wget file patchelf
     - name: Install Python deps
       run: pip3 install --no-cache-dir pillow pyyaml
     - name: Build
@@ -42,8 +42,12 @@ jobs:
     - name: Bundle AppImage
       run: |
         rm -f AppDir/glsl-shaders AppDir/sprites-gfx
+        cp -r glsl-shaders AppDir/
+        cp -r sprites-gfx AppDir/
         cp zelda3 AppDir/
-        cp zelda3.ini AppDir/
+        mkdir -p AppDir/usr/lib
+        cp -L /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0 AppDir/usr/lib/
+        patchelf --set-rpath '$ORIGIN/../lib' AppDir/zelda3
         chmod +x AppDir/zelda3
         wget -qO appimagetool https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
         chmod +x appimagetool
