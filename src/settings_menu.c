@@ -891,19 +891,14 @@ void SettingsMenu_ApplyCheats(void) {
   if (g_cheat_magic) {
     g_ram[0xF373] = 0x80; // magic full
   }
-  // The bomb count is link_item_bombs (0xF343). link_bomb_filler (0xF375)
-  // is a refill-animation counter: the HUD decrements it each frame and
-  // increments link_item_bombs toward max. Zero the filler so it stays
-  // at the max we set. Only apply if player has acquired bombs.
-  if (g_cheat_bombs && g_ram[0xF370] > 0) {
+  // link_item_bombs (0xF343) is the real bomb count. Keep it pinned
+  // at the max for the current upgrade level so it never decreases.
+  if (g_cheat_bombs) {
     g_ram[0xF343] = kMaxBombsForLevel[g_ram[0xF370]];
-    g_ram[0xF375] = 0;
   }
-  // Arrow count is link_num_arrows (0xF377). link_arrow_filler (0xF376)
-  // is the refill-animation counter (same pattern as bombs).
-  if (g_cheat_arrows && g_ram[0xF371] > 0) {
+  // link_num_arrows (0xF377) is the real arrow count.
+  if (g_cheat_arrows) {
     g_ram[0xF377] = kMaxArrowsForLevel[g_ram[0xF371]];
-    g_ram[0xF376] = 0;
   }
   if (g_cheat_keys) {
     g_ram[0xF36F] = 1; // small keys
