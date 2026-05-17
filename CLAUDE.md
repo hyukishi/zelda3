@@ -25,7 +25,13 @@ Requires SDL2 (`brew install sdl2`) and Python with `pillow` and `pyyaml` (`pyth
 This project has no automated tests. The primary verification mechanism is the optional ROM comparison mode: run `./zelda3 zelda3.sfc` to run the C reimplementation and original ROM side-by-side, comparing RAM state each frame to verify correctness.
 
 ### Version
-Current release: `v0.9.1`. The updater in `src/updater.c` checks `https://api.github.com/repos/hyukishi/zelda3/releases/latest` for newer versions.
+Current release: `v0.9.3`. Version is read from the `VERSION` file at repo root and injected into the build via `-DCURRENT_VERSION` in the Makefile. Falls back to `git describe --tags --abbrev=0` if the file is missing. The updater in `src/updater.c` compares against `https://api.github.com/repos/hyukishi/zelda3/releases/latest`.
+
+### AppImage build (Docker)
+```sh
+docker compose up --build    # builds AppImage, outputs to ./out/
+```
+The AppImage bundles `libSDL2-2.0.so.0` via `patchelf --set-rpath '$ORIGIN/../lib'`. The Dockerfile and `.github/workflows/build.yaml` are kept in sync.
 
 ## Architecture
 
@@ -98,7 +104,7 @@ Selected at startup by `g_config.output_method` (`kOutputMethod_SDL=0`, `kOutput
 `SDL_KEYDOWN` → `HandleInput()` → `FindCmdForSdlKey()` (looks up key binding hash) → `HandleCommand()` → sets SNES joypad bitset (`g_input1_state`) or triggers action. Gamepad input: `HandleGamepadInput()` → `FindCmdForGamepadButton()` → `HandleCommand()`. The settings menu intercepts inputs when `g_settings_menu_active` is true.
 
 ### Config system
-`zelda3.ini` at project root. INI parsing in `config.c`: sections map to integers (0=General, 1=Graphics, 2=Sound, 3=Features, 4=KeyMap, 5=Cheats). `SaveConfigFile()` writes current settings on exit and when closing the settings menu. The game auto-creates this file on first run.
+`zelda3.ini` at project root. INI parsing in `config.c`: sections map to integers (0=KeyMap, 1=Graphics, 2=Sound, 3=General, 4=Features, 5=GamepadMap, 6=Cheats). `SaveConfigFile()` writes current settings on exit and when closing the settings menu. The game auto-creates this file on first run.
 
 Key binding setup: `kDefaultKbdControls[]` (position-mapped to `kKeys_*` enum) → `KeyMapHash_Add()` during `RegisterDefaultKeys()` → `FindCmdForSdlKey()` for lookup.
 
@@ -117,6 +123,29 @@ Place US `zelda3.sfc` (SHA256: `66871d66be19ad2c34c927d6b14cd8eb6fc3181965b6e517
 3. Add a menu entry in `src/settings_menu.c`
 4. Read the bit where needed via `enhanced_features0` or via `g_config.features0`
 
+### Cheat system
+- Toggle state stored in `g_cheat_config` (persisted to `[Cheats]` in INI)
+- `SettingsMenu_ApplyCheats()` in `settings_menu.c` is called every frame after `ZeldaRunFrame()` from `main.c`
+- Writes directly to SNES RAM (`g_ram[]`) using addresses from `variables.h`
+- Key addresses: `link_health_current` (0xF36D), `link_health_capacity` (0xF36C), `link_item_bombs` (0xF343), `link_num_arrows` (0xF377), `link_num_keys` (0xF36F), `link_rupees_actual` (0xF362)
+- Bomb count uses `link_item_bombs` (0xF343), NOT `link_bomb_filler` (0xF375, which is a refill animation counter). Arrow count uses `link_num_arrows` (0xF377). Max values per upgrade level come from `kMaxBombsForLevel[]`/`kMaxArrowsForLevel[]` extern arrays (defined in `hud.c`)
+- `CheatUnlockAll()` in `settings_menu.c` grants all items and sets capacity upgrades
+
+### Shader presets
+- `.glslp` files in `glsl-shaders/presets/` define multi-pass shader chains
+- `scale_type = source` means scale values multiply cumulatively: each pass's framebuffer size = previous_pass_size * scale_factor
+- `float_framebuffer = true` is needed for scalefx passes 0-1
+- Shader menu items added via `kShaderNames[]`/`kShaderPaths[]` arrays in `settings_menu.c`
+- Tested working presets: `scalefx-aa`, `scalefx-aa-fast`, `6xBRZ`, `ScaleHQ`, `6xBRZ+ScaleHQ`
+
+### Adding a new config option (setting persisted in INI with menu item)
+1. Add field to `Config` struct in `src/config.h`
+2. Parse in `HandleIniConfig()` in `src/config.c` (match section: 1=Graphics, 3=General)
+3. Save in `SaveConfigFile()` in `src/config.c` (match section)
+4. Add `kOpt_*` enum entry and label in `src/settings_menu.c`
+5. Add draw case in `DrawMainPage()` switch
+6. Add change case in `ChangeValue()` switch
+
 ### Noteworthy modifications
 - **Sword beam cuts grass/bushes**: `Ancilla_SwordBeam()` in `ancilla.c` calls `Overworld_BombTile()` every 4th frame
 - **GLSL version upgrade**: `GlslPass_Compile()` auto-upgrades `#version 130` to `#version 330` for core-profile OpenGL 3.3+
@@ -125,6 +154,9 @@ Place US `zelda3.sfc` (SHA256: `66871d66be19ad2c34c927d6b14cd8eb6fc3181965b6e517
 - **Gamepad in menus**: Settings menu fully navigable via controller (DPad + A to select, Select+Start to open)
 - **Widescreen**: Aspect ratio changes update `g_config.extended_aspect_ratio` only (takes effect on PPU init at next launch)
 - **Stretch to Fill**: `IgnoreAspectRatio` applies immediately via `SDL_RenderSetLogicalSize`
+- **FPS counter corner selector**: `g_config.fps_counter` (0=Off, 1=TL, 2=TR, 3=BL, 4=BR), persisted as `FpsCounter` in `[Graphics]`, 'f' key cycles
+- **Background updater**: `SDL_CreateThread` runs `Updater_Thread()` at startup, shows banner via `Updater_DrawNotify()`, Enter to download/apply, Esc to dismiss, auto-dismiss 15s
+- **Vsync**: `g_config.vsync` in `[Graphics]`, applied via `SDL_GL_SetSwapInterval` (OpenGL) or `SDL_RENDERER_PRESENTVSYNC` flag (SDL)
 
 ### Repository
 This is a fork of `hyukishi/zelda3` (origin), itself derived from `snesrev/zelda3` (MIT license). Current branch: `master`.
