@@ -375,6 +375,9 @@ int main(int argc, char** argv) {
   if (!g_renderer_funcs.Initialize(window))
     return 1;
 
+  if (g_config.output_method == kOutputMethod_OpenGL || g_config.output_method == kOutputMethod_OpenGL_ES)
+    SDL_GL_SetSwapInterval(g_config.vsync ? 1 : 0);
+
   SDL_AudioDeviceID device = 0;
   SDL_AudioSpec want = { 0 }, have;
   g_audio_mutex = SDL_CreateMutex();
@@ -655,6 +658,7 @@ static void HandleCommand_Locked(uint32 j, bool pressed) {
     case kKeys_StopReplay: PatchCommand('l'); break;
     case kKeys_Fullscreen:
       g_win_flags ^= SDL_WINDOW_FULLSCREEN_DESKTOP;
+      g_config.fullscreen = (g_win_flags & SDL_WINDOW_FULLSCREEN_DESKTOP) ? 1 : 0;
       SDL_SetWindowFullscreen(g_window, g_win_flags & SDL_WINDOW_FULLSCREEN_DESKTOP);
       g_cursor = !g_cursor;
       SDL_ShowCursor(g_cursor);

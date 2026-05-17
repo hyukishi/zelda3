@@ -197,6 +197,7 @@ enum {
   kOpt_Autosave,
   kOpt_Update,
   kOpt_FpsCounter,
+  kOpt_Vsync,
   kOpt_Close,
   kOpt_MAIN_COUNT,
 };
@@ -216,6 +217,7 @@ static const char *kOptLabels[] = {
   "Autosave",
   "Update",
   "FPS Counter",
+  "Vsync",
   "Close",
 };
 
@@ -223,8 +225,8 @@ static const int kOutputValues[] = { 0, 2, 1, 3 };
 static const int kOutputCount = 4;
 
 // Shader presets
-static const char *kShaderNames[] = { "None", "scalefx-aa", "6xBRZ", "ScaleHQ", "6xBRZ+ScaleHQ", "scalefx+ScaleHQ" };
-static const char *kShaderPaths[] = { NULL, "glsl-shaders/presets/scalefx-aa.glslp", "glsl-shaders/xbrz/6xbrz-linear.glslp", "glsl-shaders/scalehq/4xScaleHQ.glslp", "glsl-shaders/presets/6xbrz+scalehq.glslp", "glsl-shaders/presets/scalefx+ScaleHQ.glslp" };
+static const char *kShaderNames[] = { "None", "scalefx-aa", "scalefx+AA fast", "6xBRZ", "ScaleHQ", "6xBRZ+ScaleHQ" };
+static const char *kShaderPaths[] = { NULL, "glsl-shaders/presets/scalefx-aa.glslp", "glsl-shaders/presets/scalefx-aa-fast.glslp", "glsl-shaders/xbrz/6xbrz-linear.glslp", "glsl-shaders/scalehq/4xScaleHQ.glslp", "glsl-shaders/presets/6xbrz+scalehq.glslp" };
 static const int kShaderCount = 6;
 
 static const char *kFpsCornerNames[] = { "Off", "Top Left", "Top Right", "Bottom Left", "Bottom Right" };
@@ -346,6 +348,10 @@ static void DrawMainPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w
     case kOpt_FpsCounter:
       DrawString(buf, pitch, vx, y, kFpsCornerNames[g_config.fps_counter],
                  g_config.fps_counter ? kCol_On : kCol_Off);
+      break;
+    case kOpt_Vsync:
+      DrawString(buf, pitch, vx, y, g_config.vsync ? "ON" : "OFF",
+                 g_config.vsync ? kCol_On : kCol_Value);
       break;
     default: break;
     }
@@ -675,10 +681,13 @@ static void ChangeValue(int opt, int delta) {
   }
   case kOpt_Fullscreen:
     if (delta > 0) {
-      if (g_win_flags & SDL_WINDOW_FULLSCREEN_DESKTOP)
+      if (g_win_flags & SDL_WINDOW_FULLSCREEN_DESKTOP) {
         g_win_flags &= ~SDL_WINDOW_FULLSCREEN_DESKTOP;
-      else
+        g_config.fullscreen = 0;
+      } else {
         g_win_flags |= SDL_WINDOW_FULLSCREEN_DESKTOP;
+        g_config.fullscreen = 1;
+      }
       SDL_SetWindowFullscreen(g_window, g_win_flags & SDL_WINDOW_FULLSCREEN_DESKTOP);
     }
     break;
@@ -726,6 +735,9 @@ static void ChangeValue(int opt, int delta) {
     break;
   case kOpt_FpsCounter:
     g_config.fps_counter = (g_config.fps_counter + delta + 5) % 5;
+    break;
+  case kOpt_Vsync:
+    g_config.vsync = !g_config.vsync;
     break;
   case kOpt_OutputMethod: {
     int idx = 0;
