@@ -155,19 +155,20 @@ static void DrawPpuFrameWithPerf() {
   int fb_h = g_snes_height * render_scale;
 
   g_renderer_funcs.BeginDraw(fb_w, fb_h, &pixel_buffer, &pitch);
+  static float fps_history[64], fps_average;
+  static int fps_history_pos;
+  static uint64 fps_last_counter;
+  ZeldaDrawPpuFrame(pixel_buffer, pitch, g_ppu_render_flags);
   if (g_config.fps_counter || g_config.display_perf_title) {
-    static float history[64], average;
-    static int history_pos;
-    uint64 before = SDL_GetPerformanceCounter();
-    ZeldaDrawPpuFrame(pixel_buffer, pitch, g_ppu_render_flags);
-    uint64 after = SDL_GetPerformanceCounter();
-    float v = (double)SDL_GetPerformanceFrequency() / (after - before);
-    average += v - history[history_pos];
-    history[history_pos] = v;
-    history_pos = (history_pos + 1) & 63;
-    g_curr_fps = average * (1.0f / 64);
-  } else {
-    ZeldaDrawPpuFrame(pixel_buffer, pitch, g_ppu_render_flags);
+    uint64 now = SDL_GetPerformanceCounter();
+    if (fps_last_counter) {
+      float v = (double)SDL_GetPerformanceFrequency() / (now - fps_last_counter);
+      fps_average += v - fps_history[fps_history_pos];
+      fps_history[fps_history_pos] = v;
+      fps_history_pos = (fps_history_pos + 1) & 63;
+      g_curr_fps = fps_average * (1.0f / 64);
+    }
+    fps_last_counter = now;
   }
   if (g_config.fps_counter) {
     bool big = (render_scale == 4);
@@ -499,6 +500,8 @@ int main(int argc, char** argv) {
     SDL_LockMutex(g_audio_mutex);
     bool is_replay = ZeldaRunFrame(inputs);
     SDL_UnlockMutex(g_audio_mutex);
+
+    SettingsMenu_ApplyCheats();
 
     // Check for updates once on startup (non-blocking background thread)
     if (!g_updater_started) {
