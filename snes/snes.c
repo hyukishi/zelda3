@@ -26,6 +26,7 @@ static int snes_getAccessTime(Snes* snes, uint32_t adr);
 
 Snes* snes_init(uint8_t *ram) {
   Snes* snes = (Snes * )malloc(sizeof(Snes));
+  if (!snes) return NULL;
   snes->ram = ram;
   snes->cpu = cpu_init(snes, 0);
   snes->apu = apu_init();

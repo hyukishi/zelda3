@@ -62,6 +62,7 @@ static void dsp_handleNoise(Dsp* dsp);
 
 Dsp* dsp_init(uint8_t *apu_ram) {
   Dsp* dsp = (Dsp*)malloc(sizeof(Dsp));
+  if (!dsp) return NULL;
   dsp->apu_ram = apu_ram;
   return dsp;
 }
@@ -222,9 +223,10 @@ static void dsp_handleEcho(Dsp* dsp, int* outputL, int* outputR) {
 }
 
 static void dsp_cycleChannel(Dsp* dsp, int ch) {
+  if (ch >= 8) return;
   // handle pitch counter
   uint16_t pitch = dsp->channel[ch].pitch;
-  if(ch > 0 && dsp->channel[ch].pitchModulation) {
+  if(ch > 0 && ch < 8 && dsp->channel[ch].pitchModulation) {
     int factor = (dsp->channel[ch - 1].sampleOut >> 4) + 0x400;
     pitch = (pitch * factor) >> 10;
     if(pitch > 0x3fff) pitch = 0x3fff;

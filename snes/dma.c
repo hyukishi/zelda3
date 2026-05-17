@@ -28,6 +28,7 @@ static void dma_transferByte(Dma* dma, uint16_t aAdr, uint8_t aBank, uint8_t bAd
 
 Dma* dma_init(Snes* snes) {
   Dma* dma = (Dma*)malloc(sizeof(Dma));
+  if (!dma) return NULL;
   dma->snes = snes;
   return dma;
 }

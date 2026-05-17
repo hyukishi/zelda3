@@ -3732,8 +3732,8 @@ void LinkState_TreePull() {  // 87b416
     if (!sign8(--some_animation_timer))
       goto out;
     int j = ++link_var30d;
-    some_animation_timer_steps = kGrabWall_AnimSteps[j];
-    some_animation_timer = kGrabWall_AnimTimer[j];
+    some_animation_timer_steps = kGrabWall_AnimSteps[j < 7 ? j : 0];
+    some_animation_timer = kGrabWall_AnimTimer[j < 7 ? j : 0];
     if (j != 7)
       goto out;
 

@@ -76,7 +76,9 @@ static bool KeyMapHash_Add(uint16 key, uint16 cmd) {
   if ((keymap_hash_size & 0xff) == 0) {
     if (keymap_hash_size > 10000)
       Die("Too many keys");
-    keymap_hash = realloc(keymap_hash, sizeof(KeyMapHashEnt) * (keymap_hash_size + 256));
+    void *tmp = realloc(keymap_hash, sizeof(KeyMapHashEnt) * (keymap_hash_size + 256));
+    if (!tmp) Die("Out of memory");
+    keymap_hash = (KeyMapHashEnt *)tmp;
   }
   int i = keymap_hash_size++;
   KeyMapHashEnt *ent = &keymap_hash[i];

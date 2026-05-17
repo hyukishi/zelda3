@@ -35,6 +35,7 @@ enum {
 
 Ppu* ppu_init() {
   Ppu* ppu = (Ppu * )malloc(sizeof(Ppu));
+  if (!ppu) return NULL;
   ppu->extraLeftRight = kPpuExtraLeftRight;
   return ppu;
 }

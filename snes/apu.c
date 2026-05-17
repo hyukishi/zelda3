@@ -19,6 +19,7 @@ static const uint8_t bootRom[0x40] = {
 
 Apu* apu_init() {
   Apu* apu = (Apu * )malloc(sizeof(Apu));
+  if (!apu) return NULL;
   apu->spc = spc_init(apu);
   apu->dsp = dsp_init(apu->ram);
   return apu;

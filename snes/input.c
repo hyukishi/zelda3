@@ -10,6 +10,7 @@
 
 Input* input_init(Snes* snes) {
   Input* input = (Input * )malloc(sizeof(Input));
+  if (!input) return NULL;
   input->snes = snes;
   // TODO: handle (where?)
   input->type = 1;

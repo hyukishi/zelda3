@@ -34,9 +34,9 @@ typedef unsigned int uint;
 #define NOINLINE __declspec(noinline)
 #else
 #define countof(a) (sizeof(a)/sizeof(*(a)))
-#define NORETURN
-#define FORCEINLINE inline
-#define NOINLINE
+#define NORETURN __attribute__((noreturn))
+#define FORCEINLINE inline __attribute__((always_inline))
+#define NOINLINE __attribute__((noinline))
 #endif
 
 #ifdef _DEBUG

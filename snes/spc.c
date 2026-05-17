@@ -57,6 +57,7 @@ static void spc_write(Spc* spc, uint16_t adr, uint8_t val) {
 
 Spc* spc_init(Apu* apu) {
   Spc* spc = (Spc * )malloc(sizeof(Spc));
+  if (!spc) return NULL;
   spc->apu = apu;
   return spc;
 }

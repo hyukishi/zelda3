@@ -665,8 +665,9 @@ int InputStateReadFromFile() {
     cur_keys = next_keys;
     if (!f)
       f = fopen("boss_bug.txt", "r");
+    if (!f) break;
     if (fgets(buf, sizeof(buf), f)) {
-      if (sscanf(buf, "%d: %s", &next_ts, keys) == 1) keys[0] = 0;
+      if (sscanf(buf, "%d: %63s", &next_ts, keys) == 1) keys[0] = 0;
       int i = 0;
       for (const char *s = keys; *s; s++) {
         static const char kKeys[] = "AXsSUDLRBY";

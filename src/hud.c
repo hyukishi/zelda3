@@ -1233,7 +1233,7 @@ void Hud_DrawSelectedYButtonItem() {  // 8deb3a
     src_p = &kHudItemText[(13 - 1) * 16];
   } else if (item == 0) {
     src_p = btn_index ? kNotAssignedItemText : &kHudItemText[(20 - 1) * 16];
-  } else {
+  } else if (item > 0 && (item - 1) * 16 < (int)countof(kHudItemText)) {
     src_p = &kHudItemText[(item - 1) * 16];
   }
   Hud_DrawNxN(dst_box + HUDXY(22, 8), src_p, 8, 2);

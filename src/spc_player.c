@@ -1187,6 +1187,7 @@ static void Interrupt_Reset(SpcPlayer *p) {
 
 SpcPlayer *SpcPlayer_Create() {
   SpcPlayer *p = (SpcPlayer *)malloc(sizeof(SpcPlayer));
+  if (!p) return NULL;
   p->dsp = dsp_init(p->ram);
   p->reg_write_history = 0;
   return p;

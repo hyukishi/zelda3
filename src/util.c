@@ -100,6 +100,7 @@ char *ReplaceFilenameWithNewPath(const char *old_path, const char *new_path) {
   while (olen && old_path[olen - 1] != '/' && old_path[olen - 1] != '\\')
     olen--;
   char *result = malloc(olen + nlen);
+  if (!result) return NULL;
   memcpy(result, old_path, olen);
   memcpy(result + olen, new_path, nlen);
   return result;
@@ -260,13 +261,13 @@ uint8 *ApplyBps(const uint8 *src, size_t src_size_in,
       break;
     case 2:
       cmd = BpsDecodeInt(&bps);
-      sourceRelativeOffset += (cmd & 1 ? -1 : +1) * (cmd >> 1);
+      sourceRelativeOffset += (uint32)((int)(cmd & 1 ? -1 : +1) * (int)(cmd >> 1));
       while (length--)
         dst[outputOffset++] = src[sourceRelativeOffset++];
       break;
     default:
       cmd = BpsDecodeInt(&bps);
-      targetRelativeOffset += (cmd & 1 ? -1 : +1) * (cmd >> 1);
+      targetRelativeOffset += (uint32)((int)(cmd & 1 ? -1 : +1) * (int)(cmd >> 1));
       while(length--)
         dst[outputOffset++] = dst[targetRelativeOffset++];
       break;

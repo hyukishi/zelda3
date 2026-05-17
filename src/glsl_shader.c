@@ -50,6 +50,7 @@ static void ParseTextures(GlslShader *gs, char *value) {
   GlslTexture **nextp = &gs->first_texture;
   for (int num = 0; (id = NextDelim(&value, ';')) != NULL && num < kGlslMaxTextures; num++) {
     GlslTexture *t = calloc(sizeof(GlslTexture), 1);
+    if (!t) Die("Out of memory");
     t->id = strdup(id);
     t->wrap_mode = GL_CLAMP_TO_BORDER;
     t->filter = GL_NEAREST;
@@ -85,6 +86,7 @@ static GlslParam *GlslShader_GetParam(GlslShader *gs, const char *id) {
     if (!strcmp((*pp)->id, id))
       return *pp;
   GlslParam *p = (GlslParam *)calloc(1, sizeof(GlslParam));
+  if (!p) Die("Out of memory");
   *pp = p;
   p->id = strdup(id);
   return p;
@@ -110,6 +112,7 @@ static bool ParseParameterKeyValue(GlslShader *gs, const char *key, const char *
 static void GlslShader_InitializePasses(GlslShader *gs, int passes) {
   gs->n_pass = passes;
   gs->pass = (GlslPass *)calloc(gs->n_pass + 1, sizeof(GlslPass));
+  if (!gs->pass) Die("Out of memory");
   for (int i = 0; i < gs->n_pass; i++)
     GlslPass_Initialize(gs->pass + i + 1);
 }

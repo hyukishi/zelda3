@@ -15,12 +15,14 @@ static void cart_writeHirom(Cart* cart, uint8_t bank, uint16_t adr, uint8_t val)
 
 Cart* cart_init(Snes* snes) {
   Cart* cart = (Cart *)malloc(sizeof(Cart));
+  if (!cart) return NULL;
   cart->snes = snes;
   cart->type = 0;
   cart->rom = NULL;
   cart->romSize = 0;
   cart->ramSize = 0x2000;
   cart->ram = (uint8_t *)malloc(cart->ramSize);
+  if (!cart->ram) { free(cart); return NULL; }
   return cart;
 }
 

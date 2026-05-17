@@ -202,6 +202,7 @@ void RunEmulatedFuncSilent(uint32 pc, uint16 a, uint16 x, uint16 y, bool mf, boo
 
   static uint8 *rambak;
   if (rambak == 0) rambak = (uint8 *)malloc(0x20000);
+  if (!rambak) return;
   memcpy(rambak, g_emulated_ram, 0x20000);
   memcpy(g_emulated_ram, g_ram, 0x20000);
 
