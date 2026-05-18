@@ -87,7 +87,7 @@ jobs:
       run: |
         mkdir -p dist/zelda3-windows
         cp zelda3.exe zelda3.ini dist/zelda3-windows/
-        cp -r assets dist/zelda3-windows/
+        cp -r assets other dist/zelda3-windows/
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
