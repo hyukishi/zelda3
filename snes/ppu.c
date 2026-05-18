@@ -33,7 +33,8 @@ enum {
   kWindow2Enabled = 8,
 };
 
-Ppu* ppu_init() {
+Ppu* ppu_init(void *unused) {
+  (void)unused;
   Ppu* ppu = (Ppu * )malloc(sizeof(Ppu));
   if (!ppu) return NULL;
   ppu->extraLeftRight = kPpuExtraLeftRight;
