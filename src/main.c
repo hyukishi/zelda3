@@ -72,7 +72,7 @@ static uint32 g_gamepad_modifiers;
 static uint16 g_gamepad_last_cmd[kGamepadBtn_Count];
 
 void NORETURN Die(const char *error) {
-#if defined(NDEBUG) && defined(_WIN32)
+#ifdef _WIN32
   SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, kWindowTitle, error, NULL);
 #endif
   fprintf(stderr, "Error: %s\n", error);
@@ -353,7 +353,10 @@ int main(int argc, char** argv) {
 
   // set up SDL
   if(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_GAMECONTROLLER) != 0) {
-    printf("Failed to init SDL: %s\n", SDL_GetError());
+    fprintf(stderr, "Failed to init SDL: %s\n", SDL_GetError());
+#ifdef _WIN32
+    MessageBoxA(NULL, SDL_GetError(), "SDL Init Failed", MB_OK | MB_ICONERROR);
+#endif
     return 1;
   }
 
@@ -371,8 +374,7 @@ int main(int argc, char** argv) {
 
   SDL_Window* window = SDL_CreateWindow(kWindowTitle, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, window_width, window_height, g_win_flags);
   if(window == NULL) {
-    printf("Failed to create window: %s\n", SDL_GetError());
-    return 1;
+    Die(SDL_GetError());
   }
   g_window = window;
   SDL_SetWindowHitTest(window, HitTestCallback, NULL);
