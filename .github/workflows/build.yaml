@@ -61,3 +61,33 @@ jobs:
         path: zelda3-linux-x86_64.AppImage
         if-no-files-found: error
 
+  build-windows:
+    name: Windows x86_64
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: msys2 {0}
+    steps:
+    - uses: actions/checkout@v3
+    - uses: msys2/setup-msys2@v2
+      with:
+        msystem: MINGW64
+        install: >-
+          mingw-w64-x86_64-gcc
+          mingw-w64-x86_64-SDL2
+          mingw-w64-x86_64-python
+          mingw-w64-x86_64-python-pip
+          make
+    - name: Install Python deps
+      run: pip install Pillow PyYAML
+    - name: Build
+      run: make -j$(nproc)
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: zelda3-windows-x86_64
+        path: |
+          zelda3.exe
+          zelda3.ini
+        if-no-files-found: error
+
