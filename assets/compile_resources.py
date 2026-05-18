@@ -1,3 +1,4 @@
+import os
 import sys
 import text_compression
 import util
@@ -809,7 +810,7 @@ extern MemBlk FindInAssetArray(int asset, int idx);
       file_data += b'\0'
     file_data += v
 
-  open('../zelda3_assets.dat', 'wb').write(file_data)
+  open(os.path.join(os.path.dirname(__file__), '..', 'zelda3_assets.dat'), 'wb').write(file_data)
 
 def main(args):
   print_all(args)
