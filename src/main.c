@@ -903,7 +903,11 @@ static void LoadAssets() {
 #ifdef _WIN32
       ret = system("py -3 assets/restool.py --extract-from-rom");
       if (ret != 0)
+        ret = system("python3 assets/restool.py --extract-from-rom");
+      if (ret != 0)
         ret = system("python assets/restool.py --extract-from-rom");
+      if (ret != 0)
+        ret = system("py assets/restool.py --extract-from-rom");
 #else
       ret = system("python3 assets/restool.py --extract-from-rom");
       if (ret != 0)
@@ -919,19 +923,31 @@ static void LoadAssets() {
       if (bps && bps_src)
         data = ApplyBps(bps_src, bps_src_length, bps, bps_length, &length);
     }
-    if (!data)
+    if (!data) {
+      char msg[2048];
+      char cwd[1024];
+      getcwd(cwd, sizeof(cwd));
 #ifdef _WIN32
-      Die("zelda3_assets.dat not found.\n\n"
-          "Place zelda3.sfc in this folder, then open a Command Prompt here and run:\n"
+      snprintf(msg, sizeof(msg),
+          "zelda3_assets.dat not found.\n\n"
+          "Looking in: %s\n\n"
+          "Place zelda3.sfc in that folder, then open a Command Prompt there and run:\n"
           "  pip install pillow pyyaml\n"
           "  py -3 assets/restool.py --extract-from-rom\n\n"
-          "If Python is not installed, get it from https://python.org");
+          "If Python is not installed, get it from https://python.org",
+          cwd);
 #else
-      Die("zelda3_assets.dat not found. Install Python deps and extract assets:\n"
+      snprintf(msg, sizeof(msg),
+          "zelda3_assets.dat not found.\n\n"
+          "Looking in: %s\n\n"
+          "Install Python deps and extract assets:\n"
           "  pip install --user pillow pyyaml\n"
           "  python3 assets/restool.py --extract-from-rom\n"
-          "Then launch again.");
+          "Then launch again.",
+          cwd);
 #endif
+      Die(msg);
+    }
   }
 
   static const char kAssetsSig[] = { kAssets_Sig };
