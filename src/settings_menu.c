@@ -1,3 +1,4 @@
+#include <SDL.h>
 #include "settings_menu.h"
 #include "config.h"
 #include "types.h"
@@ -7,7 +8,6 @@
 #include "zelda_rtl.h"
 #include "snes/ppu.h"
 #include "updater.h"
-#include <SDL.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
