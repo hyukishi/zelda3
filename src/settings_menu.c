@@ -183,43 +183,113 @@ static void DrawRectSafe(uint8 *buf, int pitch, int x, int y, int w, int h,
 // ====================================================================
 
 enum {
+  // Video section
+  kOpt_SecVideo,
   kOpt_WindowScale,
   kOpt_Fullscreen,
   kOpt_AspectRatio,
-  kOpt_Volume,
-  kOpt_LinearFilter,
   kOpt_StretchToFill,
-  kOpt_Shader,
-  kOpt_UpdateShaders,
-  kOpt_OutputMethod,
-  kOpt_Controls,
-  kOpt_Cheats,
-  kOpt_Autosave,
-  kOpt_Update,
+  kOpt_LinearFilter,
   kOpt_FpsCounter,
   kOpt_Vsync,
+  kOpt_OutputMethod,
+  kOpt_Shader,
+  kOpt_UpdateShaders,
+  // Audio section
+  kOpt_SecAudio,
+  kOpt_Volume,
+  kOpt_EnableAudio,
+  // Game section
+  kOpt_SecGame,
+  kOpt_EnhancedMode7,
+  kOpt_NewRenderer,
+  kOpt_ExtendY,
+  kOpt_NoSpriteLimits,
+  kOpt_Autosave,
+  kOpt_DisplayPerf,
+  kOpt_DisableFrameDelay,
+  // Features section
+  kOpt_SecFeatures,
+  kOpt_SwitchLR,
+  kOpt_TurnWhileDashing,
+  kOpt_MiscBugFixes,
+  // Actions
+  kOpt_Controls,
+  kOpt_Cheats,
+  kOpt_Update,
   kOpt_Close,
   kOpt_MAIN_COUNT,
 };
 
 static const char *kOptLabels[] = {
+  "Video",                    // kOpt_SecVideo
   "Window Scale",
   "Fullscreen",
   "Aspect Ratio",
-  "Volume",
-  "Linear Filter",
   "Stretch to Fill",
-  "Shader",
-  "Update Shaders",
-  "Output Method",
-  "Show Controls",
-  "Cheats",
-  "Autosave",
-  "Update",
+  "Linear Filter",
   "FPS Counter",
   "Vsync",
+  "Output Method",
+  "Shader",
+  "Update Shaders",
+  "Audio",                    // kOpt_SecAudio
+  "Volume",
+  "Enable Audio",
+  "Game",                     // kOpt_SecGame
+  "Enhanced Mode7",
+  "New Renderer",
+  "Extend Y (240p)",
+  "No Sprite Limits",
+  "Autosave",
+  "Display Perf",
+  "Disable Frame Delay",
+  "Features",                 // kOpt_SecFeatures
+  "Switch LR",
+  "Turn While Dashing",
+  "Misc Bug Fixes",
+  "Show Controls",
+  "Cheats",
+  "Update",
   "Close",
 };
+
+static bool IsSectionHeader(int opt) {
+  return opt == kOpt_SecVideo || opt == kOpt_SecAudio ||
+         opt == kOpt_SecGame || opt == kOpt_SecFeatures;
+}
+
+// Returns the number of selectable (non-header) items
+static int SelectableCount(void) {
+  int n = 0;
+  for (int i = 0; i < kOpt_MAIN_COUNT; i++)
+    if (!IsSectionHeader(i)) n++;
+  return n;
+}
+
+// Map a selectable index to the actual option enum value
+static int SelectableToOpt(int sel_idx) {
+  int n = 0;
+  for (int i = 0; i < kOpt_MAIN_COUNT; i++) {
+    if (!IsSectionHeader(i)) {
+      if (n == sel_idx) return i;
+      n++;
+    }
+  }
+  return kOpt_Close; // fallback
+}
+
+// Map an option to its selectable index
+static int OptToSelectable(int opt) {
+  int n = 0;
+  for (int i = 0; i < kOpt_MAIN_COUNT; i++) {
+    if (!IsSectionHeader(i)) {
+      if (i == opt) return n;
+      n++;
+    }
+  }
+  return 0;
+}
 
 static const int kOutputValues[] = { 0, 2, 1, 3 };
 static const int kOutputCount = 4;
@@ -261,27 +331,46 @@ static void DrawMainPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w
   int lines_fit = (content_h > 0) ? content_h / rh : 1;
   if (lines_fit < 1) lines_fit = 1;
 
-  // Clamp scroll so cursor is visible
-  if (g_cursor >= 0 && g_cursor < kOpt_MAIN_COUNT) {
-    if (g_cursor < g_main_scroll)
-      g_main_scroll = g_cursor;
-    else if (g_cursor >= g_main_scroll + lines_fit)
-      g_main_scroll = g_cursor - lines_fit + 1;
+  // Clamp scroll so the selected selectable item is visible
+  int sel_opt = SelectableToOpt(g_cursor);
+  int sel_opt_idx = -1;
+  int vis_count = 0;
+  int vis_to_actual[kOpt_MAIN_COUNT]; // maps visible row -> actual opt
+  for (int i = 0; i < kOpt_MAIN_COUNT; i++) {
+    vis_to_actual[vis_count++] = i;
+    if (i == sel_opt) sel_opt_idx = vis_count - 1;
   }
-  if (g_main_scroll > kOpt_MAIN_COUNT - lines_fit)
-    g_main_scroll = (kOpt_MAIN_COUNT > lines_fit) ? kOpt_MAIN_COUNT - lines_fit : 0;
+  if (sel_opt_idx >= 0) {
+    if (sel_opt_idx < g_main_scroll)
+      g_main_scroll = sel_opt_idx;
+    else if (sel_opt_idx >= g_main_scroll + lines_fit)
+      g_main_scroll = sel_opt_idx - lines_fit + 1;
+  }
+  if (g_main_scroll > vis_count - lines_fit)
+    g_main_scroll = (vis_count > lines_fit) ? vis_count - lines_fit : 0;
   if (g_main_scroll < 0) g_main_scroll = 0;
 
   int y = content_y;
-  for (int i = g_main_scroll; i < kOpt_MAIN_COUNT && i < g_main_scroll + lines_fit; i++) {
-    int sel = (i == g_cursor);
+  for (int vi = g_main_scroll; vi < vis_count && vi < g_main_scroll + lines_fit; vi++) {
+    int i = vis_to_actual[vi];
+    int sel = (IsSectionHeader(i) ? false : (SelectableToOpt(g_cursor) == i));
+
+    if (IsSectionHeader(i)) {
+      // Draw section header with accent bar
+      DrawRectSafe(buf, pitch, px + kPanelPad, y + kLineH, pw - kPanelPad * 2, 1,
+                   kCol_Sep, fb_w, fb_h);
+      DrawString(buf, pitch, lx, y - 1, kOptLabels[i], kCol_Title);
+      y += rh + 2;
+      continue;
+    }
 
     if (sel)
       DrawRectSafe(buf, pitch, px + kPanelPad, y, pw - kPanelPad * 2, kLineH, kCol_Highlight, fb_w, fb_h);
     if (sel)
       DrawChar(buf, pitch, lx - kFontW - 2, y + 2, '>', kCol_HiAccent);
 
-    uint32 lcol = (i == kOpt_Close) ? kCol_Close : (i == kOpt_Cheats) ? kCol_Cheat : (i == kOpt_Autosave || i == kOpt_Update) ? kCol_Action : kCol_Label;
+    uint32 lcol = (i == kOpt_Close) ? kCol_Close : (i == kOpt_Cheats) ? kCol_Cheat :
+                  (i == kOpt_Autosave || i == kOpt_Update) ? kCol_Action : kCol_Label;
     DrawString(buf, pitch, lx, y + 2, kOptLabels[i], lcol);
 
     char vb[32];
@@ -353,13 +442,56 @@ static void DrawMainPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w
       DrawString(buf, pitch, vx, y, g_config.vsync ? "ON" : "OFF",
                  g_config.vsync ? kCol_On : kCol_Value);
       break;
+    case kOpt_EnableAudio:
+      DrawString(buf, pitch, vx, y, g_config.enable_audio ? "ON" : "OFF",
+                 g_config.enable_audio ? kCol_On : kCol_Value);
+      break;
+    case kOpt_EnhancedMode7:
+      DrawString(buf, pitch, vx, y, g_config.enhanced_mode7 ? "ON" : "OFF",
+                 g_config.enhanced_mode7 ? kCol_On : kCol_Value);
+      break;
+    case kOpt_NewRenderer:
+      DrawString(buf, pitch, vx, y, g_config.new_renderer ? "ON" : "OFF",
+                 g_config.new_renderer ? kCol_On : kCol_Value);
+      break;
+    case kOpt_ExtendY:
+      DrawString(buf, pitch, vx, y, g_config.extend_y ? "ON" : "OFF",
+                 g_config.extend_y ? kCol_On : kCol_Value);
+      break;
+    case kOpt_NoSpriteLimits:
+      DrawString(buf, pitch, vx, y, g_config.no_sprite_limits ? "ON" : "OFF",
+                 g_config.no_sprite_limits ? kCol_On : kCol_Value);
+      break;
+    case kOpt_DisplayPerf:
+      DrawString(buf, pitch, vx, y, g_config.display_perf_title ? "ON" : "OFF",
+                 g_config.display_perf_title ? kCol_On : kCol_Value);
+      break;
+    case kOpt_DisableFrameDelay:
+      DrawString(buf, pitch, vx, y, g_config.disable_frame_delay ? "ON" : "OFF",
+                 g_config.disable_frame_delay ? kCol_On : kCol_Value);
+      break;
+    case kOpt_SwitchLR: {
+      bool on = (g_config.features0 & kFeatures0_SwitchLR) != 0;
+      DrawString(buf, pitch, vx, y, on ? "ON" : "OFF", on ? kCol_On : kCol_Value);
+      break;
+    }
+    case kOpt_TurnWhileDashing: {
+      bool on = (g_config.features0 & kFeatures0_TurnWhileDashing) != 0;
+      DrawString(buf, pitch, vx, y, on ? "ON" : "OFF", on ? kCol_On : kCol_Value);
+      break;
+    }
+    case kOpt_MiscBugFixes: {
+      bool on = (g_config.features0 & kFeatures0_MiscBugFixes) != 0;
+      DrawString(buf, pitch, vx, y, on ? "ON" : "OFF", on ? kCol_On : kCol_Value);
+      break;
+    }
     default: break;
     }
     y += rh;
   }
   // Scroll indicators
   bool scroll_up = (g_main_scroll > 0);
-  bool scroll_dn = (g_main_scroll + lines_fit < kOpt_MAIN_COUNT);
+  bool scroll_dn = (g_main_scroll + lines_fit < vis_count);
   if (scroll_up)
     DrawString(buf, pitch, lx, content_y - 8, "^", kCol_Back);
   if (scroll_dn)
@@ -527,9 +659,12 @@ static void SettingsMenu_DrawFrame(uint8 *buf, int pitch, int fb_w, int fb_h) {
   int title_h = 7 * kFontH + 8;    // space for title + underline
   int nav_h = kFontH + 8;          // footer hint
   int opt_h = 0;
-  int item_count = 0, sep_count = 0;
+  int item_count = 0, sep_count = 0, section_extra = 0;
   if (g_page == kPage_Main) {
     item_count = kOpt_MAIN_COUNT;
+    // Section headers take extra vertical space (separator line + padding)
+    for (int i = 0; i < kOpt_MAIN_COUNT; i++)
+      if (IsSectionHeader(i)) section_extra += kLineH/2 + 2;
   } else if (g_page == kPage_Cheats) {
     item_count = kCheat_COUNT;
     // count separators
@@ -539,7 +674,7 @@ static void SettingsMenu_DrawFrame(uint8 *buf, int pitch, int fb_w, int fb_h) {
   } else {
     item_count = 17; // controls
   }
-  opt_h = item_count * (kLineH + 2) + sep_count * (kLineH/2);
+  opt_h = item_count * (kLineH + 2) + sep_count * (kLineH/2) + section_extra;
   int ph = title_h + opt_h + nav_h + kPanelPad * 2;
   if (ph > max_ph) ph = max_ph;
 
@@ -670,6 +805,13 @@ static void CheatToggleWall(void) {
 
 // --- Main page input ---
 
+static void ToggleBool(bool *val) { *val = !*val; }
+
+static void ToggleFeaturesBit(uint32 bit) {
+  g_config.features0 ^= bit;
+  g_wanted_zelda_features ^= bit;
+}
+
 static void ChangeValue(int opt, int delta) {
   switch (opt) {
   case kOpt_WindowScale: {
@@ -706,14 +848,13 @@ static void ChangeValue(int opt, int delta) {
     break;
   }
   case kOpt_LinearFilter: {
-    g_config.linear_filtering = !g_config.linear_filtering;
+    ToggleBool(&g_config.linear_filtering);
     SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY,
                 g_config.linear_filtering ? "best" : "nearest");
     break;
   }
   case kOpt_StretchToFill: {
-    g_config.ignore_aspect_ratio = !g_config.ignore_aspect_ratio;
-    // Apply immediately for SDL mode
+    ToggleBool(&g_config.ignore_aspect_ratio);
     extern SDL_Renderer *g_renderer;
     extern int g_snes_width, g_snes_height;
     if (g_renderer) {
@@ -731,13 +872,13 @@ static void ChangeValue(int opt, int delta) {
     break;
   }
   case kOpt_Autosave:
-    g_config.autosave = !g_config.autosave;
+    ToggleBool(&g_config.autosave);
     break;
   case kOpt_FpsCounter:
     g_config.fps_counter = (g_config.fps_counter + delta + 5) % 5;
     break;
   case kOpt_Vsync:
-    g_config.vsync = !g_config.vsync;
+    ToggleBool(&g_config.vsync);
     break;
   case kOpt_OutputMethod: {
     int idx = 0;
@@ -746,30 +887,68 @@ static void ChangeValue(int opt, int delta) {
     g_config.output_method = kOutputValues[idx];
     break;
   }
+  case kOpt_EnableAudio:
+    ToggleBool(&g_config.enable_audio);
+    break;
+  case kOpt_EnhancedMode7:
+    ToggleBool(&g_config.enhanced_mode7);
+    break;
+  case kOpt_NewRenderer:
+    ToggleBool(&g_config.new_renderer);
+    break;
+  case kOpt_ExtendY:
+    ToggleBool(&g_config.extend_y);
+    break;
+  case kOpt_NoSpriteLimits:
+    ToggleBool(&g_config.no_sprite_limits);
+    break;
+  case kOpt_DisplayPerf:
+    ToggleBool(&g_config.display_perf_title);
+    break;
+  case kOpt_DisableFrameDelay:
+    ToggleBool(&g_config.disable_frame_delay);
+    break;
+  case kOpt_SwitchLR:
+    ToggleFeaturesBit(kFeatures0_SwitchLR);
+    break;
+  case kOpt_TurnWhileDashing:
+    ToggleFeaturesBit(kFeatures0_TurnWhileDashing);
+    break;
+  case kOpt_MiscBugFixes:
+    ToggleFeaturesBit(kFeatures0_MiscBugFixes);
+    break;
   }
 }
 
 static void HandleMainInput(int key_code, int key_mod, bool pressed) {
   (void)key_mod;
   if (!pressed) return;
+  int sel_count = SelectableCount();
   switch (key_code) {
-  case SDLK_UP:     g_cursor = (g_cursor - 1 + kOpt_MAIN_COUNT) % kOpt_MAIN_COUNT; break;
-  case SDLK_DOWN:   g_cursor = (g_cursor + 1) % kOpt_MAIN_COUNT; break;
-  case SDLK_LEFT:   ChangeValue(g_cursor, -1); break;
-  case SDLK_RIGHT:  ChangeValue(g_cursor, 1); break;
+  case SDLK_UP:
+    g_cursor = (g_cursor - 1 + sel_count) % sel_count;
+    break;
+  case SDLK_DOWN:
+    g_cursor = (g_cursor + 1) % sel_count;
+    break;
+  case SDLK_LEFT:   ChangeValue(SelectableToOpt(g_cursor), -1); break;
+  case SDLK_RIGHT:  ChangeValue(SelectableToOpt(g_cursor), 1); break;
   case SDLK_RETURN:
-  case SDLK_KP_ENTER:
-    if (g_cursor == kOpt_Controls) { g_page = kPage_Controls; g_cursor = 0; }
-    else if (g_cursor == kOpt_Cheats) { g_page = kPage_Cheats; g_cursor = 0; g_cheat_scroll = 0; }
-    else if (g_cursor == kOpt_UpdateShaders) {
+  case SDLK_KP_ENTER: {
+    int opt = SelectableToOpt(g_cursor);
+    if (opt == kOpt_Controls) { g_page = kPage_Controls; g_cursor = 0; }
+    else if (opt == kOpt_Cheats) { g_page = kPage_Cheats; g_cursor = 0; g_cheat_scroll = 0; }
+    else if (opt == kOpt_UpdateShaders) {
       system("./fetch-shaders.sh &");
     }
-    else if (g_cursor == kOpt_Update) {
+    else if (opt == kOpt_Update) {
       if (g_update_available && Updater_IsReady()) { Updater_Apply(); }
       else { Updater_Check(); g_update_available = false; }
     }
-    else if (g_cursor == kOpt_Close) SettingsMenu_Toggle();
-    else ChangeValue(g_cursor, 1);
+    else if (opt == kOpt_Close) SettingsMenu_Toggle();
+    else ChangeValue(opt, 1);
+    break;
+  }
     break;
   }
 }
