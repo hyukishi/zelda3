@@ -899,9 +899,16 @@ static void LoadAssets() {
     // Requires Python 3 with pillow and pyyaml (pip install --user pillow pyyaml).
     if (ReadWholeFile("zelda3.sfc", NULL)) {
       fprintf(stderr, "Extracting game assets on first run...\n");
-      int ret = system("python3 assets/restool.py --extract-from-rom");
+      int ret;
+#ifdef _WIN32
+      ret = system("py -3 assets/restool.py --extract-from-rom");
       if (ret != 0)
         ret = system("python assets/restool.py --extract-from-rom");
+#else
+      ret = system("python3 assets/restool.py --extract-from-rom");
+      if (ret != 0)
+        ret = system("python assets/restool.py --extract-from-rom");
+#endif
       if (ret == 0)
         data = ReadWholeFile("zelda3_assets.dat", &length);
     }
@@ -913,10 +920,18 @@ static void LoadAssets() {
         data = ApplyBps(bps_src, bps_src_length, bps, bps_length, &length);
     }
     if (!data)
+#ifdef _WIN32
+      Die("zelda3_assets.dat not found.\n\n"
+          "Place zelda3.sfc in this folder, then open a Command Prompt here and run:\n"
+          "  pip install pillow pyyaml\n"
+          "  py -3 assets/restool.py --extract-from-rom\n\n"
+          "If Python is not installed, get it from https://python.org");
+#else
       Die("zelda3_assets.dat not found. Install Python deps and extract assets:\n"
           "  pip install --user pillow pyyaml\n"
           "  python3 assets/restool.py --extract-from-rom\n"
           "Then launch again.");
+#endif
   }
 
   static const char kAssetsSig[] = { kAssets_Sig };
