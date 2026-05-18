@@ -997,10 +997,21 @@ static void LoadAssets() {
 // Go some steps up and find zelda3.ini
 static void SwitchDirectory() {
   char buf[4096];
+#ifdef _WIN32
+  // Use the executable's directory, not the CWD.
+  if (GetModuleFileNameA(NULL, buf, sizeof(buf))) {
+    char *last = strrchr(buf, '\\');
+    if (last) {
+      *last = 0;
+      chdir(buf);
+      return;
+    }
+  }
+#endif
+  // Fallback: walk up from CWD looking for zelda3.ini.
   if (!getcwd(buf, sizeof(buf) - 32))
     return;
   size_t pos = strlen(buf);
-
   for (int step = 0; pos != 0 && step < 3; step++) {
     memcpy(buf + pos, "/zelda3.ini", 12);
     FILE *f = fopen(buf, "rb");
