@@ -899,19 +899,30 @@ static void LoadAssets() {
     // Requires Python 3 with pillow and pyyaml (pip install --user pillow pyyaml).
     if (ReadWholeFile("zelda3.sfc", NULL)) {
       fprintf(stderr, "Extracting game assets on first run...\n");
-      int ret;
+      int ret = 1;
+      // Redirect output to a log so we can show the user what went wrong
 #ifdef _WIN32
-      ret = system("py -3 assets/restool.py --extract-from-rom");
-      if (ret != 0)
-        ret = system("python3 assets/restool.py --extract-from-rom");
-      if (ret != 0)
-        ret = system("python assets/restool.py --extract-from-rom");
-      if (ret != 0)
-        ret = system("py assets/restool.py --extract-from-rom");
+      static const char *kPyCommands[] = {
+        "py -3 assets/restool.py --extract-from-rom",
+        "python3 assets/restool.py --extract-from-rom",
+        "python assets/restool.py --extract-from-rom",
+        "py assets/restool.py --extract-from-rom",
+      };
+      for (int i = 0; ret != 0 && i < countof(kPyCommands); i++) {
+        char cmd[256];
+        snprintf(cmd, sizeof(cmd), "%s > zelda3_extract.log 2>&1", kPyCommands[i]);
+        ret = system(cmd);
+      }
 #else
-      ret = system("python3 assets/restool.py --extract-from-rom");
-      if (ret != 0)
-        ret = system("python assets/restool.py --extract-from-rom");
+      static const char *kPyCommands[] = {
+        "python3 assets/restool.py --extract-from-rom",
+        "python assets/restool.py --extract-from-rom",
+      };
+      for (int i = 0; ret != 0 && i < countof(kPyCommands); i++) {
+        char cmd[256];
+        snprintf(cmd, sizeof(cmd), "%s > zelda3_extract.log 2>&1", kPyCommands[i]);
+        ret = system(cmd);
+      }
 #endif
       if (ret == 0)
         data = ReadWholeFile("zelda3_assets.dat", &length);
@@ -924,28 +935,35 @@ static void LoadAssets() {
         data = ApplyBps(bps_src, bps_src_length, bps, bps_length, &length);
     }
     if (!data) {
-      char msg[2048];
+      char msg[4096];
       char cwd[1024];
       getcwd(cwd, sizeof(cwd));
+      // Include extraction log if present
+      size_t log_len;
+      uint8 *log_data = ReadWholeFile("zelda3_extract.log", &log_len);
+      const char *log_str = log_data ? (const char *)log_data : "(no log)";
 #ifdef _WIN32
       snprintf(msg, sizeof(msg),
           "zelda3_assets.dat not found.\n\n"
           "Looking in: %s\n\n"
-          "Place zelda3.sfc in that folder, then open a Command Prompt there and run:\n"
+          "Extraction log:\n%s\n\n"
+          "Place zelda3.sfc in this folder, then open a Command Prompt here and run:\n"
           "  pip install pillow pyyaml\n"
           "  py -3 assets/restool.py --extract-from-rom\n\n"
           "If Python is not installed, get it from https://python.org",
-          cwd);
+          cwd, log_str);
 #else
       snprintf(msg, sizeof(msg),
           "zelda3_assets.dat not found.\n\n"
           "Looking in: %s\n\n"
+          "Extraction log:\n%s\n\n"
           "Install Python deps and extract assets:\n"
           "  pip install --user pillow pyyaml\n"
           "  python3 assets/restool.py --extract-from-rom\n"
           "Then launch again.",
-          cwd);
+          cwd, log_str);
 #endif
+      free(log_data);
       Die(msg);
     }
   }
