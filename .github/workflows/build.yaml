@@ -83,17 +83,25 @@ jobs:
       run: pip install --break-system-packages PyYAML
     - name: Build
       run: make -j$(nproc)
-    - name: Bundle assets for extraction
+    - name: Fetch glsl-shaders
+      run: |
+        git clone --depth 1 --no-checkout https://github.com/libretro/glsl-shaders.git glsl-shaders
+        cd glsl-shaders
+        git sparse-checkout init --cone
+        git sparse-checkout set presets scalefx xbr xbrz sharpen sabr nnedi3 scalehq shaders
+        git checkout
+        rm -rf .git
+        cd ..
+    - name: Bundle for distribution
       run: |
         mkdir -p dist/zelda3-windows
         cp zelda3.exe zelda3.ini dist/zelda3-windows/
-        cp -r assets other dist/zelda3-windows/
+        cp -r assets other glsl-shaders dist/zelda3-windows/
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
         name: zelda3-windows-x86_64
         path: |
-          dist/zelda3-windows/*
-          dist/zelda3-windows/assets/*
+          dist/zelda3-windows/**
         if-no-files-found: error
 
