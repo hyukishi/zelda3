@@ -86,13 +86,12 @@ jobs:
     - name: Fetch glsl-shaders
       run: |
         pacman -S --noconfirm --needed git
-        git clone --depth 1 --no-checkout https://github.com/libretro/glsl-shaders.git glsl-shaders
-        cd glsl-shaders
-        git sparse-checkout init --cone
+        git clone --depth 1 --filter=blob:none --sparse https://github.com/libretro/glsl-shaders.git _shaders_tmp
+        cd _shaders_tmp
         git sparse-checkout set presets scalefx xbr xbrz sharpen sabr nnedi3 scalehq shaders
-        git checkout
-        rm -rf .git
         cd ..
+        cp -r _shaders_tmp/* glsl-shaders/
+        rm -rf _shaders_tmp
     - name: Bundle for distribution
       run: |
         mkdir -p dist/zelda3-windows
