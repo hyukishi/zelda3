@@ -5,6 +5,7 @@
 #include <stdbool.h>
 #include <SDL.h>
 #ifdef _WIN32
+#include <windows.h>
 #include "platform/win32/volume_control.h"
 #include <direct.h>
 #else
