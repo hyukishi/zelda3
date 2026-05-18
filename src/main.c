@@ -299,7 +299,9 @@ static const struct RendererFuncs kSdlRendererFuncs  = {
 
 void OpenGLRenderer_Create(struct RendererFuncs *funcs, bool use_opengl_es);
 
+#ifndef _WIN32
 #undef main
+#endif
 int main(int argc, char** argv) {
   argc--, argv++;
   const char *config_file = NULL;
