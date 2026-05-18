@@ -85,6 +85,7 @@ jobs:
       run: make -j$(nproc)
     - name: Fetch glsl-shaders
       run: |
+        pacman -S --noconfirm --needed git
         git clone --depth 1 --no-checkout https://github.com/libretro/glsl-shaders.git glsl-shaders
         cd glsl-shaders
         git sparse-checkout init --cone
