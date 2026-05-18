@@ -76,10 +76,9 @@ jobs:
           mingw-w64-x86_64-gcc
           mingw-w64-x86_64-SDL2
           mingw-w64-x86_64-python
-          mingw-w64-x86_64-python-pip
+          mingw-w64-x86_64-python-pillow
+          mingw-w64-x86_64-python-pyyaml
           make
-    - name: Install Python deps
-      run: pip install Pillow PyYAML
     - name: Build
       run: make -j$(nproc)
     - name: Upload artifact
