@@ -206,10 +206,15 @@ static const char *kOptLabels[] = {
   "Close",
 };
 
+// Draw a string right-aligned so its last character lands at pixel x.
+static void DrawStringRight(uint8 *buf, int pitch, int x, int y, const char *s, uint32 color) {
+  DrawString(buf, pitch, x - (int)strlen(s) * kFontW, y, s, color);
+}
+
 static void DrawMainPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w, int fb_h,
                          int content_y, int content_h) {
   int lx = px + kPanelPad;
-  int vx = px + pw - kPanelPad - 80;
+  int rx = px + pw - kPanelPad;
   int rh = kLineH + 1;
 
   int lines_fit = (content_h > 0) ? content_h / rh : 1;
@@ -241,7 +246,7 @@ static void DrawMainPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w
                   is_category ? kCol_Value : kCol_Label;
     DrawString(buf, pitch, lx, y + 2, kOptLabels[i], lcol);
     if (is_category)
-      DrawString(buf, pitch, vx, y, ">", kCol_Value);
+      DrawStringRight(buf, pitch, rx, y, ">", kCol_Value);
 
     // Show Update status
     if (i == kOpt_Update) {
@@ -252,7 +257,7 @@ static void DrawMainPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w
         snprintf(vb, sizeof(vb), "Downloading...");
       else
         snprintf(vb, sizeof(vb), "Check...");
-      DrawString(buf, pitch, vx, y, vb, g_update_available ? kCol_Cheat : kCol_Value);
+      DrawStringRight(buf, pitch, rx, y, vb, g_update_available ? kCol_Cheat : kCol_Value);
     }
     y += rh;
   }
@@ -302,7 +307,7 @@ static void DrawSubPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w,
                         int content_y, int content_h, const char *title,
                         const SubPageItem *items, int item_count) {
   int lx = px + kPanelPad;
-  int vx = px + pw - kPanelPad - 80;
+  int rx = px + pw - kPanelPad;  // right edge for value anchoring
   int rh = kLineH + 1;
 
   int lines_fit = (content_h > 0) ? content_h / rh : 1;
@@ -337,7 +342,7 @@ static void DrawSubPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w,
     DrawString(buf, pitch, lx, y + 2, items[i].label, lcol);
     if (items[i].value) {
       bool on = (items[i].value[0] == 'O' && items[i].value[1] == 'N');
-      DrawString(buf, pitch, vx, y, items[i].value, on ? kCol_On : kCol_Value);
+      DrawStringRight(buf, pitch, rx, y, items[i].value, on ? kCol_On : kCol_Value);
     }
     y += rh;
   }
@@ -399,14 +404,14 @@ static void DrawAudioPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_
   };
   DrawSubPage(buf, pitch, px, py, pw, fb_w, fb_h, content_y, content_h,
               "Audio", items, kOptA_COUNT);
-  // Volume bar
-  int lx = px + kPanelPad;
-  int vx = px + pw - kPanelPad - 80;
+  // Volume bar — drawn to the left of the right-aligned value text
+  int rx = px + pw - kPanelPad;
   int y = content_y;
   int rh = kLineH + 1;
   for (int i = g_sub_scroll; i < kOptA_COUNT && i < g_sub_scroll + (content_h / rh); i++) {
     if (i == kOptA_Volume) {
-      int bw = 40, bx = vx;
+      int bw = 40;
+      int bx = rx - bw - 6 - (int)strlen(vv) * kFontW;  // bar to the left of value
       int fill = (vol * bw) / 100;
       DrawRectSafe(buf, pitch, bx, y + 2, bw, 5, kCol_BarBg, fb_w, fb_h);
       if (fill > 0)
@@ -550,7 +555,7 @@ static void DrawCheatsPage(uint8 *buf, int pitch, int px, int py, int pw, int fb
       vis_idx[vis_count++] = i;
 
   int lx = px + kPanelPad;
-  int vx = px + pw - kPanelPad - 50;
+  int rx = px + pw - kPanelPad;
   int rh = kLineH + 2;
 
   // Clamp scroll so cursor is always visible
@@ -590,7 +595,7 @@ static void DrawCheatsPage(uint8 *buf, int pitch, int px, int py, int pw, int fb
     DrawString(buf, pitch, lx, y + 3, items[i].lbl, items[i].col);
     if (items[i].show_val) {
       bool on = (items[i].val && strcmp(items[i].val, "ON") == 0);
-      DrawString(buf, pitch, vx, y + 3, items[i].val, on ? kCol_On : kCol_Off);
+      DrawStringRight(buf, pitch, rx, y + 3, items[i].val, on ? kCol_On : kCol_Off);
     }
     y += rh;
   }
