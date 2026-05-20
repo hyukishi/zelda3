@@ -503,6 +503,7 @@ int main(int argc, char** argv) {
     inputs |= g_gamepad_buttons;
 
     SDL_LockMutex(g_audio_mutex);
+    SettingsMenu_PreFrameCheats();
     bool is_replay = ZeldaRunFrame(inputs);
     SDL_UnlockMutex(g_audio_mutex);
 

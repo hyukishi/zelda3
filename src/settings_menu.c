@@ -505,6 +505,9 @@ enum { kCtrl_TotalItems = kCtrl_ActionCount + 2 };
 static bool g_ctrl_waiting;
 static int  g_ctrl_wait_cmd;
 
+// Pot carry cheat: shared between pre-frame and post-frame
+static bool g_potcarry_was_lifted;
+
 static void DrawControlsPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w, int fb_h,
                              int content_y, int content_h) {
   int lx = px + kPanelPad;
@@ -1258,15 +1261,27 @@ void SettingsMenu_ApplyCheats(void) {
       g_ram[0xF363] = (999 >> 8) & 0xFF;
     }
   }
-  // Pot carry: preserve carry bit through door transitions (not stairs)
+  // Pot carry: the game blocks door transitions while holding a pot.
+  // PreFrameCheats clears the pot so doors work; we restore it here.
   if (g_cheat_potcarry) {
-    static uint8 prev_hand = 0;
     uint8 cur_hand = g_ram[0x301];
-    // If player had a pot lifted (bit 1 = 2) and it was just cleared by the game,
-    // restore it during room transitions. Skip stairs/pits (z != 0) to avoid
-    // glitching Link into holding pots during stair-climb animations.
-    if ((prev_hand & 2) && !(cur_hand & 2) && link_z_coord == 0)
+    // If PreFrameCheats saved a pot and the game cleared it, restore it.
+    // Skip stairs/pits (z != 0) to avoid glitching climb animations.
+    if (g_potcarry_was_lifted && !(cur_hand & 2) && link_z_coord == 0)
       g_ram[0x301] = cur_hand | 2;
-    prev_hand = g_ram[0x301];
+    g_potcarry_was_lifted = (g_ram[0x301] & 2) ? 1 : 0;
+  }
+}
+
+// Called BEFORE ZeldaRunFrame to hide pot state from the game
+void SettingsMenu_PreFrameCheats(void) {
+  if (g_cheat_config.pot_carry) {
+    uint8 cur = g_ram[0x301];
+    // If player is holding a pot, save the state and clear it so the
+    // game's door-transition code doesn't see it and block the door.
+    if (cur & 2) {
+      g_ram[0x301] = cur & ~2;
+      g_potcarry_was_lifted = true;
+    }
   }
 }
