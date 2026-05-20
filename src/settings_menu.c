@@ -1278,34 +1278,37 @@ void SettingsMenu_ApplyCheats(void) {
     g_ram[kRam_PotCarryPreserveAncilla] = 0;
     g_potcarry_saved_pickup_flag = g_ram[0x2EC];
 
-    // If holding a pot and near a door edge, force the doorway state
-    // for the NEXT frame. Setting it post-frame survives the movement
-    // collision code (which clears it during the frame) so
-    // HandleDoorTransitions will see it on the next ZeldaRunFrame.
+    // If holding a pot and near a door edge, force the room transition
+    // by directly setting the page movement delta. HandleDoorTransitions
+    // checks this independently of is_standing_in_doorway so it works
+    // even when the tile collision system isn't detecting the doorway.
     if (cur_hand & 2) {
       uint16 lx = g_ram[0x22] | (g_ram[0x23] << 8);  // link_x_coord
       uint16 ly = g_ram[0x20] | (g_ram[0x21] << 8);  // link_y_coord
       uint8 last_dir = g_ram[0x26];  // link_direction_last
-      uint8 *doorway = &g_ram[0x6C];  // is_standing_in_doorway
-      // Near top edge, moving up → north door (doorway=1, dir bit 4)
-      if ((ly & 0xFF) < 20 && (last_dir & 0xC) == 4) {
-        *doorway = 1;
-        g_ram[0x26] = (last_dir & ~0xC) | 4;  // ensure up-dir bits set
+      // Near top edge, moving up -> north door
+      if ((ly & 0xFF) < 16 && (last_dir & 0xC) == 4) {
+        g_ram[0x26] = (last_dir & ~0xC) | 4;
+        g_ram[0x6C] = 1;   // is_standing_in_doorway = NS
+        g_ram[0x68] = 0xFF; // link_y_page_movement_delta = -1 (int8)
       }
-      // Near bottom edge, moving down → south door (doorway=1, dir bit 8)
-      if ((ly & 0xFF) > 200 && (last_dir & 0xC) == 8) {
-        *doorway = 1;
+      // Near bottom edge, moving down -> south door
+      else if ((ly & 0xFF) > 210 && (last_dir & 0xC) == 8) {
         g_ram[0x26] = (last_dir & ~0xC) | 8;
+        g_ram[0x6C] = 1;
+        g_ram[0x68] = 0x01; // link_y_page_movement_delta = 1
       }
-      // Near left edge, moving left → west door (doorway=2, dir bit 1)
-      if ((lx & 0xFF) < 12 && (last_dir & 3) == 1) {
-        *doorway = 2;
+      // Near left edge, moving left -> west door
+      else if ((lx & 0xFF) < 12 && (last_dir & 3) == 1) {
         g_ram[0x26] = (last_dir & ~3) | 1;
+        g_ram[0x6C] = 2;   // is_standing_in_doorway = EW
+        g_ram[0x69] = 0xFF; // link_x_page_movement_delta = -1
       }
-      // Near right edge, moving right → east door (doorway=2, dir bit 2)
-      if ((lx & 0xFF) > 240 && (last_dir & 3) == 2) {
-        *doorway = 2;
+      // Near right edge, moving right -> east door
+      else if ((lx & 0xFF) > 244 && (last_dir & 3) == 2) {
         g_ram[0x26] = (last_dir & ~3) | 2;
+        g_ram[0x6C] = 2;
+        g_ram[0x69] = 0x01; // link_x_page_movement_delta = 1
       }
     }
   }
