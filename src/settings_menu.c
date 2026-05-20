@@ -1076,8 +1076,12 @@ static void HandleControlsInput(int key_code, int key_mod, bool pressed) {
       return;
     }
     new_key |= REMAP_SDL_KEYCODE(key_code);
-    // Remove old binding, add new one
+    // Remove old binding for this command
     RemoveKeyForCmd(g_ctrl_wait_cmd);
+    // If target key is already used by another command, free it first
+    int other_cmd = FindCmdForSdlKey(key_code, key_mod);
+    if (other_cmd && other_cmd != g_ctrl_wait_cmd)
+      RemoveKeyForCmd(other_cmd);
     KeyMapHash_Add(new_key, g_ctrl_wait_cmd);
     g_ctrl_waiting = false;
     return;
@@ -1254,13 +1258,14 @@ void SettingsMenu_ApplyCheats(void) {
       g_ram[0xF363] = (999 >> 8) & 0xFF;
     }
   }
-  // Pot carry: preserve carry bit through room transitions
+  // Pot carry: preserve carry bit through door transitions (not stairs)
   if (g_cheat_potcarry) {
     static uint8 prev_hand = 0;
     uint8 cur_hand = g_ram[0x301];
     // If player had a pot lifted (bit 1 = 2) and it was just cleared by the game,
-    // restore it immediately. This lets pots cross room boundaries.
-    if ((prev_hand & 2) && !(cur_hand & 2))
+    // restore it during room transitions. Skip stairs/pits (z != 0) to avoid
+    // glitching Link into holding pots during stair-climb animations.
+    if ((prev_hand & 2) && !(cur_hand & 2) && link_z_coord == 0)
       g_ram[0x301] = cur_hand | 2;
     prev_hand = g_ram[0x301];
   }
