@@ -100,12 +100,13 @@ enum {
 enum { kFontW = 8, kFontH = 8, kPanelPad = 12, kLineH = 14 };
 
 // --- Pages ---
-enum { kPage_Main, kPage_Controls, kPage_Cheats };
+enum { kPage_Main, kPage_Video, kPage_Audio, kPage_Game, kPage_Features, kPage_Controls, kPage_Cheats };
 
 // --- State ---
 static int g_cursor;
 static int g_page;
 static int g_main_scroll;
+static int g_sub_scroll;
 static int g_cheat_scroll;
 
 
@@ -183,37 +184,10 @@ static void DrawRectSafe(uint8 *buf, int pitch, int x, int y, int w, int h,
 // ====================================================================
 
 enum {
-  // Video section
-  kOpt_SecVideo,
-  kOpt_WindowScale,
-  kOpt_Fullscreen,
-  kOpt_AspectRatio,
-  kOpt_StretchToFill,
-  kOpt_LinearFilter,
-  kOpt_FpsCounter,
-  kOpt_Vsync,
-  kOpt_OutputMethod,
-  kOpt_Shader,
-  kOpt_UpdateShaders,
-  // Audio section
-  kOpt_SecAudio,
-  kOpt_Volume,
-  kOpt_EnableAudio,
-  // Game section
-  kOpt_SecGame,
-  kOpt_EnhancedMode7,
-  kOpt_NewRenderer,
-  kOpt_ExtendY,
-  kOpt_NoSpriteLimits,
-  kOpt_Autosave,
-  kOpt_DisplayPerf,
-  kOpt_DisableFrameDelay,
-  // Features section
-  kOpt_SecFeatures,
-  kOpt_SwitchLR,
-  kOpt_TurnWhileDashing,
-  kOpt_MiscBugFixes,
-  // Actions
+  kOpt_Video,
+  kOpt_Audio,
+  kOpt_Game,
+  kOpt_Features,
   kOpt_Controls,
   kOpt_Cheats,
   kOpt_Update,
@@ -222,104 +196,15 @@ enum {
 };
 
 static const char *kOptLabels[] = {
-  "Video",                    // kOpt_SecVideo
-  "Window Scale",
-  "Fullscreen",
-  "Aspect Ratio",
-  "Stretch to Fill",
-  "Linear Filter",
-  "FPS Counter",
-  "Vsync",
-  "Output Method",
-  "Shader",
-  "Update Shaders",
-  "Audio",                    // kOpt_SecAudio
-  "Volume",
-  "Enable Audio",
-  "Game",                     // kOpt_SecGame
-  "Enhanced Mode7",
-  "New Renderer",
-  "Extend Y (240p)",
-  "No Sprite Limits",
-  "Autosave",
-  "Display Perf",
-  "Disable Frame Delay",
-  "Features",                 // kOpt_SecFeatures
-  "Switch LR",
-  "Turn While Dashing",
-  "Misc Bug Fixes",
+  "Video",
+  "Audio",
+  "Game",
+  "Features",
   "Show Controls",
   "Cheats",
   "Update",
   "Close",
 };
-
-static bool IsSectionHeader(int opt) {
-  return opt == kOpt_SecVideo || opt == kOpt_SecAudio ||
-         opt == kOpt_SecGame || opt == kOpt_SecFeatures;
-}
-
-// Returns the number of selectable (non-header) items
-static int SelectableCount(void) {
-  int n = 0;
-  for (int i = 0; i < kOpt_MAIN_COUNT; i++)
-    if (!IsSectionHeader(i)) n++;
-  return n;
-}
-
-// Map a selectable index to the actual option enum value
-static int SelectableToOpt(int sel_idx) {
-  int n = 0;
-  for (int i = 0; i < kOpt_MAIN_COUNT; i++) {
-    if (!IsSectionHeader(i)) {
-      if (n == sel_idx) return i;
-      n++;
-    }
-  }
-  return kOpt_Close; // fallback
-}
-
-// Map an option to its selectable index
-static int OptToSelectable(int opt) {
-  int n = 0;
-  for (int i = 0; i < kOpt_MAIN_COUNT; i++) {
-    if (!IsSectionHeader(i)) {
-      if (i == opt) return n;
-      n++;
-    }
-  }
-  return 0;
-}
-
-static const int kOutputValues[] = { 0, 2, 1, 3 };
-static const int kOutputCount = 4;
-
-// Shader presets
-static const char *kShaderNames[] = { "None", "scalefx-aa", "scalefx+AA fast", "6xBRZ", "ScaleHQ", "6xBRZ+ScaleHQ" };
-static const char *kShaderPaths[] = { NULL, "glsl-shaders/presets/scalefx-aa.glslp", "glsl-shaders/presets/scalefx-aa-fast.glslp", "glsl-shaders/xbrz/6xbrz-linear.glslp", "glsl-shaders/scalehq/4xScaleHQ.glslp", "glsl-shaders/presets/6xbrz+scalehq.glslp" };
-static const int kShaderCount = 6;
-
-static const char *kFpsCornerNames[] = { "Off", "Top Left", "Top Right", "Bottom Left", "Bottom Right" };
-
-static int GetShaderIndex(void) {
-  if (!g_config.shader) return 0;
-  for (int i = 1; i < kShaderCount; i++)
-    if (kShaderPaths[i] && strcmp(g_config.shader, kShaderPaths[i]) == 0)
-      return i;
-  return 0;
-}
-
-// --- Aspect ratio helpers ---
-static const char *kAspectNames[] = { "4:3", "16:9", "16:10", "18:9" };
-static const int kAspectValues[] = { 0, 48, 34, 64 };
-static const int kAspectCount = 4;
-
-static int GetAspectIndex(void) {
-  for (int i = 0; i < kAspectCount; i++)
-    if (g_config.extended_aspect_ratio == kAspectValues[i])
-      return i;
-  return 1;
-}
 
 static void DrawMainPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w, int fb_h,
                          int content_y, int content_h) {
@@ -327,175 +212,252 @@ static void DrawMainPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w
   int vx = px + pw - kPanelPad - 80;
   int rh = kLineH + 1;
 
-  // Calculate which items fit
   int lines_fit = (content_h > 0) ? content_h / rh : 1;
   if (lines_fit < 1) lines_fit = 1;
 
-  // Clamp scroll so the selected selectable item is visible
-  int sel_opt = SelectableToOpt(g_cursor);
-  int sel_opt_idx = -1;
-  int vis_count = 0;
-  int vis_to_actual[kOpt_MAIN_COUNT]; // maps visible row -> actual opt
-  for (int i = 0; i < kOpt_MAIN_COUNT; i++) {
-    vis_to_actual[vis_count++] = i;
-    if (i == sel_opt) sel_opt_idx = vis_count - 1;
+  // Clamp scroll so cursor is visible
+  if (g_cursor >= 0 && g_cursor < kOpt_MAIN_COUNT) {
+    if (g_cursor < g_main_scroll)
+      g_main_scroll = g_cursor;
+    else if (g_cursor >= g_main_scroll + lines_fit)
+      g_main_scroll = g_cursor - lines_fit + 1;
   }
-  if (sel_opt_idx >= 0) {
-    if (sel_opt_idx < g_main_scroll)
-      g_main_scroll = sel_opt_idx;
-    else if (sel_opt_idx >= g_main_scroll + lines_fit)
-      g_main_scroll = sel_opt_idx - lines_fit + 1;
-  }
-  if (g_main_scroll > vis_count - lines_fit)
-    g_main_scroll = (vis_count > lines_fit) ? vis_count - lines_fit : 0;
+  if (g_main_scroll > kOpt_MAIN_COUNT - lines_fit)
+    g_main_scroll = (kOpt_MAIN_COUNT > lines_fit) ? kOpt_MAIN_COUNT - lines_fit : 0;
   if (g_main_scroll < 0) g_main_scroll = 0;
 
   int y = content_y;
-  for (int vi = g_main_scroll; vi < vis_count && vi < g_main_scroll + lines_fit; vi++) {
-    int i = vis_to_actual[vi];
-    int sel = (IsSectionHeader(i) ? false : (SelectableToOpt(g_cursor) == i));
-
-    if (IsSectionHeader(i)) {
-      // Draw section header with accent bar
-      DrawRectSafe(buf, pitch, px + kPanelPad, y + kLineH, pw - kPanelPad * 2, 1,
-                   kCol_Sep, fb_w, fb_h);
-      DrawString(buf, pitch, lx, y - 1, kOptLabels[i], kCol_Title);
-      y += rh + 2;
-      continue;
-    }
-
+  for (int i = g_main_scroll; i < kOpt_MAIN_COUNT && i < g_main_scroll + lines_fit; i++) {
+    int sel = (i == g_cursor);
     if (sel)
       DrawRectSafe(buf, pitch, px + kPanelPad, y, pw - kPanelPad * 2, kLineH, kCol_Highlight, fb_w, fb_h);
     if (sel)
       DrawChar(buf, pitch, lx - kFontW - 2, y + 2, '>', kCol_HiAccent);
 
+    // Categories (with sub-menus) get a different color and ">" indicator
+    bool is_category = (i == kOpt_Video || i == kOpt_Audio || i == kOpt_Game ||
+                        i == kOpt_Features || i == kOpt_Controls || i == kOpt_Cheats);
     uint32 lcol = (i == kOpt_Close) ? kCol_Close : (i == kOpt_Cheats) ? kCol_Cheat :
-                  (i == kOpt_Autosave || i == kOpt_Update) ? kCol_Action : kCol_Label;
+                  is_category ? kCol_Value : kCol_Label;
     DrawString(buf, pitch, lx, y + 2, kOptLabels[i], lcol);
+    if (is_category)
+      DrawString(buf, pitch, vx, y, ">", kCol_Value);
 
-    char vb[32];
-    switch (i) {
-    case kOpt_WindowScale:
-      snprintf(vb, sizeof(vb), "%dx", g_current_window_scale);
-      DrawString(buf, pitch, vx, y, vb, kCol_Value);
-      break;
-    case kOpt_Fullscreen:
-      DrawString(buf, pitch, vx, y,
-        (g_win_flags & (SDL_WINDOW_FULLSCREEN_DESKTOP | SDL_WINDOW_FULLSCREEN)) ? "ON" : "OFF",
-        (g_win_flags & (SDL_WINDOW_FULLSCREEN_DESKTOP | SDL_WINDOW_FULLSCREEN)) ? kCol_On : kCol_Value);
-      break;
-    case kOpt_AspectRatio:
-      DrawString(buf, pitch, vx, y, kAspectNames[GetAspectIndex()], kCol_Value);
-      break;
-    case kOpt_Volume: {
-      int vol = (g_sdl_audio_mixer_volume * 100) / SDL_MIX_MAXVOLUME;
-      int bw = 40;
-      int bx = vx;
-      int fill = (vol * bw) / 100;
-      DrawRectSafe(buf, pitch, bx, y + 2, bw, 5, kCol_BarBg, fb_w, fb_h);
-      if (fill > 0)
-        DrawRectSafe(buf, pitch, bx, y + 2, fill, 5, kCol_BarFill, fb_w, fb_h);
-      snprintf(vb, sizeof(vb), "%d%%", vol);
-      DrawString(buf, pitch, bx + bw + 4, y, vb, kCol_Value);
-      break;
-    }
-    case kOpt_LinearFilter:
-      DrawString(buf, pitch, vx, y, g_config.linear_filtering ? "ON" : "OFF",
-                 g_config.linear_filtering ? kCol_On : kCol_Value);
-      break;
-    case kOpt_StretchToFill:
-      DrawString(buf, pitch, vx, y, g_config.ignore_aspect_ratio ? "ON" : "OFF",
-                 g_config.ignore_aspect_ratio ? kCol_On : kCol_Value);
-      break;
-    case kOpt_Shader:
-      DrawString(buf, pitch, vx, y, kShaderNames[GetShaderIndex()], kCol_Value);
-      break;
-    case kOpt_UpdateShaders:
-      DrawString(buf, pitch, vx, y, "Run...", kCol_Value);
-      break;
-    case kOpt_OutputMethod: {
-      int om = g_config.output_method;
-      const char *nm = "SDL";
-      if (om == 2) nm = "OpenGL";
-      else if (om == 1) nm = "SDL-SW";
-      else if (om == 3) nm = "GL-ES";
-      DrawString(buf, pitch, vx, y, nm, kCol_Value);
-      break;
-    }
-    case kOpt_Autosave:
-      DrawString(buf, pitch, vx, y, g_config.autosave ? "ON" : "OFF",
-                 g_config.autosave ? kCol_On : kCol_Value);
-      break;
-    case kOpt_Update:
+    // Show Update status
+    if (i == kOpt_Update) {
+      char vb[48];
       if (g_update_available && Updater_IsReady())
-        DrawString(buf, pitch, vx, y, g_update_version ? g_update_version : "Ready", kCol_Cheat);
+        snprintf(vb, sizeof(vb), "v%s Ready", g_update_version ? g_update_version : "");
       else if (g_update_available)
-        DrawString(buf, pitch, vx, y, "Downloading...", kCol_Action);
+        snprintf(vb, sizeof(vb), "Downloading...");
       else
-        DrawString(buf, pitch, vx, y, "Check...", kCol_Value);
-      break;
-    case kOpt_FpsCounter:
-      DrawString(buf, pitch, vx, y, kFpsCornerNames[g_config.fps_counter],
-                 g_config.fps_counter ? kCol_On : kCol_Off);
-      break;
-    case kOpt_Vsync:
-      DrawString(buf, pitch, vx, y, g_config.vsync ? "ON" : "OFF",
-                 g_config.vsync ? kCol_On : kCol_Value);
-      break;
-    case kOpt_EnableAudio:
-      DrawString(buf, pitch, vx, y, g_config.enable_audio ? "ON" : "OFF",
-                 g_config.enable_audio ? kCol_On : kCol_Value);
-      break;
-    case kOpt_EnhancedMode7:
-      DrawString(buf, pitch, vx, y, g_config.enhanced_mode7 ? "ON" : "OFF",
-                 g_config.enhanced_mode7 ? kCol_On : kCol_Value);
-      break;
-    case kOpt_NewRenderer:
-      DrawString(buf, pitch, vx, y, g_config.new_renderer ? "ON" : "OFF",
-                 g_config.new_renderer ? kCol_On : kCol_Value);
-      break;
-    case kOpt_ExtendY:
-      DrawString(buf, pitch, vx, y, g_config.extend_y ? "ON" : "OFF",
-                 g_config.extend_y ? kCol_On : kCol_Value);
-      break;
-    case kOpt_NoSpriteLimits:
-      DrawString(buf, pitch, vx, y, g_config.no_sprite_limits ? "ON" : "OFF",
-                 g_config.no_sprite_limits ? kCol_On : kCol_Value);
-      break;
-    case kOpt_DisplayPerf:
-      DrawString(buf, pitch, vx, y, g_config.display_perf_title ? "ON" : "OFF",
-                 g_config.display_perf_title ? kCol_On : kCol_Value);
-      break;
-    case kOpt_DisableFrameDelay:
-      DrawString(buf, pitch, vx, y, g_config.disable_frame_delay ? "ON" : "OFF",
-                 g_config.disable_frame_delay ? kCol_On : kCol_Value);
-      break;
-    case kOpt_SwitchLR: {
-      bool on = (g_config.features0 & kFeatures0_SwitchLR) != 0;
-      DrawString(buf, pitch, vx, y, on ? "ON" : "OFF", on ? kCol_On : kCol_Value);
-      break;
-    }
-    case kOpt_TurnWhileDashing: {
-      bool on = (g_config.features0 & kFeatures0_TurnWhileDashing) != 0;
-      DrawString(buf, pitch, vx, y, on ? "ON" : "OFF", on ? kCol_On : kCol_Value);
-      break;
-    }
-    case kOpt_MiscBugFixes: {
-      bool on = (g_config.features0 & kFeatures0_MiscBugFixes) != 0;
-      DrawString(buf, pitch, vx, y, on ? "ON" : "OFF", on ? kCol_On : kCol_Value);
-      break;
-    }
-    default: break;
+        snprintf(vb, sizeof(vb), "Check...");
+      DrawString(buf, pitch, vx, y, vb, g_update_available ? kCol_Cheat : kCol_Value);
     }
     y += rh;
   }
   // Scroll indicators
   bool scroll_up = (g_main_scroll > 0);
-  bool scroll_dn = (g_main_scroll + lines_fit < vis_count);
+  bool scroll_dn = (g_main_scroll + lines_fit < kOpt_MAIN_COUNT);
   if (scroll_up)
     DrawString(buf, pitch, lx, content_y - 8, "^", kCol_Back);
   if (scroll_dn)
     DrawString(buf, pitch, lx, content_y + content_h - 10, "v", kCol_Back);
+}
+
+// ====================================================================
+//  SUB-PAGE HELPERS
+// ====================================================================
+
+static const int kOutputValues[] = { 0, 2, 1, 3 };
+static const int kOutputCount = 4;
+
+static const char *kShaderNames[] = { "None", "scalefx-aa", "scalefx+AA fast", "6xBRZ", "ScaleHQ", "6xBRZ+ScaleHQ" };
+static const char *kShaderPaths[] = { NULL, "glsl-shaders/presets/scalefx-aa.glslp", "glsl-shaders/presets/scalefx-aa-fast.glslp", "glsl-shaders/xbrz/6xbrz-linear.glslp", "glsl-shaders/scalehq/4xScaleHQ.glslp", "glsl-shaders/presets/6xbrz+scalehq.glslp" };
+static const int kShaderCount = 6;
+static const char *kFpsCornerNames[] = { "Off", "Top Left", "Top Right", "Bottom Left", "Bottom Right" };
+static const char *kAspectNames[] = { "4:3", "16:9", "16:10", "18:9" };
+static const int kAspectValues[] = { 0, 48, 34, 64 };
+static const int kAspectCount = 4;
+
+static int GetShaderIndex(void) {
+  if (!g_config.shader) return 0;
+  for (int i = 1; i < kShaderCount; i++)
+    if (kShaderPaths[i] && strcmp(g_config.shader, kShaderPaths[i]) == 0) return i;
+  return 0;
+}
+static int GetAspectIndex(void) {
+  for (int i = 0; i < kAspectCount; i++)
+    if (g_config.extended_aspect_ratio == kAspectValues[i]) return i;
+  return 1;
+}
+
+// Generic sub-page: an array of { label, value_string } with a Back item at the end.
+typedef struct {
+  const char *label;
+  const char *value;
+} SubPageItem;
+
+static void DrawSubPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w, int fb_h,
+                        int content_y, int content_h, const char *title,
+                        const SubPageItem *items, int item_count) {
+  int lx = px + kPanelPad;
+  int vx = px + pw - kPanelPad - 80;
+  int rh = kLineH + 1;
+
+  int lines_fit = (content_h > 0) ? content_h / rh : 1;
+  if (lines_fit < 1) lines_fit = 1;
+
+  // Clamp scroll
+  if (g_cursor >= 0 && g_cursor < item_count) {
+    if (g_cursor < g_sub_scroll)
+      g_sub_scroll = g_cursor;
+    else if (g_cursor >= g_sub_scroll + lines_fit)
+      g_sub_scroll = g_cursor - lines_fit + 1;
+  }
+  if (g_sub_scroll > item_count - lines_fit)
+    g_sub_scroll = (item_count > lines_fit) ? item_count - lines_fit : 0;
+  if (g_sub_scroll < 0) g_sub_scroll = 0;
+
+  // Title
+  DrawString(buf, pitch, lx, content_y - kFontH - 4, title, kCol_Title);
+  DrawRectSafe(buf, pitch, px + kPanelPad, content_y - 2, pw - kPanelPad * 2, 1,
+               kCol_Sep, fb_w, fb_h);
+
+  int y = content_y;
+  for (int i = g_sub_scroll; i < item_count && i < g_sub_scroll + lines_fit; i++) {
+    int sel = (i == g_cursor);
+    if (sel)
+      DrawRectSafe(buf, pitch, px + kPanelPad, y, pw - kPanelPad * 2, kLineH, kCol_Highlight, fb_w, fb_h);
+    if (sel)
+      DrawChar(buf, pitch, lx - kFontW - 2, y + 2, '>', kCol_HiAccent);
+
+    bool is_back = (i == item_count - 1);
+    uint32 lcol = is_back ? kCol_Close : kCol_Label;
+    DrawString(buf, pitch, lx, y + 2, items[i].label, lcol);
+    if (items[i].value) {
+      bool on = (items[i].value[0] == 'O' && items[i].value[1] == 'N');
+      DrawString(buf, pitch, vx, y, items[i].value, on ? kCol_On : kCol_Value);
+    }
+    y += rh;
+  }
+
+  bool scroll_up = (g_sub_scroll > 0);
+  bool scroll_dn = (g_sub_scroll + lines_fit < item_count);
+  if (scroll_up)
+    DrawString(buf, pitch, lx, content_y - kFontH - 14, "^", kCol_Back);
+  if (scroll_dn)
+    DrawString(buf, pitch, lx, content_y + content_h - 10, "v", kCol_Back);
+}
+
+// --- Video sub-page ---
+
+enum {
+  kOptV_WindowScale, kOptV_Fullscreen, kOptV_AspectRatio, kOptV_StretchToFill,
+  kOptV_LinearFilter, kOptV_FpsCounter, kOptV_Vsync, kOptV_OutputMethod,
+  kOptV_Shader, kOptV_UpdateShaders, kOptV_Back, kOptV_COUNT
+};
+
+static void DrawVideoPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w, int fb_h,
+                          int content_y, int content_h) {
+  char vb[64];
+  char vs[12], vf[12], va[40], vsf[12], vlf[12], vfp[12], vvs[12], vom[12], vsh[40];
+  snprintf(vs, sizeof(vs), "%dx", g_current_window_scale);
+  snprintf(vf, sizeof(vf), "%s", (g_win_flags & (SDL_WINDOW_FULLSCREEN_DESKTOP | SDL_WINDOW_FULLSCREEN)) ? "ON" : "OFF");
+  snprintf(va, sizeof(va), "%s", kAspectNames[GetAspectIndex()]);
+  snprintf(vsf, sizeof(vsf), "%s", g_config.ignore_aspect_ratio ? "ON" : "OFF");
+  snprintf(vlf, sizeof(vlf), "%s", g_config.linear_filtering ? "ON" : "OFF");
+  snprintf(vfp, sizeof(vfp), "%s", kFpsCornerNames[g_config.fps_counter]);
+  snprintf(vvs, sizeof(vvs), "%s", g_config.vsync ? "ON" : "OFF");
+  int om = g_config.output_method;
+  snprintf(vom, sizeof(vom), "%s", om == 2 ? "OpenGL" : om == 1 ? "SDL-SW" : om == 3 ? "GL-ES" : "SDL");
+  snprintf(vsh, sizeof(vsh), "%s", kShaderNames[GetShaderIndex()]);
+
+  SubPageItem items[] = {
+    {"Window Scale", vs}, {"Fullscreen", vf}, {"Aspect Ratio", va},
+    {"Stretch to Fill", vsf}, {"Linear Filter", vlf}, {"FPS Counter", vfp},
+    {"Vsync", vvs}, {"Output Method", vom}, {"Shader", vsh},
+    {"Update Shaders", "Run..."}, {"Back", NULL},
+  };
+  DrawSubPage(buf, pitch, px, py, pw, fb_w, fb_h, content_y, content_h,
+              "Video", items, kOptV_COUNT);
+}
+
+// --- Audio sub-page ---
+
+enum { kOptA_Volume, kOptA_EnableAudio, kOptA_Back, kOptA_COUNT };
+
+static void DrawAudioPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w, int fb_h,
+                          int content_y, int content_h) {
+  int vol = (g_sdl_audio_mixer_volume * 100) / SDL_MIX_MAXVOLUME;
+  char vv[12], vea[12];
+  snprintf(vv, sizeof(vv), "%d%%", vol);
+  snprintf(vea, sizeof(vea), "%s", g_config.enable_audio ? "ON" : "OFF");
+
+  SubPageItem items[] = {
+    {"Volume", vv}, {"Enable Audio", vea}, {"Back", NULL},
+  };
+  DrawSubPage(buf, pitch, px, py, pw, fb_w, fb_h, content_y, content_h,
+              "Audio", items, kOptA_COUNT);
+  // Volume bar
+  int lx = px + kPanelPad;
+  int vx = px + pw - kPanelPad - 80;
+  int y = content_y;
+  int rh = kLineH + 1;
+  for (int i = g_sub_scroll; i < kOptA_COUNT && i < g_sub_scroll + (content_h / rh); i++) {
+    if (i == kOptA_Volume) {
+      int bw = 40, bx = vx;
+      int fill = (vol * bw) / 100;
+      DrawRectSafe(buf, pitch, bx, y + 2, bw, 5, kCol_BarBg, fb_w, fb_h);
+      if (fill > 0)
+        DrawRectSafe(buf, pitch, bx, y + 2, fill, 5, kCol_BarFill, fb_w, fb_h);
+    }
+    y += rh;
+  }
+}
+
+// --- Game sub-page ---
+
+enum {
+  kOptG_EnhancedMode7, kOptG_NewRenderer, kOptG_ExtendY, kOptG_NoSpriteLimits,
+  kOptG_Autosave, kOptG_DisplayPerf, kOptG_DisableFrameDelay, kOptG_Back, kOptG_COUNT
+};
+
+static void DrawGamePage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w, int fb_h,
+                         int content_y, int content_h) {
+  char on[4] = "ON", off[4] = "OFF";
+  SubPageItem items[] = {
+    {"Enhanced Mode7", g_config.enhanced_mode7 ? on : off},
+    {"New Renderer", g_config.new_renderer ? on : off},
+    {"Extend Y (240p)", g_config.extend_y ? on : off},
+    {"No Sprite Limits", g_config.no_sprite_limits ? on : off},
+    {"Autosave", g_config.autosave ? on : off},
+    {"Display Perf", g_config.display_perf_title ? on : off},
+    {"Disable Frame Delay", g_config.disable_frame_delay ? on : off},
+    {"Back", NULL},
+  };
+  DrawSubPage(buf, pitch, px, py, pw, fb_w, fb_h, content_y, content_h,
+              "Game", items, kOptG_COUNT);
+}
+
+// --- Features sub-page ---
+
+enum {
+  kOptF_SwitchLR, kOptF_TurnWhileDashing, kOptF_MiscBugFixes,
+  kOptF_Back, kOptF_COUNT
+};
+
+static void DrawFeaturesPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w, int fb_h,
+                             int content_y, int content_h) {
+  char on[4] = "ON", off[4] = "OFF";
+  SubPageItem items[] = {
+    {"Switch LR", (g_config.features0 & kFeatures0_SwitchLR) ? on : off},
+    {"Turn While Dashing", (g_config.features0 & kFeatures0_TurnWhileDashing) ? on : off},
+    {"Misc Bug Fixes", (g_config.features0 & kFeatures0_MiscBugFixes) ? on : off},
+    {"Back", NULL},
+  };
+  DrawSubPage(buf, pitch, px, py, pw, fb_w, fb_h, content_y, content_h,
+              "Features", items, kOptF_COUNT);
 }
 
 // ====================================================================
@@ -659,22 +621,26 @@ static void SettingsMenu_DrawFrame(uint8 *buf, int pitch, int fb_w, int fb_h) {
   int title_h = 7 * kFontH + 8;    // space for title + underline
   int nav_h = kFontH + 8;          // footer hint
   int opt_h = 0;
-  int item_count = 0, sep_count = 0, section_extra = 0;
+  int item_count = 0, sep_count = 0;
   if (g_page == kPage_Main) {
     item_count = kOpt_MAIN_COUNT;
-    // Section headers take extra vertical space (separator line + padding)
-    for (int i = 0; i < kOpt_MAIN_COUNT; i++)
-      if (IsSectionHeader(i)) section_extra += kLineH/2 + 2;
   } else if (g_page == kPage_Cheats) {
     item_count = kCheat_COUNT;
-    // count separators
     for (int i = 0; i < kCheat_COUNT; i++) {
       if (i == kCheat_Sep1 || i == kCheat_Sep2 || i == kCheat_Sep3) sep_count++;
     }
+  } else if (g_page == kPage_Video) {
+    item_count = kOptV_COUNT;
+  } else if (g_page == kPage_Audio) {
+    item_count = kOptA_COUNT;
+  } else if (g_page == kPage_Game) {
+    item_count = kOptG_COUNT;
+  } else if (g_page == kPage_Features) {
+    item_count = kOptF_COUNT;
   } else {
     item_count = 17; // controls
   }
-  opt_h = item_count * (kLineH + 2) + sep_count * (kLineH/2) + section_extra;
+  opt_h = item_count * (kLineH + 2) + sep_count * (kLineH/2);
   int ph = title_h + opt_h + nav_h + kPanelPad * 2;
   if (ph > max_ph) ph = max_ph;
 
@@ -687,22 +653,36 @@ static void SettingsMenu_DrawFrame(uint8 *buf, int pitch, int fb_w, int fb_h) {
   DrawRectSafe(buf, pitch, px, py, pw, ph, kCol_PanelBg, fb_w, fb_h);
 
   // Title
-  int tx = px + (pw - 8 * 7) / 2; // "SETTINGS" = 7 chars * 8px + spacing
+  int tx = px + (pw - 8 * 7) / 2;
   DrawString(buf, pitch, tx, py + kPanelPad, "SETTINGS", kCol_Title);
   DrawRectSafe(buf, pitch, px + kPanelPad, py + kPanelPad + kFontH + 2,
                pw - kPanelPad * 2, 1, 0xFF555577, fb_w, fb_h);
 
   // Page content
-  if (g_page == kPage_Main) {
-    int content_y = py + 7 * kFontH + 8;
-    int content_h = py + ph - kPanelPad - kFontH - 4 - content_y;
+  int content_y = py + 7 * kFontH + 8;
+  int content_h = py + ph - kPanelPad - kFontH - 4 - content_y;
+  switch (g_page) {
+  case kPage_Main:
     DrawMainPage(buf, pitch, px, py, pw, fb_w, fb_h, content_y, content_h);
-  } else if (g_page == kPage_Controls)
+    break;
+  case kPage_Video:
+    DrawVideoPage(buf, pitch, px, py, pw, fb_w, fb_h, content_y, content_h);
+    break;
+  case kPage_Audio:
+    DrawAudioPage(buf, pitch, px, py, pw, fb_w, fb_h, content_y, content_h);
+    break;
+  case kPage_Game:
+    DrawGamePage(buf, pitch, px, py, pw, fb_w, fb_h, content_y, content_h);
+    break;
+  case kPage_Features:
+    DrawFeaturesPage(buf, pitch, px, py, pw, fb_w, fb_h, content_y, content_h);
+    break;
+  case kPage_Controls:
     DrawControlsPage(buf, pitch, px, py, pw, fb_w, fb_h);
-  else if (g_page == kPage_Cheats) {
-    int content_y = py + 7 * kFontH + 8;
-    int content_h = py + ph - kPanelPad - kFontH - 4 - content_y;
+    break;
+  case kPage_Cheats:
     DrawCheatsPage(buf, pitch, px, py, pw, fb_w, fb_h, content_y, content_h);
+    break;
   }
 
   // Footer
@@ -806,22 +786,73 @@ static void CheatToggleWall(void) {
 // --- Main page input ---
 
 static void ToggleBool(bool *val) { *val = !*val; }
-
 static void ToggleFeaturesBit(uint32 bit) {
   g_config.features0 ^= bit;
   g_wanted_zelda_features ^= bit;
 }
 
-static void ChangeValue(int opt, int delta) {
+// --- Main page input ---
+
+static void HandleMainInput(int key_code, int key_mod, bool pressed) {
+  (void)key_mod;
+  if (!pressed) return;
+  switch (key_code) {
+  case SDLK_UP:    g_cursor = (g_cursor - 1 + kOpt_MAIN_COUNT) % kOpt_MAIN_COUNT; break;
+  case SDLK_DOWN:  g_cursor = (g_cursor + 1) % kOpt_MAIN_COUNT; break;
+  case SDLK_RETURN:
+  case SDLK_KP_ENTER:
+    switch (g_cursor) {
+    case kOpt_Video:    g_page = kPage_Video;    g_cursor = 0; g_sub_scroll = 0; break;
+    case kOpt_Audio:    g_page = kPage_Audio;    g_cursor = 0; g_sub_scroll = 0; break;
+    case kOpt_Game:     g_page = kPage_Game;     g_cursor = 0; g_sub_scroll = 0; break;
+    case kOpt_Features: g_page = kPage_Features; g_cursor = 0; g_sub_scroll = 0; break;
+    case kOpt_Controls: g_page = kPage_Controls; g_cursor = 0; break;
+    case kOpt_Cheats:   g_page = kPage_Cheats;   g_cursor = 0; g_cheat_scroll = 0; break;
+    case kOpt_Update:
+      if (g_update_available && Updater_IsReady()) Updater_Apply();
+      else { Updater_Check(); g_update_available = false; }
+      break;
+    case kOpt_Close: SettingsMenu_Toggle(); break;
+    }
+    break;
+  }
+}
+
+// --- Generic sub-page input handler ---
+
+static void HandleSubPageInput(int key_code, int key_mod, bool pressed,
+                                int back_page, int back_cursor, int item_count,
+                                void (*on_enter)(int cursor), void (*on_change)(int cursor, int delta)) {
+  (void)key_mod;
+  if (!pressed) return;
+  switch (key_code) {
+  case SDLK_UP:    g_cursor = (g_cursor - 1 + item_count) % item_count; break;
+  case SDLK_DOWN:  g_cursor = (g_cursor + 1) % item_count; break;
+  case SDLK_LEFT:  if (on_change) on_change(g_cursor, -1); break;
+  case SDLK_RIGHT: if (on_change) on_change(g_cursor, 1); break;
+  case SDLK_RETURN:
+  case SDLK_KP_ENTER:
+    if (g_cursor == item_count - 1) { // Back
+      g_page = back_page; g_cursor = back_cursor; g_sub_scroll = 0;
+    } else if (on_enter) {
+      on_enter(g_cursor);
+    }
+    break;
+  }
+}
+
+// --- Video sub-page handlers ---
+
+static void VideoChange(int opt, int delta) {
   switch (opt) {
-  case kOpt_WindowScale: {
+  case kOptV_WindowScale: {
     int ns = g_current_window_scale + delta;
     if (ns >= 1 && ns <= 10)
       for (int i = 0; i < (delta > 0 ? delta : -delta); i++)
         ChangeWindowScale(delta > 0 ? 1 : -1);
     break;
   }
-  case kOpt_Fullscreen:
+  case kOptV_Fullscreen:
     if (delta > 0) {
       if (g_win_flags & SDL_WINDOW_FULLSCREEN_DESKTOP) {
         g_win_flags &= ~SDL_WINDOW_FULLSCREEN_DESKTOP;
@@ -833,27 +864,13 @@ static void ChangeValue(int opt, int delta) {
       SDL_SetWindowFullscreen(g_window, g_win_flags & SDL_WINDOW_FULLSCREEN_DESKTOP);
     }
     break;
-  case kOpt_AspectRatio: {
+  case kOptV_AspectRatio: {
     int idx = GetAspectIndex();
     idx = (idx + delta + kAspectCount) % kAspectCount;
     g_config.extended_aspect_ratio = kAspectValues[idx];
     break;
   }
-  case kOpt_Volume: {
-    int vol = (g_sdl_audio_mixer_volume * 100) / SDL_MIX_MAXVOLUME;
-    vol += delta * 5;
-    if (vol < 0) vol = 0;
-    if (vol > 100) vol = 100;
-    g_sdl_audio_mixer_volume = (vol * SDL_MIX_MAXVOLUME) / 100;
-    break;
-  }
-  case kOpt_LinearFilter: {
-    ToggleBool(&g_config.linear_filtering);
-    SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY,
-                g_config.linear_filtering ? "best" : "nearest");
-    break;
-  }
-  case kOpt_StretchToFill: {
+  case kOptV_StretchToFill: {
     ToggleBool(&g_config.ignore_aspect_ratio);
     extern SDL_Renderer *g_renderer;
     extern int g_snes_width, g_snes_height;
@@ -865,92 +882,93 @@ static void ChangeValue(int opt, int delta) {
     }
     break;
   }
-  case kOpt_Shader: {
-    int idx = GetShaderIndex();
-    idx = (idx + delta + kShaderCount) % kShaderCount;
-    g_config.shader = kShaderPaths[idx];
+  case kOptV_LinearFilter:
+    ToggleBool(&g_config.linear_filtering);
+    SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, g_config.linear_filtering ? "best" : "nearest");
     break;
-  }
-  case kOpt_Autosave:
-    ToggleBool(&g_config.autosave);
-    break;
-  case kOpt_FpsCounter:
+  case kOptV_FpsCounter:
     g_config.fps_counter = (g_config.fps_counter + delta + 5) % 5;
     break;
-  case kOpt_Vsync:
+  case kOptV_Vsync:
     ToggleBool(&g_config.vsync);
     break;
-  case kOpt_OutputMethod: {
+  case kOptV_OutputMethod: {
     int idx = 0;
     for (int i = 0; i < kOutputCount; i++)
       if (g_config.output_method == kOutputValues[i]) { idx = (i + delta + kOutputCount) % kOutputCount; break; }
     g_config.output_method = kOutputValues[idx];
     break;
   }
-  case kOpt_EnableAudio:
-    ToggleBool(&g_config.enable_audio);
+  case kOptV_Shader: {
+    int idx = GetShaderIndex();
+    idx = (idx + delta + kShaderCount) % kShaderCount;
+    g_config.shader = kShaderPaths[idx];
     break;
-  case kOpt_EnhancedMode7:
-    ToggleBool(&g_config.enhanced_mode7);
-    break;
-  case kOpt_NewRenderer:
-    ToggleBool(&g_config.new_renderer);
-    break;
-  case kOpt_ExtendY:
-    ToggleBool(&g_config.extend_y);
-    break;
-  case kOpt_NoSpriteLimits:
-    ToggleBool(&g_config.no_sprite_limits);
-    break;
-  case kOpt_DisplayPerf:
-    ToggleBool(&g_config.display_perf_title);
-    break;
-  case kOpt_DisableFrameDelay:
-    ToggleBool(&g_config.disable_frame_delay);
-    break;
-  case kOpt_SwitchLR:
-    ToggleFeaturesBit(kFeatures0_SwitchLR);
-    break;
-  case kOpt_TurnWhileDashing:
-    ToggleFeaturesBit(kFeatures0_TurnWhileDashing);
-    break;
-  case kOpt_MiscBugFixes:
-    ToggleFeaturesBit(kFeatures0_MiscBugFixes);
+  }
+  case kOptV_UpdateShaders:
+    if (delta > 0) system("./fetch-shaders.sh &");
     break;
   }
 }
 
-static void HandleMainInput(int key_code, int key_mod, bool pressed) {
-  (void)key_mod;
-  if (!pressed) return;
-  int sel_count = SelectableCount();
-  switch (key_code) {
-  case SDLK_UP:
-    g_cursor = (g_cursor - 1 + sel_count) % sel_count;
-    break;
-  case SDLK_DOWN:
-    g_cursor = (g_cursor + 1) % sel_count;
-    break;
-  case SDLK_LEFT:   ChangeValue(SelectableToOpt(g_cursor), -1); break;
-  case SDLK_RIGHT:  ChangeValue(SelectableToOpt(g_cursor), 1); break;
-  case SDLK_RETURN:
-  case SDLK_KP_ENTER: {
-    int opt = SelectableToOpt(g_cursor);
-    if (opt == kOpt_Controls) { g_page = kPage_Controls; g_cursor = 0; }
-    else if (opt == kOpt_Cheats) { g_page = kPage_Cheats; g_cursor = 0; g_cheat_scroll = 0; }
-    else if (opt == kOpt_UpdateShaders) {
-      system("./fetch-shaders.sh &");
-    }
-    else if (opt == kOpt_Update) {
-      if (g_update_available && Updater_IsReady()) { Updater_Apply(); }
-      else { Updater_Check(); g_update_available = false; }
-    }
-    else if (opt == kOpt_Close) SettingsMenu_Toggle();
-    else ChangeValue(opt, 1);
+static void HandleVideoInput(int key_code, int key_mod, bool pressed) {
+  HandleSubPageInput(key_code, key_mod, pressed, kPage_Main, kOpt_Video, kOptV_COUNT, NULL, VideoChange);
+}
+
+// --- Audio sub-page handlers ---
+
+static void AudioChange(int opt, int delta) {
+  switch (opt) {
+  case kOptA_Volume: {
+    int vol = (g_sdl_audio_mixer_volume * 100) / SDL_MIX_MAXVOLUME;
+    vol += delta * 5;
+    if (vol < 0) vol = 0;
+    if (vol > 100) vol = 100;
+    g_sdl_audio_mixer_volume = (vol * SDL_MIX_MAXVOLUME) / 100;
     break;
   }
+  case kOptA_EnableAudio:
+    ToggleBool(&g_config.enable_audio);
     break;
   }
+}
+
+static void HandleAudioInput(int key_code, int key_mod, bool pressed) {
+  HandleSubPageInput(key_code, key_mod, pressed, kPage_Main, kOpt_Audio, kOptA_COUNT, NULL, AudioChange);
+}
+
+// --- Game sub-page handlers ---
+
+static void GameChange(int opt, int delta) {
+  (void)delta;
+  switch (opt) {
+  case kOptG_EnhancedMode7:   ToggleBool(&g_config.enhanced_mode7); break;
+  case kOptG_NewRenderer:     ToggleBool(&g_config.new_renderer); break;
+  case kOptG_ExtendY:         ToggleBool(&g_config.extend_y); break;
+  case kOptG_NoSpriteLimits:  ToggleBool(&g_config.no_sprite_limits); break;
+  case kOptG_Autosave:        ToggleBool(&g_config.autosave); break;
+  case kOptG_DisplayPerf:     ToggleBool(&g_config.display_perf_title); break;
+  case kOptG_DisableFrameDelay: ToggleBool(&g_config.disable_frame_delay); break;
+  }
+}
+
+static void HandleGameInput(int key_code, int key_mod, bool pressed) {
+  HandleSubPageInput(key_code, key_mod, pressed, kPage_Main, kOpt_Game, kOptG_COUNT, NULL, GameChange);
+}
+
+// --- Features sub-page handlers ---
+
+static void FeaturesChange(int opt, int delta) {
+  (void)delta;
+  switch (opt) {
+  case kOptF_SwitchLR:         ToggleFeaturesBit(kFeatures0_SwitchLR); break;
+  case kOptF_TurnWhileDashing: ToggleFeaturesBit(kFeatures0_TurnWhileDashing); break;
+  case kOptF_MiscBugFixes:     ToggleFeaturesBit(kFeatures0_MiscBugFixes); break;
+  }
+}
+
+static void HandleFeaturesInput(int key_code, int key_mod, bool pressed) {
+  HandleSubPageInput(key_code, key_mod, pressed, kPage_Main, kOpt_Features, kOptF_COUNT, NULL, FeaturesChange);
 }
 
 // --- Controls page input ---
@@ -998,7 +1016,6 @@ static void HandleCheatsInput(int key_code, int key_mod, bool pressed) {
     }
     break;
   case SDLK_LEFT:
-    // Toggle off for infinite cheats
     if (g_cursor == kCheat_InfHealth)  { g_cheat_health = false; }
     else if (g_cursor == kCheat_InfMagic)  { g_cheat_magic  = false; }
     else if (g_cursor == kCheat_InfBombs)  { g_cheat_bombs  = false; }
@@ -1009,7 +1026,6 @@ static void HandleCheatsInput(int key_code, int key_mod, bool pressed) {
     else if (g_cursor == kCheat_Wall)      { g_cheat_wall   = false; CheatToggleWall(); }
     break;
   case SDLK_RIGHT:
-    // Toggle on for infinite cheats
     if (g_cursor == kCheat_InfHealth)  { g_cheat_health = true; }
     else if (g_cursor == kCheat_InfMagic)  { g_cheat_magic  = true; }
     else if (g_cursor == kCheat_InfBombs)  { g_cheat_bombs  = true; }
@@ -1049,15 +1065,22 @@ void SettingsMenu_Input(int key_code, int key_mod, bool pressed) {
     Updater_Apply();
     return;
   }
-  // Global close
+  // Escape goes back to main from sub-pages, closes from main
   if (pressed && (key_code == SDLK_F12 || key_code == SDLK_ESCAPE)) {
-    SettingsMenu_Toggle();
+    if (g_page == kPage_Main)
+      SettingsMenu_Toggle();
+    else
+      { g_page = kPage_Main; g_cursor = 0; g_sub_scroll = 0; }
     return;
   }
   switch (g_page) {
-  case kPage_Main:    HandleMainInput(key_code, key_mod, pressed); break;
+  case kPage_Main:     HandleMainInput(key_code, key_mod, pressed); break;
+  case kPage_Video:    HandleVideoInput(key_code, key_mod, pressed); break;
+  case kPage_Audio:    HandleAudioInput(key_code, key_mod, pressed); break;
+  case kPage_Game:     HandleGameInput(key_code, key_mod, pressed); break;
+  case kPage_Features: HandleFeaturesInput(key_code, key_mod, pressed); break;
   case kPage_Controls: HandleControlsInput(key_code, key_mod, pressed); break;
-  case kPage_Cheats:  HandleCheatsInput(key_code, key_mod, pressed); break;
+  case kPage_Cheats:   HandleCheatsInput(key_code, key_mod, pressed); break;
   }
 }
 
