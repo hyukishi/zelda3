@@ -1319,13 +1319,17 @@ void SettingsMenu_PreFrameCheats(void) {
   if (!g_cheat_config.pot_carry) return;
   uint8 cur = g_ram[0x301];
   if (cur & 2) {
-    // LinkState_HoldingBigRock (handler 24) sets link_direction but never
-    // calls tile collision, so is_standing_in_doorway is never set and
-    // HandleDoorTransitions never triggers. Switch to LinkState_Default (0)
-    // which calls PlayerHandler_00_Ground_3 -> StartMovementCollisionChecks.
-    g_ram[0x301] = cur & ~2;  // link_item_in_hand=0 so line 283 check passes
+    // Hide pot state so the game processes movement normally:
+    // - PlayerHandler_00_Ground_3:283 checks !link_item_in_hand
+    // - LinkState_HoldingBigRock never calls tile collision (no doorway detection)
+    // - link_auxiliary_state causes HandleLink_From1D to hijack movement
+    g_ram[0x301] = cur & ~2;  // link_item_in_hand
     g_ram[0x5D] = 0;          // link_player_handler_state -> Ground
-    g_ram[0x4D] = 0;          // link_auxiliary_state -> skip HandleLink_From1D
+    g_ram[0x4D] = 0;          // link_auxiliary_state
+    g_ram[0x308] = 0;         // link_state_bits
+    g_ram[0x309] = 0;         // link_picking_throw_state
+    g_ram[0x379] = 0;         // byte_7E0379 (blocks A-press)
+    g_ram[0x376] = 0;         // link_grabbing_wall
     g_ram[kRam_PotCarryPreserveAncilla] = 1;
     g_potcarry_was_lifted = true;
   } else {
