@@ -6,17 +6,9 @@
 #include "features.h"
 #include "util.h"
 
-enum {
-  kKeyMod_ScanCode = 0x200,
-  kKeyMod_Alt = 0x400,
-  kKeyMod_Shift = 0x800,
-  kKeyMod_Ctrl = 0x1000,
-};
-
 Config g_config;
 CheatConfig g_cheat_config;
 
-#define REMAP_SDL_KEYCODE(key) ((key) & SDLK_SCANCODE_MASK ? kKeyMod_ScanCode : 0) | (key) & (kKeyMod_ScanCode - 1)
 #define _(x) REMAP_SDL_KEYCODE(x)
 #define S(x) REMAP_SDL_KEYCODE(x) | kKeyMod_Shift
 #define A(x) REMAP_SDL_KEYCODE(x) | kKeyMod_Alt
@@ -72,7 +64,7 @@ static KeyMapHashEnt *keymap_hash;
 static int keymap_hash_size;
 static bool has_keynameid[countof(kKeyNameId)];
 
-static bool KeyMapHash_Add(uint16 key, uint16 cmd) {
+bool KeyMapHash_Add(uint16 key, uint16 cmd) {
   if ((keymap_hash_size & 0xff) == 0) {
     if (keymap_hash_size > 10000)
       Die("Too many keys");
@@ -107,6 +99,36 @@ static int KeyMapHash_Find(uint16 key) {
     i = ent->next;
   }
   return 0;
+}
+
+uint16 GetKeyForCmd(int cmd) {
+  // Scan the hash table for the first key bound to this command
+  for (int i = 0; i < keymap_hash_size; i++) {
+    if (keymap_hash[i].cmd == cmd)
+      return keymap_hash[i].key;
+  }
+  return 0;
+}
+
+void RemoveKeyForCmd(int cmd) {
+  // Remove all bindings for this command from the hash chains
+  for (int i = 0; i < keymap_hash_size; i++) {
+    if (keymap_hash[i].cmd == cmd) {
+      uint16 key = keymap_hash[i].key;
+      int bucket = (uint32)key % 255;
+      uint16 *cur = &keymap_hash_first[bucket];
+      while (*cur) {
+        if (*cur == i + 1) {
+          *cur = keymap_hash[i].next;
+          break;
+        }
+        cur = &keymap_hash[*cur - 1].next;
+      }
+      keymap_hash[i].key = 0;
+      keymap_hash[i].cmd = 0;
+      keymap_hash[i].next = 0;
+    }
+  }
 }
 
 int FindCmdForSdlKey(SDL_Keycode code, SDL_Keymod mod) {
@@ -253,7 +275,7 @@ static void ParseGamepadArray(char *value, int cmd, int size) {
   }
 }
 
-static void RegisterDefaultKeys() {
+void RegisterDefaultKeys() {
   for (int i = 1; i < countof(kKeyNameId); i++) {
     if (!has_keynameid[i]) {
       int size = kKeyNameId[i].size, k = kKeyNameId[i].id;
@@ -639,6 +661,36 @@ void SaveConfigFile(const char *filename) {
   fprintf(f, "InfiniteRupees = %s\n", g_cheat_config.infinite_rupees ? "yes" : "no");
   fprintf(f, "PotCarry = %s\n", g_cheat_config.pot_carry ? "yes" : "no");
   fprintf(f, "WalkWall = %s\n", g_cheat_config.walk_wall ? "yes" : "no");
+
+  // Save current key bindings
+  fprintf(f, "\n[KeyMap]\n");
+  for (int ki = 1; ki < countof(kKeyNameId); ki++) {
+    int cmd = kKeyNameId[ki].id;
+    int size = kKeyNameId[ki].size;
+    if (size <= 0) continue;
+    // Build comma-separated list of key bindings for this command
+    char line[256] = {0};
+    int off = 0;
+    for (int si = 0; si < size; si++) {
+      uint16 key = GetKeyForCmd(cmd + si);
+      if (!key) continue;
+      if (off > 0) line[off++] = ',';
+      if (key & kKeyMod_Ctrl)  { memcpy(line + off, "Ctrl+", 5); off += 5; }
+      if (key & kKeyMod_Shift) { memcpy(line + off, "Shift+", 6); off += 6; }
+      if (key & kKeyMod_Alt)   { memcpy(line + off, "Alt+", 4); off += 4; }
+      SDL_Keycode kc = key & (kKeyMod_ScanCode - 1);
+      const char *nm = SDL_GetKeyName(kc);
+      if (nm && *nm) {
+        int nl = strlen(nm);
+        memcpy(line + off, nm, nl);
+        off += nl;
+      }
+    }
+    if (off > 0) {
+      line[off] = 0;
+      fprintf(f, "%s = %s\n", kKeyNameId[ki].name, line);
+    }
+  }
 
   fclose(f);
 }

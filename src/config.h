@@ -3,6 +3,15 @@
 #include <SDL_keycode.h>
 
 enum {
+  kKeyMod_ScanCode = 0x200,
+  kKeyMod_Alt = 0x400,
+  kKeyMod_Shift = 0x800,
+  kKeyMod_Ctrl = 0x1000,
+};
+
+#define REMAP_SDL_KEYCODE(key) (((key) & SDLK_SCANCODE_MASK ? kKeyMod_ScanCode : 0) | ((key) & (kKeyMod_ScanCode - 1)))
+
+enum {
   kKeys_Null,
   kKeys_Controls,
   kKeys_Controls_Last = kKeys_Controls + 11,
@@ -126,5 +135,9 @@ void ParseConfigFile(const char *filename);
 int FindCmdForSdlKey(SDL_Keycode code, SDL_Keymod mod);
 int FindCmdForGamepadButton(int button, uint32 modifiers);
 const uint16 *GetDefaultKbdControls(void);
+uint16 GetKeyForCmd(int cmd);
+void RemoveKeyForCmd(int cmd);
+bool KeyMapHash_Add(uint16 key, uint16 cmd);
+void RegisterDefaultKeys(void);
 void SaveConfigFile(const char *filename);
 void CheatConfig_Apply(void);

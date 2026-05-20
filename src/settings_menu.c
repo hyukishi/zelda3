@@ -469,37 +469,114 @@ static void DrawFeaturesPage(uint8 *buf, int pitch, int px, int py, int pw, int 
 //  CONTROLS PAGE
 // ====================================================================
 
-static void DrawControlsPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w, int fb_h) {
-  (void)pw;
-  static const struct { const char *act; int kid; } keys[] = {
-    {"Up",kKeys_Controls},{"Down",kKeys_Controls+1},{"Left",kKeys_Controls+2},{"Right",kKeys_Controls+3},
-    {"Select",kKeys_Controls+4},{"Start",kKeys_Controls+5},{"A",kKeys_Controls+6},{"B",kKeys_Controls+7},
-    {"X",kKeys_Controls+8},{"Y",kKeys_Controls+9},{"L",kKeys_Controls+10},{"R",kKeys_Controls+11},
-    {"Fullscreen",kKeys_Fullscreen},{"Pause",kKeys_Pause},{"Turbo",kKeys_Turbo},
-    {"Settings",kKeys_Settings},
-  };
-  const uint16 *def = GetDefaultKbdControls();
-  int y = py + 6 * kFontH + 4;
+// Build readable key name from internal keycode (reverse of REMAP_SDL_KEYCODE)
+static void KeyName(uint16 key, char *out, int out_size) {
+  out[0] = 0;
+  if (key & kKeyMod_Ctrl)  strcat(out, "Ctrl+");
+  if (key & kKeyMod_Shift) strcat(out, "Shft+");
+  if (key & kKeyMod_Alt)   strcat(out, "Alt+");
+  int code = key & (kKeyMod_ScanCode - 1);
+  SDL_Keycode kc = code;
+  const char *n = SDL_GetKeyName(kc);
+  if (!n || !*n) n = "???";
+  strncat(out, n, out_size - strlen(out) - 1);
+}
+
+enum {
+  kCtrl_ResetDefaults,
+  kCtrl_Back,
+  kCtrl_COUNT
+};
+
+enum { kCtrl_ActionCount = 16 };  // the 16 game key bindings
+
+static const struct { const char *act; int kid; } kCtrlActions[] = {
+  {"Up",kKeys_Controls},{"Down",kKeys_Controls+1},{"Left",kKeys_Controls+2},{"Right",kKeys_Controls+3},
+  {"Select",kKeys_Controls+4},{"Start",kKeys_Controls+5},{"A",kKeys_Controls+6},{"B",kKeys_Controls+7},
+  {"X",kKeys_Controls+8},{"Y",kKeys_Controls+9},{"L",kKeys_Controls+10},{"R",kKeys_Controls+11},
+  {"Fullscreen",kKeys_Fullscreen},{"Pause",kKeys_Pause},{"Turbo",kKeys_Turbo},
+  {"Settings",kKeys_Settings},
+};
+
+// Total items = 16 actions + reset + back = 18
+enum { kCtrl_TotalItems = kCtrl_ActionCount + 2 };
+
+// Waiting-for-key state
+static bool g_ctrl_waiting;
+static int  g_ctrl_wait_cmd;
+
+static void DrawControlsPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w, int fb_h,
+                             int content_y, int content_h) {
   int lx = px + kPanelPad;
-  int vx = px + kPanelPad + 80;
+  int rx = px + pw - kPanelPad;
+  int rh = kLineH + 2;
+  int lines_fit = (content_h > 0) ? content_h / rh : 1;
+  if (lines_fit < 1) lines_fit = 1;
 
-  for (size_t i = 0; i < sizeof(keys)/sizeof(keys[0]); i++) {
-    uint16 key = def ? def[keys[i].kid] : 0;
-    int sc = key & 0x1FF;
-    SDL_Keycode kc = sc;
-    char kn[32] = {0};
-    if (key & 0x1000) strcat(kn, "Ctrl+");
-    if (key & 0x800)  strcat(kn, "Shft+");
-    if (key & 0x400)  strcat(kn, "Alt+");
-    const char *n = SDL_GetKeyName(kc);
-    strncat(kn, n, sizeof(kn)-strlen(kn)-1);
-
-    DrawString(buf, pitch, lx, y, keys[i].act, kCol_Label);
-    DrawString(buf, pitch, vx, y, kn, kCol_Value);
-    y += kLineH + 2;
+  // Clamp scroll
+  if (g_cursor >= 0 && g_cursor < kCtrl_TotalItems) {
+    if (g_cursor < g_sub_scroll)
+      g_sub_scroll = g_cursor;
+    else if (g_cursor >= g_sub_scroll + lines_fit)
+      g_sub_scroll = g_cursor - lines_fit + 1;
   }
-  y += 4;
-  DrawString(buf, pitch, lx, y, "F12/Esc = back", kCol_Back);
+  if (g_sub_scroll > kCtrl_TotalItems - lines_fit)
+    g_sub_scroll = (kCtrl_TotalItems > lines_fit) ? kCtrl_TotalItems - lines_fit : 0;
+  if (g_sub_scroll < 0) g_sub_scroll = 0;
+
+  // Title
+  DrawString(buf, pitch, lx, content_y - kFontH - 4, "Controls", kCol_Title);
+  DrawRectSafe(buf, pitch, px + kPanelPad, content_y - 2, pw - kPanelPad * 2, 1,
+               kCol_Sep, fb_w, fb_h);
+
+  int y = content_y;
+  for (int vi = g_sub_scroll; vi < kCtrl_TotalItems && vi < g_sub_scroll + lines_fit; vi++) {
+    if (vi < kCtrl_ActionCount) {
+      // Action row
+      int kid = kCtrlActions[vi].kid;
+      uint16 key = GetKeyForCmd(kid);
+      char kn[40] = {0};
+      if (g_ctrl_waiting && g_ctrl_wait_cmd == kid)
+        snprintf(kn, sizeof(kn), "Press key...");
+      else if (key)
+        KeyName(key, kn, sizeof(kn));
+      else
+        snprintf(kn, sizeof(kn), "(unbound)");
+
+      int sel = (vi == g_cursor);
+      if (sel)
+        DrawRectSafe(buf, pitch, px + kPanelPad, y, pw - kPanelPad * 2, kLineH, kCol_Highlight, fb_w, fb_h);
+      if (sel)
+        DrawChar(buf, pitch, lx - kFontW - 2, y + 3, '>', kCol_HiAccent);
+      DrawString(buf, pitch, lx, y + 3, kCtrlActions[vi].act, kCol_Label);
+      bool waiting = (g_ctrl_waiting && g_ctrl_wait_cmd == kid);
+      DrawStringRight(buf, pitch, rx, y + 3, kn, waiting ? kCol_Cheat : kCol_Value);
+    } else if (vi == kCtrl_ActionCount) {
+      // Reset to defaults
+      int sel = (vi == g_cursor);
+      if (sel)
+        DrawRectSafe(buf, pitch, px + kPanelPad, y, pw - kPanelPad * 2, kLineH, kCol_Highlight, fb_w, fb_h);
+      if (sel)
+        DrawChar(buf, pitch, lx - kFontW - 2, y + 3, '>', kCol_HiAccent);
+      DrawString(buf, pitch, lx, y + 3, "Reset to Defaults", kCol_Action);
+    } else {
+      // Back
+      int sel = (vi == g_cursor);
+      if (sel)
+        DrawRectSafe(buf, pitch, px + kPanelPad, y, pw - kPanelPad * 2, kLineH, kCol_Highlight, fb_w, fb_h);
+      if (sel)
+        DrawChar(buf, pitch, lx - kFontW - 2, y + 3, '>', kCol_HiAccent);
+      DrawString(buf, pitch, lx, y + 3, "Back", kCol_Close);
+    }
+    y += rh;
+  }
+
+  bool scroll_up = (g_sub_scroll > 0);
+  bool scroll_dn = (g_sub_scroll + lines_fit < kCtrl_TotalItems);
+  if (scroll_up)
+    DrawString(buf, pitch, lx, content_y - kFontH - 14, "^", kCol_Back);
+  if (scroll_dn)
+    DrawString(buf, pitch, lx, content_y + content_h - 10, "v", kCol_Back);
 }
 
 // ====================================================================
@@ -642,8 +719,8 @@ static void SettingsMenu_DrawFrame(uint8 *buf, int pitch, int fb_w, int fb_h) {
     item_count = kOptG_COUNT;
   } else if (g_page == kPage_Features) {
     item_count = kOptF_COUNT;
-  } else {
-    item_count = 17; // controls
+  } else if (g_page == kPage_Controls) {
+    item_count = kCtrl_TotalItems;
   }
   opt_h = item_count * (kLineH + 2) + sep_count * (kLineH/2);
   int ph = title_h + opt_h + nav_h + kPanelPad * 2;
@@ -683,7 +760,7 @@ static void SettingsMenu_DrawFrame(uint8 *buf, int pitch, int fb_w, int fb_h) {
     DrawFeaturesPage(buf, pitch, px, py, pw, fb_w, fb_h, content_y, content_h);
     break;
   case kPage_Controls:
-    DrawControlsPage(buf, pitch, px, py, pw, fb_w, fb_h);
+    DrawControlsPage(buf, pitch, px, py, pw, fb_w, fb_h, content_y, content_h);
     break;
   case kPage_Cheats:
     DrawCheatsPage(buf, pitch, px, py, pw, fb_w, fb_h, content_y, content_h);
@@ -811,7 +888,7 @@ static void HandleMainInput(int key_code, int key_mod, bool pressed) {
     case kOpt_Audio:    g_page = kPage_Audio;    g_cursor = 0; g_sub_scroll = 0; break;
     case kOpt_Game:     g_page = kPage_Game;     g_cursor = 0; g_sub_scroll = 0; break;
     case kOpt_Features: g_page = kPage_Features; g_cursor = 0; g_sub_scroll = 0; break;
-    case kOpt_Controls: g_page = kPage_Controls; g_cursor = 0; break;
+    case kOpt_Controls: g_page = kPage_Controls; g_cursor = 0; g_sub_scroll = 0; g_ctrl_waiting = false; break;
     case kOpt_Cheats:   g_page = kPage_Cheats;   g_cursor = 0; g_cheat_scroll = 0; break;
     case kOpt_Update:
       if (g_update_available && Updater_IsReady()) Updater_Apply();
@@ -979,12 +1056,70 @@ static void HandleFeaturesInput(int key_code, int key_mod, bool pressed) {
 // --- Controls page input ---
 
 static void HandleControlsInput(int key_code, int key_mod, bool pressed) {
-  (void)key_mod;
   if (!pressed) return;
-  if (key_code == SDLK_ESCAPE || key_code == SDLK_F12 ||
-      key_code == SDLK_RETURN || key_code == SDLK_KP_ENTER) {
+
+  // If waiting for a key rebind
+  if (g_ctrl_waiting) {
+    if (key_code == SDLK_ESCAPE) {
+      g_ctrl_waiting = false;
+      return;
+    }
+    // Build internal key from pressed key + modifiers
+    int new_key = 0;
+    if (key_mod & KMOD_ALT)   new_key |= kKeyMod_Alt;
+    if (key_mod & KMOD_CTRL)  new_key |= kKeyMod_Ctrl;
+    if (key_mod & KMOD_SHIFT) new_key |= kKeyMod_Shift;
+    // Don't bind meta-only keys (modifier keys alone)
+    if (key_code == SDLK_LALT || key_code == SDLK_RALT ||
+        key_code == SDLK_LCTRL || key_code == SDLK_RCTRL ||
+        key_code == SDLK_LSHIFT || key_code == SDLK_RSHIFT) {
+      return;
+    }
+    new_key |= REMAP_SDL_KEYCODE(key_code);
+    // Remove old binding, add new one
+    RemoveKeyForCmd(g_ctrl_wait_cmd);
+    KeyMapHash_Add(new_key, g_ctrl_wait_cmd);
+    g_ctrl_waiting = false;
+    return;
+  }
+
+  switch (key_code) {
+  case SDLK_UP:
+    g_cursor = (g_cursor - 1 + kCtrl_TotalItems) % kCtrl_TotalItems;
+    break;
+  case SDLK_DOWN:
+    g_cursor = (g_cursor + 1) % kCtrl_TotalItems;
+    break;
+  case SDLK_RETURN:
+  case SDLK_KP_ENTER:
+    if (g_cursor >= 0 && g_cursor < kCtrl_ActionCount) {
+      // Start rebinding this action
+      g_ctrl_waiting = true;
+      g_ctrl_wait_cmd = kCtrlActions[g_cursor].kid;
+    } else if (g_cursor == kCtrl_ActionCount) {
+      // Reset to defaults
+      RegisterDefaultKeys();
+    } else {
+      // Back
+      g_page = kPage_Main;
+      g_cursor = kOpt_Controls;
+      g_sub_scroll = 0;
+    }
+    break;
+  case SDLK_F12:
+  case SDLK_ESCAPE:
+    g_ctrl_waiting = false;
     g_page = kPage_Main;
     g_cursor = kOpt_Controls;
+    g_sub_scroll = 0;
+    break;
+  case SDLK_DELETE:
+  case SDLK_BACKSPACE:
+    // Unbind: remove the current key
+    if (g_cursor >= 0 && g_cursor < kCtrl_ActionCount) {
+      RemoveKeyForCmd(kCtrlActions[g_cursor].kid);
+    }
+    break;
   }
 }
 
