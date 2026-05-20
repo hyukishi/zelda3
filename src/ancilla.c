@@ -6886,7 +6886,7 @@ uint8 Ancilla_TerminateSelectInteractives(uint8 y) {  // 89ac6b
       }
     }
 
-    if (sign8(link_state_bits)) {
+    if (sign8(link_state_bits) || g_ram[0x647]) {
       if (i + 1 != flag_is_ancilla_to_pick_up)
         ancilla_type[i] = 0;
     }

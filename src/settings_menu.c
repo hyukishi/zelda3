@@ -507,6 +507,9 @@ static int  g_ctrl_wait_cmd;
 
 // Pot carry cheat: shared between pre-frame and post-frame
 static bool g_potcarry_was_lifted;
+// RAM flag used by Ancilla_TerminateSelectInteractives to preserve the
+// picked-up ancilla across room transitions when pot carry cheat is active.
+#define kRam_PotCarryPreserveAncilla 0x647
 
 static void DrawControlsPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w, int fb_h,
                              int content_y, int content_h) {
@@ -1261,15 +1264,16 @@ void SettingsMenu_ApplyCheats(void) {
       g_ram[0xF363] = (999 >> 8) & 0xFF;
     }
   }
-  // Pot carry: the game blocks door transitions while holding a pot.
-  // PreFrameCheats clears the pot so doors work; we restore it here.
+  // Pot carry: restore hand state after room transitions.
+  // The ancilla was preserved by Ancilla_TerminateSelectInteractives
+  // checking kRam_PotCarryPreserveAncilla.
   if (g_cheat_potcarry) {
     uint8 cur_hand = g_ram[0x301];
-    // If PreFrameCheats saved a pot and the game cleared it, restore it.
-    // Skip stairs/pits (z != 0) to avoid glitching climb animations.
     if (g_potcarry_was_lifted && !(cur_hand & 2) && link_z_coord == 0)
       g_ram[0x301] = cur_hand | 2;
     g_potcarry_was_lifted = (g_ram[0x301] & 2) ? 1 : 0;
+    // Clear the preserve-ancilla flag for this frame
+    g_ram[kRam_PotCarryPreserveAncilla] = 0;
   }
 }
 
@@ -1277,10 +1281,13 @@ void SettingsMenu_ApplyCheats(void) {
 void SettingsMenu_PreFrameCheats(void) {
   if (g_cheat_config.pot_carry) {
     uint8 cur = g_ram[0x301];
-    // If player is holding a pot, save the state and clear it so the
-    // game's door-transition code doesn't see it and block the door.
+    // If player is holding a pot, clear link_item_in_hand so the game's
+    // door-transition code doesn't see it and block the door. Set a RAM
+    // flag so Ancilla_TerminateSelectInteractives preserves the ancilla
+    // across the room transition.
     if (cur & 2) {
       g_ram[0x301] = cur & ~2;
+      g_ram[kRam_PotCarryPreserveAncilla] = 1;
       g_potcarry_was_lifted = true;
     }
   }
