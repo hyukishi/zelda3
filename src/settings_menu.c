@@ -1316,8 +1316,13 @@ void SettingsMenu_PreFrameCheats(void) {
   if (!g_cheat_config.pot_carry) return;
   uint8 cur = g_ram[0x301];
   if (cur & 2) {
-    // Clear link_item_in_hand so game mechanics don't block movement
+    // Clear link_item_in_hand so the !link_item_in_hand check in
+    // PlayerHandler_00_Ground_3 (line 283) passes and movement is processed.
     g_ram[0x301] = cur & ~2;
+    // Clear link_auxiliary_state so the game runs PlayerHandler_00_Ground_3
+    // (which processes movement) instead of HandleLink_From1D (which just
+    // clears state and skips movement processing).
+    g_ram[0x4D] = 0;  // link_auxiliary_state
     g_ram[kRam_PotCarryPreserveAncilla] = 1;
     g_potcarry_was_lifted = true;
   } else {
