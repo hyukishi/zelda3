@@ -1269,50 +1269,57 @@ void SettingsMenu_ApplyCheats(void) {
   if (g_cheat_potcarry) {
     uint8 cur_hand = g_ram[0x301];
     // Restore pot state if the game cleared it during this frame
-    // (e.g. during room transition). Skip stairs (z != 0).
     if (g_potcarry_was_lifted && !(cur_hand & 2) && link_z_coord == 0) {
       g_ram[0x301] = cur_hand | 2;
-      // Also restore flag_is_ancilla_to_pick_up if the game killed it
       if (!g_ram[0x2EC])
         g_ram[0x2EC] = g_potcarry_saved_pickup_flag;
     }
     g_potcarry_was_lifted = (g_ram[0x301] & 2) ? 1 : 0;
     g_ram[kRam_PotCarryPreserveAncilla] = 0;
     g_potcarry_saved_pickup_flag = g_ram[0x2EC];
+
+    // If holding a pot and near a door edge, force the doorway state
+    // for the NEXT frame. Setting it post-frame survives the movement
+    // collision code (which clears it during the frame) so
+    // HandleDoorTransitions will see it on the next ZeldaRunFrame.
+    if (cur_hand & 2) {
+      uint16 lx = g_ram[0x22] | (g_ram[0x23] << 8);  // link_x_coord
+      uint16 ly = g_ram[0x20] | (g_ram[0x21] << 8);  // link_y_coord
+      uint8 last_dir = g_ram[0x26];  // link_direction_last
+      uint8 *doorway = &g_ram[0x6C];  // is_standing_in_doorway
+      // Near top edge, moving up → north door (doorway=1, dir bit 4)
+      if ((ly & 0xFF) < 20 && (last_dir & 0xC) == 4) {
+        *doorway = 1;
+        g_ram[0x26] = (last_dir & ~0xC) | 4;  // ensure up-dir bits set
+      }
+      // Near bottom edge, moving down → south door (doorway=1, dir bit 8)
+      if ((ly & 0xFF) > 200 && (last_dir & 0xC) == 8) {
+        *doorway = 1;
+        g_ram[0x26] = (last_dir & ~0xC) | 8;
+      }
+      // Near left edge, moving left → west door (doorway=2, dir bit 1)
+      if ((lx & 0xFF) < 12 && (last_dir & 3) == 1) {
+        *doorway = 2;
+        g_ram[0x26] = (last_dir & ~3) | 1;
+      }
+      // Near right edge, moving right → east door (doorway=2, dir bit 2)
+      if ((lx & 0xFF) > 240 && (last_dir & 3) == 2) {
+        *doorway = 2;
+        g_ram[0x26] = (last_dir & ~3) | 2;
+      }
+    }
   }
 }
 
-// Called BEFORE ZeldaRunFrame: force door transitions when holding a pot.
+// Called BEFORE ZeldaRunFrame to hide pot state from the game
 void SettingsMenu_PreFrameCheats(void) {
   if (!g_cheat_config.pot_carry) return;
   uint8 cur = g_ram[0x301];
-
   if (cur & 2) {
-    // Save state and hide pot from game mechanics
+    // Clear link_item_in_hand so game mechanics don't block movement
     g_ram[0x301] = cur & ~2;
     g_ram[kRam_PotCarryPreserveAncilla] = 1;
     g_potcarry_was_lifted = true;
-
-    // Force doorway detection: if Link is near a door edge and pressing
-    // into it, set is_standing_in_doorway so the transition triggers.
-    // link_item_in_hand normally prevents the tile collision code from
-    // setting this flag, so we set it directly.
-    uint8 *doorway = &g_ram[0x6C];  // is_standing_in_doorway
-    if (!(*doorway)) {
-      // Check if Link is at a door edge based on room coordinates
-      uint16 lx = g_ram[0x22] | (g_ram[0x23] << 8);  // link_x_coord
-      uint16 ly = g_ram[0x20] | (g_ram[0x21] << 8);  // link_y_coord
-      uint8 facing = g_ram[0x2F];  // link_direction_facing
-      uint8 last_dir = g_ram[0x26];  // link_direction_last
-      // Near top edge + moving up → north door
-      if ((ly & 0xFF) < 20 && (last_dir & 0xC) == 4) *doorway = 1;
-      // Near bottom edge + moving down → south door
-      if ((ly & 0xFF) > 200 && (last_dir & 0xC) == 8) *doorway = 1;
-      // Near left edge + moving left → west door
-      if ((lx & 0xFF) < 12 && (last_dir & 3) == 1) *doorway = 2;
-      // Near right edge + moving right → east door
-      if ((lx & 0xFF) > 240 && (last_dir & 3) == 2) *doorway = 2;
-    }
   } else {
     g_potcarry_was_lifted = false;
   }
