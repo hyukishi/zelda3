@@ -146,6 +146,11 @@ int FindCmdForSdlKey(SDL_Keycode code, SDL_Keymod mod) {
 }
 
 static void ParseKeyArray(char *value, int cmd, int size) {
+  // Clear any existing bindings for this command range so custom
+  // bindings from the ini file replace defaults rather than conflict.
+  for (int ci = 0; ci < size; ci++)
+    RemoveKeyForCmd(cmd + ci);
+
   char *s;
   int i = 0;
   for (; i < size && (s = NextDelim(&value, ',')) != NULL; i++, cmd += (cmd != 0)) {
@@ -168,7 +173,12 @@ static void ParseKeyArray(char *value, int cmd, int size) {
       fprintf(stderr, "Unknown key: '%s'\n", s);
       continue;
     }
-    if (!KeyMapHash_Add(key_with_mod | REMAP_SDL_KEYCODE(key), cmd))
+    int new_key = key_with_mod | REMAP_SDL_KEYCODE(key);
+    // If this key is already bound to another command, free it first
+    int other_cmd = KeyMapHash_Find(new_key);
+    if (other_cmd && other_cmd != cmd)
+      RemoveKeyForCmd(other_cmd);
+    if (!KeyMapHash_Add(new_key, cmd))
       fprintf(stderr, "Duplicate key: '%s'\n", s);
   }
 }
