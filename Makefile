@@ -31,13 +31,9 @@ $(RES): src/platform/win32/zelda3.rc
 	@echo "Generating Windows resources"
 	@$(WINDRES) $< -O coff -o $@
 
-zelda3_assets.dat:
-	@echo "Extracting game resources"
-	$(PYTHON) assets/restool.py --extract-from-rom
-
 clean: clean_obj clean_gen
 clean_obj:
 	@$(RM) $(OBJS) $(TARGET_EXEC)
 clean_gen:
-	@$(RM) $(RES) zelda3_assets.dat tables/zelda3_assets.dat tables/*.txt tables/*.png tables/sprites/*.png tables/*.yaml
+	@$(RM) $(RES) tables/zelda3_assets.dat tables/*.txt tables/*.png tables/sprites/*.png tables/*.yaml
 	@rm -rf tables/__pycache__ tables/dungeon tables/img tables/overworld tables/sound

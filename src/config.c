@@ -29,7 +29,7 @@ static const uint16 kDefaultKbdControls[kKeys_Total] = {
   // Replay Ref State
   N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N,
   // CheatLife, CheatKeys, CheatEquipment, CheatWalkThroughWalls
-  _(SDLK_w), _(SDLK_o), S(SDLK_w), C(SDLK_e),
+  N, N, N, N,
   // ClearKeyLog, StopReplay, Fullscreen, Reset, Pause, PauseDimmed, Turbo, ReplayTurbo, WindowBigger, WindowSmaller, DisplayPerf, ToggleRenderer, VolumeUp, VolumeDown, Settings, Settings2
   _(SDLK_k), _(SDLK_l), A(SDLK_RETURN), C(SDLK_r), S(SDLK_p), _(SDLK_p), _(SDLK_TAB), _(SDLK_t), N, N, _(SDLK_f), _(SDLK_r), N, N, _(SDLK_ESCAPE), _(SDLK_F12),
 };

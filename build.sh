@@ -26,25 +26,9 @@ setup_venv() {
     fi
 }
 
-extract_assets() {
-    if [ ! -f "zelda3_assets.dat" ] && [ ! -f "tables/zelda3_assets.dat" ]; then
-        if [ -f "zelda3.sfc" ]; then
-            info "Extracting assets from ROM..."
-            python3 assets/restool.py --extract-from-rom
-        else
-            error "zelda3.sfc not found! Place the US ROM in this directory."
-            echo "Expected SHA256: 66871d66be19ad2c34c927d6b14cd8eb6fc3181965b6e517cb361f7316009cfb"
-            exit 1
-        fi
-    else
-        info "Assets already extracted, skipping."
-    fi
-}
-
 build_macos() {
     info "Building for macOS x86_64..."
     setup_venv
-    extract_assets
 
     if command -v brew &>/dev/null; then
         brew list sdl2 &>/dev/null || brew install sdl2
@@ -57,7 +41,6 @@ build_macos() {
 build_linux_native() {
     info "Building for Linux natively..."
     setup_venv
-    extract_assets
     make -j$(nproc)
     info "Linux build complete: ./zelda3"
 }
@@ -65,7 +48,6 @@ build_linux_native() {
 build_windows() {
     info "Building for Windows x86_64..."
     setup_venv
-    extract_assets
 
     if command -v x86_64-w64-mingw32-gcc &>/dev/null; then
         info "Cross-compiling with MinGW-w64..."
