@@ -117,7 +117,6 @@ static int g_cheat_scroll;
 #define g_cheat_arrows   g_cheat_config.infinite_arrows
 #define g_cheat_keys     g_cheat_config.infinite_keys
 #define g_cheat_rupees   g_cheat_config.infinite_rupees
-#define g_cheat_potcarry g_cheat_config.pot_carry
 #define g_cheat_wall     g_cheat_config.walk_wall
 
 // --- Drawing helpers with bounds safety ---
@@ -505,13 +504,6 @@ enum { kCtrl_TotalItems = kCtrl_ActionCount + 2 };
 static bool g_ctrl_waiting;
 static int  g_ctrl_wait_cmd;
 
-// Pot carry cheat: shared between pre-frame and post-frame
-static bool g_potcarry_was_lifted;
-static uint8 g_potcarry_saved_pickup_flag;
-// RAM flag used by Ancilla_TerminateSelectInteractives to preserve the
-// picked-up ancilla across room transitions when pot carry cheat is active.
-#define kRam_PotCarryPreserveAncilla 0x647
-
 static void DrawControlsPage(uint8 *buf, int pitch, int px, int py, int pw, int fb_w, int fb_h,
                              int content_y, int content_h) {
   int lx = px + kPanelPad;
@@ -603,7 +595,6 @@ enum {
   kCheat_InfRupees,
   kCheat_Sep2,
   kCheat_UnlockAll,
-  kCheat_PotCarry,
   kCheat_Wall,
   kCheat_Sep3,
   kCheat_Back,
@@ -627,8 +618,7 @@ static void DrawCheatsPage(uint8 *buf, int pitch, int px, int py, int pw, int fb
   items[yi].lbl = "INF:   Rupees"; items[yi].col = kCol_Label; items[yi].show_val = true; items[yi].val = g_cheat_rupees ? "ON" : "OFF"; yi++;
   items[yi].lbl = NULL; items[yi].col = 0; yi++; // separator
   items[yi].lbl = "Unlock All Items"; items[yi].col = kCol_Action; items[yi].show_val = false; yi++;
-  items[yi].lbl = "Carry Pots";       items[yi].col = kCol_Label; items[yi].show_val = true; items[yi].val = g_cheat_potcarry ? "ON" : "OFF"; yi++;
-  items[yi].lbl = "Walk Walls";       items[yi].col = kCol_Label; items[yi].show_val = true; items[yi].val = g_cheat_wall ? "ON" : "OFF"; yi++;
+  items[yi].lbl = "Walk Walls";      items[yi].col = kCol_Label; items[yi].show_val = true; items[yi].val = g_cheat_wall ? "ON" : "OFF"; yi++;
   items[yi].lbl = NULL; items[yi].col = 0; yi++; // separator
   items[yi].lbl = "Back"; items[yi].col = kCol_Close; items[yi].show_val = false; yi++;
 
@@ -1161,7 +1151,6 @@ static void HandleCheatsInput(int key_code, int key_mod, bool pressed) {
     case kCheat_InfKeys:    g_cheat_keys   = !g_cheat_keys;   break;
     case kCheat_InfRupees:  g_cheat_rupees = !g_cheat_rupees; break;
     case kCheat_UnlockAll:  CheatUnlockAll(); break;
-    case kCheat_PotCarry:   g_cheat_potcarry = !g_cheat_potcarry; break;
     case kCheat_Wall:       g_cheat_wall = !g_cheat_wall; CheatToggleWall(); break;
     case kCheat_Back:       g_page = kPage_Main; g_cursor = kOpt_Cheats; g_cheat_scroll = 0; break;
     }
@@ -1173,7 +1162,6 @@ static void HandleCheatsInput(int key_code, int key_mod, bool pressed) {
     else if (g_cursor == kCheat_InfArrows) { g_cheat_arrows = false; }
     else if (g_cursor == kCheat_InfKeys)   { g_cheat_keys   = false; }
     else if (g_cursor == kCheat_InfRupees) { g_cheat_rupees = false; }
-    else if (g_cursor == kCheat_PotCarry)  { g_cheat_potcarry = false; }
     else if (g_cursor == kCheat_Wall)      { g_cheat_wall   = false; CheatToggleWall(); }
     break;
   case SDLK_RIGHT:
@@ -1183,7 +1171,6 @@ static void HandleCheatsInput(int key_code, int key_mod, bool pressed) {
     else if (g_cursor == kCheat_InfArrows) { g_cheat_arrows = true; }
     else if (g_cursor == kCheat_InfKeys)   { g_cheat_keys   = true; }
     else if (g_cursor == kCheat_InfRupees) { g_cheat_rupees = true; }
-    else if (g_cursor == kCheat_PotCarry)  { g_cheat_potcarry = true; }
     else if (g_cursor == kCheat_Wall)      { g_cheat_wall   = true; CheatToggleWall(); }
     break;
   }
@@ -1265,74 +1252,8 @@ void SettingsMenu_ApplyCheats(void) {
       g_ram[0xF363] = (999 >> 8) & 0xFF;
     }
   }
-  // Pot carry: preserve pot state across door transitions.
-  if (g_cheat_potcarry) {
-    uint8 cur_hand = g_ram[0x301];
-    // Restore pot state if the game cleared it during this frame
-    if (g_potcarry_was_lifted && !(cur_hand & 2) && link_z_coord == 0) {
-      g_ram[0x301] = cur_hand | 2;
-      if (!g_ram[0x2EC])
-        g_ram[0x2EC] = g_potcarry_saved_pickup_flag;
-    }
-    g_potcarry_was_lifted = (g_ram[0x301] & 2) ? 1 : 0;
-    g_ram[kRam_PotCarryPreserveAncilla] = 0;
-    g_potcarry_saved_pickup_flag = g_ram[0x2EC];
-
-    // If holding a pot and near a door edge, force the room transition
-    // by directly setting the page movement delta. HandleDoorTransitions
-    // checks this independently of is_standing_in_doorway so it works
-    // even when the tile collision system isn't detecting the doorway.
-    if (cur_hand & 2) {
-      uint16 lx = g_ram[0x22] | (g_ram[0x23] << 8);  // link_x_coord
-      uint16 ly = g_ram[0x20] | (g_ram[0x21] << 8);  // link_y_coord
-      uint8 last_dir = g_ram[0x26];  // link_direction_last
-      // Near top edge, moving up -> north door
-      if ((ly & 0xFF) < 16 && (last_dir & 0xC) == 4) {
-        g_ram[0x26] = (last_dir & ~0xC) | 4;
-        g_ram[0x6C] = 1;   // is_standing_in_doorway = NS
-        g_ram[0x68] = 0xFF; // link_y_page_movement_delta = -1 (int8)
-      }
-      // Near bottom edge, moving down -> south door
-      else if ((ly & 0xFF) > 210 && (last_dir & 0xC) == 8) {
-        g_ram[0x26] = (last_dir & ~0xC) | 8;
-        g_ram[0x6C] = 1;
-        g_ram[0x68] = 0x01; // link_y_page_movement_delta = 1
-      }
-      // Near left edge, moving left -> west door
-      else if ((lx & 0xFF) < 12 && (last_dir & 3) == 1) {
-        g_ram[0x26] = (last_dir & ~3) | 1;
-        g_ram[0x6C] = 2;   // is_standing_in_doorway = EW
-        g_ram[0x69] = 0xFF; // link_x_page_movement_delta = -1
-      }
-      // Near right edge, moving right -> east door
-      else if ((lx & 0xFF) > 244 && (last_dir & 3) == 2) {
-        g_ram[0x26] = (last_dir & ~3) | 2;
-        g_ram[0x6C] = 2;
-        g_ram[0x69] = 0x01; // link_x_page_movement_delta = 1
-      }
-    }
-  }
 }
 
-// Called BEFORE ZeldaRunFrame to hide pot state from the game
 void SettingsMenu_PreFrameCheats(void) {
-  if (!g_cheat_config.pot_carry) return;
-  uint8 cur = g_ram[0x301];
-  if (cur & 2) {
-    // Hide pot state so the game processes movement normally:
-    // - PlayerHandler_00_Ground_3:283 checks !link_item_in_hand
-    // - LinkState_HoldingBigRock never calls tile collision (no doorway detection)
-    // - link_auxiliary_state causes HandleLink_From1D to hijack movement
-    g_ram[0x301] = cur & ~2;  // link_item_in_hand
-    g_ram[0x5D] = 0;          // link_player_handler_state -> Ground
-    g_ram[0x4D] = 0;          // link_auxiliary_state
-    g_ram[0x308] = 0;         // link_state_bits
-    g_ram[0x309] = 0;         // link_picking_throw_state
-    g_ram[0x379] = 0;         // byte_7E0379 (blocks A-press)
-    g_ram[0x376] = 0;         // link_grabbing_wall
-    g_ram[kRam_PotCarryPreserveAncilla] = 1;
-    g_potcarry_was_lifted = true;
-  } else {
-    g_potcarry_was_lifted = false;
-  }
+  // no-op
 }

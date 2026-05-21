@@ -539,8 +539,6 @@ static bool HandleIniConfig(int section, const char *key, char *value) {
       return ParseBool(value, &g_cheat_config.infinite_keys);
     } else if (StringEqualsNoCase(key, "InfiniteRupees")) {
       return ParseBool(value, &g_cheat_config.infinite_rupees);
-    } else if (StringEqualsNoCase(key, "PotCarry")) {
-      return ParseBool(value, &g_cheat_config.pot_carry);
     } else if (StringEqualsNoCase(key, "WalkWall")) {
       return ParseBool(value, &g_cheat_config.walk_wall);
     }
@@ -669,7 +667,6 @@ void SaveConfigFile(const char *filename) {
   fprintf(f, "InfiniteArrows = %s\n", g_cheat_config.infinite_arrows ? "yes" : "no");
   fprintf(f, "InfiniteKeys = %s\n", g_cheat_config.infinite_keys ? "yes" : "no");
   fprintf(f, "InfiniteRupees = %s\n", g_cheat_config.infinite_rupees ? "yes" : "no");
-  fprintf(f, "PotCarry = %s\n", g_cheat_config.pot_carry ? "yes" : "no");
   fprintf(f, "WalkWall = %s\n", g_cheat_config.walk_wall ? "yes" : "no");
 
   // Save current key bindings

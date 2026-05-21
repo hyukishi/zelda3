@@ -125,7 +125,6 @@ typedef struct CheatConfig {
   bool infinite_arrows;
   bool infinite_keys;
   bool infinite_rupees;
-  bool pot_carry;
   bool walk_wall;
 } CheatConfig;
 
